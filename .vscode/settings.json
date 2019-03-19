@@ -1,0 +1,7 @@
+{
+  "python.pythonPath": "/usr/bin/python",
+  "python.linting.enabled": true,
+  "python.linting.pep8Enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.pep8Args": ["--ignore=E303"]
+}
