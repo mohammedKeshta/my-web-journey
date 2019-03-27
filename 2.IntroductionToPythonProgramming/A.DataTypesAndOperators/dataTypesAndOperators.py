@@ -122,7 +122,9 @@ print(name_length <= driving_license_character_limit)
 
 
 def getType(variable):
-    print(type(variable))
+
+
+print(type(variable))
 
 
 getType("12")  # <type 'str'>
