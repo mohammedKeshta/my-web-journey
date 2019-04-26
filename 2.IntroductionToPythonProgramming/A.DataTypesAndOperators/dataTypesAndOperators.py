@@ -1,4 +1,3 @@
-
 ####################################################
 # Quiz: Average Electricity Bill
 ####################################################
@@ -50,7 +49,6 @@ reservoir_volume -= 2.5e5
 # print the new value of the reservoir_volume variable
 print(reservoir_volume)
 
-
 ####################################################
 # Quiz: Changing Variable Values
 ####################################################
@@ -59,7 +57,6 @@ rabbits = 8
 crs_per_rab = carrots / rabbits
 rabbits = 12
 print(crs_per_rab)
-
 
 ####################################################
 # Quiz: Which is denser, Rio or San Francisco?
@@ -74,7 +71,6 @@ rio_de_janeiro_pop_density = rio_population / rio_area
 # Write code that prints True if San Francisco is denser than Rio, and
 # False otherwise
 print(san_francisco_pop_density > rio_de_janeiro_pop_density)
-
 
 ####################################################
 # Quiz: Fix the Quote
@@ -98,7 +94,6 @@ url = "http://petshop.com/pets/mammals/cats"
 message = username + " accessed the site " + url + " at " + timestamp + "."
 print(message)
 
-
 ####################################################
 # Quiz: len()
 ####################################################
@@ -116,6 +111,7 @@ name_length = len(full_name)
 driving_license_character_limit = 28
 print(name_length <= driving_license_character_limit)
 
+
 ####################################################
 # Quiz: What Type Do These Objects Have?
 ####################################################
@@ -125,7 +121,6 @@ def getType(variable):
 
 
 print(type(variable))
-
 
 getType("12")  # <type 'str'>
 getType(12.3)  # <type 'float'>
@@ -143,10 +138,9 @@ thurs_sales = "98"
 fri_sales = "95"
 
 weekly_sales = int(mon_sales) + int(tues_sales) + \
-    int(wed_sales) + int(thurs_sales) + int(fri_sales)
+               int(wed_sales) + int(thurs_sales) + int(fri_sales)
 weekly_sales = str(weekly_sales)  # convert the type back!!
 print("This week's total sales: " + weekly_sales)
-
 
 # String Method Playground
 # Browse the complete list of string methods at:
