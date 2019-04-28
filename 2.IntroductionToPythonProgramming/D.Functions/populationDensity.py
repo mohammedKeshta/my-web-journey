@@ -10,15 +10,19 @@ Created on Sat Apr 27 14:50:54 2019
 # Quiz: Population Density Function
 ####################################################
 '''
- Write a function named population_density that takes two arguments, 
- population and land_area, and returns a population density calculated from those values. 
- I've included two test cases that you can use to verify that your function works correctly. 
+ Write a function named population_density that takes two arguments,
+ population and land_area, and returns a population
+ density calculated from those values.
+ I've included two test cases that you can use to verify that
+ your function works correctly.
  Once you've written your function, use the Test Run button to test your code.
 '''
 
-def population_density(population, land_area): 
-    
+
+def population_density(population, land_area):
+
     return population / land_area
+
 
 # test cases for your function
 test1 = population_density(10, 1)
