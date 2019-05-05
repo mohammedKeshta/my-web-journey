@@ -10,6 +10,9 @@ import webbrowser
 
 class Movie():
 
+    """ This class provides a way to store moview related information """
+
+    VALID_RATINGS = ["G", "PG", "PG-13", "R"]
     # Intialize the Movie Object
     def __init__(self, movie_title, movie_storyline,
                  poster_image, trailer_youtube):

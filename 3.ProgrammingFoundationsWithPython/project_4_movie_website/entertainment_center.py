@@ -25,8 +25,9 @@ def main():
                                    "https://www.youtube.com/watch?v=TcMBFSGVi1c")
     # print(avengers_endgame.storyline)
     # avengers_endgame.show_trailer()
-    movies = [ugly_dolls, avengers_endgame]
-    fresh_tomatoes.open_movies_page(movies)
+    # movies = [ugly_dolls, avengers_endgame]
+    # fresh_tomatoes.open_movies_page(movies)
+    print(media.Movie.__doc__)
 
 
 # Driver Code
