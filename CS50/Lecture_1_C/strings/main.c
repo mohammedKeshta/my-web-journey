@@ -5,17 +5,55 @@
 
 // Prototype functions
 void play_with_strings(void);
+void ciphering_encryption(void);
 
-int main(int argc, string argv[])
+int main(void)
 {
 
-    // play_with_strings();
+    play_with_strings();
+    // ciphering_encryption();
 
 }
 
+// Ciphering Encryption
+void ciphering_encryption()
+{
+    string message;
+    char ch;
+    int key;
+
+    message = get_string("Enter a message to encrypt: ");
+    key = get_int("Enter key : ");
+
+    for (int i = 0; message[i] != '\0'; ++i)
+    {
+        ch = message[i];
+        if (ch >= 'a' && ch <= 'z')
+        {
+            ch += key;
+            if (ch > 'z')
+            {
+                ch -= 'z' - 'a' - 1;
+            }
+            message[i] = ch;
+        }
+        else if (ch >= 'A' && ch <= 'Z')
+        {
+            ch += key;
+            if (ch > 'Z')
+            {
+                ch -= 'Z' + 'A' - 1;
+            }
+            message[i] = ch;
+        }
+    }
+
+    printf("Encrypted message: %s\n", message);
+}
+
+// Play with strings
 void play_with_strings()
 {
-
     // Prompt user for an Input
     string str = get_string("Input: ");
     int n = 0;
