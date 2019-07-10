@@ -2,26 +2,6 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardTitle, CardBody, CardText } from 'reactstrap';
 
 class DishDetail extends Component {
-  formatDate = date => {
-    const MONTHS_NAMES = [
-      'Jan',
-      'Feb',
-      'Mar',
-      'Apr',
-      'May',
-      'Jun',
-      'Jul',
-      'Aug',
-      'Sep',
-      'Oct',
-      'Nov',
-      'Dec'
-    ];
-    return `${
-      MONTHS_NAMES[date.getMonth()]
-    } ${date.getDate()}, ${date.getFullYear()}`;
-  };
-
   renderComments = comments => {
     if (comments != null) {
       const COMMENTS = comments.map(comment => {
@@ -30,8 +10,12 @@ class DishDetail extends Component {
             <blockquote className="blockquote">
               <p className="mb-0">{comment.comment}</p>
               <footer className="blockquote-footer">
-                <cite title={comment.author}>{comment.author}</cite> ,
-                {this.formatDate(new Date(comment.date))}
+                <cite title={comment.author}>{comment.author}  , </cite>
+                {Intl.DateTimeFormat('en-US', {
+                  year: 'numeric',
+                  month: 'short',
+                  day: '2-digit'
+                }).format(new Date(Date.parse(comment.date)))}
               </footer>
             </blockquote>
           </div>

@@ -1,47 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
-import DishDetail from './DishdetailComponent';
 
-class Menu extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      selectedDish: null
-    };
-  }
-
-  onDishSelect(dish) {
-    this.setState({ selectedDish: dish });
-  }
-
-  render() {
-    const { dishes } = this.props;
-    const { selectedDish } = this.state;
-    const MENU = dishes.map(dish => {
-      return (
-        <div
-          key={dish.id}
-          className="col-12 col-md-5 mt-1"
-          onClick={() => this.onDishSelect(dish)}
-        >
-          <Card>
-            <CardImg top width="100%" src={dish.image} alt={dish.name} />
-            <CardImgOverlay>
-              <CardTitle><strong>{dish.name}</strong></CardTitle>
-            </CardImgOverlay>
-          </Card>
-        </div>
-      );
-    });
+const Menu = ({ dishes, onClick }) => {
+  const MENU = dishes.map(dish => {
     return (
-      <div className="container">
-        <div className="row">{MENU}</div>
-        <div className="row">
-          <DishDetail dish={selectedDish}/>
-        </div>
+      // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
+      <div
+        key={dish.id}
+        className="col-12 col-md-5 mt-1"
+        onClick={() => onClick(dish.id)}
+      >
+        <Card>
+          <CardImg top width="100%" src={dish.image} alt={dish.name} />
+          <CardImgOverlay>
+            <CardTitle><strong>{dish.name}</strong></CardTitle>
+          </CardImgOverlay>
+        </Card>
       </div>
     );
-  }
-}
+  });
+  return (
+    <div className="container">
+      <div className="row">
+        {MENU}
+      </div>
+    </div>
+  );
+};
 export default Menu;
