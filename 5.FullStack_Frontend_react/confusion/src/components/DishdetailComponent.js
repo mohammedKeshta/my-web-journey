@@ -1,8 +1,9 @@
-import React from 'react';
-import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap';
+import React from "react";
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const RenderComments = ({ comments }) => {
-
   if (comments === null) return <div />;
 
   const COMMENTS = comments.map(comment => {
@@ -12,10 +13,10 @@ const RenderComments = ({ comments }) => {
           <p className="mb-0">{comment.comment}</p>
           <footer className="blockquote-footer">
             <cite title={comment.author}>{comment.author} , </cite>
-            {Intl.DateTimeFormat('en-US', {
-              year: 'numeric',
-              month: 'short',
-              day: '2-digit'
+            {Intl.DateTimeFormat("en-US", {
+              year: "numeric",
+              month: "short",
+              day: "2-digit"
             }).format(new Date(Date.parse(comment.date)))}
           </footer>
         </blockquote>
@@ -48,11 +49,21 @@ const RenderDish = ({ dish }) => {
   return <div />;
 };
 
-const DishDetail = ({ dish }) => {
-  const comments = dish && dish.comments ? dish.comments : null;
+const DishDetail = ({ dish, comments }) => {
   return (
     <div className="container">
       <div className="row">
+        <Breadcrumb>
+
+          <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
+          <BreadcrumbItem active>{dish.name}</BreadcrumbItem>
+        </Breadcrumb>
+        <div className="col-12">
+          <h3>{dish.name}</h3>
+          <hr />
+        </div>
+      </div>
+      <div className="row mb-2">
         <div className="col-12 col-md-5 mt-2">
           <RenderDish dish={dish} />
         </div>

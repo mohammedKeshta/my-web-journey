@@ -6,6 +6,7 @@ import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
+import DishDetail from "./DishdetailComponent";
 
 class Main extends Component {
   constructor(props) {
@@ -29,16 +30,23 @@ class Main extends Component {
         />
       </div>
     );
+
+    const DishWithId = ({match}) => {
+          const currentDishId = +match.params.id;
+          return (
+            <DishDetail
+              dish={dishes.filter(dish =>  dish.id === currentDishId)[0]}
+              comments={comments.filter(comment => comment.dishId === currentDishId)}
+            />);
+    };
+
     return (
       <div className="App">
         <Header />
         <Switch>
           <Route path="/home" component={HomePage} />
-          <Route
-            exact
-            path="/menu"
-            component={() => <Menu dishes={dishes} />}
-          />
+          <Route exact path="/menu" component={() => <Menu dishes={dishes} />} />
+          <Route path="/menu/:id" component={DishWithId} />
           <Route exact path="/contactus" component={Contact} />
           <Redirect to="/home" />
         </Switch>

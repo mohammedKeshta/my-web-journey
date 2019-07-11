@@ -21,9 +21,6 @@ const RenderCard = ({ item }) => (
   </Card>
 );
 const Home = ({ dish, promotion, leader }) => {
-  console.log(dish);
-  console.log(promotion);
-  console.log(leader);
   return (
     <div className="container">
       <div className="row align-items-start">
