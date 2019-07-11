@@ -1,35 +1,35 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
-import Menu from './MenuComponent';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import DISHES from '../shared/CONSTANTS';
-import DishDetail from "./DishdetailComponent";
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
+import Home from './HomeComponent';
+import Menu from './MenuComponent';
 
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      dishes: DISHES,
-      selectedDish: null
+      dishes: DISHES
     };
   }
 
-  onDishSelect(dishId) {
-    this.setState({ selectedDish: dishId });
-  }
-
   render() {
-    const { dishes, selectedDish} = this.state;
+    const { dishes } = this.state;
+    const HomePage = () => (
+      <div>
+        <Home />
+      </div>
+    );
     return (
       <div className="App">
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
-          </div>
-        </Navbar>
-        <div className="container">
-          <Menu dishes={dishes} onClick={(dishId) => this.onDishSelect(dishId)}/>
-          <DishDetail dish={dishes.filter((dish) => dish.id === selectedDish)[0]}/>
-        </div>
+        <Header />
+        <Switch>
+          <Route path="/home" component={HomePage} />
+          <Route path="/menu" component={() => <Menu dishes={dishes} />} />
+          <Redirect to="/home" />
+        </Switch>
+        <Footer />
       </div>
     );
   }
