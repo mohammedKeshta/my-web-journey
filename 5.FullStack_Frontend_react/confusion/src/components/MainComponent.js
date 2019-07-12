@@ -7,6 +7,7 @@ import Home from './HomeComponent';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
 import DishDetail from "./DishdetailComponent";
+import About from "./AboutComponent";
 
 class Main extends Component {
   constructor(props) {
@@ -40,6 +41,7 @@ class Main extends Component {
             />);
     };
 
+
     return (
       <div className="App">
         <Header />
@@ -48,6 +50,7 @@ class Main extends Component {
           <Route exact path="/menu" component={() => <Menu dishes={dishes} />} />
           <Route path="/menu/:id" component={DishWithId} />
           <Route exact path="/contactus" component={Contact} />
+          <Route exact path="/aboutus" component={() => <About leaders={leaders} />} />
           <Redirect to="/home" />
         </Switch>
         <Footer />
