@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { COMMENTS, DISHES, LEADERS, PROMOTIONS } from '../shared/DB';
+import React, {Component} from 'react';
+import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
+import connect from "react-redux/es/connect/connect";
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
@@ -9,19 +9,20 @@ import Contact from './ContactComponent';
 import DishDetail from "./DishdetailComponent";
 import About from "./AboutComponent";
 
+
+const mapStateToProps = state => {
+  return {
+    dishes: state.dishes,
+    comments: state.comments,
+    promotions: state.promotions,
+    leaders: state.leaders
+  };
+};
+
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dishes: DISHES,
-      promotions: PROMOTIONS,
-      leaders: LEADERS,
-      comments: COMMENTS
-    };
-  }
 
   render() {
-    const { dishes, promotions, leaders, comments } = this.state;
+    const {dishes, promotions, leaders, comments} = this.props;
     const HomePage = () => (
       <div>
         <Home
@@ -33,30 +34,30 @@ class Main extends Component {
     );
 
     const DishWithId = ({match}) => {
-          const currentDishId = +match.params.id;
-          return (
-            <DishDetail
-              dish={dishes.filter(dish =>  dish.id === currentDishId)[0]}
-              comments={comments.filter(comment => comment.dishId === currentDishId)}
-            />);
+      const currentDishId = +match.params.id;
+      return (
+        <DishDetail
+          dish={dishes.filter(dish => dish.id === currentDishId)[0]}
+          comments={comments.filter(comment => comment.dishId === currentDishId)}
+        />);
     };
 
 
     return (
       <div className="App">
-        <Header />
+        <Header/>
         <Switch>
-          <Route path="/home" component={HomePage} />
-          <Route exact path="/menu" component={() => <Menu dishes={dishes} />} />
-          <Route path="/menu/:id" component={DishWithId} />
-          <Route exact path="/contactus" component={Contact} />
-          <Route exact path="/aboutus" component={() => <About leaders={leaders} />} />
-          <Redirect to="/home" />
+          <Route path="/home" component={HomePage}/>
+          <Route exact path="/menu" component={() => <Menu dishes={dishes}/>}/>
+          <Route path="/menu/:id" component={DishWithId}/>
+          <Route exact path="/contactus" component={Contact}/>
+          <Route exact path="/aboutus" component={() => <About leaders={leaders}/>}/>
+          <Redirect to="/home"/>
         </Switch>
-        <Footer />
+        <Footer/>
       </div>
     );
   }
 }
 
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
