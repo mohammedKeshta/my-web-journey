@@ -13,17 +13,21 @@
 <div id="root"></div>
 <script type="text/babel">
 
-    const people = [
-        {name: 'Mohammed'},
-        {name: 'Yasmeen'},
-        {name: 'Hamza'},
-        {name: 'Hamsa'},
-    ];
-    const element = <ol>
-        { people.map((person, index) => <li key={index}> { person.name }</li>) }
-    </ol>;
-    console.log(element);
-    ReactDOM.render(element, document.getElementById('root'));
+    class ContactList extends React.Component {
+        render() {
+            const people = [
+                {name: 'Mohammed'},
+                {name: 'Yasmeen'},
+                {name: 'Hamza'},
+                {name: 'Hamsa'},
+            ];
+            return (<ol>
+                {people.map((person, index) => <li key={index}> {person.name}</li>)}
+            </ol>);
+        }
+    }
+
+    ReactDOM.render(<ContactList />, document.getElementById('root'));
 </script>
 <!--
   Note: this page is a great way to try React but it's not suitable for production.
