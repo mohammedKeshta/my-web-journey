@@ -19,9 +19,9 @@
         {name: 'Hamza'},
         {name: 'Hamsa'},
     ];
-    const element = React.createElement('ol', null,
-        people.map((person, index) => React.createElement('li', {key: index}, person.name))
-    );
+    const element = <ol>
+        { people.map((person, index) => <li key={index}> { person.name }</li>) }
+    </ol>;
     console.log(element);
     ReactDOM.render(element, document.getElementById('root'));
 </script>
