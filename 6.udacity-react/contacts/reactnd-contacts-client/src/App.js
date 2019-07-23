@@ -30,6 +30,7 @@ class App extends Component {
       contacts: prevState.contacts.filter(c => c.id !== contact.id)
     }));
   };
+
   render() {
     const { contacts } = this.state;
     return (
