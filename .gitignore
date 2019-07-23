@@ -643,3 +643,5 @@ modules.xml
 
 # End of https://www.gitignore.io/api/webstorm,webstorm+all,webstorm+iml
 
+/.idea/
+/.idea/vcs.xml
