@@ -102,10 +102,7 @@ body, .app {
 .add-contact {
   display: block;
   width: 73px;
-  background: white;
-  background-image: url('./icons/person-add.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: white url('./icons/person-add.svg') no-repeat center;
   background-size: 28px;
   font-size: 0;
 }

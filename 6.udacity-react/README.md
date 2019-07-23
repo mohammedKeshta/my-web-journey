@@ -42,10 +42,19 @@
         > An alternative way to create component.        
    - Controlled Component  
         > Allow you to hook up the forms in your application to your component state. 
+    
+   - Lifecycle Events 
+        > It's a special methods each component can have that allow us to **hook into the view** when the specific conditions happen.
         
-        
+        * componentWillMount 
+            > invoked immediately **before** the component is inserted in the DOM.
+        * componentDidMount 
+            > invoked immediately **after**  the component is inserted in the DOM.
+        * componentWillUnmount 
+            > invoked immediately **before** a component is removed from the DOM.
+        * componentWillReceiveProps 
+            > invoked whenever the component is about to receive brand new props.
+                 
                
    - Notes 
        > Components refer to reusable pieces of code ultimately responsible for returning HTML to be rendered onto the page. More often than not, you'll see React components written with JSX.
-    
-       >     
