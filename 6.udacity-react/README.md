@@ -36,6 +36,15 @@
    - [The Diffing Algorithm](https://reactjs.org/docs/reconciliation.html#the-diffing-algorithm)
         > Diffing determines how to make efficient changes to the DOM. With diffing, old DOM nodes are taken out and replaced only when necessary. This way, our app doesn't perform any unnecessary operations to figure out when to render content.
    
+   - Props 
+        > Allow you to pass data into your component.        
+   - Functional Component  
+        > An alternative way to create component.        
+   - Controlled Component  
+        > Allow you to hook up the forms in your application to your component state. 
+        
+        
+               
    - Notes 
        > Components refer to reusable pieces of code ultimately responsible for returning HTML to be rendered onto the page. More often than not, you'll see React components written with JSX.
     
