@@ -16,10 +16,11 @@ class App extends Component {
   }
 
   handleRemoveContact = contact => {
-    this.setState(prevState => ({
-      contacts: prevState.contacts.filter(c => c.id !== contact.id)
-    }));
-    remove(contact);
+    remove(contact).then(contact => {
+      this.setState(prevState => ({
+        contacts: prevState.contacts.filter(c => c.id !== contact.id)
+      }));
+    });
   };
 
   handleCreateContact = contact => {
@@ -28,7 +29,6 @@ class App extends Component {
         contacts: prevState.contacts.concat([contact])
       }));
     });
-    console.log(this.props);
   };
 
   render() {
