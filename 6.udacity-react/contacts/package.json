@@ -5,7 +5,12 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "escape-string-regexp": "^2.0.0",
+    "form-serialize": "^0.7.2",
+    "prop-types": "^15.7.2",
+    "react-router-dom": "^5.0.1",
+    "sort-by": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
