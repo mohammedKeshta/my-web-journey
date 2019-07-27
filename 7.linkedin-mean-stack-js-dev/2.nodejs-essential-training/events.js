@@ -1,5 +1,6 @@
+// Import events module
 const event = require("events");
-
+// Create an eventEmitter object
 const emitter = new event.EventEmitter();
 
 emitter.on("customEvent", (message, user = "user") => {
