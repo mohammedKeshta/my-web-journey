@@ -1,0 +1,14 @@
+{
+  "name": "3.building-a-website-with-node-js-and-express-js-2",
+  "version": "1.0.0",
+  "description": "building website with nodejs",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon ./server.js localhost 8080"
+  },
+  "author": "Mohammed Elzanaty",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
