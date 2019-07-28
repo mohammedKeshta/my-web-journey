@@ -2,6 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/6.udacity-react/contacts/reactnd-contacts-server" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/8.linkedin-become-react-developer/1.learning-react-js-4/Ex_Files_ReactJS/Ch05/05_01/finished/lake-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/8.linkedin-become-react-developer/1.learning-react-js-4/Ex_Files_ReactJS/Ch05/05_02/finished/lake-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/8.linkedin-become-react-developer/1.learning-react-js-4/Ex_Files_ReactJS/Ch05/05_02/start/lake-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/8.linkedin-become-react-developer/1.learning-react-js-4/Ex_Files_ReactJS/Ch05/05_03/finished/lake-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/8.linkedin-become-react-developer/1.learning-react-js-4/Ex_Files_ReactJS/Ch05/05_03/start/lake-app" vcs="Git" />
   </component>
 </project>
