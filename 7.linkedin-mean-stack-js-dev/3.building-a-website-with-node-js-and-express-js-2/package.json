@@ -2,13 +2,17 @@
   "name": "3.building-a-website-with-node-js-and-express-js-2",
   "version": "1.0.0",
   "description": "building website with nodejs",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js localhost 8080"
+    "start:pure-node": "nodemon ./server.js localhost 8080",
+    "start:express": "nodemon ./index.js localhost 8080"
   },
   "author": "Mohammed Elzanaty",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
