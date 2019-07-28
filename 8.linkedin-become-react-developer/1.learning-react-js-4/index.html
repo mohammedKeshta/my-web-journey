@@ -16,39 +16,31 @@
     <div id="root"></div>
 
     <script type="text/babel">
+      const lakeList = [
+        { id: 1, name: "Echo Lake", trailhead: "Echo Lake" },
+        { id: 2, name: "Maud Lake", trailhead: "Wright's Lake" },
+        { id: 3, name: "Cascade Lake", trailhead: "Bayview" }
+      ];
+
       const Lake = ({ name }) => <h1>{name}</h1>;
 
-      class App extends React.Component {
-        state = {
-          isLogin: true
-        };
-
-        handleLogin = () => {
-          this.setState(prevState => ({ isLogin: !prevState.isLogin }));
-        };
-        render() {
-          const { isLogin } = this.state;
-          return (
-            <div>
-              <button onClick={this.handleLogin}>
-                {isLogin ? "Logout" : "Login"}
-              </button>
-              <h5>user is {isLogin ? "LogedIn" : "Not LogedIn please login"}</h5>
-              {isLogin && (
-                <div>
-                  <Lake name="Mohammed" />
-                  <Lake name="Ahmed" />
-                  <Lake name="Yameena" />
-                  <Lake name="Hamza" />
-                  <Lake name="May" />
-                  <Lake name="Basma" />
-                </div>
-              )}
-            </div>
-          );
-        }
-      }
-      ReactDOM.render(<App />, document.getElementById("root"));
+      const App = ({ lakes }) => {
+        return (
+          <div>
+            <ul>
+              {lakes.map(lake => (
+                <li key={lake.id}>
+                  {lake.name} | trailhead: {lake.trailhead}{" "}
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      };
+      ReactDOM.render(
+        <App lakes={lakeList} />,
+        document.getElementById("root")
+      );
     </script>
   </body>
 </html>
