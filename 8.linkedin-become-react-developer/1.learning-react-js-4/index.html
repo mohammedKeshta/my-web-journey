@@ -16,16 +16,19 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      const Hello = ({ library, message }) => (
-        <div className="heading">
-          <h1>Hello, {library}</h1>
-          <p>{message}</p>
+      const Lake = ({ name }) => <h1>{name}</h1>;
+
+      const App = () => (
+        <div>
+          <Lake name="Mohammed" />
+          <Lake name="Ahmed" />
+          <Lake name="Yameena" />
+          <Lake name="Hamza" />
+          <Lake name="May" />
+          <Lake name="Basma" />
         </div>
       );
-      ReactDOM.render(
-        <Hello library="React" message="Enjoy!!" />,
-        document.getElementById("root")
-      );
+      ReactDOM.render(<App />, document.getElementById("root"));
     </script>
   </body>
 </html>
