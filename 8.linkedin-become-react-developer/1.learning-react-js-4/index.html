@@ -20,18 +20,30 @@
 
       class App extends React.Component {
         state = {
-          isLogin : true
-        }
+          isLogin: true
+        };
+
+        handleLogin = () => {
+          this.setState(prevState => ({ isLogin: !prevState.isLogin }));
+        };
         render() {
+          const { isLogin } = this.state;
           return (
             <div>
-              <h5>user is {this.state.isLogin ? 'LogedIn' : 'Not LogedIn'}</h5>
-              <Lake name="Mohammed" />
-              <Lake name="Ahmed" />
-              <Lake name="Yameena" />
-              <Lake name="Hamza" />
-              <Lake name="May" />
-              <Lake name="Basma" />
+              <button onClick={this.handleLogin}>
+                {isLogin ? "Logout" : "Login"}
+              </button>
+              <h5>user is {isLogin ? "LogedIn" : "Not LogedIn please login"}</h5>
+              {isLogin && (
+                <div>
+                  <Lake name="Mohammed" />
+                  <Lake name="Ahmed" />
+                  <Lake name="Yameena" />
+                  <Lake name="Hamza" />
+                  <Lake name="May" />
+                  <Lake name="Basma" />
+                </div>
+              )}
             </div>
           );
         }
