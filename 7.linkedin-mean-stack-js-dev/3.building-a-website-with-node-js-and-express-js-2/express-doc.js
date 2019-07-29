@@ -35,7 +35,14 @@ app.get("/ab+cd", (req, res) => {
 app.get(/a/, (req, res) => {
   res.send("/a/");
 });
-
+/*
+ * Route path: /users/:userId/books/:bookId
+ * Request URL: http://localhost:3000/users/34/books/8989
+ * req.params: { "userId": "34", "bookId": "8989" }
+ * */
+app.get("/users/:userId/books/:bookId", (req, res) => {
+  res.send(JSON.stringify(req.params, null, 2));
+});
 app.listen(PORT_NUMBER, () =>
   console.log(`Example app listening on port ${PORT_NUMBER}!`)
 );
