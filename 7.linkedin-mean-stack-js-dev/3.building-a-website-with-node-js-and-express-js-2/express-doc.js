@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const PORT_NUMBER = 8080;
+const birds = require("./birds");
 
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -58,6 +59,8 @@ app
   .get(getBook)
   .post(postBook)
   .put(putBook);
+
+app.use("/birds", birds);
 
 app.listen(PORT_NUMBER, () =>
   console.log(`Example app listening on port ${PORT_NUMBER}!`)
