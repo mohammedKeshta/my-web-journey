@@ -43,6 +43,22 @@ app.get(/a/, (req, res) => {
 app.get("/users/:userId/books/:bookId", (req, res) => {
   res.send(JSON.stringify(req.params, null, 2));
 });
+
+const getBook = (req, res) => {
+  res.send("Get a random book");
+};
+const postBook = (req, res) => {
+  res.send("Post a random book");
+};
+const putBook = (req, res) => {
+  res.send("Put a random book");
+};
+app
+  .route("/book")
+  .get(getBook)
+  .post(postBook)
+  .put(putBook);
+
 app.listen(PORT_NUMBER, () =>
   console.log(`Example app listening on port ${PORT_NUMBER}!`)
 );
