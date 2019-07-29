@@ -7,6 +7,14 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => res.send(`Hello, I am a web-server`));
+app.get("/throw", (req, res, next) => {
+  throw new Error("Something is wrong");
+});
+app.get("/next", (req, res, next) => {
+  setTimeout(() => {
+    next(new Error("Something is wrong"));
+  }, 1000);
+});
 app.get("/time", (req, res) =>
   res.send(`Time now is ${new Date().toString()}`)
 );

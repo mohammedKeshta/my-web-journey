@@ -10,6 +10,7 @@
   "author": "Mohammed Elzanaty",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.0",
     "nodemon": "^1.19.1"
   },
   "dependencies": {
