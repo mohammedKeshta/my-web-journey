@@ -4,9 +4,9 @@
   "description": "building website with nodejs",
   "main": "index.js",
   "scripts": {
-    "start:pure-node": "nodemon ./server.js localhost 8080",
-    "start:express": "nodemon ./index.js localhost 8080",
-    "start:doc": "nodemon ./express-doc.js localhost 8080"
+    "start:pure-node": "node_modules/.bin/nodemon ./server.js localhost 8080",
+    "start:express": "node_modules/.bin/nodemon ./index.js localhost 8080",
+    "start:doc": "node_modules/.bin/nodemon ./express-doc.js localhost 8080"
   },
   "author": "Mohammed Elzanaty",
   "license": "ISC",

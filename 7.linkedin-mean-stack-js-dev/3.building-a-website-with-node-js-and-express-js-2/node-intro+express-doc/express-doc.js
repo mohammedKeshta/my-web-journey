@@ -62,6 +62,21 @@ app
 
 app.use("/birds", birds);
 
+app.get("/error", (req, res, next) => {
+  setTimeout(() => {
+    try {
+      throw new Error("Broken"); // Express will catch this on its own.
+    } catch (err) {
+      next(err);
+    }
+  }, 100);
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke");
+});
+
 app.listen(PORT_NUMBER, () =>
   console.log(`Example app listening on port ${PORT_NUMBER}!`)
 );
