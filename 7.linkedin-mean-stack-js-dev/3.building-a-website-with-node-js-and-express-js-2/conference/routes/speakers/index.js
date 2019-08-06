@@ -4,7 +4,7 @@ const router = express.Router();
 
 /* GET home Speakers Page. */
 router.get("/", function(req, res) {
-  res.send("Hello Home Speakers");
+  res.render("speakers");
 });
 
 router.get("/:name", function(req, res) {
