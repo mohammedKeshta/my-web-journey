@@ -23,11 +23,8 @@ header
               li
                 a(href='/speakers') All Speakers
               li.divider(role='separator')
-              li
-                a(href='/speakers/Lorenzo_Garcia') Lorenzo Garcia
-              li
-                a(href='./Hillary_Goldwynn.html') Hilary Goldywynn Post
-              li
-                a(href='/speakers/Riley_Rewington') Riley Rudolph Rewington
+              each speakerName in speakersNames
+                li
+                  a(href=`/speakers/${speakerName.shortname}`) #{speakerName.name}
           li
             a(href='./feedback.html') Feedback

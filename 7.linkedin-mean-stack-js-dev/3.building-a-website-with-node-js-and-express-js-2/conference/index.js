@@ -2,10 +2,12 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const app = express();
+const SpeakerService = require('./services/SpeakerService');
 const configs = require('./config');
 const routes = require('./routes');
 
 const config = configs[app.get('env')];
+const speakerService = new SpeakerService(config.data.speakers);
 
 app.set('port', process.env.PORT || 3000);
 
@@ -17,10 +19,16 @@ if (app.get('env') === 'development') app.locals.pretty = true;
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/favicon.ico', (req, res) => res.sendStatus(204));
 
-app.get('/', (req, res) => {
-  res.render('index', { title: 'Roux Meetups', page: 'Home' });
+app.use(async (req, res, next) => {
+  try {
+    app.locals.speakersNames = await speakerService.getNames();
+    next();
+  } catch (e) {
+    return next(e);
+  }
 });
-app.use('/', routes);
+
+app.use('/', routes({ speakerService }));
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => next(createError(404)));
