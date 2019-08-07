@@ -30,6 +30,8 @@ module.exports = speakerService => {
       promises.push(speakerService.getArtworkForSpeaker(name));
       const response = await Promise.all(promises);
 
+      if (!response[0]) return next();
+
       res.render('speakers/details', {
         title: 'Roux Meetups',
         page: name,
