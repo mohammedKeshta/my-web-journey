@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    link(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', rel='stylesheet')
+    style.
+      #main-error {
+        height: 100vh;
+      }
+  body
+    #main-error.d-flex.justify-content-center.align-items-center
+      h1.mr-3.pr-3.align-top.border-right.inline-block.align-content-center=status
+      .inline-block.align-middle
+        h2#desc.font-weight-normal.lead=message
+        if(error)
+          pre=error
