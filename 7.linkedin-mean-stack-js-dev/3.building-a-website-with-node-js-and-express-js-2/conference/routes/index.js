@@ -5,7 +5,7 @@ const router = express.Router();
 const speakersRoute = require('./speakers');
 const feedbackRoute = require('./feedback');
 
-module.exports = ({ speakerService }) => {
+module.exports = ({ speakerService, feedBackService }) => {
   router.get('/', async (req, res, next) => {
     try {
       const promises = [];
@@ -24,7 +24,7 @@ module.exports = ({ speakerService }) => {
     }
   });
   router.use('/speakers', speakersRoute(speakerService));
-  router.use('/feedback', feedbackRoute(speakerService));
+  router.use('/feedback', feedbackRoute(feedBackService));
 
   return router;
 };

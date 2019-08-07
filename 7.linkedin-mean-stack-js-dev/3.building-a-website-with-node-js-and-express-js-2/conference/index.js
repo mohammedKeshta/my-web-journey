@@ -1,13 +1,17 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 const app = express();
 const SpeakerService = require('./services/SpeakerService');
+const FeedbackService = require('./services/FeedbackService');
 const configs = require('./config');
 const routes = require('./routes');
 
 const config = configs[app.get('env')];
+
 const speakerService = new SpeakerService(config.data.speakers);
+const feedBackService = new FeedbackService(config.data.feedback);
 
 app.set('port', process.env.PORT || 3000);
 
@@ -17,6 +21,9 @@ app.set('views', path.join(__dirname, './views'));
 if (app.get('env') === 'development') app.locals.pretty = true;
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
 app.get('/favicon.ico', (req, res) => res.sendStatus(204));
 
 app.use(async (req, res, next) => {
@@ -28,7 +35,7 @@ app.use(async (req, res, next) => {
   }
 });
 
-app.use('/', routes({ speakerService }));
+app.use('/', routes({ speakerService, feedBackService }));
 
 // Catch 404 and forward to error handler
 app.use((req, res, next) => next(createError(404)));
