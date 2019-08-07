@@ -2,7 +2,10 @@ const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const app = express();
+const configs = require('./config');
 const routes = require('./routes');
+
+const config = configs[app.get('env')];
 
 app.set('port', process.env.PORT || 3000);
 
@@ -15,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/favicon.ico', (req, res) => res.sendStatus(204));
 
 app.get('/', (req, res) => {
-  res.render('index', { title: ' Roux Meetups--Home' });
+  res.render('index', { title: 'Roux Meetups', page: 'Home' });
 });
 app.use('/', routes);
 
