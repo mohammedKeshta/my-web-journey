@@ -22,30 +22,46 @@ class ReactAdditionalLibraryFeature extends Component {
 
   state = {
     loading: true,
+    numberOfProducts: 10,
     products: []
   };
 
   componentDidMount() {
-    fetch('https://hplussport.com/api/products/order/price/sort/asc/qty/10')
+    this.getProducts();
+  }
+
+  getProducts() {
+    const { numberOfProducts } = this.state;
+    fetch(`https://hplussport.com/api/products/order/price/sort/asc/qty/${numberOfProducts}`)
       .then(data => data.json())
       .then(products => this.setState({ loading: false, products }));
   }
 
+  handleSubmit = e => {
+    e.preventDefault();
+    this.getProducts();
+  };
+
   render() {
-    const { loading, products } = this.state;
+    const { loading, products, numberOfProducts } = this.state;
     return (
       <div className="App">
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="numberOfProducts">
+            Number Of Products
+            <input
+              type="number"
+              value={numberOfProducts}
+              onChange={e => this.setState({ numberOfProducts: e.target.value })}
+            />
+          </label>
+          <button type="submit">Submit</button>
+        </form>
         <div className="row">
           {loading && <div> Loading .... </div>}
-          {!loading && products.length === 0 && (
-            <div>There is no product now </div>
-          )}
+          {!loading && products.length === 0 && <div>There is no product now </div>}
 
-          {!loading &&
-            products.length &&
-            products.map(product => (
-              <Product product={product} key={product.id} />
-            ))}
+          {!loading && products.length && products.map(product => <Product product={product} key={product.id} />)}
         </div>
       </div>
     );
