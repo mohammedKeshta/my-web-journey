@@ -1,18 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-const style = {
-  backgroundColor: 'orange',
-  fontSize: '60px',
-  textAlign: 'center',
-  padding: '15px',
-  color: 'white'
-};
-const element = (
-  <div style={style}>
-    <h1 id="heading-element">Hello World!</h1>
-    <p>We'r glad your 're here</p>
-  </div>
-);
+ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(element, document.getElementById('root'));
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

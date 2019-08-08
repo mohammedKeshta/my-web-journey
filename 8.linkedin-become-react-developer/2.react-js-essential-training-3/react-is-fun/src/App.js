@@ -1,26 +1,64 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
 
-function App() {
+let skyData = {
+  total: 50,
+  powder: 20,
+  backCountry: 10,
+  goal: 100
+};
+
+class SkyDayCounter extends Component {
+  getPercent = decimal => decimal * 100 + '%';
+
+  calcGoalProgress(total, goal) {
+    return this.getPercent(total / goal);
+  }
+  render() {
+    const { total, powder, backCountry, goal } = this.props;
+    return (
+      <section>
+        <div>
+          <p>Total Days: {total} </p>
+        </div>
+        <div>
+          <p>Powder Days: {powder} </p>
+        </div>
+        <div>
+          <p>BackCountry Days: {backCountry} </p>
+        </div>
+        <div>
+          <p>Goal Progress Days: {this.calcGoalProgress(total, goal)} </p>
+        </div>
+      </section>
+    );
+  }
+}
+
+class Message extends Component {
+  render() {
+    const { message, color } = this.props;
+    return (
+      <div>
+        <h1 style={{ color, fontSize: '30px' }}>{message}</h1>
+      </div>
+    );
+  }
+}
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Message message="How are you" color="orange" />
+
+      <SkyDayCounter
+        total={skyData.total}
+        powder={skyData.powder}
+        backCountry={skyData.backCountry}
+        goal={skyData.goal}
+      />
     </div>
   );
-}
+};
 
 export default App;
