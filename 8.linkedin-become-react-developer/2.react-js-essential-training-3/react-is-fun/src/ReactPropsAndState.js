@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const bookList = [
   { title: 'The Sun Also Rises', author: 'Ernest Hemingway', page: 260 },
-  { title: 'White Teeth', author: 'Zadie Smith', page: 230 },
+  { title: 'White Teeth', author: 'Zadie Smith', page: 123 },
   { title: "Cat's Cradle", author: 'Kurt Vonnegut', page: 430 },
   { title: 'Johnny to center', author: 'Mohammed Elzanaty', page: 83 }
 ];
@@ -19,7 +20,7 @@ const NotHiring = () => (
   </div>
 );
 
-const Book = ({ title, author, pages, freeBookMark }) => {
+const Book = ({ title = 'No Title Provided', author = 'No Author Provided', pages = 0, freeBookMark = false }) => {
   return (
     <section>
       <h2>{title}</h2>
@@ -31,11 +32,16 @@ const Book = ({ title, author, pages, freeBookMark }) => {
 };
 
 class Library extends Component {
+  static defaultProps = {
+    bookList: [{ title: 'Hello From Here', author: 'Mohammed Elzanaty', page: 83 }]
+  };
+
   state = { open: true, freeBookMark: true, hiring: false };
 
   handleChangeClick = () => {
     this.setState(prevState => ({ open: !prevState.open }));
   };
+
   render() {
     const { bookList } = this.props;
     const { open, freeBookMark, hiring } = this.state;
@@ -43,22 +49,25 @@ class Library extends Component {
       <div>
         {hiring ? <Hiring /> : <NotHiring />}
         <h1>The Library is {open ? 'Opened' : 'Closed'}</h1>
-        <button onClick={this.handleChangeClick}>
-          {open ? 'Close' : 'Open'} Library
-        </button>
+        <button onClick={this.handleChangeClick}>{open ? 'Close' : 'Open'} Library</button>
         {bookList.map((book, index) => (
-          <Book
-            key={index}
-            title={book.title}
-            author={book.author}
-            pages={book.page}
-            freeBookMark={freeBookMark}
-          />
+          <Book key={index} title={book.title} author={book.author} pages={book.page} freeBookMark={freeBookMark} />
         ))}
       </div>
     );
   }
 }
+
+Library.propTypes = {
+  bookList: PropTypes.array
+};
+
+Book.propTypes = {
+  title: PropTypes.string,
+  author: PropTypes.string,
+  pages: PropTypes.number,
+  freeBookMark: PropTypes.bool
+};
 
 const ReactPropsAndState = () => {
   return (

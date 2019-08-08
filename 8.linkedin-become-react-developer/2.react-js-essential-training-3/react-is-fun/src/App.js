@@ -8,8 +8,8 @@ const App = () => {
   return (
     <div className="App">
       {/*<ReactComponent />*/}
-      {/*<ReactPropsAndState />*/}
-      <ReactAdditionalLibraryFeature />
+      <ReactPropsAndState />
+      {/*<ReactAdditionalLibraryFeature />*/}
     </div>
   );
 };
