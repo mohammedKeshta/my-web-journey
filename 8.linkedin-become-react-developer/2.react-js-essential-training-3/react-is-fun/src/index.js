@@ -8,14 +8,11 @@ const style = {
   padding: '15px',
   color: 'white'
 };
-const element = React.createElement(
-  'h1',
-  {
-    className: 'title',
-    id: 'header',
-    style: style
-  },
-  'Hello World!'
+const element = (
+  <div style={style}>
+    <h1 id="heading-element">Hello World!</h1>
+    <p>We'r glad your 're here</p>
+  </div>
 );
 
 ReactDOM.render(element, document.getElementById('root'));
