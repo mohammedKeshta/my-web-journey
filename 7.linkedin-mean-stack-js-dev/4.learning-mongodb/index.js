@@ -21,7 +21,9 @@ const init = async tours => {
         return new Promise(resolve => {
           const findObject = {};
           for (let key in request.query) {
-            findObject[key] = request.query[key];
+            if (request.query.hasOwnProperty(key)) {
+              findObject[key] = request.query[key];
+            }
           }
           tours.find(findObject).toArray((error, tours) => {
             resolve(tours);
@@ -33,7 +35,13 @@ const init = async tours => {
     {
       method: "POST",
       path: "/api/tours",
-      handler: (request, reply) => {}
+      handler: (request, reply) => {
+        return new Promise(resolve => {
+          tours.insertOne(request.payload, (err, tour) => {
+            resolve(tour);
+          });
+        });
+      }
     },
     // Get a single tour
     {
@@ -41,12 +49,9 @@ const init = async tours => {
       path: "/api/tours/{name}",
       handler: (request, reply) => {
         return new Promise(resolve => {
-          tours.findOne(
-            { tourName: request.params.name },
-            (mongoError, tours) => {
-              resolve(tours);
-            }
-          );
+          tours.findOne({ tourName: request.params.name }, (mongoError, tours) => {
+            resolve(tours);
+          });
         });
       }
     },
@@ -54,13 +59,36 @@ const init = async tours => {
     {
       method: "PUT",
       path: "/api/tours/{name}",
-      handler: (request, reply) => {}
+      handler: (request, reply) => {
+        return new Promise(resolve => {
+          if (request.query.replace) {
+            request.payload.tourName = request.params.name;
+            tours.replaceOne({ tourName: request.params.name }, request.payload, (err, tours) => {
+              tours.findOne({ tourName: request.params.name }, (mongoError, tours) => {
+                resolve(tours);
+              });
+            });
+          } else {
+            tours.updateOne({ tourName: request.params.name }, { $set: request.payload }, (err, tours) => {
+              tours.findOne({ tourName: request.params.name }, (mongoError, tours) => {
+                resolve(tours);
+              });
+            });
+          }
+        });
+      }
     },
     // Delete a single tour
     {
       method: "DELETE",
       path: "/api/tours/{name}",
-      handler: (request, reply) => {}
+      handler: (request, reply) => {
+        return new Promise(resolve => {
+          tours.deleteOne({ tourName: request.params.name }, (err, result) => {
+            resolve("Deleted");
+          });
+        });
+      }
     },
     // Home page
     {

@@ -43,10 +43,7 @@ server.route([
     path: "/api/tours/{name}",
     config: { json: { space: 2 } },
     handler: function(request, reply) {
-      collection.findOne({ tourName: request.params.name }, function(
-        error,
-        tour
-      ) {
+      collection.findOne({ tourName: request.params.name }, function(error, tour) {
         assert.equal(null, error);
         reply(tour);
       });
@@ -60,31 +57,17 @@ server.route([
       if (request.query.replace == "true") {
         request.payload.tourName = request.params.name;
         console.log(request.payload);
-        collection.replaceOne(
-          { tourName: request.params.name },
-          request.payload,
-          function(error, results) {
-            collection.findOne({ tourName: request.params.name }, function(
-              error,
-              results
-            ) {
-              reply(results);
-            });
-          }
-        );
+        collection.replaceOne({ tourName: request.params.name }, request.payload, function(error, results) {
+          collection.findOne({ tourName: request.params.name }, function(error, results) {
+            reply(results);
+          });
+        });
       } else {
-        collection.updateOne(
-          { tourName: request.params.name },
-          { $set: request.payload },
-          function(error, results) {
-            collection.findOne({ tourName: request.params.name }, function(
-              error,
-              results
-            ) {
-              reply(results);
-            });
-          }
-        );
+        collection.updateOne({ tourName: request.params.name }, { $set: request.payload }, function(error, results) {
+          collection.findOne({ tourName: request.params.name }, function(error, results) {
+            reply(results);
+          });
+        });
       }
     }
   },
@@ -93,10 +76,7 @@ server.route([
     method: "DELETE",
     path: "/api/tours/{name}",
     handler: function(request, reply) {
-      collection.deleteOne({ tourName: request.params.name }, function(
-        error,
-        results
-      ) {
+      collection.deleteOne({ tourName: request.params.name }, function(error, results) {
         reply().code(204);
       });
     }
