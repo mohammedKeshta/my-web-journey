@@ -14,3 +14,11 @@
    
    * Run Query without index  ` db.COLLECTION_NAME.find({"key": value}).explain("executionStats")`
    * Add Indexes  `db.COLLECTION_NAME.createIndex({key: value})`
+   * If you want to get data from 2 collections 
+   
+            const movieName = "The Avengers"
+            const movieObj = db.movies.findOne({_id: movieName})
+            movieObj.cast = []
+            const personArray = db.people.find({movies: movieName})
+            personArray.forEach( person => { movieObj.cast.push(person) });
+            movieObj
