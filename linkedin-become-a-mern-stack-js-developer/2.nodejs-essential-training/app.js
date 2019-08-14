@@ -1,4 +1,4 @@
-const {inc, getCount} = require('./myModule');
+const { inc, getCount } = require("./myModule");
 
 inc();
 inc();
