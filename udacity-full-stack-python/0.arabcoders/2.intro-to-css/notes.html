@@ -37,6 +37,22 @@
             font-weight: bold;
             border-left: 3px solid #02b3e4;
         }
+
+        #example-1 p {
+            color: red;
+        }
+
+        #example-1 ol {
+            display: flex;
+        }
+
+        #example-1 li {
+            margin: 20px;
+        }
+
+        #example-2 p.text-center {
+            text-align: center
+        }
     </style>
 </head>
 <body>
@@ -46,23 +62,59 @@
 
         <ul class="general-bullets">
             <li>
-                <em class="tag"><code>&lt;img&gt;</code></em> — <strong>Images</strong>
+                <em class="tag"><code>&lt;Notes&gt;</code></em> — <strong>General</strong>
                 <ol>
-                    <li>Needs a src attribute with a URL, and an alt attribute with descriptive text.
-                    <li>To create an image that is a link, put an <code>img</code> element between the open and close
-                        tags of an <code>a</code> element, for instance:
-                        <code>&lt;a href="https://google.com"&gt;&lt;img src="glogo.png"
-                            alt="Google!"&gt;&lt;/a&gt;</code>
-                    <li>Ex. <code>&lt;img src="https://fakeurl.example.net/fish.png" alt="Alternative Text"&gt;</code>
+                    <li>We can apply style to HTML elements by 2 ways <em>
+                        <mark>style attribute</mark>
+                    </em> | <em>
+                        <mark>style element</mark>
+                    </em>
+                    <li>With the quotes gone and a space added, the editor thinks that <code>property:value;</code> is
+                        an attribute, just like <code>style</code>.
                 </ol>
             </li>
 
         </ul>
     </div>
     <div class="seven columns">
+        <!-- Example 2 -  Inline Style -->
+        <div id="example-2">
+            <h4 class="title">Inline Style</h4>
+            <p style="color: red;">Make me red!</p>
+            <p style="color: green;">Make me green!</p>
+            <p style="color: blue;">Make me blue!</p>
 
-        <!-- Example 1 -  -->
-        <!-- <h4 class="title"></h4>-->
+            <p style="text-align: center;">This is a haiku</p>
+            <p style="text-align:center;"> So I want each line centered</p>
+            <p style="text-align: center;">Let’s make it stylish</p>
+
+            <p class="text-center">This is a haiku</p>
+            <p class="text-center">So I want each line centered</p>
+            <p class="text-center">Let’s make it stylish</p>
+
+            <p style="color: darkblue; text-align:center; text-transform: uppercase;">Hello world!</p>
+            <!-- Remove quotes from style value -->
+            <p style=color:blue;text-align:center;>Hello!</p>
+
+            <p style="font-size:24pt;">I <em style=color:red;>love</em> CSS!</p>
+        </div>
+        <hr>
+        <!-- Example 1 -  Trees to boxes -->
+        <div id="example-1">
+            <h4 class="title"> Trees to boxes</h4>
+            <p>These are some red red words.</p>
+            <ol>
+                <li>Apple apple berry berry sauce sauce sauce.<br>
+                    Cook it on the stove and serve it to your boss.
+                <li>Betty bought a bit of butter,
+                    but the butter's burning bitter.<br>
+                <li>Crisp cookies claim Charlie's cookout crown.<br> Clever Clara
+                    clocked the crows at <em>c</em> (clearly connivance!)
+                <li>Daring drivers drove down Devil's Ditch in Dodges.
+                <li>Evil eggs explode everywhere. Eww!
+            </ol>
+        </div>
+
     </div>
 </div>
 </body>
