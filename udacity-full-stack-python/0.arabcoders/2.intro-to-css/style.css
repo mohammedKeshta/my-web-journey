@@ -1,0 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 3rem;
+}
+
+h4.title {
+    color: #02b3e4 !important;
+}
+
+ul {
+    padding: 0;
+}
+
+ul.general-bullets > li {
+    margin: 10px 0;
+    list-style: none;
+}
+
+em.tag {
+    color: #02b3e4;
+    padding: 2px 8px;
+    font-weight: bold;
+    border-left: 3px solid #02b3e4;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background: -webkit-gradient(linear, left top, right top, from(#fce4ed), to(#ffe8cc));
+    background: linear-gradient(to right, #fce4ed, #ffe8cc);
+}
+
+#example-1 p {
+    color: red;
+}
+
+#example-1 ol {
+    display: flex;
+}
+
+#example-1 li {
+    margin: 20px;
+}
+
+#example-2 p.text-center {
+    text-align: center
+}
+
+#example-3 .special {
+    color: purple;
+}
+
+#example-3 p {
+    font-style: italic;
+}
+
+#example-4 li {
+    font-size: 1.5em;
+}
+
+#example-4 li.done {
+    text-decoration: line-through;
+}
+
+#example-4 li.highlight {
+    background-color: yellow;
+    font-weight: bold;
+    color: red;
+}
+
+#example-5 .blue_box {
+    border: 10px solid blue;
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 150px;
+    height: 100px;
+    float: right;
+}
+
+#example-5 .red_box {
+    border: 10px solid red;
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 20px;
+    height: 20px;
+    float: right;
+}
