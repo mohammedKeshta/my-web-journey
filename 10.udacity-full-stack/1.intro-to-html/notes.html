@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Milestone One - Into to HTML</title>
-    <meta name="description" content="">
+    <title>My Notes</title>
+    <meta name="description" content="Notes On HTML">
     <meta name="author" content="Mohammed Elzanaty">
 
     <!-- Mobile Specific Metas
@@ -26,7 +26,7 @@
             padding: 0;
         }
 
-        li {
+        ul.general-bullets > li {
             margin: 10px 0;
             list-style: none;
         }
@@ -41,32 +41,65 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="four columns">
 
-        <ul>
+    <div class="five columns">
+
+        <ul class="general-bullets">
             <li>
-                <em class="tag"><code>&lt;em&gt; & &lt;strong&gt;</code></em>
+                <em class="tag"><code>&lt;img&gt;</code></em> — <strong>Images</strong>
                 <ol>
-                    <li>
-                        <p>Tag marks text that has stress emphasis which traditionally means that the text is displayed
-                            in
-                            italics
-                            by
-                            the browser.</p>
+                    <li>Needs a src attribute with a URL, and an alt attribute with descriptive text.
+                    <li>To create an image that is a link, put an <code>img</code> element between the open and close
+                        tags of an <code>a</code> element, for instance:
+                        <code>&lt;a href="https://google.com"&gt;&lt;img src="glogo.png"
+                            alt="Google!"&gt;&lt;/a&gt;</code>
+                    <li>Ex. <code>&lt;img src="https://fakeurl.example.net/fish.png" alt="Alternative Text"&gt;</code>
+
+                </ol>
+            </li>
+            <li>
+                <em class="tag"><code>&lt;a&gt;</code></em> — <strong>Hyperlinks.</strong>
+                <ol>
+                    <li>Needs an href attribute with a URL.</li>
+                    <li><code>a</code> element is an <strong>inline</strong> element. It doesn't create a box on the
+                        page. Links normally have the appearance of a specially highlighted piece of text.
+                    <li>Ex. <code>&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;</code>
+
+                </ol>
+            </li>
+            <li>
+                <em class="tag"><code>&lt;ul&gt;</code> & <code>&lt;ol&gt;</code> & <code>&lt;li&gt;</code></em> —
+                <strong>Unordered and ordered lists.</strong>
+                <ol>
+                    <li> By default, ul lists are displayed with bullet points, and ol lists with numbered items.
+                    <li>The li element has to be nested inside a ul or ol list; it can't occur on its own.
+                    <li><code>ul</code> for unordered list and <code>ol</code> is for ordered list
+                    <li>The closing tag on the li element is optional. So you can include them or leave them off and it
+                        will work the same either way.
+                    <li>Pay attention to the fact that the closing tag is optional for <code>li</code>, but not optional
+                        for <code>ol</code> and <code>ul</code>.
+                </ol>
+            </li>
+            <li>
+                <em class="tag"><code>&lt;em&gt; & &lt;strong&gt;</code></em> — <strong>Emphasis</strong>
+                <ol>
+                    <li> Tag marks text that has stress emphasis which traditionally means that the text is displayed
+                        in
+                        italics
+                        by
+                        the browser.
                     </li>
-                    <li>
-                        <p>Any text editor that uses <strong>plain text</strong> should work. Code editors use plain
-                            text
-                            <em>and</em> have extra features to make your life easier (such as <em>syntax
-                                highlighting</em>).
-                            But
-                            stay away from <strong>word processors</strong> for HTML and programming — these add extra
-                            data
-                            that can
-                            break your code!</p>
+                    <li> Any text editor that uses <strong>plain text</strong> should work. Code editors use plain
+                        text
+                        <em>and</em> have extra features to make your life easier (such as <em>syntax
+                            highlighting</em>).
+                        But
+                        stay away from <strong>word processors</strong> for HTML and programming — these add extra
+                        data
+                        that can
+                        break your code!
                     </li>
-                    <li>
-                        By default, text inside &lt;em&gt; is displayed as <em>italic</em>, and text in &lt;strong&gt;
+                    <li> By default, text inside &lt;em&gt; is displayed as <em>italic</em>, and text in &lt;strong&gt;
                         is
                         displayed as
                         <strong>boldface</strong>.
@@ -75,18 +108,22 @@
 
             </li>
             <li>
-                <em class="tag"><code>&lt;p&gt;</code></em>
-                <p><strong>Paragraph</strong> Text in a paragraph is separated visually from other paragraphs by a small
+                <em class="tag"><code>&lt;p&gt;</code></em> — <strong>Paragraph</strong>
+                <p>A line break does not create a new paragraph; it only marks the end of a line.</p>
+                <p> Text in a paragraph is separated visually from other paragraphs by a small
                     margin.</p>
+                <p>The <code>p</code> element is an element for which the closing tag is optional.
+                <p>When you leave off an optional closing tag, it is still implied—that is, the browser will figure out
+                    where the element should be closed, even though you didn't explicitly tell it.
             </li>
             <li>
-                <em class="tag"><code>&lt;br&gt;</code></em>
-                <p><strong> Line break. (empty)</strong> A line break does not create a new paragraph; it only marks the
+                <em class="tag"><code>&lt;br&gt;</code></em> — <strong> Line break. (empty)</strong>
+                <p>A line break does not create a new paragraph; it only marks the
                     end
                     of a line</p>
             </li>
             <li>
-                <em class="tag"><code>&lt;sub&gt; & &lt;sup&gt;</code></em>
+                <em class="tag"><code>&lt;sub&gt; & &lt;sup&gt;</code></em> — <strong>Subscript and superscript</strong>
                 <p><code>sub</code> and <code>sup</code> stand for "subscript" and "superscript". Originally, HTML
                     started
                     out as a tool for scientific and academic work; and these are really useful for science and math,
@@ -94,26 +131,71 @@
                     writing x<sup>2</sup>+3x+4 = 1 or chemical formulas like H<sub>2</sub>O.</p>
             </li>
             <li>
-                <em class="tag"><code>&lt;mark&gt;</code></em>
-                <p><strong>Highlighting.</strong> Not very often used, but it's
+                <em class="tag"><code>&lt;mark&gt;</code></em> — <strong>Highlighting.</strong>
+                <p>Not very often used, but it's
                     <mark>kind of cool</mark>
                 </p>
             </li>
             <li>
-                <em class="tag"><code>&lt;h1&gt;</code> -> <code>&lt;h6&gt;</code></em>
+                <em class="tag"><code>&lt;h1&gt;</code> -> <code>&lt;h6&gt;</code></em> — <strong>Headings</strong>
                 <p>Elements for headlines or section headings, starting with
                     <code>&lt;h1&gt;</code> for the largest headlines and going down to <code>&lt;h6&gt;</code> for the
                     smallest.</p>
             </li>
 
             <li>
-                <em class="tag"><code>div</code> </em> Stand For <strong>Division</strong>
+                <em class="tag"><code>div</code> </em> — <strong>Division</strong>
                 <p>Use it to divide up the page into different sections.</p>
             </li>
 
         </ul>
     </div>
-    <div class="eight columns">
+    <div class="seven columns">
+
+        <!-- Example 10 - Validating HTML -->
+        <h4 class="title">Don't Forget to check Validating HTML</h4>
+        <a href="https://validator.w3.org/">Validator</a>
+        <hr>
+        <!-- Example 9 Images -->
+        <h4 class="title">Images</h4>
+        <a href="https://placebear.com">
+            <img src="https://placebear.com/200/100" alt="bear">
+        </a>
+        <hr/>
+        <!-- Example 8 Nested Lists -->
+        <h4 class="title">Nested Lists</h4>
+        <p style="color: darkgrey">Here is an example of a nested list:</p>
+        <ul>
+            <li>Mammals
+                <ol>
+                    <li>Raccoons
+                    <li>Gorillas
+                </ol>
+            <li>Reptiles
+                <ol>
+                    <li>Iguanas
+                    <li>Cobras
+                </ol>
+            <li>Birds
+                <ol>
+                    <li>Ostriches
+                    <li>Ravens
+                </ol>
+        </ul>
+        <p>Indentation can help show the nested structure of the elements.</p>
+        <p>It can also make the code <em>much</em> easier to read!</p>
+        <hr/>
+        <!-- Example 7 Lists and implied close tags -->
+        <h4 class="title">Lists and implied close tags</h4>
+        <ol>
+            <li>Learn HTML.
+            <li>Learn CSS.
+            <li>Learn Python.
+            <li> Save the world.
+        </ol>
+        <p><strong> This line should not be part of the list! (But it will be, if you forget to put a closing
+            tag!)</strong></p>
+        <hr/>
         <!-- Example 6 Element Review 1 -->
         <h4 class="title">Element Review 1</h4>
         <h1> My chemistry notes </h1>
