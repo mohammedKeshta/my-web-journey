@@ -40,10 +40,7 @@ server.route([
     path: "/api/tours/{name}",
     config: { json: { space: 2 } },
     handler: function(request, reply) {
-      collection.findOne({ tourName: request.params.name }, function(
-        error,
-        tour
-      ) {
+      collection.findOne({ tourName: request.params.name }, function(error, tour) {
         assert.equal(null, error);
         reply(tour);
       });
