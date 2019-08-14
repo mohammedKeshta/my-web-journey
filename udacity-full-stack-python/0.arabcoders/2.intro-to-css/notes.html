@@ -53,6 +53,28 @@
         #example-2 p.text-center {
             text-align: center
         }
+
+        #example-3 .special {
+            color: purple;
+        }
+
+        #example-3 p {
+            font-style: italic;
+        }
+
+        #example-4 li {
+            font-size: 1.5em;
+        }
+
+        #example-4 li.done {
+            text-decoration: line-through;
+        }
+
+        #example-4 li.highlight {
+            background-color: yellow;
+            font-weight: bold;
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -71,12 +93,68 @@
                     </em>
                     <li>With the quotes gone and a space added, the editor thinks that <code>property:value;</code> is
                         an attribute, just like <code>style</code>.
+                    <li> ID must be unique on the page.
+                    <li><strong>Selectors</strong> are one part of the CSS ruleset. They indicate which HTML element(s)
+                        the rule is for.
+                    <li><strong>Declaration blocks</strong> are the other part of the CSS ruleset, they say how the rule
+                        will modify the elements indicated by selectors.
+                    <li> CSS <strong>rules</strong> are composed of a selector followed by a declaration block.
+                    <li><strong>Type</strong> is the simplest kind of selector. It indicates the name of one type of
+                        HTML element (such as em or li).
+                    <li><strong>Class</strong> in HTML is an attribute that groups elements together that you want to
+                        have the same style.
+                    <li><strong>ID</strong> is an attribute that must be unique to a single element, used to identify
+                        it.
                 </ol>
+            </li>
+            <li>
+                <em class="tag"><strong>Type Selector</strong></em>
+                <ol>
+                    <li>Type Selector <code>p { color: white } </code>
+                    <li>Class & ID Selector <code>.follow-class { color: white } </code> or
+                        <mark>ID</mark>
+                        <code>#follow-id { color: white } </code>
+                    <li>Descendent (Combining) Selector <code>li em { color: white } </code>
+                </ol>
+            </li>
+            <li>
+                <em class="tag">DOM</em> — <strong>Document Object Model</strong>
+                It's a tree structure with a node for each HTML element, piece of text, image, and
+                any other object in the web page.
             </li>
 
         </ul>
     </div>
     <div class="seven columns">
+        <!-- Example 4 -  To-do  -->
+        <div id="example-4">
+            <h4 class="title">To-do</h4>
+
+            <h1>To-do:</h1>
+            <ul>
+                <li class="done">Buy milk
+                <li>Buy eggs
+                <li class="done">Buy flour
+                <li class="highlight done">Make waffles
+                <li>Do laundry
+                <li class="highlight">Learn to code
+                <li class="highlight">Build a robot
+            </ul>
+        </div>
+        <hr>
+
+        <!-- Example 3 -  Inline Style -->
+        <div id="example-3">
+            <h4 class="title">Selectors review</h4>
+
+            <h1 class="special">This header is special</h1>
+            <p>A nice paragraph in italics.</p>
+            <h1>This header isn't so special.</h1>
+            <p>And this paragraph will be in italics too!</p>
+            <p id="important-information">This paragraph needs to be italicized and bolded!</p>
+
+        </div>
+        <hr>
         <!-- Example 2 -  Inline Style -->
         <div id="example-2">
             <h4 class="title">Inline Style</h4>
