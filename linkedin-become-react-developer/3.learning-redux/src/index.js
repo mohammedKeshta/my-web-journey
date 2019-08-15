@@ -1,15 +1,18 @@
-import CONSTANTS from "./redux/constants/action-types";
-import { allSkiDays, goal } from "./initialState.json";
+import { SET_GOAL } from "./redux/constants/action-types";
+import rootReducer from "./redux/reducers";
+
+const INIT_STATE = { goal: 10 };
+
+const action = {
+  type: SET_GOAL,
+  payload: 15
+};
+const nextState = rootReducer(INIT_STATE, action);
 
 console.log(`
 
-   Ski Day Counter
-   ================
-   The goal is ${goal} days 
-   Initially there are ${allSkiDays.length} ski days in state 
-
-   Constants (actions)
-   -------------------
-   ${Object.keys(CONSTANTS).join("\n     ")}
+    initial goal: ${INIT_STATE.goal}
+    action: ${JSON.stringify(action)}
+    new goal: ${nextState.goal}
 
 `);
