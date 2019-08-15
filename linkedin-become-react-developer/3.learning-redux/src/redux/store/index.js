@@ -1,19 +1,31 @@
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
 import rootReducer from '../reducers';
 import { ADD_DAY } from '../constants/action-types';
 
-const store = createStore(rootReducer);
+const consoleMessages = store => next => action => {
+  let result;
 
-store.subscribe(() => console.log(store.getState()));
+  console.groupCollapsed(`dispatching action => ${action.type}`);
+  console.log('ski days', store.getState().allSkiDays.length);
+  result = next(action);
 
-store.dispatch({
-  type: ADD_DAY,
-  payload: {
-    resort: 'Mt Shasta',
-    date: '2016-10-28',
-    powder: false,
-    backcountry: true
-  }
-});
+  let { allSkiDays, goal, errors, resortNames } = store.getState();
+
+  console.log(`
+
+		ski days: ${allSkiDays.length}
+		goal: ${goal}
+		fetching: ${resortNames.fetching}
+		suggestions: ${resortNames.suggestions}
+		errors: ${errors.length}
+
+	`);
+
+  console.groupEnd();
+
+  return result;
+};
+
+const store = applyMiddleware(consoleMessages)(createStore)(rootReducer);
 
 export default store;
