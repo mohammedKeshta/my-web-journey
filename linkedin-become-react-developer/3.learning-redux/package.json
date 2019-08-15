@@ -1,15 +1,42 @@
 {
-  "name": "3.learning-redux",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "start": "./node_modules/.bin/babel-node ./src/"
+  "name": "redux-basics",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1",
+    "uuid": "^3.3.2"
   },
-  "author": "Mohammed Elzanaty",
-  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "semi": true
+  },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4"
   }
 }

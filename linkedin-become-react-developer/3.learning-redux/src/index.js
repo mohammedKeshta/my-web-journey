@@ -1,18 +1,13 @@
-import { SET_GOAL } from "./redux/constants/action-types";
-import rootReducer from "./redux/reducers";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-const INIT_STATE = { goal: 10 };
+ReactDOM.render(<App />, document.getElementById('root'));
 
-const action = {
-  type: SET_GOAL,
-  payload: 15
-};
-const nextState = rootReducer(INIT_STATE, action);
-
-console.log(`
-
-    initial goal: ${INIT_STATE.goal}
-    action: ${JSON.stringify(action)}
-    new goal: ${nextState.goal}
-
-`);
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
