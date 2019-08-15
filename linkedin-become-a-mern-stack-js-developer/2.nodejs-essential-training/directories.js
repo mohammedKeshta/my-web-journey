@@ -12,11 +12,10 @@ if (!fs.existsSync(DIR_NAME)) {
 }
 
 // Rename Directory
-fs.renameSync(`./${DIR_NAME}`, './storage');
+fs.renameSync(`./${DIR_NAME}`, "./storage");
 
 // Delete Directory
-fs.rmdir('./storage', err => {
+fs.rmdir("./storage", err => {
   if (err) throw err;
-  console.log('Dir Deleted');
+  console.log("Dir Deleted");
 });
-

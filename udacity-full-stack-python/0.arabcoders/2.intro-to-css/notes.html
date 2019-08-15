@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Notes</title>
+    <meta name="description" content="Notes On CSS">
+    <meta name="author" content="Mohammed Elzanaty">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-fluid">
+
+    <div class="five columns">
+
+        <ul class="general-bullets">
+            <li>
+                <em class="tag">
+                    selector {
+                    property: value;
+                    }
+                </em>
+            </li>
+            <li>
+                <em class="tag">Notes</em> — <strong>General</strong>
+                <ol>
+                    <li>We can apply style to HTML elements by 2 ways <em>
+                        <mark>style attribute</mark>
+                    </em> | <em>
+                        <mark>style element</mark>
+                    </em>
+                    <li>With the quotes gone and a space added, the editor thinks that <code>property:value;</code> is
+                        an attribute, just like <code>style</code>.
+                    <li> ID must be unique on the page.
+                    <li><strong>Selectors</strong> are one part of the CSS ruleset. They indicate which HTML element(s)
+                        the rule is for.
+                    <li><strong>Declaration blocks</strong> are the other part of the CSS ruleset, they say how the rule
+                        will modify the elements indicated by selectors.
+                    <li> CSS <strong>rules</strong> are composed of a selector followed by a declaration block.
+                    <li><strong>Type</strong> is the simplest kind of selector. It indicates the name of one type of
+                        HTML element (such as em or li).
+                    <li><strong>Class</strong> in HTML is an attribute that groups elements together that you want to
+                        have the same style.
+                    <li><strong>ID</strong> is an attribute that must be unique to a single element, used to identify
+                        it.
+                    <li><strong>Cascading and specificity</strong>
+                        The term "cascading" in <em>Cascading Style Sheets</em> refers to the way that style
+                        properties "cascade" down the DOM tree, starting at the top. A style applied to the
+                        <code>body</code>
+                        element will affect the entire document. A style applied to a lower-level element will
+                        affect that element and all its descendants.
+                    <li> The <code>width</code> property only changes the width of the <strong>contents</strong>. The
+                        padding, border, and margin are not included in the width (so they add extra width around the
+                        sides of the box!).
+                    <li>The <code>font-variant</code> property allows you to change the targeted text to small caps.
+                        This property has been extended in CSS3.
+                    <li> The <code>em</code> and <code>strong</code>elements specify the meaning of their contents. In
+                        contrast, the CSS style properties are just specifying the visual appearance.
+                    <li>HTML indicates what the contents mean, while the CSS indicates how the contents should look. Web
+                        programmers refer to this as semantic markup — using markup to indicate meaning, not just
+                        appearance.
+                </ol>
+            </li>
+            <li>
+                <em class="tag"><strong>Type Selector</strong></em>
+                <ol>
+                    <li>Type Selector <code>p { color: white } </code>
+                    <li>Class & ID Selector <code>.follow-class { color: white } </code> or
+                        <mark>ID</mark>
+                        <code>#follow-id { color: white } </code>
+                    <li>Descendent (Combining) Selector <code>li em { color: white } </code>
+                </ol>
+            </li>
+            <li>
+                <em class="tag">DOM</em> — <strong>Document Object Model</strong>
+                It's a tree structure with a node for each HTML element, piece of text, image, and
+                any other object in the web page.
+            </li>
+
+            <li>
+                <em class="tag">font-family</em> — <strong>Generic Font Family</strong>
+                <ol>
+                    <li> serif
+                    <li> sans-serif
+                    <li> cursive
+                    <li> fantasy
+                    <li> monospace
+                </ol>
+            </li>
+
+        </ul>
+    </div>
+    <div class="seven columns">
+
+        <!-- Example 9 -  Tic Tac Toes  -->
+        <div id="example-10">
+            <h4 class="title">Tic Tac Toes</h4>
+            <div class="game-container">
+                <ul>
+                    <li>X
+                    <li>
+                    <li>O
+
+                    <li>
+                    <li>X
+                    <li>O
+
+                    <li>X
+                    <li>O
+                    <li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Example 8 -  Flex  -->
+        <div id="example-8">
+            <h4 class="title">Flex</h4>
+            <div class="container-boxes">
+                <div class="box red">red</div>
+                <div class="box green">green</div>
+                <div class="box yellow">yellow</div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Example 7 -  Containers  -->
+        <div id="example-7">
+            <h4 class="title">Containers</h4>
+            <div class="container-boxes">
+                <div class="box red">red</div>
+                <div class="box green">green</div>
+                <div class="box yellow">yellow</div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- Example 6 -  Fonts  -->
+        <div id="example-6">
+            <h4 class="title">Fonts</h4>
+            <h1>Fonts, fonts, fonts!</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Amet tellus cras adipiscing enim eu turpis egestas pretium. Eget aliquet nibh
+                praesent tristique magna sit amet purus gravida. Eu feugiat pretium nibh ipsum consequat. Massa enim nec
+                dui nunc mattis enim ut tellus elementum. Auctor augue mauris augue neque. Id volutpat lacus laoreet non
+                curabitur gravida arcu ac tortor. Placerat duis ultricies lacus sed turpis tincidunt. Egestas diam in
+                arcu cursus euismod quis viverra nibh cras. Orci dapibus ultrices in iaculis nunc sed. Pharetra sit amet
+                aliquam id. Tortor posuere ac ut consequat semper viverra. Tincidunt praesent semper feugiat nibh
+                sed.</p>
+        </div>
+        <hr>
+
+        <!-- Example 5 -  Floating boxes  -->
+        <div id="example-5">
+            <h4 class="title">Floating boxes</h4>
+
+            <div class="blue_box">
+                <div class="red_box"></div>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Mi sit amet mauris commodo. Vitae elementum curabitur vitae nunc sed velit
+                dignissim sodales ut. Volutpat est velit egestas dui id ornare arcu. Nulla facilisi nullam vehicula
+                ipsum a arcu cursus vitae congue. Porttitor lacus luctus accumsan tortor posuere ac ut consequat. Et
+                malesuada fames ac turpis. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Sed risus
+                ultricies tristique nulla. At auctor urna nunc id. Pharetra convallis posuere morbi leo. Quam quisque id
+                diam vel quam elementum pulvinar etiam. Eleifend donec pretium vulputate sapien nec sagittis aliquam
+                malesuada. Amet risus nullam eget felis eget nunc lobortis.</p>
+
+        </div>
+        <hr>
+
+        <!-- Example 4 -  To-do  -->
+        <div id="example-4">
+            <h4 class="title">To-do</h4>
+
+            <h1>To-do:</h1>
+            <ul>
+                <li class="done">Buy milk
+                <li>Buy eggs
+                <li class="done">Buy flour
+                <li class="highlight done">Make waffles
+                <li>Do laundry
+                <li class="highlight">Learn to code
+                <li class="highlight">Build a robot
+            </ul>
+        </div>
+        <hr>
+
+        <!-- Example 3 -  Inline Style -->
+        <div id="example-3">
+            <h4 class="title">Selectors review</h4>
+
+            <h1 class="special">This header is special</h1>
+            <p>A nice paragraph in italics.</p>
+            <h1>This header isn't so special.</h1>
+            <p>And this paragraph will be in italics too!</p>
+            <p id="important-information">This paragraph needs to be italicized and bolded!</p>
+
+        </div>
+        <hr>
+        <!-- Example 2 -  Inline Style -->
+        <div id="example-2">
+            <h4 class="title">Inline Style</h4>
+            <p style="color: red;">Make me red!</p>
+            <p style="color: green;">Make me green!</p>
+            <p style="color: blue;">Make me blue!</p>
+
+            <p style="text-align: center;">This is a haiku</p>
+            <p style="text-align:center;"> So I want each line centered</p>
+            <p style="text-align: center;">Let’s make it stylish</p>
+
+            <p class="text-center">This is a haiku</p>
+            <p class="text-center">So I want each line centered</p>
+            <p class="text-center">Let’s make it stylish</p>
+
+            <p style="color: darkblue; text-align:center; text-transform: uppercase;">Hello world!</p>
+            <!-- Remove quotes from style value -->
+            <p style=color:blue;text-align:center;>Hello!</p>
+
+            <p style="font-size:24pt;">I <em style=color:red;>love</em> CSS!</p>
+        </div>
+        <hr>
+        <!-- Example 1 -  Trees to boxes -->
+        <div id="example-1">
+            <h4 class="title"> Trees to boxes</h4>
+            <p>These are some red red words.</p>
+            <ol>
+                <li>Apple apple berry berry sauce sauce sauce.<br>
+                    Cook it on the stove and serve it to your boss.
+                <li>Betty bought a bit of butter,
+                    but the butter's burning bitter.<br>
+                <li>Crisp cookies claim Charlie's cookout crown.<br> Clever Clara
+                    clocked the crows at <em>c</em> (clearly connivance!)
+                <li>Daring drivers drove down Devil's Ditch in Dodges.
+                <li>Evil eggs explode everywhere. Eww!
+            </ol>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

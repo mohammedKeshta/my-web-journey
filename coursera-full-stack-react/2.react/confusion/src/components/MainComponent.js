@@ -1,14 +1,13 @@
-import React, {Component} from 'react';
-import {Redirect, Route, Switch, withRouter} from 'react-router-dom';
-import connect from "react-redux/es/connect/connect";
+import React, { Component } from 'react';
+import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
+import connect from 'react-redux/es/connect/connect';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Menu from './MenuComponent';
 import Contact from './ContactComponent';
-import DishDetail from "./DishdetailComponent";
-import About from "./AboutComponent";
-
+import DishDetail from './DishdetailComponent';
+import About from './AboutComponent';
 
 const mapStateToProps = state => {
   return {
@@ -20,9 +19,8 @@ const mapStateToProps = state => {
 };
 
 class Main extends Component {
-
   render() {
-    const {dishes, promotions, leaders, comments} = this.props;
+    const { dishes, promotions, leaders, comments } = this.props;
     const HomePage = () => (
       <div>
         <Home
@@ -33,28 +31,38 @@ class Main extends Component {
       </div>
     );
 
-    const DishWithId = ({match}) => {
+    const DishWithId = ({ match }) => {
       const currentDishId = +match.params.id;
       return (
         <DishDetail
           dish={dishes.filter(dish => dish.id === currentDishId)[0]}
-          comments={comments.filter(comment => comment.dishId === currentDishId)}
-        />);
+          comments={comments.filter(
+            comment => comment.dishId === currentDishId
+          )}
+        />
+      );
     };
-
 
     return (
       <div className="App">
-        <Header/>
+        <Header />
         <Switch>
-          <Route path="/home" component={HomePage}/>
-          <Route exact path="/menu" component={() => <Menu dishes={dishes}/>}/>
-          <Route path="/menu/:id" component={DishWithId}/>
-          <Route exact path="/contactus" component={Contact}/>
-          <Route exact path="/aboutus" component={() => <About leaders={leaders}/>}/>
-          <Redirect to="/home"/>
+          <Route path="/home" component={HomePage} />
+          <Route
+            exact
+            path="/menu"
+            component={() => <Menu dishes={dishes} />}
+          />
+          <Route path="/menu/:id" component={DishWithId} />
+          <Route exact path="/contactus" component={Contact} />
+          <Route
+            exact
+            path="/aboutus"
+            component={() => <About leaders={leaders} />}
+          />
+          <Redirect to="/home" />
         </Switch>
-        <Footer/>
+        <Footer />
       </div>
     );
   }

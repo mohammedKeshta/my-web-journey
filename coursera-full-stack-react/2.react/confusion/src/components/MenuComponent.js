@@ -1,5 +1,12 @@
 import React from 'react';
-import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import {
+  Card,
+  CardImg,
+  CardImgOverlay,
+  CardTitle,
+  Breadcrumb,
+  BreadcrumbItem
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const CardMenuItem = ({ dish }) => {
@@ -22,8 +29,12 @@ const Menu = ({ dishes }) => {
     <div className="container">
       <div className="row">
         <Breadcrumb tag="nav" listTag="div">
-          <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
-          <BreadcrumbItem active tag="span">Menu</BreadcrumbItem>
+          <BreadcrumbItem>
+            <Link to="/home">Home</Link>
+          </BreadcrumbItem>
+          <BreadcrumbItem active tag="span">
+            Menu
+          </BreadcrumbItem>
         </Breadcrumb>
         <div className="col-12">
           <h3>Menu</h3>
