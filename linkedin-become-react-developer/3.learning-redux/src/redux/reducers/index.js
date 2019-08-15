@@ -42,7 +42,7 @@ const INITIAL_STATE = {
 
 // Goal
 export const goal = (state = INITIAL_STATE.goal, action) =>
-  action.type === SET_GOAL ? parseInt(action.payload) : state.goal;
+  action.type === SET_GOAL ? parseInt(action.payload) : state;
 // All Ski Days
 export const allSkyDays = (state = INITIAL_STATE.allSkiDays, action) => {
   switch (action.type) {
