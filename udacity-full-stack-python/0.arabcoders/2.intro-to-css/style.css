@@ -92,10 +92,8 @@ em.tag {
     font: bold 16pt Consolas, "Courier New", Courier, monospace;
 }
 
-#example-7 .container-boxes {
-    float: right;
-}
-#example-7 .box{
+
+.box{
     width: 100px;
     height: 100px;
     text-align: center;
@@ -103,15 +101,47 @@ em.tag {
     font-weight: bold;
     font-family: sans-serif;
 }
-
-#example-7 .red{
+.box.red{
     background-color: red;
 }
 
-#example-7 .green{
+.box.green{
     background-color: green;
 }
 
-#example-7 .yellow{
+.box.yellow{
     background-color: yellow;
+}
+
+#example-7 .container-boxes {
+    float: right;
+}
+
+
+#example-8 .container-boxes {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid black;
+}
+
+
+.game-container ul {
+    width: 300px;
+    height: 300px   ;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-container ul li {
+    border: 1px solid black;
+    width: 90px;
+    height: 90px;
+    background-color: lightblue;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 80px;
+    list-style: none;
+    margin: 5px;
 }

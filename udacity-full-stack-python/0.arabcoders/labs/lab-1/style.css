@@ -1,0 +1,61 @@
+/* add your CSS here */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    width: 300px;
+    text-align: left;
+    min-height: 100%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    border-radius: 10px;
+    padding-bottom: .5em;
+    padding-top: .5em;
+}
+
+#container:hover {
+    box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16), 0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
+}
+
+/* Add Border */
+#container,
+#container #card {
+    border: 1px solid #DCDCDC;
+}
+
+#container #card {
+    padding: 0.5em;
+}
+
+#container h1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+}
+
+#container img {
+    width: 300px;
+    height: 300px;
+    padding-bottom: .8em;
+}
+
+
+#container #card.animal-info {
+    margin: 5px;
+}
+
+/* Interesting Fact */
+#container #card #interesting-fact {
+    font-style: italic;
+}
+
+/* List Information */
+#container #card ul#facts {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#container #card ul#facts li span {
+    font-weight: bold;
+}
