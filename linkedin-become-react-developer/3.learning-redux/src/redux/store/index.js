@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import rootReducer from '../reducers';
-import { ADD_DAY } from '../constants/action-types';
+import { addDay, removeDay, setGoal } from '../actions';
 
 const consoleMessages = store => next => action => {
   let result;
@@ -27,5 +27,9 @@ const consoleMessages = store => next => action => {
 };
 
 const store = applyMiddleware(consoleMessages)(createStore)(rootReducer);
+
+store.dispatch(addDay('Heavenly', '2019-8-15'));
+store.dispatch(removeDay('2019-8-15'));
+store.dispatch(setGoal(5));
 
 export default store;

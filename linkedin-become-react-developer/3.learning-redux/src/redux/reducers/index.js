@@ -44,13 +44,13 @@ const INITIAL_STATE = {
 export const goal = (state = INITIAL_STATE.goal, action) =>
   action.type === SET_GOAL ? parseInt(action.payload) : state;
 // All Ski Days
-export const allSkyDays = (state = INITIAL_STATE.allSkiDays, action) => {
+export const allSkiDays = (state = INITIAL_STATE.allSkiDays, action) => {
   switch (action.type) {
     case ADD_DAY:
       const HAS_DAY = state.some(skiDay => skiDay.date === action.payload.date);
       return HAS_DAY ? state : [...state, action.payload].sort((a, b) => new Date(b.date) - new Date(a.date));
     case REMOVE_DAY:
-      return state.filter(skiDay => skiDay !== action.payload);
+      return state.filter(skiDay => skiDay.date !== action.payload);
     default:
       return state;
   }
@@ -92,7 +92,7 @@ export const errors = (state = INITIAL_STATE.errors, action) => {
   }
 };
 const rootReducer = combineReducers({
-  allSkyDays,
+  allSkiDays,
   goal,
   errors,
   resortNames: combineReducers({ fetching, suggestions })
