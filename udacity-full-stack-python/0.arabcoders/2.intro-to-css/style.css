@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font: normal 14px 'Roboto', sans-serif;
     margin: 0;
     padding: 3rem;
 }
@@ -82,4 +82,36 @@ em.tag {
     width: 20px;
     height: 20px;
     float: right;
+}
+
+#example-6 h1 {
+    font: italic 28pt Impact, "Franklin Gothic Bold", "Arial Black", sans-serif;
+}
+
+#example-6 p {
+    font: bold 16pt Consolas, "Courier New", Courier, monospace;
+}
+
+#example-7 .container-boxes {
+    float: right;
+}
+#example-7 .box{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#example-7 .red{
+    background-color: red;
+}
+
+#example-7 .green{
+    background-color: green;
+}
+
+#example-7 .yellow{
+    background-color: yellow;
 }
