@@ -9,3 +9,7 @@
 * Creating middleware
 * Building action creators
 * Incorporating React components
+
+**_Articles_**
+
+- [React Redux Tutorial for Beginners: The Definitive Guide (2019)](https://www.valentinog.com/blog/redux/)

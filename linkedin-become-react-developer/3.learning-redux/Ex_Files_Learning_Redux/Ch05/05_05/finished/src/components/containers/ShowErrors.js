@@ -1,21 +1,22 @@
-import ShowErrors from '../ui/ShowErrors'
-import { clearError } from '../../actions'
-import { connect } from 'react-redux'
+import ShowErrors from "../ui/ShowErrors";
+import { clearError } from "../../actions";
+import { connect } from "react-redux";
 
 const mapStateToProps = state => {
-	return {
-		errors: state.errors
-	}
-}
+  return {
+    errors: state.errors
+  };
+};
 
 const mapDispatchToProps = dispatch => {
-	return {
-		onClearError(index) {
-			dispatch(
-				clearError(index)
-			)
-		}
-	}
-}
+  return {
+    onClearError(index) {
+      dispatch(clearError(index));
+    }
+  };
+};
 
-export default connect(mapStateToProps,mapDispatchToProps)(ShowErrors)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ShowErrors);

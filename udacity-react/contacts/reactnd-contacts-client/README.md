@@ -1323,7 +1323,7 @@ If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest
 ![VS Code Jest Preview](https://cloud.githubusercontent.com/assets/49038/20795349/a032308a-b7c8-11e6-9b34-7eeac781003f.png)
 
 <!--
-## Developing Components in Isolation
+## Developing components in Isolation
 
 Usually, in an app, you have a lot of UI components, and each of them has many different states.
 For an example, a simple button component could have following states:
