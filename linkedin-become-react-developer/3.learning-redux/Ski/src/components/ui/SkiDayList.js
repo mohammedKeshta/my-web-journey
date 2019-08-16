@@ -32,10 +32,10 @@ const SkiDayList = ({ days, filter, onRemoveDay = f => f }) => {
               <Link to="/list-days" style={!filter ? activeFilterStyle : null}>
                 All Days
               </Link>
-              <Link to="/list-days/powder" activeStyle={activeFilterStyle}>
+              <Link to="/list-days/powder" activestyle={activeFilterStyle}>
                 Powder Days
               </Link>
-              <Link to="/list-days/backcountry" activeStyle={activeFilterStyle}>
+              <Link to="/list-days/backcountry" activestyle={activeFilterStyle}>
                 Backcountry Days
               </Link>
             </td>

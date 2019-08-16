@@ -15,7 +15,7 @@ const App = () => (
       <ShowErrors />
       <Route exact path="/" component={SkiDayCount} />
       <Route path="/add-day" component={AddDayForm} />
-      <Route path="/list-days" component={SkiDayList} />
+      <Route exact path="/list-days" component={SkiDayList} />
       <Route path="/list-days/:filter" component={SkiDayList} />
       {/*<Route path="*" component={Whoops404} />*/}
       <GoalProgress />
