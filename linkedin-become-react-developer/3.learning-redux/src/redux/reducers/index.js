@@ -86,7 +86,7 @@ export const errors = (state = INITIAL_STATE.errors, action) => {
     case ADD_ERROR:
       return [...state, action.payload];
     case CLEAR_ERROR:
-      return state.filter((message, i) => i === action.payload);
+      return state.filter((message, i) => i !== action.payload);
     default:
       return state;
   }
