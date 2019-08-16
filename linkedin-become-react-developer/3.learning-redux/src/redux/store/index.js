@@ -49,7 +49,7 @@ store.dispatch(changeSuggestions(['One', 'Two', 'Three']));
 expect(store.getState().resortNames.suggestions).toEqual(['One', 'Two', 'Three']);
 console.log(` changeSuggestions() Action Creator Works!!!`);
 
-store.dispatch(clearSuggestions([]));
+store.dispatch(clearSuggestions());
 expect(store.getState().resortNames.suggestions).toEqual([]);
 console.log(` clearSuggestions() Action Creator Works!!!`);
 

@@ -23,4 +23,4 @@ export const clearError = errorMsgIndex => ({ type: CLEAR_ERROR, payload: errorM
 
 export const changeSuggestions = suggestions => ({ type: CHANGE_SUGGESTIONS, payload: suggestions });
 
-export const clearSuggestions = suggestions => ({ type: CLEAR_SUGGESTIONS, payload: suggestions });
+export const clearSuggestions = () => ({ type: CLEAR_SUGGESTIONS });
