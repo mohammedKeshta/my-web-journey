@@ -1,8 +1,19 @@
 import expect from 'expect';
 import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
-import { addDay, addError, removeDay, setGoal, clearError, changeSuggestions, clearSuggestions } from '../actions';
+import {
+  addDay,
+  addError,
+  removeDay,
+  setGoal,
+  clearError,
+  changeSuggestions,
+  clearSuggestions,
+  randomGoals,
+  suggestResortNames
+} from '../actions';
 
 const consoleMessages = store => next => action => {
   let result;
@@ -28,7 +39,7 @@ const consoleMessages = store => next => action => {
   return result;
 };
 
-const store = applyMiddleware(consoleMessages)(createStore)(rootReducer);
+const store = applyMiddleware(thunk, consoleMessages)(createStore)(rootReducer);
 
 store.dispatch(addDay('Heavenly', '2019-8-15'));
 store.dispatch(removeDay('2019-8-15'));
@@ -52,5 +63,17 @@ console.log(` changeSuggestions() Action Creator Works!!!`);
 store.dispatch(clearSuggestions());
 expect(store.getState().resortNames.suggestions).toEqual([]);
 console.log(` clearSuggestions() Action Creator Works!!!`);
+
+store.dispatch(randomGoals());
+expect(store.getState().resortNames.fetching).toEqual(true);
+console.log(` randomGoals() Action Creator Works!!! and Now Fetched`);
+
+setTimeout(() => {
+  expect(store.getState().resortNames.fetching).toEqual(false);
+  console.log(` randomGoals() Action Creator Works!!! and Fetched`);
+}, 1500);
+
+store.dispatch(suggestResortNames());
+store.dispatch(suggestResortNames('hea'));
 
 export default store;
