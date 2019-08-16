@@ -1,17 +1,26 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import './App.scss';
 
-const App = () => {
-  return (
-    <div className="row mt-5">
-      <div className="col-md-4 offset-md-1">
-        <h2>Articles</h2>
-      </div>
-      <div className="col-md-4 offset-md-1">
-        <h2>Add a new article</h2>
-      </div>
-    </div>
-  );
-};
+import Menu from './components/ui/Menu';
+import ShowErrors from './components/containers/ShowErrors';
+import GoalProgress from './components/containers/GoalProgress';
+import SkiDayCount from './components/containers/SkiDayCount';
+import AddDayForm from './components/containers/AddDayForm';
+import SkiDayList from './components/containers/SkiDayList';
 
+const App = () => (
+  <div className="app">
+    <Router>
+      <ShowErrors />
+      <Route exact path="/" component={SkiDayCount} />
+      <Route path="/add-day" component={AddDayForm} />
+      <Route path="/list-days" component={SkiDayList} />
+      <Route path="/list-days/:filter" component={SkiDayList} />
+      {/*<Route path="*" component={Whoops404} />*/}
+      <GoalProgress />
+      <Menu />
+    </Router>
+  </div>
+);
 export default App;

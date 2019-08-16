@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const resorts = require('./resort-names.json');
 const { port = 3333, delay = 0 } = require('minimist')(process.argv);
@@ -13,7 +14,8 @@ const logger = (req, res, next) => {
 const app = express()
   .use(logger)
   .use(cors())
-  .use('/', express.static('./dist/img'))
+  .use('/', express.static(path.join(__dirname, 'public')))
+  .get('/favicon.ico', (req, res) => res.sendStatus(204))
   .get('/resorts', (req, res) => res.status(200).json(resorts))
   .get('/resorts/:name', (req, res) =>
     setTimeout(() => res.status(200).json(resorts.filter(byName(req.params.name))), delay)

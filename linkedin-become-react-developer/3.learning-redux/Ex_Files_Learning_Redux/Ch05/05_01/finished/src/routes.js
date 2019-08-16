@@ -1,13 +1,12 @@
-import React from "react";
-import { Router, Route, IndexRoute, hashHistory } from "react-router";
-import { App, Whoops404 } from "./components";
-import SkiDayCount from "./components/containers/SkiDayCount";
-import AddDayForm from "./components/containers/AddDayForm";
-import SkiDayList from "./components/containers/SkiDayList";
+import React from 'react';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router-dom';
+import SkiDayCount from './components/containers/SkiDayCount';
+import AddDayForm from './components/containers/AddDayForm';
+import SkiDayList from './components/containers/SkiDayList';
 
 const routes = (
   <Router history={hashHistory}>
-    <Route path="/" component={App}>
+    <Route path="/">
       <IndexRoute component={SkiDayCount} />
       <Route path="add-day" component={AddDayForm} />
       <Route path="list-days" component={SkiDayList}>
