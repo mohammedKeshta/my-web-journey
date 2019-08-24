@@ -1,5 +1,5 @@
-import storeFactory from './store';
-import { randomGoals } from './actions';
+import storeFactory from "./store";
+import { randomGoals } from "./actions";
 
 const store = storeFactory();
 

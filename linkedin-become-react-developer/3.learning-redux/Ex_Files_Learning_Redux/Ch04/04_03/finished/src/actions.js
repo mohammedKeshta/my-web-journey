@@ -1,4 +1,4 @@
-import C from './constants';
+import C from "./constants";
 
 export function addDay(resort, date, powder = false, backcountry = false) {
   return {

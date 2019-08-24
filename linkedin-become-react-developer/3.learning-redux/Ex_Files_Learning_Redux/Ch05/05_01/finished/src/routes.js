@@ -1,8 +1,8 @@
-import React from 'react';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router-dom';
-import SkiDayCount from './components/containers/SkiDayCount';
-import AddDayForm from './components/containers/AddDayForm';
-import SkiDayList from './components/containers/SkiDayList';
+import React from "react";
+import { Router, Route, IndexRoute, hashHistory } from "react-router-dom";
+import SkiDayCount from "./components/containers/SkiDayCount";
+import AddDayForm from "./components/containers/AddDayForm";
+import SkiDayList from "./components/containers/SkiDayList";
 
 const routes = (
   <Router history={hashHistory}>
