@@ -5,6 +5,7 @@
     - Create an environment
        1. mkdir projectName
        2. cd projectName
+       3. py -3 -m venv venv
     - Activate the environment
        4. venv\Scripts\activate
     - Install Flask 
