@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+<h1>Forms</h1>
+{% endblock%}
+{% block body%}
+
+<form method="post" action="{{ url_for('hello')}}">
+
+  <label for="name">Username</label>
+  <input type="text" id="name" name="name" placeholder="Type in your username.." autocomplete="off" required />
+
+  <input type="submit" name="submit" value="Submit" />
+
+</form>
+{% endblock%}
+

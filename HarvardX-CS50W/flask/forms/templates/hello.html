@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+<h1>Name</h1>
+{% endblock%}
+{% block body%}
+{% if name %}
+<h4> Hello, {{name}}</h4>
+{% else %}
+<h4>Please Submit form first</h4>
+<a href="{{url_for('index')}}">Back</a>
+{%endif%}
+
+
+{% endblock%}
+
