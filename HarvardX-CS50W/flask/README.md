@@ -5,7 +5,6 @@
     - Create an environment
        1. mkdir projectName
        2. cd projectName
-       3. py -3 -m venv venv
     - Activate the environment
        4. venv\Scripts\activate
     - Install Flask 
@@ -13,7 +12,8 @@
        5. pip install Flask   
     - Run Project 
        6. set FLASK_APP=entry.py
-       7. python -m flask run
+       7. set FLASK_ENV=development
+       8. python -m flask run
 ## Notes 
  * **_venv_** — Creation of virtual environments
     - The venv module provides support for creating lightweight “virtual environments” with their own site directories, optionally isolated from system site directories. 
