@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
-engine = create_engine('postgres://postgres:m3l2o18#@localhost:5432')
+engine = create_engine('heroku pg:psql postgresql-tetrahedral-36991 --app read-guid-css50w')
 # Create Global Session
 db = scoped_session(sessionmaker(bind=engine))
 
