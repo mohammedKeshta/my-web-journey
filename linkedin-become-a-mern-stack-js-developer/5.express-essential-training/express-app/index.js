@@ -1,34 +1,47 @@
-import path from "path";
-import express, { json } from "express";
-import data from "./data/db";
+import path from 'path';
+import express, { json } from 'express';
+import data from './data/db';
 
 const app = express();
 const PORT = 3000;
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
   // get data first
   res.json(data);
 });
 
-app.get("/item/:id", (req, res) => {
-  if (req.params && req.params.id) {
-    let id = parseInt(req.params.id);
-    let item = (data || []).filter(item => item.id === id);
-    res.send(item);
+app.get(
+  '/item/:id',
+  (req, res, next) => {
+    if (req.params && req.params.id) {
+      let id = parseInt(req.params.id);
+      let item = (data || []).filter(item => item.id === id);
+      res.send(item);
+    }
+    next();
+  },
+  (req, res) => {
+    console.log('Did you get the rights data');
   }
-});
+);
 
-app.post("/newItem", (req, res) => {
+// Common Method
+app.get('/responseMethod', (res, req) => {
+  req.download('public/images/rocket.jpg');
+  // req.redirect('https://google.com');
+  // req.end(); /* end the response process*/
+});
+app.post('/newItem', (req, res) => {
   res.send(`<h1>A POST request with / route on port ${PORT}</h1>`);
 });
 
-app.put("/item", (req, res) => {
+app.put('/item', (req, res) => {
   res.send(`<h1>A PUT request with / route on port ${PORT}</h1>`);
 });
 
-app.delete("/item", (req, res) => {
+app.delete('/item', (req, res) => {
   res.send(`<h1>A DELETE request with / route on port ${PORT}</h1>`);
 });
 
