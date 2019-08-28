@@ -62,6 +62,12 @@ app
     res.send(`<h1>A DELETE request with / route on port ${PORT}</h1>`);
   });
 
+// Error Handling Function
+app.use((err, req, res, next) => {
+  console.log(err.status);
+  console.log(err.stackTrace);
+  res.sendStatus(500).send(`Red Alert ${err.stackTrace}`);
+});
 app.listen(PORT, () => {
   console.log(`your server is running on port ${PORT}`);
 });
