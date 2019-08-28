@@ -5,7 +5,8 @@
   "author": "Mohammed Elzanaty",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js"
+    "start": "nodemon ./index.js --exec babel-node -e js",
+    "debug": "set DEBUG=express:* & yarn start"
   },
   "dependencies": {
     "express": "^4.17.1",

@@ -1,10 +1,13 @@
-import path from 'path';
-import express, { Router } from 'express';
+import * as path from 'path';
+import express from 'express';
 import data from './data/db';
 import favicon from 'serve-favicon';
 
 const app = express();
 const PORT = 3000;
+
+// Install Proxy
+app.set('trust proxy', 'loopback'); // specify a single subnet
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
