@@ -1,5 +1,5 @@
 import path from "path";
-import express from "express";
+import express, { json } from "express";
 import data from "./data/db";
 
 const app = express();
@@ -10,6 +10,14 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   // get data first
   res.json(data);
+});
+
+app.get("/item/:id", (req, res) => {
+  if (req.params && req.params.id) {
+    let id = parseInt(req.params.id);
+    let item = (data || []).filter(item => item.id === id);
+    res.send(item);
+  }
 });
 
 app.post("/newItem", (req, res) => {
