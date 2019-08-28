@@ -1,11 +1,13 @@
 import path from 'path';
 import express, { Router } from 'express';
 import data from './data/db';
+import favicon from 'serve-favicon';
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 // Method to use json
 app.use(express.json());
 
