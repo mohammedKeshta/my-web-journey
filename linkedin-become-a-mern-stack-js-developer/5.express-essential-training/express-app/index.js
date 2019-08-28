@@ -1,23 +1,36 @@
 import path from 'path';
-import express, { json } from 'express';
+import express, { Router } from 'express';
 import data from './data/db';
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.static(path.join(__dirname, 'public')));
+// Method to use json
+app.use(express.json());
 
 app.get('/', (req, res) => {
   // get data first
   res.json(data);
 });
 
+// JSON data   =>   {"name": "mohammed"}
+// URL-ENCODED =>   name=mohammed
+app.post('/newItem', (req, res) => {
+  res.send(req.body);
+});
+
 app.get(
   '/item/:id',
   (req, res, next) => {
+    // this is the middleware that pull the data
     if (req.params && req.params.id) {
       let id = parseInt(req.params.id);
       let item = (data || []).filter(item => item.id === id);
+      // middleware tha uses the req Object
+      console.log(`Request from: ${req.originalUrl}`);
+      console.log(`Request type: ${req.method}`);
+      // everything above is a middleware
       res.send(item);
     }
     next();
