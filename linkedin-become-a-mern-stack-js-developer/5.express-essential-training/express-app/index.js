@@ -33,17 +33,21 @@ app.get('/responseMethod', (res, req) => {
   // req.redirect('https://google.com');
   // req.end(); /* end the response process*/
 });
-app.post('/newItem', (req, res) => {
-  res.send(`<h1>A POST request with / route on port ${PORT}</h1>`);
-});
 
-app.put('/item', (req, res) => {
-  res.send(`<h1>A PUT request with / route on port ${PORT}</h1>`);
-});
-
-app.delete('/item', (req, res) => {
-  res.send(`<h1>A DELETE request with / route on port ${PORT}</h1>`);
-});
+app
+  .route('/item')
+  .get((req, res) => {
+    res.send(`<h1>A GET request with / route on port ${PORT}</h1>`);
+  })
+  .post((req, res) => {
+    res.send(`<h1>A POST request with / route on port ${PORT}</h1>`);
+  })
+  .put((req, res) => {
+    res.send(`<h1>A PUT request with / route on port ${PORT}</h1>`);
+  })
+  .delete((req, res) => {
+    res.send(`<h1>A DELETE request with / route on port ${PORT}</h1>`);
+  });
 
 app.listen(PORT, () => {
   console.log(`your server is running on port ${PORT}`);
