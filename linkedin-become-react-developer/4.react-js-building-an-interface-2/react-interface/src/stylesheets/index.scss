@@ -108,45 +108,125 @@ footer {
   /* Likely future */
 }
 
-.item-list {
+/* Listpets */
+
+
+.search-pets {
+  width: 100%;
+  padding: 20px 20px 20px 60px;
+  background-image: url('../icons/search.svg');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 1.2em;
+  font-size: 1.2em;
+  border: 0;
+  outline: none;
+}
+
+
+.showing-pets {
+  text-align: center;
+  margin: 20px 0;
+}
+.showing-pets button {
+  color: blue;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.pets-list {
+  width: 100%;
+  margin: 0;
   padding: 0;
   list-style-type: none;
-  margin: 10px 5%;
-  font-size: 1rem;
+}
+.pet-list-item {
+  padding: 20px;
+  background: white;
+  display: flex;
+}
 
-  .pet-item {
-    border-bottom: 1px dotted gray;
-    padding-bottom: 10px;
+@media (min-width: 600px) {
+  .pet-list-item {
+    margin: 20px;
+    border: 1px solid #d5d8df;
+    border-radius: 4px;
+  }
+}
 
-    &:last-child {
-      border-bottom: none;
+.pet-avatar {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pet-details {
+  padding-left: 20px;
+  border-left: 1px solid #eee;
+
+  flex: 1;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h4 {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    color: #0f0f0f;
+    position: relative;
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      width: 9%;
+      height: 5px;
+      background: #00B7FF;
+      position: absolute;
+      left: 0;
+      bottom: 0;
     }
   }
-
-  .pet-name {
-    font-weight: 600;
-    color: #337ab7;
-    font-size: 1.3em;
-    line-height: 100%;
+  h5 {
+    color: #00B7FF;
+    font-weight: 500;
+  }
+  h6 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: lightgray;
+    margin: 0.4rem 0;
+  }
+  p {
+    margin: 0;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  .pet-info {
-    font-size: 1.7em;
-  }
+}
 
-  .label-item {
-    font-weight: 600;
-    color: #667B82;
-  }
-
-  .pet-delete {
-    font-size: 1.2em;
-  }
-
-  .apt-date {
-    font-style: italic;
-  }
-
-  .apt-notes {
-  }
+.pet-remove {
+  padding-left: 20px;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  background-image: url('../icons/cancel.svg');
+  background-size: 100% 100%;
+  border: 0;
+  color: black;
+  font-size: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
 }
