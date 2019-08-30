@@ -22,7 +22,7 @@ const HeaderComponent = () => (
           About
         </NavLink>
         <NavLink to="/articles" className="p-2 text-muted">
-          Article
+          Articles
         </NavLink>
       </nav>
     </div>
