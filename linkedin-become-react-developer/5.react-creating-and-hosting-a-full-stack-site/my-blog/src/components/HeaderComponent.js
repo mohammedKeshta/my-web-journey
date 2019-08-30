@@ -15,13 +15,13 @@ const HeaderComponent = () => (
 
     <div className="nav-scroller py-1 mb-2">
       <nav className="nav d-flex">
-        <NavLink to="/" className="p-2 text-muted" href="#">
+        <NavLink to="/" className="p-2 text-muted">
           Home
         </NavLink>
-        <NavLink to="/about" className="p-2 text-muted" href="#">
+        <NavLink to="/about" className="p-2 text-muted">
           About
         </NavLink>
-        <NavLink to="/article" className="p-2 text-muted" href="#">
+        <NavLink to="/articles" className="p-2 text-muted">
           Article
         </NavLink>
       </nav>
