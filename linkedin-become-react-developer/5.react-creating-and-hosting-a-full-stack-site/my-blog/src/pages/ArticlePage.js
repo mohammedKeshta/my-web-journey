@@ -1,6 +1,6 @@
 import * as React from "react";
 import ArticlesListComponent from "../components/ArticleListComponent";
-import articles from "../data/data";
+import articles from "../../../my-blog-backend/data/data";
 import { NavLink } from "react-router-dom";
 import moment from "moment";
 import FourOhFour from "./FourOhFour";

@@ -1,5 +1,5 @@
 import * as React from "react";
-import articles from '../data/data';
+import articles from '../../../my-blog-backend/data/data';
 import ArticlesListComponent from "../components/ArticleListComponent";
 
 const ArticlesListPage = () => (
