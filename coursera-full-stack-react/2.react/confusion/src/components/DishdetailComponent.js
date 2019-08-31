@@ -1,6 +1,13 @@
-import React from "react";
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import React from 'react';
+import {
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  Breadcrumb,
+  BreadcrumbItem
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const RenderComments = ({ comments }) => {
@@ -13,10 +20,10 @@ const RenderComments = ({ comments }) => {
           <p className="mb-0">{comment.comment}</p>
           <footer className="blockquote-footer">
             <cite title={comment.author}>{comment.author} , </cite>
-            {Intl.DateTimeFormat("en-US", {
-              year: "numeric",
-              month: "short",
-              day: "2-digit"
+            {Intl.DateTimeFormat('en-US', {
+              year: 'numeric',
+              month: 'short',
+              day: '2-digit'
             }).format(new Date(Date.parse(comment.date)))}
           </footer>
         </blockquote>
@@ -54,8 +61,9 @@ const DishDetail = ({ dish, comments }) => {
     <div className="container">
       <div className="row">
         <Breadcrumb>
-
-          <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
+          <BreadcrumbItem>
+            <Link to="/menu">Menu</Link>
+          </BreadcrumbItem>
           <BreadcrumbItem active>{dish.name}</BreadcrumbItem>
         </Breadcrumb>
         <div className="col-12">

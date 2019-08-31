@@ -1,6 +1,5 @@
 import UTILS from "../Helpers/UTILS";
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
 
 const StarMatch = () => {
   const [stars, setStarts] = useState(UTILS.random(1, 9));

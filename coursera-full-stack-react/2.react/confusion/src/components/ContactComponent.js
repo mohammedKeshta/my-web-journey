@@ -1,34 +1,40 @@
-import React, {Component} from 'react';
-import {Breadcrumb, BreadcrumbItem, Button, Col, Label, Row} from 'reactstrap';
-import {Link} from 'react-router-dom';
-import {Control, Errors, LocalForm} from 'react-redux-form';
+import React, { Component } from 'react';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Button,
+  Col,
+  Label,
+  Row
+} from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { Control, Errors, LocalForm } from 'react-redux-form';
 
-const required = (val) => val && val.length;
-const maxLength = (len) => (val) => !(val) || (val.length <= len);
-const minLength = (len) => (val) => val && (val.length >= len);
-const isNumber = (val) => !isNaN(Number(val));
-const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
+const required = val => val && val.length;
+const maxLength = len => val => !val || val.length <= len;
+const minLength = len => val => val && val.length >= len;
+const isNumber = val => !isNaN(Number(val));
+const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 class Contact extends Component {
-
-  handleSubmit = values =>  {
-
+  handleSubmit = values => {
     // eslint-disable-next-line no-console
     console.log(`Current State is: ${JSON.stringify(values)}`);
   };
 
   render() {
-
     return (
       <div className="container">
         <div className="row">
           <Breadcrumb>
-            <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+            <BreadcrumbItem>
+              <Link to="/home">Home</Link>
+            </BreadcrumbItem>
             <BreadcrumbItem active>Contact Us</BreadcrumbItem>
           </Breadcrumb>
           <div className="col-12">
             <h3>Contact Us</h3>
-            <hr/>
+            <hr />
           </div>
         </div>
 
@@ -40,16 +46,16 @@ class Contact extends Component {
             <h5>Our Address</h5>
             <address>
               121, Clear Water Bay Road
-              <br/>
+              <br />
               Clear Water Bay, Kowloon
-              <br/>
+              <br />
               HONG KONG
-              <br/>
-              <i className="fa fa-phone"/>: +852 1234 5678
-              <br/>
-              <i className="fa fa-fax"/>: +852 8765 4321
-              <br/>
-              <i className="fa fa-envelope"/>:{' '}
+              <br />
+              <i className="fa fa-phone" />: +852 1234 5678
+              <br />
+              <i className="fa fa-fax" />: +852 8765 4321
+              <br />
+              <i className="fa fa-envelope" />:{' '}
               <a href="mailto:confusion@food.net">confusion@food.net</a>
             </address>
           </div>
@@ -58,15 +64,23 @@ class Contact extends Component {
           </div>
           <div className="col-12 col-sm-11 offset-sm-1">
             <div className="btn-group" role="group">
-              <a role="button" className="btn btn-primary" href="tel:+85212345678">
-                <i className="fa fa-phone"/> Call
+              <a
+                role="button"
+                className="btn btn-primary"
+                href="tel:+85212345678"
+              >
+                <i className="fa fa-phone" /> Call
               </a>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a role="button" className="btn btn-info" href=''>
-                <i className="fa fa-skype"/> Skype
+              <a role="button" className="btn btn-info" href="">
+                <i className="fa fa-skype" /> Skype
               </a>
-              <a role="button" className="btn btn-success" href="mailto:confusion@food.net">
-                <i className="fa fa-envelope-o"/> Email
+              <a
+                role="button"
+                className="btn btn-success"
+                href="mailto:confusion@food.net"
+              >
+                <i className="fa fa-envelope-o" /> Email
               </a>
             </div>
           </div>
@@ -77,16 +91,23 @@ class Contact extends Component {
             <h3>Send us your Feedback</h3>
           </div>
           <div className="col-12 col-md-9">
-            <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
+            <LocalForm onSubmit={values => this.handleSubmit(values)}>
               <Row className="form-group">
-                <Label htmlFor="firstname" md={2}>First Name</Label>
+                <Label htmlFor="firstname" md={2}>
+                  First Name
+                </Label>
                 <Col md={10}>
-                  <Control.text model=".firstname" id="firstname" name="firstname"
-                                placeholder="First Name"
-                                className="form-control"
-                                validators={{
-                                  required, minLength: minLength(3), maxLength: maxLength(15)
-                                }}
+                  <Control.text
+                    model=".firstname"
+                    id="firstname"
+                    name="firstname"
+                    placeholder="First Name"
+                    className="form-control"
+                    validators={{
+                      required,
+                      minLength: minLength(3),
+                      maxLength: maxLength(15)
+                    }}
                   />
                   <Errors
                     className="text-danger"
@@ -101,14 +122,21 @@ class Contact extends Component {
                 </Col>
               </Row>
               <Row className="form-group">
-                <Label htmlFor="lastname" md={2}>Last Name</Label>
+                <Label htmlFor="lastname" md={2}>
+                  Last Name
+                </Label>
                 <Col md={10}>
-                  <Control.text model=".lastname" id="lastname" name="lastname"
-                                placeholder="Last Name"
-                                className="form-control"
-                                validators={{
-                                  required, minLength: minLength(3), maxLength: maxLength(15)
-                                }}
+                  <Control.text
+                    model=".lastname"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Last Name"
+                    className="form-control"
+                    validators={{
+                      required,
+                      minLength: minLength(3),
+                      maxLength: maxLength(15)
+                    }}
                   />
                   <Errors
                     className="text-danger"
@@ -123,14 +151,22 @@ class Contact extends Component {
                 </Col>
               </Row>
               <Row className="form-group">
-                <Label htmlFor="telnum" md={2}>Contact Tel.</Label>
+                <Label htmlFor="telnum" md={2}>
+                  Contact Tel.
+                </Label>
                 <Col md={10}>
-                  <Control.text model=".telnum" id="telnum" name="telnum"
-                                placeholder="Tel. Number"
-                                className="form-control"
-                                validators={{
-                                  required, minLength: minLength(3), maxLength: maxLength(15), isNumber
-                                }}
+                  <Control.text
+                    model=".telnum"
+                    id="telnum"
+                    name="telnum"
+                    placeholder="Tel. Number"
+                    className="form-control"
+                    validators={{
+                      required,
+                      minLength: minLength(3),
+                      maxLength: maxLength(15),
+                      isNumber
+                    }}
                   />
                   <Errors
                     className="text-danger"
@@ -146,14 +182,20 @@ class Contact extends Component {
                 </Col>
               </Row>
               <Row className="form-group">
-                <Label htmlFor="email" md={2}>Email</Label>
+                <Label htmlFor="email" md={2}>
+                  Email
+                </Label>
                 <Col md={10}>
-                  <Control.text model=".email" id="email" name="email"
-                                placeholder="Email"
-                                className="form-control"
-                                validators={{
-                                  required, validEmail
-                                }}
+                  <Control.text
+                    model=".email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    className="form-control"
+                    validators={{
+                      required,
+                      validEmail
+                    }}
                   />
                   <Errors
                     className="text-danger"
@@ -167,15 +209,21 @@ class Contact extends Component {
                 </Col>
               </Row>
               <Row className="form-group">
-                <Label htmlFor="message" md={2}>Your Feedback</Label>
+                <Label htmlFor="message" md={2}>
+                  Your Feedback
+                </Label>
                 <Col md={10}>
-                  <Control.textarea model=".message" id="message" name="message"
-                                    rows="12"
-                                    className="form-control"/>
+                  <Control.textarea
+                    model=".message"
+                    id="message"
+                    name="message"
+                    rows="12"
+                    className="form-control"
+                  />
                 </Col>
               </Row>
               <Row className="form-group">
-                <Col md={{size: 10, offset: 2}}>
+                <Col md={{ size: 10, offset: 2 }}>
                   <Button type="submit" color="primary">
                     Send Feedback
                   </Button>
@@ -185,10 +233,8 @@ class Contact extends Component {
           </div>
         </div>
       </div>
-    )
-      ;
+    );
   }
-
 }
 
 export default Contact;

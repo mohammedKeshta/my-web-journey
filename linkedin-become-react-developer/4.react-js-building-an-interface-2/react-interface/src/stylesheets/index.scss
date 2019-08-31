@@ -1,0 +1,232 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800|Roboto+Slab:400,100,300,700);
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  position: relative;
+  background-color: #337ab7;
+  font-size: 16px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+
+/**  Header Navigation **/
+
+header {
+  .navbar {
+    margin-bottom: 0;
+  }
+
+  .navbar-default {
+    background-color: #337ab7;
+    border: none;
+    border-radius: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-brand {
+    background: url(../images/wisdompetlogo.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 0;
+
+    h1 {
+      color: white;
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: 400;
+      padding-left: 70px;
+    }
+  }
+}
+
+/**  Navbar Brand **/
+
+.main {
+  background: white;
+  padding: 30px 0;
+}
+
+/**  Footer **/
+
+footer {
+  background: #337ab7;
+  color: white;
+  font-size: .8em;
+  padding: 20px 0 40px 0;
+
+  a {
+    color: #E0E6AE;
+
+    &:hover {
+      color: #EEC856 !important;
+    }
+  }
+
+  .phone {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #E0E6AE;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+    min-height: 0;
+  }
+
+  .navbar-default {
+    background-color: transparent;
+    border: none;
+    margin-right: 40px;
+  }
+
+  .navbar-nav > li a {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-decoration: underline;
+    color: #EEC856 !important;
+  }
+}
+
+/**  Interface Styles **/
+
+.apt-addheading {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */
+}
+
+/* Listpets */
+
+
+.search-pets {
+  width: 100%;
+  padding: 20px 20px 20px 60px;
+  background-image: url('../icons/search.svg');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 1.2em;
+  font-size: 1.2em;
+  border: 0;
+  outline: none;
+}
+
+
+.showing-pets {
+  text-align: center;
+  margin: 20px 0;
+}
+.showing-pets button {
+  color: blue;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.pets-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.pet-list-item {
+  padding: 20px;
+  background: white;
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .pet-list-item {
+    margin: 20px;
+    border: 1px solid #d5d8df;
+    border-radius: 4px;
+  }
+}
+
+.pet-avatar {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pet-details {
+  padding-left: 20px;
+  border-left: 1px solid #eee;
+
+  flex: 1;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h4 {
+    font-weight: bold;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+    color: #0f0f0f;
+    position: relative;
+    text-transform: uppercase;
+    &::after {
+      content: '';
+      width: 9%;
+      height: 5px;
+      background: #00B7FF;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  h5 {
+    color: #00B7FF;
+    font-weight: 500;
+  }
+  h6 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: lightgray;
+    margin: 0.4rem 0;
+  }
+  p {
+    margin: 0;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+.pet-remove {
+  padding-left: 20px;
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  background-image: url('../icons/cancel.svg');
+  background-size: 100% 100%;
+  border: 0;
+  color: black;
+  font-size: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  outline: none;
+}
