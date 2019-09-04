@@ -1,22 +1,15 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
+const crmController = require('../controllers/crmController');
+router
+  .route('/contacts')
+  .get(crmController.index)
+  .post(crmController.new);
 
 router
-  .route("/contact")
-  .get((req, res) => {
-    res.send("Get Request Successfully ");
-  })
-  .post((req, res) => {
-    res.send("Post Request Successfully");
-  });
-
-router
-  .route("/contact/:contactId")
-  .put((req, res) => {
-    res.send("Put Request Successfully ");
-  })
-  .delete((req, res) => {
-    res.send("Delete Request Successfully");
-  });
+  .route('/contacts/:contactId')
+  .get(crmController.exist)
+  .put(crmController.update)
+  .delete(crmController.delete);
 
 module.exports = router;
