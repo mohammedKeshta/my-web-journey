@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Single from './Single';
+import Single from '../Single/Single';
 
 export default class Grid extends Component {
   renderList() {
