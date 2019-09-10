@@ -23,3 +23,8 @@
        7. `cd WEBSITE_NAME`
        8. `python manage.py runserver`
        9. `python manage.py startapp APP_NAME`
+    
+   - Migrations Commands 
+       1. `python manage.py makemigrations`
+       2. `python manage.py migrate`
+       *. `python manage.py showmigrations`
