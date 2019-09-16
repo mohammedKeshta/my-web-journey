@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Header from './component/Header';
+import Footer from './component/Footer';
+import ContestList from './component/ContestList';
 
 function App() {
-  return <div>I'M READY TO USE THE BACK END APIS! :-)</div>;
+  const [data, setData] = useState({ contests: [] });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(`http://localhost:8080/api/contests`);
+      setData(response.data.data);
+    };
+    fetchData().catch(console.error);
+  }, []);
+  return (
+    <div>
+      <Header />
+      <div className="container">
+        <ContestList contests={data} />
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
