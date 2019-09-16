@@ -14,11 +14,14 @@ function App() {
     };
     fetchData().catch(console.error);
   }, []);
+
+  const fetchContest = contestId => {};
+
   return (
     <div>
       <Header />
       <div className="container">
-        <ContestList contests={data} />
+        <ContestList contests={data} onContestClick={fetchContest} />
       </div>
       <Footer />
     </div>

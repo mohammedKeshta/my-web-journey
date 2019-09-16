@@ -1,9 +1,10 @@
 import React from 'react';
+import PropsType from 'prop-types';
 
-const ContestPreview = props => {
-  const { categoryName, contestName, categoryImage, contestDescription, id, _id } = props.contest;
+const ContestPreview = ({ contest, onClick }) => {
+  const { categoryName, contestName, categoryImage, contestDescription, id, _id } = contest;
   const handleContestDetailsClick = id => {
-    console.log(id);
+    onClick(id);
   };
   return (
     <>
@@ -19,6 +20,15 @@ const ContestPreview = props => {
       </div>
     </>
   );
+};
+
+ContestPreview.propsTypes = {
+  id: PropsType.number.isRequired,
+  categoryName: PropsType.string.isRequired,
+  contestName: PropsType.string.isRequired,
+  categoryImage: PropsType.string.isRequired,
+  contestDescription: PropsType.string.isRequired,
+  onClick: PropsType.func.isRequired
 };
 
 export default ContestPreview;
