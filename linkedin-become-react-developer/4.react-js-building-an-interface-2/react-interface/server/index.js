@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const createError = require('http-errors');
 const cors = require('cors');
 
-
 const PORT = 8080;
 const pets = require('./data/data');
 
