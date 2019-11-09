@@ -1,16 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./stylesheets/index.scss";
-import App from "./components/App";
-import * as serviceWorker from "./serviceWorker";
+import './stylesheets/index.scss';
+import App from './components/App';
+import * as serviceWorker from './serviceWorker';
 /*Some Libs*/
 import 'jquery/dist/jquery.min';
 import 'popper.js/dist/popper.min';
 import 'bootstrap/dist/js/bootstrap.min';
 
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

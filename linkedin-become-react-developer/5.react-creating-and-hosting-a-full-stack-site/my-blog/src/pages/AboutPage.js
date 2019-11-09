@@ -2,7 +2,7 @@ import * as React from "react";
 
 const AboutPage = () => (
   <>
-    <h1 className='font-weight-bold font-italic'>About</h1>
+    <h1 className="font-weight-bold font-italic">About</h1>
     <p className="mb-2">
       Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean
       lacinia bibendum nulla sed consectetur.
