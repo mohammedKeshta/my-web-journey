@@ -1,21 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import pet, { ANIMALS } from '@frontendmasters/pet';
 import useDropdown from './useDropdown';
+import pet, { ANIMALS } from '@frontendmasters/pet';
+import sortBy from 'sort-by';
 
 const SearchParams = () => {
   const [location, setLocation] = useState('Seattle, WA');
-  const [animal, AnimalDropdown] = useDropdown('Animal', 'Dog', ANIMALS);
+  const [animal, AnimalDropdown] = useDropdown('Animal', 'dog', ANIMALS);
   const [breeds, setBreeds] = useState([]);
   const [breed, BreedDropdown, setBreed] = useDropdown('Breed', '', breeds);
 
   useEffect(() => {
     setBreed('');
     setBreeds([]);
-
     pet.breeds(animal).then(({ breeds }) => {
-      console.log(breeds);
+      const sortedBreed = (breeds || []).sort(sortBy('name'));
+      const breedStrings = sortedBreed.map(({ name }) => name);
+      setBreeds(breedStrings);
     }, console.error);
   }, [animal, setBreed, setBreeds]);
+
   return (
     <form>
       <div className="columns">

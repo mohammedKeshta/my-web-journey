@@ -6,7 +6,6 @@ const App = () => {
   return (
     <div className="App section">
       <h1 className="text-center">Adopt Me</h1>
-
       <SearchParams />
     </div>
   );
