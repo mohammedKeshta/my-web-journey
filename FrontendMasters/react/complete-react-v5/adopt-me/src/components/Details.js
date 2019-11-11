@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import pet from '@frontendmasters/pet';
 import { Link } from '@reach/router';
 import Carousel from './Carousel';
+import ErrorBoundary from './error-boundaries';
 
 class Details extends Component {
   state = {
@@ -42,12 +43,12 @@ class Details extends Component {
     }
     return (
       <div className="details">
+        <Carousel media={media} />
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} — ${breed} — ${location}`}</h2>
           <button>Adopt {name}</button>
           <p>{description}</p>
-          <Carousel media={media} />
           <Link to="/">
             <button className="button is-dark back">Back</button>
           </Link>
@@ -57,4 +58,10 @@ class Details extends Component {
   }
 }
 
-export default Details;
+export default function DetailsErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      <Details {...props} />
+    </ErrorBoundary>
+  );
+}
