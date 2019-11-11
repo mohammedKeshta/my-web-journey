@@ -10,9 +10,43 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.loading-wrapper  {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading{
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  margin: 50px auto;
+  border-radius: 50%;
+  border-left: 5px solid rgba(#bf3334,0.8);
+  border-right: 5px solid rgba(#d9c148,0.8);
+  animation: load 2s linear infinite
+}
+
+@keyframes load{
+  0%{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100%{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg)
+  }
+}
+
 form.search-params {
     background-color: #d9c148;
-    margin: 0px 25px 0px 0px;
+    margin: 0 25px 0 0;
     padding: 35px 15px 15px 15px;
     border-radius: 5px;
 }
@@ -60,7 +94,7 @@ form.search-params {
   width: 100px;
   height: 100px;
   float: left;
-  margin: 0px 20px 0px 10px;
+  margin: 0 20px 0 10px;
 }
 
 .pet h1 {
@@ -77,12 +111,11 @@ form.search-params {
 header > a,
 #root > div > h1,
 .logo{
-  display: inline-block;
   background-image: url('../images/image-logo.png');
   width: 279px;
   height: 76px;
   overflow: hidden;
-  margin: 0 0 20px;
+  margin: 0 auto 20px;
   text-indent: -9999px;
 }
 
@@ -109,26 +142,30 @@ header {
   justify-content: space-between;
   width: 1100px;
   margin: 0 auto;
-  padding: 20px 0px 0px 0px;
+  padding: 20px 0 0 0;
 }
 
 .details {
   p {
     line-height: 1.5;
-    padding: 0px 15px;
+    padding: 0 15px;
   }
 
   h1 {
     text-align: center;
     color: #bf3334;
     font-size: 60px;
-    margin: 5px 0px;
+    margin: 5px 0;
   }
 
   h2 {
     text-align: center;
-    margin: 5px 0px 20px 0px;
+    margin: 5px 0 20px 0;
   }
+}
+
+button.back {
+  margin: 10px 0 0 !important;
 }
 
 .carousel {
@@ -229,7 +266,7 @@ header {
     justify-content: space-between;
     width: 95%;
     margin: 0 auto;
-    padding: 20px 0px 0px 0px;
+    padding: 20px 0 0 0;
   }
 
   .search-params {

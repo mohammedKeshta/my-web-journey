@@ -15,6 +15,7 @@
       "jsx": true
     }
   },
+  "parser": "babel-eslint",
   "rules": {
     "react/prop-types": 0,
     "react-hooks/rules-of-hooks": 2,
