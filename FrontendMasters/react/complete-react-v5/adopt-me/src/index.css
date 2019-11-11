@@ -75,7 +75,8 @@ form.search-params {
 }
 
 header > a,
-#root > div > h1 {
+#root > div > h1,
+.logo {
   display: inline-block;
   background-image: url("../images/image-logo.png");
   width: 279px;
