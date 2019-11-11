@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import useDropdown from './useDropdown';
 import pet, { ANIMALS } from '@frontendmasters/pet';
 import sortBy from 'sort-by';
 import Results from './Results';
+import ThemeContext from './ThemeContext';
 
 const SearchParams = () => {
   const [location, setLocation] = useState('Seattle, WA');
@@ -11,6 +12,7 @@ const SearchParams = () => {
   const [breed, BreedDropdown, setBreed] = useDropdown('Breed', '', breeds);
   const [pets, setPets] = useState([]);
 
+  const [theme, setTheme] = useContext(ThemeContext);
   async function requestPets() {
     const { animals } = await pet
       .animals({
@@ -43,6 +45,28 @@ const SearchParams = () => {
           }}
         >
           <div className="field">
+            <label className="label" htmlFor="theme">
+              Theme
+            </label>
+            <div className="control">
+              <div className="select">
+                <select
+                  value={theme}
+                  onChange={e => setTheme(e.target.value)}
+                  onBlur={e => setTheme(e.target.value)}
+                >
+                  <option value="peru">Peru</option>
+                  <option value="darkblue">Dark Blue</option>
+                  <option value="chartreuse">Chartreuse</option>
+                  <option value="mediumorchid">Medium Orchid</option>
+                  <option value="orange">Medium Orchid</option>
+                  <option value="darkyellow">Medium Orchid</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div className="field">
             <div className="control">
               <label className="label" htmlFor="location">
                 Location
@@ -61,7 +85,12 @@ const SearchParams = () => {
           <BreedDropdown />
           <div className="field">
             <div className="control">
-              <button className="button is-danger">Search</button>
+              <button
+                className="button is-danger"
+                style={{ backgroundColor: theme }}
+              >
+                Search
+              </button>
             </div>
           </div>
         </form>

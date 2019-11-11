@@ -3,6 +3,7 @@ import pet from '@frontendmasters/pet';
 import { Link } from '@reach/router';
 import Carousel from './Carousel';
 import ErrorBoundary from './error-boundaries';
+import ThemeContext from './ThemeContext';
 
 class Details extends Component {
   state = {
@@ -47,7 +48,16 @@ class Details extends Component {
         <div>
           <h1>{name}</h1>
           <h2>{`${animal} — ${breed} — ${location}`}</h2>
-          <button>Adopt {name}</button>
+          <ThemeContext.Consumer>
+            {([theme]) => (
+              <button
+                style={{ backgroundColor: theme }}
+                onClick={this.toggleModal}
+              >
+                Adopt {name}
+              </button>
+            )}
+          </ThemeContext.Consumer>
           <p>{description}</p>
           <Link to="/">
             <button className="button is-dark back">Back</button>
