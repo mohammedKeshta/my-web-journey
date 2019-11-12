@@ -36,14 +36,31 @@ const SearchParams = () => {
 
   return (
     <div className="columns">
-      <div className="column">
+      <div className="column is-one-quarter">
         <form
-          className="search-params "
+          className="search-params"
           onSubmit={e => {
             e.preventDefault();
             requestPets();
           }}
         >
+          <div className="field">
+            <div className="control">
+              <label className="label" htmlFor="location">
+                Location
+              </label>
+              <input
+                className="input"
+                type="text"
+                placeholder="Location"
+                id="location"
+                value={location}
+                onChange={e => setLocation(e.target.value)}
+              />
+            </div>
+          </div>
+          <AnimalDropdown />
+          <BreedDropdown />
           <div className="field">
             <label className="label" htmlFor="theme">
               Theme
@@ -65,24 +82,6 @@ const SearchParams = () => {
               </div>
             </div>
           </div>
-
-          <div className="field">
-            <div className="control">
-              <label className="label" htmlFor="location">
-                Location
-              </label>
-              <input
-                className="input"
-                type="text"
-                placeholder="Location"
-                id="location"
-                value={location}
-                onChange={e => setLocation(e.target.value)}
-              />
-            </div>
-          </div>
-          <AnimalDropdown />
-          <BreedDropdown />
           <div className="field">
             <div className="control">
               <button
@@ -96,7 +95,7 @@ const SearchParams = () => {
         </form>
       </div>
 
-      <div className="column is-four-fifths">
+      <div className="column">
         <Results pets={pets} />
       </div>
     </div>

@@ -9,8 +9,8 @@ const App = () => {
   const theme = useState('darkblue');
 
   return (
-    <ThemeContext.Provider value={theme}>
-      <React.StrictMode>
+    <React.StrictMode>
+      <ThemeContext.Provider value={theme}>
         <div className="App section">
           <Link to="/">
             <h1 className="logo">Adopt Me</h1>
@@ -20,8 +20,8 @@ const App = () => {
             <Details path="/details/:id" />
           </Router>
         </div>
-      </React.StrictMode>
-    </ThemeContext.Provider>
+      </ThemeContext.Provider>
+    </React.StrictMode>
   );
 };
 

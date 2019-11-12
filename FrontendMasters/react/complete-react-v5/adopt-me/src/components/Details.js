@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import pet from '@frontendmasters/pet';
-import { Link } from '@reach/router';
+import { Link, navigate } from '@reach/router';
 import Carousel from './Carousel';
 import ErrorBoundary from './error-boundaries';
 import ThemeContext from './ThemeContext';
+import Modal from './Modal';
 
 class Details extends Component {
   state = {
-    loading: true
+    loading: true,
+    showModal: false
   };
 
   componentDidMount() {
     const { id } = this.props;
     pet.animal(+id).then(({ animal }) => {
       this.setState({
+        url: animal.url,
         name: animal.name,
         animal: animal.type,
         location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
@@ -25,6 +28,9 @@ class Details extends Component {
     });
   }
 
+  toggleModal = () => this.setState({ showModal: !this.state.showModal });
+  adopt = () => navigate(this.state.url);
+
   render() {
     const {
       loading,
@@ -33,7 +39,8 @@ class Details extends Component {
       breed,
       description,
       location,
-      media
+      media,
+      showModal
     } = this.state;
     if (loading) {
       return (
@@ -59,6 +66,17 @@ class Details extends Component {
             )}
           </ThemeContext.Consumer>
           <p>{description}</p>
+          {showModal ? (
+            <Modal>
+              <div>
+                <h1>Would you like to adopt {name}?</h1>
+                <div className="buttons">
+                  <button onClick={this.adopt}>Yes</button>
+                  <button onClick={this.toggleModal}>No</button>
+                </div>
+              </div>
+            </Modal>
+          ) : null}
           <Link to="/">
             <button className="button is-dark back">Back</button>
           </Link>
