@@ -1,11 +1,11 @@
-function copyArrayAndMultiplyBy2(array) {
+function copyArrayAndManipulate(array, instruction) {
   let output = [];
-  let multiplyBy2 = number => number * 2;
   for (let i = 0; i < array.length; i++) {
-    output.push(multiplyBy2(array[i]));
+    output.push(instruction(array[i]));
   }
   return output;
 }
 
 const myArray = [1, 2, 3];
-let result = copyArrayAndMultiplyBy2(myArray); // [2, 4, 6]
+const multiplyBy2 = a => a * 2;
+let result = copyArrayAndManipulate(myArray, multiplyBy2);
