@@ -5,11 +5,15 @@
   "author": "Mohammed Elzanaty <mohammedelzanaty129@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "cli-new": "node exercises/cli/index.js new",
+    "cli-list": "node exercises/cli/index.js list"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "commander": "^4.0.1",
     "express": "^4.17.1",
+    "inquirer": "^7.0.0",
     "mime": "^2.4.4",
     "morgan": "^1.9.1"
   },
