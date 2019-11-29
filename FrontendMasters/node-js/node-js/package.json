@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.2",
+    "@types/jest": "^24.0.23",
     "jest": "^24.9.0"
   },
   "prettier": {
