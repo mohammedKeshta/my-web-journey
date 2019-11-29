@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest",
     "cli-new": "node exercises/cli/index.js new",
-    "cli-list": "node exercises/cli/index.js list"
+    "cli-list": "node exercises/cli/index.js list",
+    "api": "node exercises/api/server.js"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
