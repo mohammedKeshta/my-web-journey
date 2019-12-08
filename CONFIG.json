@@ -1,0 +1,31 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontLigatures": true,
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/bower_components": true,
+        "**/node_modules": true,
+        "**/tmp": true
+    },
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.formatOnSave": false
+    },
+    "editor.fontFamily": "Dank Mono, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "workbench.colorTheme": "Material Theme Ocean High Contrast",
+    "git.ignoreLegacyWarning": true,
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "terminal.integrated.fontSize": 16,
+    "better-comments.multilineComments": true,
+    "better-comments.highlightPlainText": false,
+    "editor.cursorBlinking": "expand",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.printWidth": 100,
+    "prettier.singleQuote": true,
+    "python.jediEnabled": false,
+    "code-runner.runInTerminal": true,
+}

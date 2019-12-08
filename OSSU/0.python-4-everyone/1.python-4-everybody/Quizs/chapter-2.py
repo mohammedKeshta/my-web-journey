@@ -13,7 +13,7 @@ A. a variable
 
 # 3
 Q. Which of the following is a bad Python variable name?
-A. Spam
+A. Spam 
 
 # 4
 Q. Which of the following is not a Python reserved word?
