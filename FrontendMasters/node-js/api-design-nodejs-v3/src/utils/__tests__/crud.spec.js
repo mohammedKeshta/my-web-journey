@@ -4,6 +4,7 @@ import { User } from '../../resources/user/user.model'
 import mongoose from 'mongoose'
 
 describe('crud controllers', () => {
+  // eslint-disable-next-line jest/valid-describe
   describe('getOne', async () => {
     test('finds by authenticated user and id', async () => {
       expect.assertions(2)
@@ -49,7 +50,7 @@ describe('crud controllers', () => {
 
       const res = {
         status(status) {
-          expect(status).toBe(400)
+          expect(status).toBe(404)
           return this
         },
         end() {
