@@ -32,13 +32,11 @@ beforeEach(async done => {
 
   if (mongoose.connection.readyState === 0) {
     try {
-      await mongoose.connect(
-        url + db,
-        {
-          useNewUrlParser: true,
-          autoIndex: true
-        }
-      )
+      await mongoose.connect(url + db, {
+        useNewUrlParser: true,
+        autoIndex: true,
+        useUnifiedTopology: true
+      })
       await clearDB()
       await Promise.all(Object.keys(models).map(name => models[name].init()))
     } catch (e) {
