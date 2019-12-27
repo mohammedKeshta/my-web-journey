@@ -1,0 +1,15 @@
+{
+  "name": "web-development-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel watch index.html"
+  },
+  "devDependencies": {
+    "sass": "^1.24.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "description": "Web Development V2",
+  "author": "Mohammed Elzanaty"
+}

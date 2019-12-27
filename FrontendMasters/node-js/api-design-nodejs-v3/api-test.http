@@ -1,0 +1,43 @@
+GET http://localhost:3000/ HTTP/1.1
+
+###
+
+POST http://localhost:3000/ HTTP/1.1
+content-type: application/json
+
+{
+    "message": "welcome",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+
+PUT http://localhost:3000/ HTTP/1.1
+
+###
+
+DELETE http://localhost:3000/ HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/me HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/item HTTP/1.1
+
+###
+
+POST http://localhost:3000/api/item HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/item/1 HTTP/1.1
+
+###
+
+PUT http://localhost:3000/api/item/3 HTTP/1.1
+
+###
+
+DELETE  http://localhost:3000/api/item/4 HTTP/1.1
