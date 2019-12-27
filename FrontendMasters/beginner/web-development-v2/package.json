@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "start": "parcel watch index.html"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "sass": "^1.24.0",
+    "parcel-bundler": "^1.12.4"
   },
   "description": "Web Development V2",
   "author": "Mohammed Elzanaty"

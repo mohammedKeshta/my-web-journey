@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Development V2</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.scss">
 </head>
 
 <body>
@@ -46,9 +45,47 @@
                     <div class="box box-3">3</div>
                 </div>
             </div>
+
+            <div class="button-container">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+            </div>
+            <br>
+            <input placeholder="type into me!" class="input-to-copy" />
+            <p class="p-to-copy-to">Nothing has happened yet.</p>
+
+
+            <h1>Dogs</h1>
+            <button class="add-dog">add dog</button>
+
+            <div class="dog-container">
+            </div>
+
         </main>
     </div>
+
     <script src="./index.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.button-container').addEventListener('click', event => {
+                if (event.target.tagName === 'BUTTON') {
+                    alert(`You clicked on button ${event.target.innerText}`);
+                }
+                event.stopPropagation();
+            });
+
+            const input = document.querySelector('.input-to-copy');
+            const inputPlaceholder = document.querySelector('.p-to-copy-to');
+            input.addEventListener('keyup', event => {
+                inputPlaceholder.innerText = event.target.value;
+            });
+        });
+    </script>
+
 </body>
 
 </html>
