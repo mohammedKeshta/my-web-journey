@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Development V2</title>
+    <link rel="stylesheet" href="style.scss">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="title">
+            <h6>Frontend Developer</h6>
+            <h4>Mohammed Elzanaty</h4>
+        </div>
+        <main>
+            <p class="text" id="para-1">
+                <span class="tag">Paragraph #1</span>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate nam quae
+                explicabo ratione, deserunt placeat dolorum facere earum suscipit qui odio optio iste aperiam laboriosam
+                exercitationem maiores impedit aspernatur autem.</p>
+            <p class="text" id="para-2">
+                <span class="tag">Paragraph #2</span>
+                Quaerat at perferendis quidem sunt dignissimos porro iste ea molestiae iure.
+                Consectetur tempora fugiat repellat, odio officia minima magni modi reiciendis adipisci, veniam aliquid
+                aspernatur illo perspiciatis quasi dicta blanditiis.</p>
+
+            <div class="card">
+                <h2>Float</h2>
+                <div class="floated">
+                    <div class="box box-1">1</div>
+                    <div class="box box-2">2</div>
+                    <div class="box box-3">3</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Flex</h2>
+                <div class="flexed">
+                    <div class="box box-1">1</div>
+                    <div class="box box-2">2</div>
+                    <div class="box box-3">3</div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+            </div>
+            <br>
+            <input placeholder="type into me!" class="input-to-copy" />
+            <p class="p-to-copy-to">Nothing has happened yet.</p>
+
+
+            <h1>Dogs</h1>
+            <button class="add-dog">add dog</button>
+
+            <div class="dog-container">
+            </div>
+
+        </main>
+    </div>
+
+    <script src="./index.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.button-container').addEventListener('click', event => {
+                if (event.target.tagName === 'BUTTON') {
+                    alert(`You clicked on button ${event.target.innerText}`);
+                }
+                event.stopPropagation();
+            });
+
+            const input = document.querySelector('.input-to-copy');
+            const inputPlaceholder = document.querySelector('.p-to-copy-to');
+            input.addEventListener('keyup', event => {
+                inputPlaceholder.innerText = event.target.value;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
