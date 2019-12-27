@@ -8,5 +8,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "description": "Web Development V2",
+  "author": "Mohammed Elzanaty"
 }
