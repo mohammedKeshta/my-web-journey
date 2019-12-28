@@ -2,6 +2,7 @@
   "name": "adopt-me",
   "version": "0.1.0",
   "private": true,
+  "author": "mohammed elzanaty<mohammedelzanaty129@gmail.com>",
   "dependencies": {
     "@frontendmasters/pet": "^1.0.3",
     "@reach/router": "^1.2.1",
