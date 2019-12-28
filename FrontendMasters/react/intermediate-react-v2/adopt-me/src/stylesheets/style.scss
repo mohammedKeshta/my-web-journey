@@ -1,0 +1,368 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	min-height: 100vh;
+}
+
+.loading-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loading {
+	width: 50px;
+	height: 50px;
+	border: 5px solid #ccc;
+	margin: 50px auto;
+	border-radius: 50%;
+	border-left: 5px solid rgba(#bf3334, 0.8);
+	border-right: 5px solid rgba(#d9c148, 0.8);
+	animation: load 2s linear infinite;
+}
+
+@keyframes load {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+form.search-params {
+	margin: 25px 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.field {
+		margin-right: 10px;
+
+		button {
+			position: relative;
+			top: 10px;
+		}
+	}
+}
+
+.search {
+	padding: 15px;
+	border-radius: 9px;
+	margin-bottom: 25px;
+}
+
+.details {
+	width: 1100px;
+	border-radius: 9px;
+	margin: 0 auto 25px;
+}
+
+.pets {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pet {
+	width: calc(100% / 3 - 20px);
+	overflow: hidden;
+	display: block;
+	position: relative;
+	border-radius: 8px;
+	z-index: 0;
+	flex-grow: 0;
+	margin: 10px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px;
+	background: white;
+	box-shadow: 0 0 1px 0 rgba(17, 22, 26, 0.16),
+		0 2px 4px 0 rgba(17, 22, 26, 0.08);
+	transition: all 0.5s ease-in-out;
+
+	&:hover {
+		box-shadow: none;
+	}
+
+	.image-container {
+		width: 120px;
+		height: 120px;
+		min-width: 120px;
+		min-height: 120px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: 10px;
+		img {
+			min-width: 120px;
+			min-height: 120px;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.info {
+		h1 {
+			white-space: nowrap;
+			font-weight: normal;
+			font-size: 30px;
+			color: #bf3334;
+			width: 95%;
+			overflow: hidden;
+			margin: 0;
+			text-overflow: ellipsis;
+		}
+		p {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1.6;
+			color: #4d4751;
+			text-decoration: none;
+			text-transform: none;
+		}
+	}
+}
+
+header > a,
+#root > div > h1,
+.logo {
+	background-image: url("../images/image-logo.png");
+	width: 279px;
+	height: 76px;
+	overflow: hidden;
+	margin: 0 auto 20px;
+	text-indent: -9999px;
+}
+
+.pet h2 {
+	white-space: nowrap;
+	font-weight: normal;
+	font-size: 20px;
+	margin: 0;
+	text-overflow: ellipsis;
+}
+
+header {
+	a {
+		color: #bf3334;
+		font-size: 3px;
+		text-decoration: none;
+		font-weight: bold;
+		display: block;
+		padding-bottom: 10px;
+	}
+
+	display: flex;
+	align-content: center;
+	justify-content: space-between;
+	width: 1100px;
+	margin: 0 auto;
+	padding: 20px 0 0 0;
+}
+
+.details {
+	p {
+		line-height: 1.5;
+		padding: 0 15px;
+	}
+
+	h1 {
+		text-align: center;
+		color: #bf3334;
+		font-size: 60px;
+		margin: 5px 0;
+	}
+
+	h2 {
+		text-align: center;
+		margin: 5px 0 20px 0;
+	}
+}
+
+button.back {
+	margin: 10px 0 0 !important;
+}
+
+.carousel {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 300px;
+	margin-top: 8px;
+	border-radius: 20px;
+	overflow: hidden;
+
+	> img {
+		max-width: 45%;
+		max-height: 300px;
+		border-radius: 20px;
+	}
+}
+
+.carousel-smaller {
+	width: 50%;
+
+	> img {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		display: inline-block;
+		margin: 15px;
+		cursor: pointer;
+		border: 2px solid #333;
+
+		&.active {
+			border-color: #ad343e;
+			opacity: 0.6;
+		}
+	}
+}
+
+#modal button,
+.details button {
+	background-color: #ad343e;
+	padding: 5px 25px;
+	color: white;
+	font-size: 18px;
+	border: #333 1px solid;
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+.search-params button {
+	&:hover {
+		background-color: #122622;
+	}
+
+	&:active {
+		background-color: #5f1d22;
+	}
+
+	&:focus {
+		border: 1px solid cornflowerblue;
+	}
+}
+
+#modal {
+	background-color: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:empty {
+		display: none;
+	}
+
+	> div {
+		background-color: white;
+		max-width: 500px;
+		padding: 15px;
+		border-radius: 5px;
+		text-align: center;
+	}
+
+	.buttons button {
+		display: inline-block;
+		margin-right: 15px;
+	}
+}
+
+@media only screen and (max-width: 1129px) {
+	header {
+		display: flex;
+		align-content: center;
+		justify-content: space-between;
+		width: 95%;
+		margin: 0 auto;
+		padding: 20px 0 0 0;
+	}
+
+	.search-params {
+		width: 95%;
+
+		form {
+			margin-bottom: 20px;
+		}
+	}
+
+	.search {
+		width: 55%;
+		padding: 15px;
+		border-radius: 9px;
+		float: left;
+		margin-bottom: 25px;
+	}
+
+	.details {
+		width: 95%;
+		margin: 0 auto;
+		padding: 15px;
+		border-radius: 9px;
+		margin-bottom: 25px;
+	}
+
+	.info {
+		width: 65%;
+
+		h1,
+		h2 {
+			width: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
+@media only screen and (max-width: 945px) {
+	.search-params {
+		width: 95%;
+	}
+
+	.search {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.pet {
+		height: 200px;
+	}
+
+	.info {
+		width: 100%;
+		text-align: center;
+	}
+
+	.image-container {
+		margin: 0 auto;
+		float: none;
+	}
+
+	.carousel-smaller > img {
+		width: 60px;
+		height: 60px;
+	}
+}
