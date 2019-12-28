@@ -15,7 +15,7 @@
     - `load("nameOfFile")`
   - `db.collection_name.find().pretty()` to show all document @ specific collection
   - `db.collection_name.find({key: "value"}).count()` get Count
-  -
+  - Insert Document to DB `db.collection_name.insertOne({title: "Star Trek II: The Wrath of Khan", year: 1982, imdb: "tt0084726"})`
   -
   -
   -
