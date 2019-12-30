@@ -8,6 +8,7 @@
   - mongo "mongodb+srv://zanaty-m001-8fc5f.mongodb.net/test" --authenticationDatabase admin --ssl --username m001-student --password m001-mongodb-basics
 - [Creating an Atlas Sandbox Cluster](https://cloud.mongodb.com/user#/atlas/register/accountProfile)
 - [Labs](https://krishnakrishh04.blogspot.com/2019/10/m001-mongodb-basics-q-quiz-labs-final.html)
+- [Material](Repo for All MongoDB University Courses)
 - MongoDB Commands
   - `show dbs` to show all names-spaces/dbs
   - `use db_name` to use specific names-spaces/dbs
