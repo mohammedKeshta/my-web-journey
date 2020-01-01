@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "react-scripts build && babel-node server/index.js",
     "start:mock": "cross-env PET_MOCK=mock react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
