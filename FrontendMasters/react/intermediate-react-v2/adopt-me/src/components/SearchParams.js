@@ -34,6 +34,9 @@ const SearchParams = () => {
     }, console.error);
   }, [animal, setBreed, setBreeds]);
 
+
+  if (!pets.length) requestPets();
+
   return (
     <>
       <div className="columns">
@@ -95,9 +98,7 @@ const SearchParams = () => {
         </form>
       </div>
       <div className="columns">
-        <div className="column">
-          <Results pets={pets} />
-        </div>
+        <Results pets={pets} />
       </div>
     </>
   );

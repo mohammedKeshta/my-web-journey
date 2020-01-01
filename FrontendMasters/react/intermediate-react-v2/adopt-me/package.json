@@ -4,6 +4,7 @@
   "private": true,
   "author": "mohammed elzanaty<mohammedelzanaty129@gmail.com>",
   "dependencies": {
+    "@emotion/core": "^10.0.27",
     "@frontendmasters/pet": "^1.0.3",
     "@reach/router": "^1.2.1",
     "axios": "^0.19.0",
@@ -17,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "react-scripts build && babel-node server/index.js",
     "start:mock": "cross-env PET_MOCK=mock react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -50,7 +52,10 @@
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
+    "@emotion/babel-preset-css-prop": "^10.0.27",
     "babel-eslint": "^10.0.3",
+    "babel-plugin-emotion": "^10.0.27",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "cross-env": "^6.0.3",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
