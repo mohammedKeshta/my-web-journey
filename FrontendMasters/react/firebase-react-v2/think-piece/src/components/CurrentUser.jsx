@@ -4,13 +4,13 @@ import moment from 'moment';
 
 const CurrentUser = ({ displayName, photoURL, email, createdAt, children }) => {
   return (
-    <section className="CurrentUser">
-      <div className="CurrentUser--profile">
+    <section className='CurrentUser'>
+      <div className='CurrentUser--profile'>
         {photoURL && <img src={photoURL} alt={displayName} />}
-        <div className="CurrentUser--information">
+        <div className='CurrentUser--information'>
           <h2>{displayName}</h2>
-          <p className="email">{email}</p>
-          <p className="created-at">{moment(createdAt).calendar()}</p>
+          <p className='email'>{email}</p>
+          <p className='created-at'>{moment(createdAt).calendar()}</p>
         </div>
       </div>
       <div>
@@ -22,10 +22,10 @@ const CurrentUser = ({ displayName, photoURL, email, createdAt, children }) => {
 };
 
 CurrentUser.defaultProps = {
-  displayName: 'Bill Murray',
-  email: 'billmurray@mailinator.com',
+  displayName: 'Mohammed Elzanaty',
+  email: 'mohammedelzanaty129@gmail.com',
   photoURL: 'https://www.fillmurray.com/300/300',
-  createdAt: new Date(),
+  createdAt: new Date()
 };
 
 export default CurrentUser;

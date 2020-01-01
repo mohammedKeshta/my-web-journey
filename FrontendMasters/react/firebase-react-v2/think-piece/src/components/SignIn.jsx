@@ -1,45 +1,36 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-class SignIn extends Component {
-  state = { email: '', password: '' };
+const SignIn = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  handleChange = event => {
-    const { name, value } = event.target;
-
-    this.setState({ [name]: value });
-  };
-
-  handleSubmit = event => {
+  const handleSubmit = event => {
     event.preventDefault();
-
-    this.setState({ email: '', password: '' });
+    setEmail('');
+    setPassword('');
   };
 
-  render() {
-    const { email, password } = this.state;
-
-    return (
-      <form className="SignIn" onSubmit={this.handleSubmit}>
-        <h2>Sign In</h2>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={email}
-          onChange={this.handleChange}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={this.handleChange}
-        />
-        <input type="submit" value="Sign In" />
-        <button>Sign In With Google</button>
-      </form>
-    );
-  }
-}
+  return (
+    <form className='SignIn' onSubmit={handleSubmit}>
+      <h2>Sign In</h2>
+      <input
+        type='email'
+        name='email'
+        placeholder='Email'
+        value={email}
+        onChange={event => setEmail(event.target.value)}
+      />
+      <input
+        type='password'
+        name='password'
+        placeholder='Password'
+        value={password}
+        onChange={event => setPassword(event.target.value)}
+      />
+      <input type='submit' value='Sign In' />
+      <button>Sign In With Google</button>
+    </form>
+  );
+};
 
 export default SignIn;
