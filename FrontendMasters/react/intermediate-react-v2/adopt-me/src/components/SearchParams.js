@@ -95,9 +95,7 @@ const SearchParams = () => {
         </form>
       </div>
       <div className="columns">
-        <div className="column">
-          <Results pets={pets} />
-        </div>
+        <Results pets={pets} />
       </div>
     </>
   );

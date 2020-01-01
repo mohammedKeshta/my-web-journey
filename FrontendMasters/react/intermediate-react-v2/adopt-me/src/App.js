@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './index.scss';
-import { Router, Link } from '@reach/router';
+import { Router } from '@reach/router';
 import SearchParams from './components/SearchParams';
 import Details from './components/Details';
 import ThemeContext from './components/ThemeContext';
+import Header from './components/Header';
 
 const App = () => {
   const theme = useState('darkblue');
@@ -12,9 +13,7 @@ const App = () => {
     <React.StrictMode>
       <ThemeContext.Provider value={theme}>
         <div className="App section">
-          <Link to="/">
-            <h1 className="logo">Adopt Me</h1>
-          </Link>
+          <Header />
           <Router>
             <SearchParams path="/" />
             <Details path="/details/:id" />
