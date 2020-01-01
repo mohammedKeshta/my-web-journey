@@ -10,6 +10,7 @@ import Memo from './Memo';
 import Callback from './Callback';
 import LayoutEffect from './LayoutEffect';
 import ImperativeHandle from './ImperativeHandle';
+import ReducerDoc from './ReducerDoc';
 
 import './styles.css';
 
@@ -27,6 +28,8 @@ function App() {
       <Ref />
       <hr />
       <Reducer />
+      <hr />
+      <ReducerDoc />
       <hr />
       <Memo />
       <hr />
