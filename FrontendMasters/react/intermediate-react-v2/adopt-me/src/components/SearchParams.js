@@ -34,6 +34,9 @@ const SearchParams = () => {
     }, console.error);
   }, [animal, setBreed, setBreeds]);
 
+
+  if (!pets.length) requestPets();
+
   return (
     <>
       <div className="columns">
