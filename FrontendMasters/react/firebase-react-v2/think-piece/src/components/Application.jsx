@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Posts from './Posts';
+import { firestore } from '../firebase';
 
 import POSTS from '../util/POSTS';
 
 const Application = () => {
   const [posts, setPosts] = useState(POSTS);
-  console.log(posts.length)
+
+  useEffect(() => {
+    const posts = firestore
+      .collection('posts')
+      .get()
+      .then(snapshot => console.log({ snapshot }));
+    console.log({ posts });
+    return () => {
+      // TODO: cleanup
+    };
+  }, [posts]);
   return (
     <main className='Application'>
       <h1>Think Piece</h1>
