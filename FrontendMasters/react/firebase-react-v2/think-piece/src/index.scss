@@ -1,8 +1,8 @@
-$input-color: #7dbbc3;
+$input-color: #f50057;
 $button-color: #f4b9b2;
-$info-color: #daedbd;
-$comment-highlight-color: #de6b48;
-$danger-color: #de6b48;
+$info-color: #dadada;
+$comment-highlight-color: #f50057;
+$danger-color: #fff;
 
 @mixin button($color) {
   background-color: $color;
@@ -194,4 +194,16 @@ input[type="file"] {
   &:before {
     content: ' ';
   }
+}
+
+
+#loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

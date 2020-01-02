@@ -2,10 +2,11 @@ import React from 'react';
 
 import moment from 'moment';
 
-import { firestore } from '../firebase';
+import firebas from '../firebase';
 
-const Post = ({ id, title, content, user, createdAt, stars, comments }) => {
-  const postRef = firestore.doc(`posts/${id}`);
+const Post = props => {
+  const { id, title, content, user, createdAt, stars, comments } = props;
+  const postRef = firebas.db.doc(`posts/${id}`);
   const remove = () => postRef.delete();
   const star = () => postRef.update({ stars: (stars += 1) });
 
