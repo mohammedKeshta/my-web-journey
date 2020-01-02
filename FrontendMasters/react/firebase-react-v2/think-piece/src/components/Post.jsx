@@ -2,7 +2,13 @@ import React from 'react';
 
 import moment from 'moment';
 
-const Post = ({ title, content, user, createdAt, stars, comments }) => {
+import { firestore } from '../firebase';
+
+const Post = ({ id, title, content, user, createdAt, stars, comments }) => {
+  const postRef = firestore.doc(`posts/${id}`);
+  const remove = () => postRef.delete();
+  const star = () => postRef.update({ stars: (stars += 1) });
+
   return (
     <article className='Post'>
       <div className='Post--content'>
@@ -24,11 +30,15 @@ const Post = ({ title, content, user, createdAt, stars, comments }) => {
             {comments}
           </p>
           <p>Posted by {user.displayName}</p>
-          <p>{moment(createdAt).calendar()}</p>
+          <p>{moment(createdAt.toDate()).calendar()}</p>
         </div>
         <div>
-          <button className='star'>Star</button>
-          <button className='delete'>Delete</button>
+          <button className='star' onClick={() => star()}>
+            Star
+          </button>
+          <button className='delete' onClick={() => remove()}>
+            Delete
+          </button>
         </div>
       </div>
     </article>
@@ -40,7 +50,7 @@ Post.defaultProps = {
   content:
     'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus est aut dolorem, dolor voluptatem assumenda possimus officia blanditiis iusto porro eaque non ab autem nihil! Alias repudiandae itaque quo provident.',
   user: {
-    id: '123',
+    id: Date.now().toString(),
     displayName: 'Mohammed Elzanaty',
     email: 'mohammedelzanaty129@gmail.com',
     photoURL: 'https://www.fillmurray.com/300/300'

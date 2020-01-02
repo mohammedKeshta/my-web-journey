@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { firestore } from '../firebase';
 
-const AddPost = ({ onCreate }) => {
+const AddPost = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
   const post = {
-    id: Date.now().toString(),
     title,
     content,
     user: {
@@ -15,13 +15,14 @@ const AddPost = ({ onCreate }) => {
       photoURL: 'http://placekitten.com/g/200/200'
     },
     favorites: 0,
+    stars: 0,
     comments: 0,
     createdAt: new Date()
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault();
-    onCreate(post);
+    await firestore.collection('posts').add(post);
     setTitle('');
     setContent('');
   };
