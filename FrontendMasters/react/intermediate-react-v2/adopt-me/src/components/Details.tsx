@@ -1,38 +1,53 @@
 import React, { Component } from 'react';
-import pet from '@frontendmasters/pet';
-import { Link, navigate } from '@reach/router';
+import pet, { Photo } from '@frontendmasters/pet';
+import { Link, navigate, RouteComponentProps } from '@reach/router';
 import Carousel from './Carousel';
 import ErrorBoundary from './ErrorBoundary';
 import ThemeContext from './ThemeContext';
 
 const Modal = React.lazy(() => import('./Modal'));
 
-class Details extends Component {
-  state = {
+class Details extends Component<RouteComponentProps<{ id: string }>> {
+  public state = {
     loading: true,
-    showModal: false
+    showModal: false,
+    url: '',
+    name: '',
+    animal: '',
+    breed: '',
+    description: '',
+    location: '',
+    media: [] as Photo[],
   };
 
-  componentDidMount() {
+  public componentDidMount() {
     const { id } = this.props;
-    pet.animal(+id).then(({ animal }) => {
-      this.setState({
-        url: animal.url,
-        name: animal.name,
-        animal: animal.type,
-        location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
-        description: animal.description,
-        media: animal.photos,
-        breed: animal.breeds.primary,
-        loading: false
-      });
-    });
+    if (!id) {
+      navigate('');
+      return;
+    }
+    pet
+      .animal(+id)
+      .then(({ animal }) => {
+        this.setState({
+          url: animal.url,
+          name: animal.name,
+          animal: animal.type,
+          location: `${animal.contact.address.city}, ${animal.contact.address.state}`,
+          description: animal.description,
+          media: animal.photos,
+          breed: animal.breeds.primary,
+          loading: false,
+        });
+      })
+      .catch((err: Error) => this.setState({ error: err }));
   }
 
-  toggleModal = () => this.setState({ showModal: !this.state.showModal });
-  adopt = () => navigate(this.state.url);
+  private toggleModal = () =>
+    this.setState({ showModal: !this.state.showModal });
+  private adopt = () => navigate(this.state.url);
 
-  render() {
+  public render() {
     const {
       loading,
       name,
@@ -41,7 +56,7 @@ class Details extends Component {
       description,
       location,
       media,
-      showModal
+      showModal,
     } = this.state;
     if (loading) {
       return (
@@ -87,7 +102,9 @@ class Details extends Component {
   }
 }
 
-export default function DetailsErrorBoundary(props) {
+export default function DetailsErrorBoundary(
+  props: RouteComponentProps<{ id: string }>
+) {
   return (
     <ErrorBoundary>
       <Details {...props} />

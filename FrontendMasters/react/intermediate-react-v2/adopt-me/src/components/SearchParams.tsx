@@ -1,24 +1,30 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useContext,
+  FunctionComponent,
+} from 'react';
 import useDropdown from './useDropdown';
-import pet, { ANIMALS } from '@frontendmasters/pet';
-import sortBy from 'sort-by';
+import pet, { ANIMALS, Animal } from '@frontendmasters/pet';
 import Results from './Results';
 import ThemeContext from './ThemeContext';
+import { RouteComponentProps } from '@reach/router';
 
-const SearchParams = () => {
+const SearchParams: FunctionComponent<RouteComponentProps> = () => {
   const [location, setLocation] = useState('Seattle, WA');
   const [animal, AnimalDropdown] = useDropdown('Animal', 'dog', ANIMALS);
-  const [breeds, setBreeds] = useState([]);
+  const [breeds, setBreeds] = useState([] as string[]);
   const [breed, BreedDropdown, setBreed] = useDropdown('Breed', '', breeds);
-  const [pets, setPets] = useState([]);
+  const [pets, setPets] = useState([] as Animal[]);
 
   const [theme, setTheme] = useContext(ThemeContext);
   async function requestPets() {
+    // @ts-ignore
     const { animals } = await pet
       .animals({
         location,
         breed,
-        type: animal
+        type: animal,
       })
       .catch(console.error);
 
@@ -28,14 +34,15 @@ const SearchParams = () => {
     setBreeds([]);
     setBreed('');
     pet.breeds(animal).then(({ breeds }) => {
-      const sortedBreed = (breeds || []).sort(sortBy('name'));
+      const sortedBreed = breeds;
       const breedStrings = sortedBreed.map(({ name }) => name);
       setBreeds(breedStrings);
     }, console.error);
   }, [animal, setBreed, setBreeds]);
 
-
-  if (!pets.length) requestPets();
+  if (!pets.length) {
+    requestPets();
+  }
 
   return (
     <>
