@@ -15,6 +15,7 @@ const useDropdown = (
       <div className="control">
         <div className="select">
           <select
+            data-testid={id}
             value={state}
             onChange={e => setState(e.target.value)}
             onBlur={e => setState(e.target.value)}
