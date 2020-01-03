@@ -2,8 +2,9 @@
 /** @jsx jsx */
 import { Link } from '@reach/router';
 import { css, jsx } from '@emotion/core';
+import { FunctionComponent } from 'react';
 
-export const Header = () => {
+export const Header: FunctionComponent = () => {
   return (
     <div
       css={css`

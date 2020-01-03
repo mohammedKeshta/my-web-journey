@@ -1,19 +1,18 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from 'react';
 import './index.scss';
 import { Router } from '@reach/router';
-import ThemeContext from './components/ThemeContext';
 import Header from './components/Header';
 import ErrorBoundary from './components/ErrorBoundary';
+import { Provider } from 'react-redux';
+import store from './redux/store/store';
 
 const Details = lazy(() => import('./components/Details'));
 const SearchParams = lazy(() => import('./components/SearchParams'));
 
 const App = () => {
-  const theme = useState('darkblue');
-
   return (
-    <React.StrictMode>
-      <ThemeContext.Provider value={theme}>
+    <Provider store={store}>
+      <React.StrictMode>
         <div className="App section">
           <Header />
           <ErrorBoundary>
@@ -25,8 +24,8 @@ const App = () => {
             </Suspense>
           </ErrorBoundary>
         </div>
-      </ThemeContext.Provider>
-    </React.StrictMode>
+      </React.StrictMode>
+    </Provider>
   );
 };
 

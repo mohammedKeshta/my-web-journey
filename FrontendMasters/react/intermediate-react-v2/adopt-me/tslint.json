@@ -1,0 +1,32 @@
+{
+    "extends": [
+        "tslint:recommended",
+        "tslint-react",
+        "tslint-config-prettier"
+    ],
+    "rules": {
+        "jsx-alignment": true,
+        "jsx-boolean-value": true,
+        "jsx-curly-spacing": [
+            true,
+            "never"
+        ],
+        "jsx-equals-spacing": [
+            true,
+            "never"
+        ],
+        "jsx-key": true,
+        "jsx-no-bind": true,
+        "jsx-no-multiline-js": false,
+        "jsx-no-string-ref": true,
+        "jsx-self-close": true,
+        "jsx-wrap-multiline": true,
+        "ordered-imports": false,
+        "object-literal-sort-keys": false,
+        "no-console": false,
+        "jsx-no-lambda": false,
+        "member-ordering": false,
+        "prettier": true,
+        "interface-name": false
+    }
+}
