@@ -1,23 +1,23 @@
-import React, {
-  useState,
-  useEffect,
-  useContext,
-  FunctionComponent,
-} from 'react';
+import React, { useState, useEffect, FunctionComponent } from 'react';
 import useDropdown from './useDropdown';
 import pet, { ANIMALS, Animal } from '@frontendmasters/pet';
 import Results from './Results';
-import ThemeContext from './ThemeContext';
 import { RouteComponentProps } from '@reach/router';
+import { connect } from 'react-redux';
+import changeLocation from '../redux/actionCreators/changeLocation';
+import changeTheme from '../redux/actionCreators/changeTheme';
 
-const SearchParams: FunctionComponent<RouteComponentProps> = () => {
-  const [location, setLocation] = useState('Seattle, WA');
+const SearchParams: FunctionComponent<RouteComponentProps<{
+  theme: string;
+  location: string;
+  setTheme: any;
+  updateLocation: any;
+}>> = ({ theme, location, setTheme, updateLocation }) => {
   const [animal, AnimalDropdown] = useDropdown('Animal', 'dog', ANIMALS);
   const [breeds, setBreeds] = useState([] as string[]);
   const [breed, BreedDropdown, setBreed] = useDropdown('Breed', '', breeds);
   const [pets, setPets] = useState([] as Animal[]);
 
-  const [theme, setTheme] = useContext(ThemeContext);
   async function requestPets() {
     // @ts-ignore
     const { animals } = await pet
@@ -65,7 +65,7 @@ const SearchParams: FunctionComponent<RouteComponentProps> = () => {
                 placeholder="Location"
                 id="location"
                 value={location}
-                onChange={e => setLocation(e.target.value)}
+                onChange={e => updateLocation(e.target.value)}
               />
             </div>
           </div>
@@ -111,4 +111,14 @@ const SearchParams: FunctionComponent<RouteComponentProps> = () => {
   );
 };
 
-export default SearchParams;
+const mapStateToProps = ({ theme, location }: any) => ({ theme, location });
+const mapDispatchToProps = (dispatch: any) => ({
+  updateLocation(location: string) {
+    dispatch(changeLocation(location));
+  },
+  setTheme(theme: string) {
+    dispatch(changeTheme(theme));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchParams);
