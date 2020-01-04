@@ -1,0 +1,22 @@
+{
+  "name": "draft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "notes.js",
+  "scripts": {
+    "start": "nodemon ./index.js",
+    "start:todo": "nodemon ./todo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/redux": "^3.6.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "dependencies": {
+    "redux": "^4.0.5"
+  }
+}

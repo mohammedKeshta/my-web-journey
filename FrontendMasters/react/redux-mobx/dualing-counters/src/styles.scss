@@ -1,0 +1,21 @@
+$button-color: cyan;
+
+html, body, * {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+button {
+  background-color: $button-color;
+  border: 5px solid lighten($button-color, 30%);
+  color: black;
+  margin: 0 0.5em;
+  padding: 1em;
+  outline: none;
+  &:hover {
+    background-color: darken($button-color, 5%);
+  }
+  &:active {
+    background-color: darken($button-color, 10%);
+  }
+}
