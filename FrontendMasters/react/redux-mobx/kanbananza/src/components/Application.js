@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import CreateList from './CreateList';
-import Lists from './Lists';
-
-// import defaultState from '../default-state.json';
+import Users from './Users';
+import ListsContainer from '../redux/containers/ListsContainer';
 
 class Application extends Component {
   render() {
     return (
       <main className="Application">
-        <div>{/* Users will go here! */}</div>
+        <div>
+          <Users />
+        </div>
         <section>
           <CreateList />
-          <Lists />
+          <ListsContainer />
         </section>
       </main>
     );

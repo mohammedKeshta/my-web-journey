@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
 import CreateCard from './CreateCard';
-import Card from './Card';
+import CardContainer from '../redux/containers/CardContainer';
 
 class List extends Component {
   state = { showOptions: false };
 
-  toggleOptions = () => {};
+  toggleOptions = () => {
+    this.setState({ ...this.state, showOptions: !this.state.showOptions });
+  };
 
   createCard = () => {};
 
@@ -31,11 +33,12 @@ class List extends Component {
           className="List-toggle toggle-options"
           onClick={this.toggleOptions}
         >
-          Toggle Options
+          {!showOptions ? 'Toggle Options' : 'Collapse Options'}
         </button>
         <div>
-          {/* Iterate over cards here. */}
-          <Card />
+          {list.cards.map(cardId => (
+            <CardContainer key={cardId} cardId={cardId} />
+          ))}
         </div>
       </article>
     );
