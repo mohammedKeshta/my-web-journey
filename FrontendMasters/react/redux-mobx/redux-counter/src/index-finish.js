@@ -1,21 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
-import './styles.scss';
-
-import { createStore } from 'redux';
+import { createStore, bindActionCreators } from 'redux';
 import { Provider, connect } from 'react-redux';
+import './styles.scss';
 
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
 const RESET = 'RESET';
 const initialState = { count: 0 };
 
-// Actions
-const increment = () => ({ type: INCREMENT });
-const decrement = () => ({ type: DECREMENT });
-const reset = () => ({ type: RESET });
-
-const reducer = (state = initialState, action) => {
+// Reducer
+const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT:
       return { ...state, count: state.count + 1 };
@@ -28,7 +23,13 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-const store = createStore(reducer);
+// Actions
+const increment = () => ({ type: INCREMENT });
+const decrement = () => ({ type: DECREMENT });
+const reset = () => ({ type: RESET });
+
+// Store
+const store = createStore(counterReducer);
 
 const Counter = ({ count, increment, decrement, reset }) => {
   return (
@@ -43,17 +44,14 @@ const Counter = ({ count, increment, decrement, reset }) => {
   );
 };
 
-const mapsStateToProps = ({ count }) => ({ count });
-const mapsDispatchToProps = { increment, decrement, reset };
+const mapStateToProps = ({ count }) => ({ count });
+const mapDispatchToProps = dispatch =>
+  bindActionCreators({ increment, decrement, reset }, dispatch);
 
-const CounterContainer = connect(
-  mapsStateToProps,
-  mapsDispatchToProps,
-)(Counter);
-
+const CounterWrapper = connect(mapStateToProps, mapDispatchToProps)(Counter);
 render(
   <Provider store={store}>
-    <CounterContainer />
+    <CounterWrapper />
   </Provider>,
   document.getElementById('root'),
 );
