@@ -12,11 +12,11 @@ type(None)  # NoneType
 float(5)  # 5.0
 int(3.9)  # 3
 
-print(5//2)  # 2
+print(5 // 2)  # 2
 print(5 % 2)  # 1
 
 print(2 ** 3)  # 8
 print(2 * 3)  # 6
-print(5/2)  # 2.5
-print(3+2)  # 5
-print(3-2)  # 1
+print(5 / 2)  # 2.5
+print(3 + 2)  # 5
+print(3 - 2)  # 1

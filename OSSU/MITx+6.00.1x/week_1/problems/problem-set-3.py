@@ -19,15 +19,11 @@ longest_substring_in_alphabetical_order = ''
 s = s.lower()
 
 for i, letter in enumerate(s):
-    str = ''
-    isAlphap = True
-    while isAlphap: 
-        if s[i] < s[i+1]: 
-            str += letter
-            print(str)
-            continue
-        isAlphap = False
-        
+    if (len(s) == 1):
+        longest_substring_in_alphabetical_order = s
+        break 
+
+
 
 output = 'Longest substring in alphabetical order is: {}'.format(
     longest_substring_in_alphabetical_order)
