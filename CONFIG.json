@@ -1,31 +1,173 @@
 {
-    "window.zoomLevel": 0,
-    "editor.fontLigatures": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.colorTheme": "Night Owl",
+    "workbench.startupEditor": "newUntitledFile",
     "editor.wordWrap": "on",
-    "files.exclude": {
-        "**/bower_components": true,
+    "search.exclude": {
+        "**/tmp": true,
         "**/node_modules": true,
-        "**/tmp": true
+        "**/bower_components": true,
+        "**/coverage": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.build": true,
+        "**/.gh-pages": true
     },
-    "editor.formatOnSave": true,
-    "[html]": {
-        "editor.formatOnSave": false
-    },
-    "editor.fontFamily": "Dank Mono, Fira Code, Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontSize": 16,
-    "workbench.colorTheme": "Material Theme Ocean High Contrast",
-    "git.ignoreLegacyWarning": true,
+    "files.autoSave": "afterDelay",
+    "editor.fontFamily": "'Dank Mono', Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.folding": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.lineHeight": 26,
+    "editor.matchBrackets": "always",
     "editor.minimap.enabled": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "terminal.integrated.fontSize": 16,
-    "better-comments.multilineComments": true,
-    "better-comments.highlightPlainText": false,
-    "editor.cursorBlinking": "expand",
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "prettier.jsxSingleQuote": true,
-    "prettier.printWidth": 100,
+    "editor.occurrencesHighlight": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderIndentGuides": false,
+    "editor.renderLineHighlight": "none",
+    "explorer.openEditors.visible": 0,
+    "workbench.activityBar.visible": true,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editor.showIcons": true,
+    "workbench.statusBar.visible": false,
+    "editor.fontSize": 18,
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 0,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "explorer.sortOrder": "type",
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "smooth",
+    "files.trimFinalNewlines": true,
+    "breadcrumbs.enabled": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.suggestSelection": "recentlyUsed",
+        "editor.suggest.showKeywords": false
+    },
     "prettier.singleQuote": true,
+    "prettier.disableLanguages": [
+        "HTML"
+    ],
+    "prettier.jsxBracketSameLine": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.printWidth": 120,
+    "cSpell.userWords": [
+        "DEVTOOLS",
+        "firestore"
+    ],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "terminal.integrated.fontSize": 16,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "editor.foldingStrategy": "indentation",
+    "emmet.showSuggestionsAsSnippets": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
     "python.jediEnabled": false,
-    "code-runner.runInTerminal": true,
+    "fileHeaderComment.parameter": {
+        "*": {
+            "author": "Mohammed Elzanaty",
+            "commentbegin": "/*",
+            "commentprefix": " *",
+            "commentline": " ",
+            "commentend": " */",
+            "company": "sceel.io"
+        }
+    },
+    "fileHeaderComment.template": {
+        "*": [
+            "${commentbegin}",
+            "    Created on ${datetime24h}",
+            "${commentline}",
+            "    Copyright (c) ${year} - ${author} - ${company} ",
+            "${commentend}"
+        ]
+    },
+    // Place your settings in this file to overwrite the default settings
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": true,
+    "editor.lightbulb.enabled": false,
+    "editor.rulers": [
+        80
+    ],
+    "editor.snippetSuggestions": "top",
+    "editor.wordBasedSuggestions": false,
+    "editor.suggest.localityBonus": true,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.suggestSelection": "recentlyUsed",
+        "editor.suggest.showKeywords": false
+    },
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "editor.glyphMargin": false,
+    "files.exclude": {
+        "USE_GITIGNORE": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "javascript.suggest.autoImports": false,
+    "javascript.validate.enable": false,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.options": {
+        "env": {
+            "browser": true,
+            "jest/globals": true,
+            "es6": true
+        },
+        "parserOptions": {
+            "ecmaVersion": 2019,
+            "sourceType": "module",
+            "ecmaFeatures": {
+                "jsx": true
+            }
+        },
+        "rules": {
+            "no-debugger": "off"
+        }
+    },
+    "terminal.integrated.shellArgs.osx": [
+        "-l"
+    ],
+    "terminal.integrated.scrollback": 10000,
+    "files.associations": {
+        "*.md": "mdx"
+    },
+    "local-history.absolute": true,
+    "grunt.autoDetect": "off",
+    "npm.runSilent": true,
+    "gulp.autoDetect": "off",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.sideBar.location": "left",
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": false,
+    "prettier.bracketSpacing": false,
+    "prettier.proseWrap": "always",
+    "prettier.semi": false,
+    "prettier.trailingComma": "all",
+    "prettier.useEditorConfig": false,
 }
