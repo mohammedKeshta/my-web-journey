@@ -1,32 +1,32 @@
 // prop getters
 
-import React from 'react'
-import {Switch} from '../switch'
+import React from 'react';
+import {Switch} from '../switch';
 
 const callAll = (...fns) => (...args) =>
-  fns.forEach(fn => fn && fn(...args))
+  fns.forEach(fn => fn && fn(...args));
 
 class Toggle extends React.Component {
-  state = {on: false}
+  state = {on: false};
   toggle = () =>
     this.setState(
       ({on}) => ({on: !on}),
       () => this.props.onToggle(this.state.on),
-    )
+    );
   getTogglerProps = ({onClick, ...props} = {}) => ({
     'aria-pressed': this.state.on,
     onClick: callAll(onClick, this.toggle),
     ...props,
-  })
+  });
   getStateAndHelpers() {
     return {
       on: this.state.on,
       toggle: this.toggle,
       getTogglerProps: this.getTogglerProps,
-    }
+    };
   }
   render() {
-    return this.props.children(this.getStateAndHelpers())
+    return this.props.children(this.getStateAndHelpers());
   }
 }
 
@@ -52,8 +52,8 @@ function Usage({
         </div>
       )}
     </Toggle>
-  )
+  );
 }
-Usage.title = 'Prop Getters'
+Usage.title = 'Prop Getters';
 
-export {Toggle, Usage as default}
+export {Toggle, Usage as default};

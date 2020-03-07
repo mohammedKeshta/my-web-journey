@@ -1,10 +1,10 @@
 // Flexible Compound Components with context (extra credit 1)
 // This adds validation to the consumer
 
-import React from 'react'
-import {Switch} from '../switch'
+import React from 'react';
+import {Switch} from '../switch';
 
-const ToggleContext = React.createContext()
+const ToggleContext = React.createContext();
 
 function ToggleConsumer(props) {
   return (
@@ -13,12 +13,12 @@ function ToggleConsumer(props) {
         if (!context) {
           throw new Error(
             `Toggle compound components cannot be rendered outside the Toggle component`,
-          )
+          );
         }
-        return props.children(context)
+        return props.children(context);
       }}
     </ToggleContext.Consumer>
-  )
+  );
 }
 
 class Toggle extends React.Component {
@@ -26,25 +26,25 @@ class Toggle extends React.Component {
     <ToggleConsumer>
       {({on}) => (on ? children : null)}
     </ToggleConsumer>
-  )
+  );
   static Off = ({children}) => (
     <ToggleConsumer>
       {({on}) => (on ? null : children)}
     </ToggleConsumer>
-  )
+  );
   static Button = props => (
     <ToggleConsumer>
       {({on, toggle}) => (
         <Switch on={on} onClick={toggle} {...props} />
       )}
     </ToggleConsumer>
-  )
-  state = {on: false}
+  );
+  state = {on: false};
   toggle = () =>
     this.setState(
       ({on}) => ({on: !on}),
       () => this.props.onToggle(this.state.on),
-    )
+    );
   render() {
     return (
       <ToggleContext.Provider
@@ -52,7 +52,7 @@ class Toggle extends React.Component {
       >
         {this.props.children}
       </ToggleContext.Provider>
-    )
+    );
   }
 }
 
@@ -67,8 +67,8 @@ function Usage({
         <Toggle.Button />
       </div>
     </Toggle>
-  )
+  );
 }
-Usage.title = 'Flexible Compound Components'
+Usage.title = 'Flexible Compound Components';
 
-export {Toggle, Usage as default}
+export {Toggle, Usage as default};

@@ -1,10 +1,10 @@
 // state reducer
 
-import React from 'react'
-import {Switch} from '../switch'
+import React from 'react';
+import {Switch} from '../switch';
 
 const callAll = (...fns) => (...args) =>
-  fns.forEach(fn => fn && fn(...args))
+  fns.forEach(fn => fn && fn(...args));
 
 // Render props allow users to be in control over the UI based on state.
 // State reducers allow users to be in control over logic based on actions.
@@ -29,9 +29,9 @@ class Toggle extends React.Component {
     onReset: () => {},
     // 🐨 let's add a default stateReducer here. It should return
     // the changes object as it is passed.
-  }
-  initialState = {on: this.props.initialOn}
-  state = this.initialState
+  };
+  initialState = {on: this.props.initialOn};
+  state = this.initialState;
   // 🐨 let's add a method here called `internalSetState`. It will simulate
   // the same API as `setState(updater, callback)`:
   // - updater: (changes object or function that returns the changes object)
@@ -51,27 +51,27 @@ class Toggle extends React.Component {
   reset = () =>
     this.setState(this.initialState, () =>
       this.props.onReset(this.state.on),
-    )
+    );
   toggle = () =>
     this.setState(
       ({on}) => ({on: !on}),
       () => this.props.onToggle(this.state.on),
-    )
+    );
   getTogglerProps = ({onClick, ...props} = {}) => ({
     onClick: callAll(onClick, this.toggle),
     'aria-pressed': this.state.on,
     ...props,
-  })
+  });
   getStateAndHelpers() {
     return {
       on: this.state.on,
       toggle: this.toggle,
       reset: this.reset,
       getTogglerProps: this.getTogglerProps,
-    }
+    };
   }
   render() {
-    return this.props.children(this.getStateAndHelpers())
+    return this.props.children(this.getStateAndHelpers());
   }
 }
 
@@ -82,27 +82,27 @@ class Usage extends React.Component {
   static defaultProps = {
     onToggle: (...args) => console.log('onToggle', ...args),
     onReset: (...args) => console.log('onReset', ...args),
-  }
-  initialState = {timesClicked: 0}
-  state = this.initialState
+  };
+  initialState = {timesClicked: 0};
+  state = this.initialState;
   handleToggle = (...args) => {
     this.setState(({timesClicked}) => ({
       timesClicked: timesClicked + 1,
-    }))
-    this.props.onToggle(...args)
-  }
+    }));
+    this.props.onToggle(...args);
+  };
   handleReset = (...args) => {
-    this.setState(this.initialState)
-    this.props.onReset(...args)
-  }
+    this.setState(this.initialState);
+    this.props.onReset(...args);
+  };
   toggleStateReducer = (state, changes) => {
     if (this.state.timesClicked >= 4) {
-      return {...changes, on: false}
+      return {...changes, on: false};
     }
-    return changes
-  }
+    return changes;
+  };
   render() {
-    const {timesClicked} = this.state
+    const {timesClicked} = this.state;
     return (
       <Toggle
         stateReducer={this.toggleStateReducer}
@@ -130,12 +130,12 @@ class Usage extends React.Component {
           </div>
         )}
       </Toggle>
-    )
+    );
   }
 }
-Usage.title = 'State Reducers'
+Usage.title = 'State Reducers';
 
-export {Toggle, Usage as default}
+export {Toggle, Usage as default};
 
 /* eslint
 "no-unused-vars": [

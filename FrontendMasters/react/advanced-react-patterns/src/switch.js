@@ -1,5 +1,5 @@
-import './switch.styles.css'
-import React from 'react'
+import './switch.styles.css';
+import React from 'react';
 
 // STOP! You should not have to change anything in this file to
 // make it through the workshop. If tests are failing because of
@@ -11,7 +11,7 @@ import React from 'react'
 // this is here to fill in for the onChange handler
 // we're not using onChange because it seems to behave
 // differently in codesandbox and locally :shrug:
-const noop = () => {}
+const noop = () => {};
 
 class Switch extends React.Component {
   render() {
@@ -21,14 +21,14 @@ class Switch extends React.Component {
       'aria-label': ariaLabel,
       onClick,
       ...props
-    } = this.props
+    } = this.props;
     const btnClassName = [
       className,
       'toggle-btn',
       on ? 'toggle-btn-on' : 'toggle-btn-off',
     ]
       .filter(Boolean)
-      .join(' ')
+      .join(' ');
     return (
       <label
         aria-label={ariaLabel || 'Toggle'}
@@ -44,8 +44,8 @@ class Switch extends React.Component {
         />
         <span className={btnClassName} {...props} />
       </label>
-    )
+    );
   }
 }
 
-export {Switch}
+export {Switch};

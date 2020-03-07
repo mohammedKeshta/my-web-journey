@@ -1,14 +1,14 @@
 // control props
 
-import React from 'react'
-import {Switch} from '../switch'
+import React from 'react';
+import {Switch} from '../switch';
 
 // Here we're going to simplify our component slightly so you
 // can learn the control props pattern in isolation from everything else.
 // Next you'll put the pieces together.
 
 class Toggle extends React.Component {
-  state = {on: false}
+  state = {on: false};
   // 🐨 let's add a function that can determine whether
   // the on prop is controlled. Call it `isControlled`.
   // It can accept a string called `prop` and should return
@@ -26,15 +26,15 @@ class Toggle extends React.Component {
     this.setState(
       ({on}) => ({on: !on}),
       () => {
-        this.props.onToggle(this.state.on)
+        this.props.onToggle(this.state.on);
       },
-    )
-  }
+    );
+  };
   render() {
     // 🐨 rather than getting state from this.state,
     // let's use our `getState` method.
-    const {on} = this.state
-    return <Switch on={on} onClick={this.toggle} />
+    const {on} = this.state;
+    return <Switch on={on} onClick={this.toggle} />;
   }
 }
 
@@ -51,13 +51,13 @@ class Toggle extends React.Component {
 // component is intended to be used and is used in the tests.
 // You can make all the tests pass by updating the Toggle component.
 class Usage extends React.Component {
-  state = {bothOn: false}
+  state = {bothOn: false};
   handleToggle = on => {
-    this.setState({bothOn: on})
-  }
+    this.setState({bothOn: on});
+  };
   render() {
-    const {bothOn} = this.state
-    const {toggle1Ref, toggle2Ref} = this.props
+    const {bothOn} = this.state;
+    const {toggle1Ref, toggle2Ref} = this.props;
     return (
       <div>
         <Toggle
@@ -71,9 +71,9 @@ class Usage extends React.Component {
           ref={toggle2Ref}
         />
       </div>
-    )
+    );
   }
 }
-Usage.title = 'Control Props'
+Usage.title = 'Control Props';
 
-export {Toggle, Usage as default}
+export {Toggle, Usage as default};

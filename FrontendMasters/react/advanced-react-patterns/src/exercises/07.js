@@ -1,10 +1,10 @@
 // State Initializers
 
-import React from 'react'
-import {Switch} from '../switch'
+import React from 'react';
+import {Switch} from '../switch';
 
 const callAll = (...fns) => (...args) =>
-  fns.forEach(fn => fn && fn(...args))
+  fns.forEach(fn => fn && fn(...args));
 
 class Toggle extends React.Component {
   // 🐨 We're going to need some static defaultProps here to allow
@@ -12,7 +12,7 @@ class Toggle extends React.Component {
   //
   // 🐨 Rather than initializing state to have on as false,
   // set on to this.props.initialOn
-  state = {on: false}
+  state = {on: false};
 
   // 🐨 now let's add a reset method here that resets the state
   // to the initial state. Then add a callback that calls
@@ -21,14 +21,14 @@ class Toggle extends React.Component {
     this.setState(
       ({on}) => ({on: !on}),
       () => this.props.onToggle(this.state.on),
-    )
+    );
   getTogglerProps = ({onClick, ...props} = {}) => {
     return {
       'aria-pressed': this.state.on,
       onClick: callAll(onClick, this.toggle),
       ...props,
-    }
-  }
+    };
+  };
   getStateAndHelpers() {
     return {
       on: this.state.on,
@@ -36,10 +36,10 @@ class Toggle extends React.Component {
       // 🐨 now let's include the reset method here
       // so folks can use that in their implementation.
       getTogglerProps: this.getTogglerProps,
-    }
+    };
   }
   render() {
-    return this.props.children(this.getStateAndHelpers())
+    return this.props.children(this.getStateAndHelpers());
   }
 }
 
@@ -65,8 +65,8 @@ function Usage({
         </div>
       )}
     </Toggle>
-  )
+  );
 }
-Usage.title = 'State Initializers'
+Usage.title = 'State Initializers';
 
-export {Toggle, Usage as default}
+export {Toggle, Usage as default};

@@ -1,45 +1,45 @@
 // Compound Components
 
-import React from 'react'
-import {Switch} from '../switch'
+import React from 'react';
+import {Switch} from '../switch';
 
 function componentHasChild(child) {
   for (const property in Toggle) {
     if (Toggle.hasOwnProperty(property)) {
       if (child.type === Toggle[property]) {
-        return true
+        return true;
       }
     }
   }
-  return false
+  return false;
 }
 
 class Toggle extends React.Component {
-  static On = ({on, children}) => (on ? children : null)
-  static Off = ({on, children}) => (on ? null : children)
+  static On = ({on, children}) => (on ? children : null);
+  static Off = ({on, children}) => (on ? null : children);
   static Button = ({on, toggle, ...props}) => (
     <Switch on={on} onClick={toggle} {...props} />
-  )
-  state = {on: false}
+  );
+  state = {on: false};
   toggle = () =>
     this.setState(
       ({on}) => ({on: !on}),
       () => this.props.onToggle(this.state.on),
-    )
+    );
   render() {
     return React.Children.map(this.props.children, child => {
       if (componentHasChild(child)) {
         return React.cloneElement(child, {
           on: this.state.on,
           toggle: this.toggle,
-        })
+        });
       }
-      return child
-    })
+      return child;
+    });
   }
 }
 
-const Hi = () => <h4>Hi</h4>
+const Hi = () => <h4>Hi</h4>;
 function Usage({
   onToggle = (...args) => console.log('onToggle', ...args),
 }) {
@@ -51,8 +51,8 @@ function Usage({
       <span>Hello</span>
       <Hi />
     </Toggle>
-  )
+  );
 }
-Usage.title = 'Compound Components'
+Usage.title = 'Compound Components';
 
-export {Toggle, Usage as default}
+export {Toggle, Usage as default};

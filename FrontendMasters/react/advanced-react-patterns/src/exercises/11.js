@@ -1,23 +1,23 @@
 // The provider pattern
-import React, {Fragment} from 'react'
-import {Switch} from '../switch'
+import React, {Fragment} from 'react';
+import {Switch} from '../switch';
 
 // 🐨 create your React context here with React.createContext
 
 class Toggle extends React.Component {
   // 🐨 expose the ToggleContext.Consumer as a static property of Toggle here.
-  state = {on: false}
+  state = {on: false};
   toggle = () =>
     this.setState(
       ({on}) => ({on: !on}),
       () => this.props.onToggle(this.state.on),
-    )
+    );
   render() {
     // 🐨 replace this with rendering the ToggleContext.Provider
     return this.props.children({
       on: this.state.on,
       toggle: this.toggle,
-    })
+    });
   }
 }
 
@@ -34,7 +34,7 @@ class Toggle extends React.Component {
 // Don't make changes to the Usage component. It's here to show you how your
 // component is intended to be used and is used in the tests.
 // You can make all the tests pass by updating the Toggle component.
-const Layer1 = () => <Layer2 />
+const Layer1 = () => <Layer2 />;
 const Layer2 = () => (
   <Toggle.Consumer>
     {({on}) => (
@@ -44,13 +44,13 @@ const Layer2 = () => (
       </Fragment>
     )}
   </Toggle.Consumer>
-)
-const Layer3 = () => <Layer4 />
+);
+const Layer3 = () => <Layer4 />;
 const Layer4 = () => (
   <Toggle.Consumer>
     {({on, toggle}) => <Switch on={on} onClick={toggle} />}
   </Toggle.Consumer>
-)
+);
 
 function Usage({
   onToggle = (...args) => console.log('onToggle', ...args),
@@ -59,7 +59,7 @@ function Usage({
     <Toggle onToggle={onToggle}>
       <Layer1 />
     </Toggle>
-  )
+  );
 }
 
 /*
@@ -87,6 +87,6 @@ function Usage({
 }
 */
 
-Usage.title = 'The Provider Pattern'
+Usage.title = 'The Provider Pattern';
 
-export {Toggle, Usage as default}
+export {Toggle, Usage as default};

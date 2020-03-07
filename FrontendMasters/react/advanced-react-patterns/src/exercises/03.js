@@ -1,7 +1,7 @@
 // Flexible Compound Components with context
 
-import React from 'react'
-import {Switch} from '../switch'
+import React from 'react';
+import {Switch} from '../switch';
 
 // Right now our component can only clone and pass props to immediate children.
 // So we need some way for our compound components to implicitly accept the on
@@ -49,17 +49,17 @@ class Toggle extends React.Component {
   // 🐨 each of these compound components will need to be changed to use
   // ToggleContext.Consumer and rather than getting `on` and `toggle`
   // from props, it'll get it from the ToggleContext.Consumer value.
-  static On = ({on, children}) => (on ? children : null)
-  static Off = ({on, children}) => (on ? null : children)
+  static On = ({on, children}) => (on ? children : null);
+  static Off = ({on, children}) => (on ? null : children);
   static Button = ({on, toggle, ...props}) => (
     <Switch on={on} onClick={toggle} {...props} />
-  )
-  state = {on: false}
+  );
+  state = {on: false};
   toggle = () =>
     this.setState(
       ({on}) => ({on: !on}),
       () => this.props.onToggle(this.state.on),
-    )
+    );
   render() {
     // Because this.props.children is _immediate_ children only, we need
     // to 🐨 remove this map function and render our context provider with
@@ -72,7 +72,7 @@ class Toggle extends React.Component {
         on: this.state.on,
         toggle: this.toggle,
       }),
-    )
+    );
   }
 }
 
@@ -97,8 +97,8 @@ function Usage({
         <Toggle.Button />
       </div>
     </Toggle>
-  )
+  );
 }
-Usage.title = 'Flexible Compound Components'
+Usage.title = 'Flexible Compound Components';
 
-export {Toggle, Usage as default}
+export {Toggle, Usage as default};
