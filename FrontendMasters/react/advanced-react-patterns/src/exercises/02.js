@@ -1,7 +1,11 @@
-// Compound Components
+/*
+ * Created on 3/8/20, 9:39 AM
+ * Copyright (c) 2020 - Mohammed Elzanaty - sceel.io
+ * @desc: Compound Components
+ */
 
-import React from 'react';
-import {Switch} from '../switch';
+import React, { Children, cloneElement } from 'react';
+import { Switch } from '../switch';
 
 class Toggle extends React.Component {
   // you can create function components as static properties!
@@ -16,10 +20,16 @@ class Toggle extends React.Component {
   //    be able to accept `on`, `toggle`, and `children` as props.
   //    Note that they will _not_ have access to Toggle instance properties
   //    like `this.state.on` or `this.toggle`.
-  state = {on: false};
+  static On = ({ children, on }) => (on ? children : null);
+  static Off = ({ children, on }) => (on ? null : children);
+  static Button = ({ on, toggle, ...props }) => (
+    <Switch on={on} onClick={toggle} {...props} />
+  );
+
+  state = { on: false };
   toggle = () =>
     this.setState(
-      ({on}) => ({on: !on}),
+      ({ on }) => ({ on: !on }),
       () => this.props.onToggle(this.state.on),
     );
   render() {
@@ -33,8 +43,14 @@ class Toggle extends React.Component {
     // 2. React.cloneElement: https://reactjs.org/docs/react-api.html#cloneelement
     //
     // 🐨 you'll want to completely replace the code below with the above logic.
-    const {on} = this.state;
-    return <Switch on={on} onClick={this.toggle} />;
+    const { on } = this.state;
+    const { children } = this.props;
+    return Children.map(children, childElement => {
+      return cloneElement(childElement, {
+        on,
+        toggle: this.toggle,
+      });
+    });
   }
 }
 
@@ -57,4 +73,4 @@ function Usage({
 }
 Usage.title = 'Compound Components';
 
-export {Toggle, Usage as default};
+export { Toggle, Usage as default };
