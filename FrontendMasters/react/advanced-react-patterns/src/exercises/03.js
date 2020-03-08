@@ -45,7 +45,8 @@ import { Switch } from '../switch';
 
 // 🐨 create a ToggleContext with React.createContext here
 
-const ToggleContext = React.createContext(null);
+const defaultValue = { on: false, toggle: () => {} };
+const ToggleContext = React.createContext(defaultValue);
 
 class Toggle extends React.Component {
   // 🐨 each of these compound components will need to be changed to use
@@ -68,21 +69,22 @@ class Toggle extends React.Component {
       )}
     </ToggleContext.Consumer>
   );
-  state = { on: false };
+
   toggle = () =>
     this.setState(
       ({ on }) => ({ on: !on }),
       () => this.props.onToggle(this.state.on),
     );
+  state = { on: false, toggle: this.toggle };
+
   render() {
     // Because this.props.children is _immediate_ children only, we need
     // to 🐨 remove this map function and render our context provider with
     // this.props.children as the children of the provider. Then we'll
     // expose the `on` state and `toggle` method as properties in the context
     // value (the value prop).
-    const { on } = this.state;
     return (
-      <ToggleContext.Provider value={{ on, toggle: this.toggle }}>
+      <ToggleContext.Provider value={this.state}>
         {this.props.children}
       </ToggleContext.Provider>
     );

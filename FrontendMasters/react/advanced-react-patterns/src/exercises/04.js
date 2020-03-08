@@ -1,21 +1,21 @@
 // render props
 
 import React from 'react';
-import {Switch} from '../switch';
+import { Switch } from '../switch';
 
 // we're back to basics here. Rather than compound components,
 // let's use a render prop!
 class Toggle extends React.Component {
-  state = {on: false};
+  state = { on: false };
   toggle = () =>
     this.setState(
-      ({on}) => ({on: !on}),
+      ({ on }) => ({ on: !on }),
       () => {
         this.props.onToggle(this.state.on);
       },
     );
   render() {
-    const {on} = this.state;
+    const { on } = this.state;
     // We want to give rendering flexibility, so we'll be making
     // a change to our render prop component here.
     // You'll notice the children prop in the Usage component
@@ -33,7 +33,7 @@ function Usage({
 }) {
   return (
     <Toggle onToggle={onToggle}>
-      {({on, toggle}) => (
+      {({ on, toggle }) => (
         <div>
           {on ? 'The button is on' : 'The button is off'}
           <Switch on={on} onClick={toggle} />
@@ -48,4 +48,4 @@ function Usage({
 }
 Usage.title = 'Render Props';
 
-export {Toggle, Usage as default};
+export { Toggle, Usage as default };
