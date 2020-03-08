@@ -1,0 +1,14 @@
+{
+  "name": "javascript-hard-parts-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mohammed Elzanaty",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^13.9.0",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  }
+}
