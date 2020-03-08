@@ -1,4 +1,8 @@
-// render props
+/*
+ * Created on 3/8/20, 9:53 PM
+ * Copyright (c) 2020 - Mohammed Elzanaty - sceel.io
+ * @desc: render props
+ */
 
 import React from 'react';
 import { Switch } from '../switch';
@@ -21,7 +25,9 @@ class Toggle extends React.Component {
     // You'll notice the children prop in the Usage component
     // is a function. 🐨 So you can replace this with a call this.props.children()
     // But you'll need to pass it an object with `on` and `toggle`.
-    return <Switch on={on} onClick={this.toggle} />;
+    return (
+      <div>{this.props.children({ on, toggle: this.toggle })}</div>
+    );
   }
 }
 
