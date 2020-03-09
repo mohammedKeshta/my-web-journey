@@ -1,13 +1,13 @@
 // prop collections
 
 import React from 'react';
-import {Switch} from '../switch';
+import { Switch } from '../switch';
 
 class Toggle extends React.Component {
-  state = {on: false};
+  state = { on: false };
   toggle = () =>
     this.setState(
-      ({on}) => ({on: !on}),
+      ({ on }) => ({ on: !on }),
       () => this.props.onToggle(this.state.on),
     );
   getStateAndHelpers() {
@@ -38,7 +38,7 @@ function Usage({
 }) {
   return (
     <Toggle onToggle={onToggle}>
-      {({on, togglerProps}) => (
+      {({ on, togglerProps }) => (
         <div>
           <Switch on={on} {...togglerProps} />
           <hr />
@@ -52,4 +52,4 @@ function Usage({
 }
 Usage.title = 'Prop Collections';
 
-export {Toggle, Usage as default};
+export { Toggle, Usage as default };
