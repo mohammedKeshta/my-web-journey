@@ -24,11 +24,19 @@ const handleOnRemoveAll = () => {
   renderApp();
 };
 
+const handleMakeDecision = () => {
+  const randomNumber = Math.floor(Math.random() * app.options.length);
+  const randomOption = app.options[randomNumber]
+  console.log(randomOption)
+  renderApp();
+};
+
 function renderApp() {
   const template = (
     <div>
       <h1>{app.title}</h1>
       {app.subtitle && <p>{app.subtitle}</p>}
+      <button  disabled={app.options.length === 0}  onClick={handleMakeDecision}>What should I do ?</button>
       <button onClick={handleOnRemoveAll}>Remove All</button>
       <p>
         {app.options && app.options.length
