@@ -4,54 +4,48 @@ const React = React;
 
 const app = {
   title: 'Indecision App',
-  subtitle: 'This is some info'
-  // options: ['One', 'Tow']
+  subtitle: 'This is some info',
+  options: ['One', 'Tow']
 };
 
-const template = (
-  <div>
-    <h1>{app.title}</h1>
-    {app.subtitle && <p>{app.subtitle}</p>}
-    <p>
-      {app.options && app.options.length > 0
-        ? "Here's your options"
-        : 'No Options'}
-    </p>
-  </div>
-);
-
-let count = 0;
-// increment counter by one
-let increment = () => {
-  count++;
-  renderCounterApp();
-};
-// decrement counter by one
-let decrement = () => {
-  count--;
-  renderCounterApp();
-};
-// reset counter
-let reset = () => {
-  count = 0;
-  renderCounterApp();
+const handleFormSubmit = e => {
+  e.preventDefault();
+  console.log('Form Submitted');
+  const option = e.target.elements.option.value;
+  if (option) {
+    app.options.push(option);
+    e.target.elements.option.value = '';
+    renderApp();
+  }
 };
 
-const renderCounterApp = () => {
-  const templateTwo = (
+const handleOnRemoveAll = () => {
+  app.options = [];
+  renderApp();
+};
+
+function renderApp() {
+  const template = (
     <div>
-      <h1>Count {count}</h1>
-      <button onClick={increment} style={{ marginRight: '10px' }}>
-        ➕
-      </button>
-      <button onClick={decrement} style={{ marginRight: '10px' }}>
-        ➖
-      </button>
-      <button onClick={reset}>🔪</button>
+      <h1>{app.title}</h1>
+      {app.subtitle && <p>{app.subtitle}</p>}
+      <button onClick={handleOnRemoveAll}>Remove All</button>
+      <p>
+        {app.options && app.options.length
+          ? "Here's your options"
+          : 'No Options'}
+      </p>
+      <ol>
+        {app.options &&
+          app.options.map(option => <li key={option}>{option}</li>)}
+      </ol>
+      <form onSubmit={handleFormSubmit}>
+        <input type="text" name="option" />
+        <button>Add Option</button>
+      </form>
     </div>
   );
 
-  render(templateTwo, document.getElementById('root'));
-};
-
-renderCounterApp();
+  render(template, document.getElementById('root'));
+}
+renderApp();
