@@ -4,7 +4,7 @@ const React = React;
 
 const app = {
   title: 'Indecision App',
-  subtitle: 'This is some info',
+  subtitle: 'This is some info'
   // options: ['One', 'Tow']
 };
 
@@ -20,20 +20,38 @@ const template = (
   </div>
 );
 
-const user = {
-  name: 'Mohammed Elzanaty',
-  age: 26,
-  // job: 'Senior Software Engineer',
-  location: 'Egypt, Cairo'
+let count = 0;
+// increment counter by one
+let increment = () => {
+  count++;
+  renderCounterApp();
+};
+// decrement counter by one
+let decrement = () => {
+  count--;
+  renderCounterApp();
+};
+// reset counter
+let reset = () => {
+  count = 0;
+  renderCounterApp();
 };
 
-const templateTwo = (
-  <div>
-    <h1>{user.name ? user.name : 'Antonymous'}</h1>
-    <p>Age: {user.age}</p>
-    {user.job && <p>Job: {user.job}</p>}
-    <p>Location: {user.location || 'Unknown'}</p>
-  </div>
-);
+const renderCounterApp = () => {
+  const templateTwo = (
+    <div>
+      <h1>Count {count}</h1>
+      <button onClick={increment} style={{ marginRight: '10px' }}>
+        ➕
+      </button>
+      <button onClick={decrement} style={{ marginRight: '10px' }}>
+        ➖
+      </button>
+      <button onClick={reset}>🔪</button>
+    </div>
+  );
 
-render(template, document.getElementById('root'));
+  render(templateTwo, document.getElementById('root'));
+};
+
+renderCounterApp();
