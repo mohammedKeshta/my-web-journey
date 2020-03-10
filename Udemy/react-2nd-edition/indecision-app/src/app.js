@@ -2,23 +2,30 @@ console.log('App.js is running');
 const { render } = ReactDOM;
 const React = React;
 
+const app = {
+  title: 'Indecision App',
+  subtitle: 'This is some info'
+};
+
 const template = (
   <div>
-    <h1>Indecision App</h1>
-    <p>This is some info</p>
-    <ol>
-      <li>Item One</li>
-      <li>Item Two</li>
-    </ol>
+    <h1>{app.title}</h1>
+    <p>{app.subtitle}</p>
   </div>
 );
+
+const user = {
+  name: 'Mohammed Elzanaty',
+  age: 26,
+  location: 'Egypt, Cairo'
+};
 
 const templateTwo = (
   <div>
-    <h1>Mohammed Elzanaty</h1>
-    <p>Age: 26</p>
-    <p>Location: Egypt</p>
+    <h1>{user.name}</h1>
+    <p>Age: {user.age}</p>
+    <p>Location: {user.location}</p>
   </div>
 );
 
-render(templateTwo, document.getElementById('root'));
+render(template, document.getElementById('root'));
