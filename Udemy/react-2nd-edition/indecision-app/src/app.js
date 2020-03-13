@@ -14,10 +14,12 @@ class Header extends React.Component {
 }
 class Action extends React.Component {
   render() {
-    const { handlePick } = this.props;
+    const { handlePick, hasOptions } = this.props;
     return (
       <div>
-        <button onClick={handlePick}>What should I do?</button>
+        <button onClick={handlePick} disabled={hasOptions}>
+          What should I do?
+        </button>
       </div>
     );
   }
@@ -52,16 +54,44 @@ class Option extends React.Component {
   }
 }
 class AddOption extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      option: '',
+      error: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleOnSubmit = this.handleOnSubmit.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  }
+
+  handleOnSubmit(e) {
+    e.preventDefault();
+    const error = this.props.handleAddOption(this.state.option.trim());
+    this.setState(prevState => {
+      return {
+        error
+      };
+    });
+  }
+
   render() {
-    const { handleAddOption, handleChange, option } = this.props;
+    const { error, option } = this.state;
     return (
       <div>
-        <form onSubmit={handleAddOption}>
+        {error && <h1>{error}</h1>}
+        <form onSubmit={this.handleOnSubmit}>
           <input
             type="text"
             name="option"
-            onChange={handleChange}
-            onBlur={handleChange}
+            onChange={this.handleChange}
+            onBlur={this.handleChange}
+            onFocus={() => this.setState(() => ({ error: '', option: '' }))}
             value={option}
           />
           <button type="submit">Add Option</button>
@@ -77,47 +107,50 @@ class App extends React.Component {
     this.state = {
       title: 'Indecision',
       subtitle: 'Put your life in the hand of a computer.',
-      options: ['Thing One', 'Thing Two', 'Thing Three'],
-      option: ''
+      options: ['Thing One', 'Thing Two', 'Thing Three']
     };
-    this.handleChange = this.handleChange.bind(this);
     this.handleAddOption = this.handleAddOption.bind(this);
     this.handleOnRemoveAll = this.handleOnRemoveAll.bind(this);
     this.handlePick = this.handlePick.bind(this);
   }
 
-  handleChange(e) {
-    this.setState({
-      [e.target.name]: e.target.value
+  handleOnRemoveAll() {
+    this.setState(() => {
+      return { options: [] };
     });
   }
 
-  handleAddOption(e) {
-    e.preventDefault();
-    const { option, options } = this.state;
-    this.setState({ options: [...options, option], option: '' });
-  }
-
-  handleOnRemoveAll() {
-    this.setState({ options: [] });
-  }
-
   handlePick() {
-    console.log(this);
+    const { options } = this.state;
+    const randomIndex = Math.floor(Math.random() * options.length);
+    const option = options[randomIndex];
+    alert(option);
+  }
+
+  handleAddOption(option) {
+    const { options } = this.state;
+
+    if (!option) {
+      return 'Enter valid value to add item';
+    } else if (options.indexOf(option) > -1) {
+      return 'This item already exist please enter another option';
+    }
+
+    this.setState(prevState => {
+      return { options: [...prevState.options, ...[option]] };
+    });
   }
 
   render() {
-    const { title, subtitle, options, option } = this.state;
+    const { title, subtitle, options } = this.state;
+    const hasOptions = options.length === 0;
+
     return (
       <div>
         <Header title={title} subtitle={subtitle} />
-        <Action handlePick={this.handlePick} />
+        <Action handlePick={this.handlePick} hasOptions={hasOptions} />
+        <AddOption handleAddOption={this.handleAddOption} />
         <Options options={options} handleOnRemoveAll={this.handleOnRemoveAll} />
-        <AddOption
-          handleAddOption={this.handleAddOption}
-          handleChange={this.handleChange}
-          option={option}
-        />
       </div>
     );
   }
