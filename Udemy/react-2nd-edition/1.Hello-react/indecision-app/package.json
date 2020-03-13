@@ -1,0 +1,24 @@
+{
+  "name": "indecision-app",
+  "version": "1.0.0",
+  "description": "todo app",
+  "main": "index.js",
+  "author": "mohammed elzanaty",
+  "license": "MIT",
+  "scripts": {
+    "server": "live-server ./public/",
+    "compile": "babel --watch src -d ./public/scripts"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "bracketSpacing": true
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3"
+  }
+}
