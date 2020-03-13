@@ -1,5 +1,15 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -56,7 +66,10 @@ var Action = /*#__PURE__*/function (_React$Component2) {
   _createClass(Action, [{
     key: "render",
     value: function render() {
-      return React.createElement("div", null, React.createElement("button", null, "What should I do?"));
+      var handlePick = this.props.handlePick;
+      return React.createElement("div", null, React.createElement("button", {
+        onClick: handlePick
+      }, "What should I do?"));
     }
   }]);
 
@@ -75,13 +88,17 @@ var Options = /*#__PURE__*/function (_React$Component3) {
   _createClass(Options, [{
     key: "render",
     value: function render() {
-      var options = this.props.options;
-      return React.createElement("div", null, options.map(function (option, index) {
+      var _this$props2 = this.props,
+          options = _this$props2.options,
+          handleOnRemoveAll = _this$props2.handleOnRemoveAll;
+      return React.createElement("div", null, React.createElement("button", {
+        onClick: handleOnRemoveAll
+      }, "\u274C Remove All"), options.length > 0 ? options.map(function (option, index) {
         return React.createElement(Option, {
           optionText: option,
           key: "option-".concat(index)
         });
-      }));
+      }) : React.createElement("h1", null, "There's no options right now ... try add one"));
     }
   }]);
 
@@ -101,7 +118,7 @@ var Option = /*#__PURE__*/function (_React$Component4) {
     key: "render",
     value: function render() {
       var optionText = this.props.optionText;
-      return React.createElement("p", null, optionText);
+      return React.createElement("div", null, React.createElement("p", null, optionText));
     }
   }]);
 
@@ -120,7 +137,21 @@ var AddOption = /*#__PURE__*/function (_React$Component5) {
   _createClass(AddOption, [{
     key: "render",
     value: function render() {
-      return React.createElement("div", null, React.createElement("button", null, "Add Option"));
+      var _this$props3 = this.props,
+          handleAddOption = _this$props3.handleAddOption,
+          handleChange = _this$props3.handleChange,
+          option = _this$props3.option;
+      return React.createElement("div", null, React.createElement("form", {
+        onSubmit: handleAddOption
+      }, React.createElement("input", {
+        type: "text",
+        name: "option",
+        onChange: handleChange,
+        onBlur: handleChange,
+        value: option
+      }), React.createElement("button", {
+        type: "submit"
+      }, "Add Option")));
     }
   }]);
 
@@ -130,24 +161,75 @@ var AddOption = /*#__PURE__*/function (_React$Component5) {
 var App = /*#__PURE__*/function (_React$Component6) {
   _inherits(App, _React$Component6);
 
-  function App() {
+  function App(props) {
+    var _this;
+
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
+    _this.state = {
+      title: 'Indecision',
+      subtitle: 'Put your life in the hand of a computer.',
+      options: ['Thing One', 'Thing Two', 'Thing Three'],
+      option: ''
+    };
+    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));
+    _this.handleAddOption = _this.handleAddOption.bind(_assertThisInitialized(_this));
+    _this.handleOnRemoveAll = _this.handleOnRemoveAll.bind(_assertThisInitialized(_this));
+    _this.handlePick = _this.handlePick.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(App, [{
+    key: "handleChange",
+    value: function handleChange(e) {
+      this.setState(_defineProperty({}, e.target.name, e.target.value));
+    }
+  }, {
+    key: "handleAddOption",
+    value: function handleAddOption(e) {
+      e.preventDefault();
+      var _this$state = this.state,
+          option = _this$state.option,
+          options = _this$state.options;
+      this.setState({
+        options: [].concat(_toConsumableArray(options), [option]),
+        option: ''
+      });
+    }
+  }, {
+    key: "handleOnRemoveAll",
+    value: function handleOnRemoveAll() {
+      this.setState({
+        options: []
+      });
+    }
+  }, {
+    key: "handlePick",
+    value: function handlePick() {
+      console.log(this);
+    }
+  }, {
     key: "render",
     value: function render() {
-      var title = 'Indecision';
-      var subtitle = 'Put your life in the hand of a computer.';
-      var options = ['Thing One', 'Thing Two', 'Thing Three'];
+      var _this$state2 = this.state,
+          title = _this$state2.title,
+          subtitle = _this$state2.subtitle,
+          options = _this$state2.options,
+          option = _this$state2.option;
       return React.createElement("div", null, React.createElement(Header, {
         title: title,
         subtitle: subtitle
-      }), React.createElement(Action, null), React.createElement(Options, {
-        options: options
-      }), React.createElement(AddOption, null));
+      }), React.createElement(Action, {
+        handlePick: this.handlePick
+      }), React.createElement(Options, {
+        options: options,
+        handleOnRemoveAll: this.handleOnRemoveAll
+      }), React.createElement(AddOption, {
+        handleAddOption: this.handleAddOption,
+        handleChange: this.handleChange,
+        option: option
+      }));
     }
   }]);
 
