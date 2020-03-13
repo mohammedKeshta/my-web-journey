@@ -1,59 +1,70 @@
-console.log('App.js is running');
-const { render } = ReactDOM;
 const React = React;
+const { render } = ReactDOM;
 
-const app = {
-  title: 'Indecision App',
-  subtitle: 'This is some info',
-  options: ['One', 'Tow']
-};
-
-const handleFormSubmit = e => {
-  e.preventDefault();
-  console.log('Form Submitted');
-  const option = e.target.elements.option.value;
-  if (option) {
-    app.options.push(option);
-    e.target.elements.option.value = '';
-    renderApp();
+class Header extends React.Component {
+  render() {
+    const { title, subtitle } = this.props;
+    return (
+      <div>
+        <h1>{title}</h1>
+        <h2>{subtitle}</h2>
+      </div>
+    );
   }
-};
-
-const handleOnRemoveAll = () => {
-  app.options = [];
-  renderApp();
-};
-
-const handleMakeDecision = () => {
-  const randomNumber = Math.floor(Math.random() * app.options.length);
-  const randomOption = app.options[randomNumber]
-  console.log(randomOption)
-  renderApp();
-};
-
-function renderApp() {
-  const template = (
-    <div>
-      <h1>{app.title}</h1>
-      {app.subtitle && <p>{app.subtitle}</p>}
-      <button  disabled={app.options.length === 0}  onClick={handleMakeDecision}>What should I do ?</button>
-      <button onClick={handleOnRemoveAll}>Remove All</button>
-      <p>
-        {app.options && app.options.length
-          ? "Here's your options"
-          : 'No Options'}
-      </p>
-      <ol>
-        {app.options &&
-          app.options.map(option => <li key={option}>{option}</li>)}
-      </ol>
-      <form onSubmit={handleFormSubmit}>
-        <input type="text" name="option" />
-        <button>Add Option</button>
-      </form>
-    </div>
-  );
-
-  render(template, document.getElementById('root'));
 }
-renderApp();
+
+class Action extends React.Component {
+  render() {
+    return (
+      <div>
+        <button>What should I do?</button>
+      </div>
+    );
+  }
+}
+class Options extends React.Component {
+  render() {
+    const { options } = this.props;
+
+    return (
+      <div>
+        {options.map((option, index) => (
+          <Option optionText={option} key={`option-${index}`} />
+        ))}
+      </div>
+    );
+  }
+}
+class Option extends React.Component {
+  render() {
+    const { optionText } = this.props;
+    return <p>{optionText}</p>;
+  }
+}
+class AddOption extends React.Component {
+  render() {
+    return (
+      <div>
+        <button>Add Option</button>
+      </div>
+    );
+  }
+}
+
+class App extends React.Component {
+  render() {
+    const title = 'Indecision';
+    const subtitle = 'Put your life in the hand of a computer.';
+    const options = ['Thing One', 'Thing Two', 'Thing Three'];
+
+    return (
+      <div>
+        <Header title={title} subtitle={subtitle} />
+        <Action />
+        <Options options={options} />
+        <AddOption />
+      </div>
+    );
+  }
+}
+render(<App />, document.getElementById('root'));
