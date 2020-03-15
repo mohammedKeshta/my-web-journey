@@ -1,0 +1,11 @@
+{
+  "name": "the-complete-nodejs-developer-course-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "mohammed elzanaty",
+  "license": "MIT",
+  "dependencies": {
+    "@types/express": "^4.17.3",
+    "@types/node": "^13.9.1"
+  }
+}
