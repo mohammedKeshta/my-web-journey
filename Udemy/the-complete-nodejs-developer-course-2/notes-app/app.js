@@ -20,4 +20,6 @@ log(isURL('google')) // false
 
 /*Printing in color*/
 const success = chalk.bold.green.inverse('Success!')
+const error = chalk.bold.red.inverse('Error!')
 log(success)
+log(error)
