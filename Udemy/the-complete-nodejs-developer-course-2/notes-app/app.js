@@ -1,17 +1,23 @@
 const utils = require('./utilities')
 const getNotes = require('./notes')
-const validator = require('validator')
+const { isEmail, isURL } = require('validator')
+const chalk = require('chalk')
+const log = console.log
 
 /* use another module */
-console.log(utils.name) // Mohammed
-console.log(utils.add(1, 2)) // 3
-console.log(utils.add(1, 2, 3, 4, 5)) // 15
+log(utils.name) // Mohammed
+log(utils.add(1, 2)) // 3
+log(utils.add(1, 2, 3, 4, 5)) // 15
 
 /* use our own files */
 const msg = getNotes()
-console.log(msg)
+log(msg)
 
 /*use node modules*/
-console.log(validator.isEmail('mo@mo.com')) // true
-console.log(validator.isURL('https://google.com')) // true
-console.log(validator.isURL('google')) // false
+log(isEmail('mo@mo.com')) // true
+log(isURL('https://google.com')) // true
+log(isURL('google')) // false
+
+/*Printing in color*/
+const success = chalk.bold.green.inverse('Success!')
+log(success)
