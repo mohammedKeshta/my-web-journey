@@ -1,25 +1,25 @@
-const utils = require('./utilities')
-const getNotes = require('./notes')
-const { isEmail, isURL } = require('validator')
+const notesController = require('./notes')
 const chalk = require('chalk')
-const log = console.log
+const yargs = require('yargs')
 
-/* use another module */
-log(utils.name) // Mohammed
-log(utils.add(1, 2)) // 3
-log(utils.add(1, 2, 3, 4, 5)) // 15
+yargs.command({
+    command: 'add',
+    describe: 'Add a new Note',
+    builder: {
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string',
+        },
+        body: {
+            describe: 'Note description',
+            demandOption: true,
+            type: 'string',
+        },
+    },
+    handler: ({ title, body }) => {
+        console.log(title, body)
+    },
+})
 
-/* use our own files */
-const msg = getNotes()
-log(msg)
-
-/*use node modules*/
-log(isEmail('mo@mo.com')) // true
-log(isURL('https://google.com')) // true
-log(isURL('google')) // false
-
-/*Printing in color*/
-const success = chalk.bold.green.inverse('Success!')
-const error = chalk.bold.red.inverse('Error!')
-log(success)
-log(error)
+yargs.parse()
