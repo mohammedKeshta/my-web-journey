@@ -11,7 +11,6 @@ const load = () => {
         return []
     }
 }
-
 const save = (notes = []) => {
     fs.writeFile(NOTE_PATH, JSON.stringify(notes, null, 2), err => {
         // Checking for errors
@@ -21,18 +20,18 @@ const save = (notes = []) => {
         console.log(chalk.bold.green.inverse(`Notes Saved`)) // Success
     })
 }
-
 const create = (title, body) => {
     // STEP 1: load notes
     let notes = load()
     // STEP 2: Adding new data to users object and check if note exist, if not add it
     const found = notes.some(note => note.title === title)
+    debugger
     if (!found) {
         notes.push({ title, body })
         // STEP 3: save notes
         save(notes)
         console.log(chalk.bold.green.inverse(`New Note Created`))
-    } else console.log(chalk.bold.cyan.inverse(`Note with title: "${title}" already taken`))
+    } else console.log(chalk.bold.red.inverse(`Note with title: "${title}" already taken`))
 }
 const list = (title = null) => {
     // load notes
@@ -40,7 +39,7 @@ const list = (title = null) => {
     if (title) {
         let current = notes.filter(note => note.title === title)
         if (current.length === 0) {
-            return console.log(chalk.bold.cyan.inverse(`No note with title: "${title}"`))
+            return console.log(chalk.bold.red.inverse(`No note with title: "${title}"`))
         }
         console.log(chalk.bold.green.inverse(`Note with title: "${title}"`))
         return console.log(JSON.stringify(current, null, 2))
@@ -70,7 +69,7 @@ const update = payload => {
     let notes = load()
     // handle empty notes
     if (!Array.isArray(notes) || !notes.length)
-        return console.log(chalk.bold.cyan.inverse("Their's no notes, Please add notes first"))
+        return console.log(chalk.bold.red.inverse("Their's no notes, Please add notes first"))
     //Find index of specific object using findIndex method.
     let noteIndex = notes.findIndex(notes => notes.title === payload.title)
     //Update note's body.
