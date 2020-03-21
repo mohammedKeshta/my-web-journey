@@ -1,13 +1,13 @@
-const LOG = console.log
+const { endpoint, apiKey } = require('./config')
+const axios = require('axios')
 
-LOG('Weather App Starting...')
-
-setTimeout(() => {
-    LOG('2 Second Timer')
-}, 2000)
-
-setTimeout(() => {
-  LOG('0 Second Timer')
-}, 0)
-
-LOG('Weather App Stop')
+axios
+    .get(`${endpoint}/forecast/${apiKey}/28.2567928,33.6287564`)
+    .then(function(response) {
+        // handle success
+        console.log(response.data.currently)
+    })
+    .catch(function(error) {
+        // handle error and show message
+        console.log(`error: ${error.message}`)
+    })
