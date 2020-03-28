@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://weather.com/weather/assets/favicon.1acd6ad0f84c999b39c434f6bda4e29f.ico">
+    <title>Weather App | {{template}}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/sticky-footer-navbar.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<!--expecting linear data. We passed template in our route-->
+<body class="{{template}}">
+        {{> header}}
+        <!-- Begin page content -->
+        <main role="main" class="container">
+            <!--is rocking the triple brackets, and is reserved specifically to serve this purpose: loading templates into other templates.-->
+            {{{body}}}
+        </main>
+        <!--This will load a partial named footer from views/partials/footer.hbs, provided that we create it-->
+        {{> footer}}
+        <!-- Bootstrap core JavaScript
+            ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="/js/vendor/jquery-3.2.1.slim.min.js"></script>
+        <script src="/js/vendor/popper.min.js"></script>
+        <script src="/js/vendor/bootstrap.min.js"></script>
+    </body>
+</html>
