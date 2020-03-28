@@ -38,9 +38,14 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
+    const { address } = req.query
+    if (!(req.query && address)) {
+        return res.json({
+            error: 'Please provide a correct address',
+        })
+    }
     res.json({
-        name: 'Mohammed',
-        age: 26,
+        address: req.query,
     })
 })
 
