@@ -3,6 +3,8 @@ const path = require('path'),
     //Loads the handlebars module
     hbs = require('express-handlebars')
 const { PORT } = require('../config/config')
+const geocode = require('./utils/geocode')
+const getWeather = require('./utils/forecast')
 
 // Initialize Express app
 const app = express()
@@ -44,9 +46,67 @@ app.get('/weather', (req, res) => {
             error: 'Please provide a correct address',
         })
     }
-    res.json({
-        address: req.query,
-    })
+
+    geocode(address)
+        .then(({ error, data }) => {
+            if (!error) {
+                const { latitude, longitude, location } = data
+                getWeather({ latitude, longitude })
+                    .then((response) => {
+                        if (!response.error) {
+                            const { daily, currently } = response.data
+
+                            let data = {
+                                forecast: `${daily.summary}, it's currently ${currently.temperature} degree out. There is a ${currently.precipProbability} chance to rain.`,
+                                location: location,
+                                address: address,
+                            }
+                            return res
+                                .status(200)
+                                .json({
+                                    status: 'success',
+                                    message: 'Retrieved All Data successfully',
+                                    data,
+                                })
+                                .end()
+                        } else {
+                            return res
+                                .status(400)
+                                .json({
+                                    status: 'error',
+                                    message: response.error,
+                                })
+                                .end()
+                        }
+                    })
+                    .catch((error) => {
+                        return res
+                            .status(400)
+                            .json({
+                                status: 'error',
+                                message: error.message,
+                            })
+                            .end()
+                    })
+            } else {
+                return res
+                  .status(200)
+                  .json({
+                    status: 'error',
+                    message:error,
+                  })
+                  .end()
+            }
+        })
+        .catch((error) => {
+            return res
+                .status(400)
+                .json({
+                    status: 'error',
+                    message: error.message,
+                })
+                .end()
+        })
 })
 
 // Handle 404

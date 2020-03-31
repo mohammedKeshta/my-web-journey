@@ -1,1 +1,25 @@
 <h1>Home</h1>
+<form class="form-inline" id="form" onsubmit="getWeather(); return false;">
+    <div class="form-group input-group">
+        <label for="inputLocation" class="mr-2">Location</label>
+        <input type="text" class="form-control" name="location" id="inputLocation" placeholder="Location">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div class="content mt-3">
+    <div class="row">
+        <div class="container">
+            <span id="forecast" class="text-primary font-weight-bold"> </span> <br>
+            <span id="location"> </span> <br>
+            <span id="address"> </span> <br>
+        </div>
+    </div>
+</div>
+
+<div class="content mt-3">
+    <div class="row">
+        <p class="font-weight-bold" id="error"></p>
+    </div>
+</div>
+
+
