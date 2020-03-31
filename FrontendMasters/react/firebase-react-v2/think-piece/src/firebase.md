@@ -13,7 +13,7 @@ const config = {
   measurementId: 'G-GVKS8NCC8P',
 }
 
-class FireBase {
+class FirebaseOld {
   constructor() {
     app.initializeApp(config)
     this.auth = app.auth()
@@ -51,4 +51,4 @@ class FireBase {
   }
 }
 
-export default new FireBase()
+export default new FirebaseOld()

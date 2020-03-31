@@ -20,8 +20,8 @@ class AddPost extends Component {
       content,
       user: {
         uid: '1111',
-        displayName: 'Steve Kinney',
-        email: 'steve@mailinator.com',
+        displayName: 'Mohammed Elzanaty',
+        email: 'mohammedelzanaty129@gmail.com',
         photoURL: 'http://placekitten.com/g/200/200',
       },
       favorites: 0,

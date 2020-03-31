@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dotenv": "^8.2.0",
     "firebase": "^7.13.1",
     "firebase-admin": "^8.10.0",
     "firebase-tools": "^7.16.2",
     "moment": "^2.24.0",
+    "prettier": "^2.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",

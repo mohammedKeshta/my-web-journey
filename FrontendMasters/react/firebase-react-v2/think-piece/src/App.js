@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
+import { firestore } from './firebase'
+import Posts from './components/Posts'
 
-import Posts from './Posts'
-
-class Application extends Component {
+class App extends Component {
   state = {
     posts: [
       {
@@ -36,6 +36,12 @@ class Application extends Component {
     ],
   }
 
+  componentDidMount() {
+    firestore.collection('posts').get().then(snapshot => {
+      console.log(snapshot.docs)
+    });
+  }
+
   handleCreate = (post) => {
     const { posts } = this.state
     this.setState({ posts: [post, ...posts] })
@@ -53,4 +59,4 @@ class Application extends Component {
   }
 }
 
-export default Application
+export default App
