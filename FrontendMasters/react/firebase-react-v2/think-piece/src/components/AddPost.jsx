@@ -15,18 +15,17 @@ class AddPost extends Component {
     const { title, content } = this.state
 
     const post = {
-      id: Date.now().toString(),
       title,
       content,
       user: {
-        uid: '1111',
+        uid: new Date().getTime(),
         displayName: 'Mohammed Elzanaty',
         email: 'mohammedelzanaty129@gmail.com',
         photoURL: 'http://placekitten.com/g/200/200',
       },
       favorites: 0,
       comments: 0,
-      createdAt: new Date(),
+      createdAt: new Date().getTime(),
     }
 
     onCreate(post)

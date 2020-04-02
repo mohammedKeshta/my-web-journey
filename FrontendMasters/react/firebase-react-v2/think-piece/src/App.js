@@ -1,50 +1,68 @@
 import React, { Component } from 'react'
-import { firestore } from './firebase'
+import { db } from './firebase'
 import Posts from './components/Posts'
+import { collectIdsAndDocs } from './utilites'
 
 class App extends Component {
   state = {
-    posts: [
-      {
-        id: '1',
-        title: 'A Very Hot Take',
-        content:
-          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit repellendus modi unde cumque, fugit in ad necessitatibus eos sed quasi et! Commodi repudiandae tempora ipsum fugiat. Quam, officia excepturi!',
-        user: {
-          uid: '123',
-          displayName: 'Bill Murray',
-          email: 'billmurray@mailinator.com',
-          photoURL: 'https://www.fillmurray.com/300/300',
-        },
-        stars: 1,
-        comments: 47,
-      },
-      {
-        id: '2',
-        title: 'The Sauciest of Opinions',
-        content:
-          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis suscipit repellendus modi unde cumque, fugit in ad necessitatibus eos sed quasi et! Commodi repudiandae tempora ipsum fugiat. Quam, officia excepturi!',
-        user: {
-          uid: '456',
-          displayName: 'Mill Burray',
-          email: 'notbillmurray@mailinator.com',
-          photoURL: 'https://www.fillmurray.com/400/400',
-        },
-        stars: 3,
-        comments: 0,
-      },
-    ],
+    posts: [],
   }
 
-  componentDidMount() {
-    firestore.collection('posts').get().then(snapshot => {
-      console.log(snapshot.docs)
-    });
-  }
+  componentDidMount = async () => {
+    const snapshot = await db
+      .collection('posts')
+      .orderBy('createdAt', 'desc')
+      .get()
 
-  handleCreate = (post) => {
-    const { posts } = this.state
-    this.setState({ posts: [post, ...posts] })
+    const posts = snapshot.docs.map(collectIdsAndDocs)
+    this.setState((prevState) => {
+      return {
+        posts: [...prevState.posts, ...posts],
+      }
+    })
+  }
+  handleCreate = async (post) => {
+    try {
+      const docReference = await db.collection('posts').add(post)
+      const documentSnapshot = await docReference.get()
+      const newPost = collectIdsAndDocs(documentSnapshot)
+      this.setState((prevState) => {
+        return {
+          posts: [newPost, ...prevState.posts],
+        }
+      })
+      console.log(`Post successfully written! with id:${docReference.id}`)
+    } catch (error) {
+      console.error('Error writing Post: ', error)
+    }
+  }
+  handleDelete = async (id) => {
+    try {
+      await db.doc(`posts/${id}`).delete()
+      this.setState((prevState) => {
+        return {
+          posts: prevState.posts.filter((post) => post.id !== id),
+        }
+      })
+      console.log(`Post successfully deleted! with id:${id}`)
+    } catch (error) {
+      console.error('Error Deleting Post: ', error)
+    }
+  }
+  handleFavorites = async (id) => {
+    try {
+      const post = this.state.posts.filter((post) => post.id === id)
+      await db
+        .collection('posts')
+        .doc(id)
+        .update({
+          favorites: post[0].favorites,
+          ...post[0],
+        })
+      console.log(`Post successfully increase fav! with id:${id}`)
+    } catch (error) {
+      console.error('Error Update Fav Post: ', error)
+    }
   }
 
   render() {
@@ -53,10 +71,17 @@ class App extends Component {
     return (
       <main className="Application">
         <h1>Think Piece</h1>
-        <Posts posts={posts} onCreate={this.handleCreate} />
+        <Posts
+          posts={posts}
+          onCreate={this.handleCreate}
+          onDelete={this.handleDelete}
+          onStar={this.handleFavorites}
+        />
       </main>
     )
   }
+
+  componentWillUnmount() {}
 }
 
 export default App
