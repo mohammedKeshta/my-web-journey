@@ -1,18 +1,14 @@
 import React from 'react'
 
 import moment from 'moment'
+import { db } from '../firebase'
 
-const Post = ({
-  title,
-  content,
-  user,
-  createdAt,
-  stars,
-  id,
-  comments,
-  onDelete,
-  onStar,
-}) => {
+const Post = ({ title, content, user, createdAt, stars, id, comments }) => {
+  const postRef = db.collection('posts').doc(id)
+
+  const remove = () => postRef.delete()
+  const star = () => postRef.update({ stars: stars + 1 })
+
   return (
     <article className="Post">
       <div className="Post--content">
@@ -37,10 +33,10 @@ const Post = ({
           <p>{moment(createdAt).calendar()}</p>
         </div>
         <div>
-          <button className="star" onClick={() => onStar(id)}>
+          <button className="star" onClick={star}>
             Star
           </button>
-          <button className="delete" onClick={() => onDelete(id)}>
+          <button className="delete" onClick={remove}>
             Delete
           </button>
         </div>
