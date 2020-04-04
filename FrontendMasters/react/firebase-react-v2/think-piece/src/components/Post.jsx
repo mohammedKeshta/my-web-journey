@@ -2,12 +2,37 @@ import React from 'react'
 
 import moment from 'moment'
 import { db } from '../firebase'
+import { NotificationManager } from 'react-notifications'
+import { UserContext } from '../Context'
 
 const Post = ({ title, content, user, createdAt, stars, id, comments }) => {
+  const userAuth = React.useContext(UserContext)
+
   const postRef = db.collection('posts').doc(id)
 
-  const remove = () => postRef.delete()
-  const star = () => postRef.update({ stars: stars + 1 })
+  const remove = () => {
+    if (userAuth.user) {
+      postRef.delete().catch((error) => {
+        NotificationManager.error(`Error: ${error.message}`, 'Error', 5000)
+      })
+    } else {
+      NotificationManager.info(`you can just delete your post.`, 'Info', 5000)
+    }
+  }
+
+  const star = () => {
+    if (userAuth.user) {
+      postRef.update({ stars: stars + 1 }).catch((error) => {
+        NotificationManager.error(`Error: ${error.message}`, 'Error', 5000)
+      })
+    } else {
+      NotificationManager.info(
+        `you need to logged in to able to star.`,
+        'Info',
+        5000
+      )
+    }
+  }
 
   return (
     <article className="Post">

@@ -6,7 +6,6 @@ import {
   facebookProvider,
   githubProvider,
   googleProvider,
-  provider,
 } from '../firebase'
 import { NotificationManager } from 'react-notifications'
 
@@ -25,7 +24,7 @@ class SignIn extends Component {
     this.context.setUser(user)
     NotificationManager.success(`${user.displayName}`, 'Welcome Back, ')
     this.setState({ email: '', password: '' })
-    navigate('posts')
+    navigate('/')
   }
 
   handleError = (error) => {

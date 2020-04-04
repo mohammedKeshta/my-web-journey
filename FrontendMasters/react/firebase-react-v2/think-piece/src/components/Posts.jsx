@@ -6,7 +6,7 @@ import CurrentUser from './CurrentUser'
 const Posts = ({ posts, user }) => {
   return (
     <>
-      <CurrentUser {...user} />
+      {user ? <CurrentUser {...user} /> : ''}
       <section className="Posts">
         <AddPost />
         {posts.map((post) => (

@@ -4,8 +4,7 @@ import Posts from './components/Posts'
 import { collectIdsAndDocs } from './utilites'
 import { Router, Link, navigate } from '@reach/router'
 import NotFound from './components/NotFound'
-import { UserContext } from './Context'
-import PrivateRoute from './components/PrivateRoute'
+import { UserProvider } from './Context'
 import About from './components/About'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
@@ -18,22 +17,19 @@ class App extends Component {
     user: null,
     setUser: (user) => {
       this.setState({ user })
-    },
+    }
   }
   unsubscribeFromPosts = null
   unsubscribeFromSignOut = null
 
   componentDidMount = async () => {
-    const { user } = this.state;
-   if (user) {
-     this.unsubscribeFromPosts = db
-       .collection('posts')
-       .orderBy('createdAt', 'desc')
-       .onSnapshot((querySnapshot) => {
-         const posts = querySnapshot.docs.map(collectIdsAndDocs)
-         this.setState({ posts })
-       })
-   }
+    this.unsubscribeFromPosts = db
+      .collection('posts')
+      .orderBy('createdAt', 'desc')
+      .onSnapshot((querySnapshot) => {
+        const posts = querySnapshot.docs.map(collectIdsAndDocs)
+        this.setState({ posts })
+      })
   }
 
   handleSignOut = async () => {
@@ -60,7 +56,7 @@ class App extends Component {
           <nav>
             <ul>
               <li>
-                <Link to="posts">Posts</Link>
+                <Link to="/">Posts</Link>
               </li>
               <li>
                 <Link to="about">About</Link>
@@ -73,18 +69,17 @@ class App extends Component {
             </ul>
           </nav>
         </div>
-        <UserContext.Provider value={this.state}>
+        <UserProvider value={this.state}>
           <Router>
-            <PrivateRoute as={Posts} posts={posts} user={user} path="/" />
-            <PrivateRoute as={Posts} posts={posts} user={user} path="/posts" />
-            <About path="about" />
-            <SignIn path="sing-in" />
-            <SignUp path="sing-up" />
-            <NotFound default />
+            <Posts path="/" posts={posts} user={user}/>
+            <About path="about"/>
+            <SignIn path="sing-in"/>
+            <SignUp path="sing-up"/>
+            <NotFound default/>
           </Router>
-        </UserContext.Provider>
+        </UserProvider>
 
-        <NotificationContainer />
+        <NotificationContainer/>
       </main>
     )
   }
