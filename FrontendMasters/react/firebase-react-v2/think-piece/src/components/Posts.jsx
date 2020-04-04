@@ -1,15 +1,20 @@
 import React from 'react'
 import Post from './Post'
 import AddPost from './AddPost'
+import CurrentUser from './CurrentUser'
 
-const Posts = ({ posts }) => {
+const Posts = ({ posts, user }) => {
   return (
-    <section className="Posts">
-      <AddPost />
-      {posts.map((post) => (
-        <Post {...post} key={post.id} />
-      ))}
-    </section>
+    <>
+      <CurrentUser {...user} />
+      <section className="Posts">
+        <AddPost />
+        {posts.map((post) => (
+          <Post {...post} key={post.id} />
+        ))}
+      </section>
+    </>
+
   )
 }
 

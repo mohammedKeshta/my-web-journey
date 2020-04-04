@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 import { UserContext } from '../Context'
-import { Link } from '@reach/router'
+import { Link, navigate } from '@reach/router'
+import {
+  auth,
+  facebookProvider,
+  githubProvider,
+  googleProvider,
+  provider,
+} from '../firebase'
+import { NotificationManager } from 'react-notifications'
 
 class SignIn extends Component {
-
-  static contextType = UserContext;
+  static contextType = UserContext
 
   state = { email: '', password: '' }
 
@@ -14,11 +21,58 @@ class SignIn extends Component {
     this.setState({ [name]: value })
   }
 
+  handleAuthCallback = ({ user }) => {
+    this.context.setUser(user)
+    NotificationManager.success(`${user.displayName}`, 'Welcome Back, ')
+    this.setState({ email: '', password: '' })
+    navigate('posts')
+  }
+
+  handleError = (error) => {
+    let errorMessage = error.message
+    NotificationManager.error(`Error: ${errorMessage}`, 'Error', 5000)
+  }
+
   handleSubmit = (event) => {
     event.preventDefault()
-    let user = null;
-    this.context.setUser(user);
-    this.setState({ email: '', password: '' })
+    const { email, password } = this.state
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then(this.handleAuthCallback)
+      .catch(this.handleError)
+  }
+
+  handleAuthenticateWithGoogle = () => {
+    auth
+      .signInWithPopup(googleProvider)
+      .then(this.handleAuthCallback)
+      .catch(this.handleError)
+  }
+
+  handleAuthenticateWithFacebook = () => {
+    auth
+      .signInWithPopup(facebookProvider)
+      .then(this.handleAuthCallback)
+      .catch(this.handleError)
+  }
+
+  handleAuthenticateWithGithub = () => {
+    auth
+      .signInWithPopup(githubProvider)
+      .then(this.handleAuthCallback)
+      .catch(this.handleError)
+  }
+
+  handleAuthenticateWithAnonymous = () => {
+    auth
+      .signInAnonymously()
+      .then(() => {
+        this.context.setUser({ displayName: 'Anonymous' })
+        NotificationManager.success(`Anonymous`, 'Welcome Back, ')
+        this.setState({ email: '', password: '' })
+        navigate('posts')
+      })
+      .catch(this.handleError)
   }
 
   render() {
@@ -42,15 +96,40 @@ class SignIn extends Component {
           onChange={this.handleChange}
         />
         <button type="submit">Sign In</button>
-        <h3 className='text-center'>Or Signin With</h3>
-        <ul className='social'>
-          <li><img src="https://image.flaticon.com/icons/svg/2111/2111425.svg" alt=""/></li>
-          <li><img src="https://image.flaticon.com/icons/svg/145/145804.svg" alt=""/></li>
-          <li><img src="https://image.flaticon.com/icons/svg/145/145802.svg" alt=""/></li>
-          <li><img src="https://image.flaticon.com/icons/svg/145/145812.svg" alt=""/></li>
-          <li><img src="https://image.flaticon.com/icons/svg/149/149071.svg" alt=""/></li>
+        <h3 className="text-center">Or Signin With</h3>
+        <ul className="social">
+          {/*Github*/}
+          <li onClick={this.handleAuthenticateWithGithub}>
+            <img
+              src="https://image.flaticon.com/icons/svg/2111/2111425.svg"
+              alt=""
+            />
+          </li>
+          {/*Google*/}
+          <li onClick={this.handleAuthenticateWithGoogle}>
+            <img
+              src="https://image.flaticon.com/icons/svg/145/145804.svg"
+              alt=""
+            />
+          </li>
+          {/*FaceBook*/}
+          <li onClick={this.handleAuthenticateWithFacebook}>
+            <img
+              src="https://image.flaticon.com/icons/svg/145/145802.svg"
+              alt=""
+            />
+          </li>
+          {/*Anonymous*/}
+          <li onClick={this.handleAuthenticateWithAnonymous}>
+            <img
+              src="https://image.flaticon.com/icons/svg/149/149071.svg"
+              alt=""
+            />
+          </li>
         </ul>
-        <Link to='../sing-up' className='text-center d-block'>Create A new Account</Link>
+        <Link to="../sing-up" className="text-center d-block">
+          Create A new Account
+        </Link>
       </form>
     )
   }

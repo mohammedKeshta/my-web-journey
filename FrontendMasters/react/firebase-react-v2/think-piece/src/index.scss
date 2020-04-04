@@ -254,3 +254,13 @@ nav ul li {
   }
 
 }
+
+.notification-message {
+  .message,
+  .title  {
+    color: white !important;
+  }
+}
+.notification-error:before {
+   color: white;
+ }

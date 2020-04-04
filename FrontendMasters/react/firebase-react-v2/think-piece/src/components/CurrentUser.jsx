@@ -15,16 +15,15 @@ const CurrentUser = ({ displayName, photoURL, email, createdAt, children }) => {
       </div>
       <div>
         <div>{children}</div>
-        <button>Sign Out</button>
       </div>
     </section>
   )
 }
 
 CurrentUser.defaultProps = {
-  displayName: 'Bill Murray',
-  email: 'billmurray@mailinator.com',
-  photoURL: 'https://www.fillmurray.com/300/300',
+  displayName: 'Anonymous',
+  email: 'anonymous@Anonymous.com',
+  photoURL: 'https://i.pravatar.cc/300',
   createdAt: new Date(),
 }
 

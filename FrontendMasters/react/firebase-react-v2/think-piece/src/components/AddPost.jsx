@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { db } from '../firebase'
+import { UserContext } from '../Context'
 
 class AddPost extends Component {
   state = { title: '', content: '' }
+  static contextType = UserContext
 
   handleChange = (event) => {
     const { name, value } = event.target
@@ -18,10 +20,10 @@ class AddPost extends Component {
       title,
       content,
       user: {
-        uid: new Date().getTime(),
-        displayName: 'Mohammed Elzanaty',
-        email: 'mohammedelzanaty129@gmail.com',
-        photoURL: 'http://placekitten.com/g/200/200',
+        uid: this.context.user.uid,
+        displayName: this.context.user.displayName,
+        email: this.context.user.email,
+        photoURL: this.context.user.photoURL,
       },
       favorites: 0,
       comments: 0,

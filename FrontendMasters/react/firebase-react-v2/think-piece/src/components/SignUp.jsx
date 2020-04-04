@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import { auth } from '../firebase'
+import { navigate } from '@reach/router'
 
 class SignUp extends Component {
   state = { displayName: '', email: '', password: '' }
+  unsubscribeFromSignUp = null
 
   handleChange = (event) => {
     const { name, value } = event.target
@@ -9,9 +12,25 @@ class SignUp extends Component {
     this.setState({ [name]: value })
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault()
-
+    const { email, password, displayName } = this.state
+    this.unsubscribeFromSignUp = auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(({ user }) => {
+        user.updateProfile({
+          displayName,
+          photoURL: 'https://i.pravatar.cc/300'
+        })
+      })
+      .catch((error) => {
+        let errorCode = error.code
+        let errorMessage = error.message
+        console.log(
+          `Error: errorCode:${errorCode}, errorMessage: ${errorMessage}`
+        )
+      })
+    navigate('/sing-in')
     this.setState({ displayName: '', email: '', password: '' })
   }
 
@@ -42,7 +61,7 @@ class SignUp extends Component {
           value={password}
           onChange={this.handleChange}
         />
-        <input type="submit" value="Sign Up" />
+        <input type="submit" value="Sign Up"/>
       </form>
     )
   }
