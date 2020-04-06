@@ -8,13 +8,12 @@ const Posts = ({ posts, user }) => {
     <>
       {user ? <CurrentUser {...user} /> : ''}
       <section className="Posts">
-        <AddPost />
+        {user && <AddPost />}
         {posts.map((post) => (
           <Post {...post} key={post.id} />
         ))}
       </section>
     </>
-
   )
 }
 

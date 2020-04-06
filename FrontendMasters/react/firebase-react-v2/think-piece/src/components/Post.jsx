@@ -1,37 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import moment from 'moment'
 import { db } from '../firebase'
 import { NotificationManager } from 'react-notifications'
-import { UserContext } from '../Context'
+import UserContext from '../Context'
 
-const Post = ({ title, content, user, createdAt, stars, id, comments }) => {
-  const userAuth = React.useContext(UserContext)
-
+const Post = ({
+  title,
+  content,
+  user,
+  createdAt,
+  stars,
+  id,
+  comments,
+}) => {
+  const state = useContext(UserContext)
   const postRef = db.collection('posts').doc(id)
-
   const remove = () => {
-    if (userAuth.user) {
-      postRef.delete().catch((error) => {
-        NotificationManager.error(`Error: ${error.message}`, 'Error', 5000)
-      })
-    } else {
-      NotificationManager.info(`you can just delete your post.`, 'Info', 5000)
-    }
+    postRef.delete().catch((error) => {
+      NotificationManager.error(`Error: ${error.message}`, 'Error', 5000)
+    })
   }
 
   const star = () => {
-    if (userAuth.user) {
-      postRef.update({ stars: stars + 1 }).catch((error) => {
-        NotificationManager.error(`Error: ${error.message}`, 'Error', 5000)
-      })
-    } else {
-      NotificationManager.info(
-        `you need to logged in to able to star.`,
-        'Info',
-        5000
-      )
-    }
+    postRef.update({ stars: stars + 1 }).catch((error) => {
+      NotificationManager.error(`Error: ${error.message}`, 'Error', 5000)
+    })
   }
 
   return (
@@ -58,12 +52,16 @@ const Post = ({ title, content, user, createdAt, stars, id, comments }) => {
           <p>{moment(createdAt).calendar()}</p>
         </div>
         <div>
-          <button className="star" onClick={star}>
-            Star
-          </button>
-          <button className="delete" onClick={remove}>
-            Delete
-          </button>
+          {state.user && (
+            <button className="star" onClick={star}>
+              Star
+            </button>
+          )}
+          {state.user && state.user.uid === user.uid && (
+            <button className="delete" onClick={remove}>
+              Delete
+            </button>
+          )}
         </div>
       </div>
     </article>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { db } from '../firebase'
-import { UserContext } from '../Context'
+import UserContext from '../Context'
 import { NotificationManager } from 'react-notifications'
 
 class AddPost extends Component {
@@ -15,29 +15,29 @@ class AddPost extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
 
-    if (this.context.user) {
-      const { title, content } = this.state
+    const { title, content } = this.state
 
-      const post = {
-        title,
-        content,
-        user: {
-          uid: this.context.user.uid,
-          displayName: this.context.user.displayName,
-          email: this.context.user.email,
-          photoURL: this.context.user.photoURL,
-        },
-        favorites: 0,
-        comments: 0,
-        createdAt: new Date().getTime(),
-      }
-
-      db.collection('posts').add(post)
-
-      this.setState({ title: '', content: '' })
-    } else {
-      NotificationManager.info(`you need to login first`, 'Hi, ')
+    if (!title) {
+      return NotificationManager.info('Please Enter Title', 'Info')
     }
+
+    const post = {
+      title,
+      content,
+      user: {
+        uid: this.context.user.uid,
+        displayName: this.context.user.displayName,
+        email: this.context.user.email,
+        photoURL: this.context.user.photoURL,
+      },
+      favorites: 0,
+      comments: 0,
+      createdAt: new Date().getTime(),
+    }
+
+    db.collection('posts').add(post)
+
+    this.setState({ title: '', content: '' })
   }
 
   render() {

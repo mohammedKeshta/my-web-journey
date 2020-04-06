@@ -1,6 +1,4 @@
-import React, { Component } from 'react'
-import { UserContext } from '../Context'
-import SignIn from './SignIn'
+import React from 'react'
 
 const About = () => (<div>
   <h1>Welcome To Think Piece</h1>

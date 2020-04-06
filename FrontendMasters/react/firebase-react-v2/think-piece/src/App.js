@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import { auth, db } from './firebase'
+import firebase, { auth, db } from './firebase'
 import Posts from './components/Posts'
 import { collectIdsAndDocs } from './utilites'
 import { Router, Link, navigate } from '@reach/router'
 import NotFound from './components/NotFound'
-import { UserProvider } from './Context'
 import About from './components/About'
 import SignUp from './components/SignUp'
 import SignIn from './components/SignIn'
 import 'react-notifications/lib/notifications.css'
 import { NotificationContainer } from 'react-notifications'
+import Context from './Context'
 
 class App extends Component {
   state = {
@@ -23,6 +23,14 @@ class App extends Component {
   unsubscribeFromSignOut = null
 
   componentDidMount = async () => {
+    // Check for token and update application state if required
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is signed in.
+        this.state.setUser(user)
+      }
+    });
+    // Get Posts
     this.unsubscribeFromPosts = db
       .collection('posts')
       .orderBy('createdAt', 'desc')
@@ -46,41 +54,39 @@ class App extends Component {
 
   render() {
     const { posts, user } = this.state
-    console.log(this.state)
     return (
-      <main className="Application">
-        <div className="header">
-          <div className="logo">
-            <h1>Think Piece</h1>
+      <Context.Provider value={this.state}>
+        <main className="Application">
+          <div className="header">
+            <div className="logo">
+              <h1>Think Piece</h1>
+            </div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Posts</Link>
+                </li>
+                <li>
+                  <Link to="about">About</Link>
+                </li>
+                <li>
+                  <Link to="about" onClick={this.handleSignOut}>
+                    {user ? 'Logout' : 'Login'}
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Posts</Link>
-              </li>
-              <li>
-                <Link to="about">About</Link>
-              </li>
-              <li>
-                <Link to="about" onClick={this.handleSignOut}>
-                  {user ? 'Logout' : 'Login'}
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <UserProvider value={this.state}>
           <Router>
             <Posts path="/" posts={posts} user={user}/>
-            <About path="about"/>
-            <SignIn path="sing-in"/>
-            <SignUp path="sing-up"/>
-            <NotFound default/>
+            <About path="about" />
+            <SignIn path="sing-in" />
+            <SignUp path="sing-up" />
+            <NotFound default />
           </Router>
-        </UserProvider>
-
-        <NotificationContainer/>
-      </main>
+          <NotificationContainer />
+        </main>
+      </Context.Provider>
     )
   }
 }

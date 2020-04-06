@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { UserContext } from '../Context'
 import { Link, navigate } from '@reach/router'
 import {
   auth,
@@ -10,8 +9,6 @@ import {
 import { NotificationManager } from 'react-notifications'
 
 class SignIn extends Component {
-  static contextType = UserContext
-
   state = { email: '', password: '' }
 
   handleChange = (event) => {
@@ -21,7 +18,6 @@ class SignIn extends Component {
   }
 
   handleAuthCallback = ({ user }) => {
-    this.context.setUser(user)
     NotificationManager.success(`${user.displayName}`, 'Welcome Back, ')
     this.setState({ email: '', password: '' })
     navigate('/')
@@ -66,7 +62,6 @@ class SignIn extends Component {
     auth
       .signInAnonymously()
       .then(() => {
-        this.context.setUser({ displayName: 'Anonymous' })
         NotificationManager.success(`Anonymous`, 'Welcome Back, ')
         this.setState({ email: '', password: '' })
         navigate('posts')
