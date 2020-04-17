@@ -5,10 +5,15 @@ const Header = ({ title, subtitle }) => {
   return (
     <div>
       <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+      {subtitle && <h2>{subtitle}</h2>}
     </div>
   );
 };
+
+Header.defaultProps = {
+  title: 'Indecision Default'
+}
+
 
 const Action = (props) => {
   const { handlePick, hasOptions } = props;
@@ -97,9 +102,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'Indecision',
       subtitle: 'Put your life in the hand of a computer.',
-      options: ['Thing One', 'Thing Two', 'Thing Three'],
+      options: this.props.options,
     };
     this.handleAddOption = this.handleAddOption.bind(this);
     this.handleOnRemoveAll = this.handleOnRemoveAll.bind(this);
@@ -134,12 +138,12 @@ class App extends React.Component {
   }
 
   render() {
-    const { title, subtitle, options } = this.state;
+    const { subtitle, options } = this.state;
     const hasOptions = options.length === 0;
 
     return (
       <div>
-        <Header title={title} subtitle={subtitle} />
+        <Header subtitle={subtitle} />
         <Action handlePick={this.handlePick} hasOptions={hasOptions} />
         <AddOption handleAddOption={this.handleAddOption} />
         <Options options={options} handleOnRemoveAll={this.handleOnRemoveAll} />
@@ -147,4 +151,9 @@ class App extends React.Component {
     );
   }
 }
+
+App.defaultProps = {
+  options: []
+}
+
 render(<App />, document.getElementById('root'));

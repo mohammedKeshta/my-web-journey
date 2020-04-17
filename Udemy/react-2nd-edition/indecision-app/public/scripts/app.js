@@ -35,7 +35,11 @@ var _ReactDOM = ReactDOM,
 var Header = function Header(_ref) {
   var title = _ref.title,
       subtitle = _ref.subtitle;
-  return React.createElement("div", null, React.createElement("h1", null, title), React.createElement("h2", null, subtitle));
+  return React.createElement("div", null, React.createElement("h1", null, title), subtitle && React.createElement("h2", null, subtitle));
+};
+
+Header.defaultProps = {
+  title: 'Indecision Default'
 };
 
 var Action = function Action(props) {
@@ -142,9 +146,8 @@ var App = /*#__PURE__*/function (_React$Component2) {
 
     _this3 = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this3.state = {
-      title: 'Indecision',
       subtitle: 'Put your life in the hand of a computer.',
-      options: ['Thing One', 'Thing Two', 'Thing Three']
+      options: _this3.props.options
     };
     _this3.handleAddOption = _this3.handleAddOption.bind(_assertThisInitialized(_this3));
     _this3.handleOnRemoveAll = _this3.handleOnRemoveAll.bind(_assertThisInitialized(_this3));
@@ -190,12 +193,10 @@ var App = /*#__PURE__*/function (_React$Component2) {
     key: "render",
     value: function render() {
       var _this$state2 = this.state,
-          title = _this$state2.title,
           subtitle = _this$state2.subtitle,
           options = _this$state2.options;
       var hasOptions = options.length === 0;
       return React.createElement("div", null, React.createElement(Header, {
-        title: title,
         subtitle: subtitle
       }), React.createElement(Action, {
         handlePick: this.handlePick,
@@ -212,4 +213,7 @@ var App = /*#__PURE__*/function (_React$Component2) {
   return App;
 }(React.Component);
 
+App.defaultProps = {
+  options: []
+};
 render(React.createElement(App, null), document.getElementById('root'));

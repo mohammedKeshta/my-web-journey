@@ -30,7 +30,7 @@ var Counter = /*#__PURE__*/function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Counter).call(this, props));
     _this.state = {
-      count: 0
+      count: _this.props.count
     };
     _this.increment = _this.increment.bind(_assertThisInitialized(_this));
     _this.decrement = _this.decrement.bind(_assertThisInitialized(_this));
@@ -83,7 +83,10 @@ var Counter = /*#__PURE__*/function (_React$Component) {
   }]);
 
   return Counter;
-}(React.Component); // Render Component
+}(React.Component);
 
+Counter.defaultProps = {
+  count: 0
+}; // Render Component
 
 ReactDOM.render(React.createElement(Counter, null), document.getElementById('root'));
