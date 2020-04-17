@@ -1,64 +1,56 @@
 const React = React;
 const { render } = ReactDOM;
 
-class Header extends React.Component {
-  render() {
-    const { title, subtitle } = this.props;
-    return (
-      <div>
-        <h1>{title}</h1>
-        <h2>{subtitle}</h2>
-      </div>
-    );
-  }
-}
-class Action extends React.Component {
-  render() {
-    const { handlePick, hasOptions } = this.props;
-    return (
-      <div>
-        <button onClick={handlePick} disabled={hasOptions}>
-          What should I do?
-        </button>
-      </div>
-    );
-  }
-}
-class Options extends React.Component {
-  render() {
-    const { options, handleOnRemoveAll } = this.props;
+const Header = ({ title, subtitle }) => {
+  return (
+    <div>
+      <h1>{title}</h1>
+      <h2>{subtitle}</h2>
+    </div>
+  );
+};
 
-    return (
-      <div>
-        <button onClick={handleOnRemoveAll}>❌ Remove All</button>
+const Action = (props) => {
+  const { handlePick, hasOptions } = props;
+  return (
+    <div>
+      <button onClick={handlePick} disabled={hasOptions}>
+        What should I do?
+      </button>
+    </div>
+  );
+};
 
-        {options.length > 0 ? (
-          options.map((option, index) => (
-            <Option optionText={option} key={`option-${index}`} />
-          ))
-        ) : (
-          <h1>There's no options right now ... try add one</h1>
-        )}
-      </div>
-    );
-  }
+const Options = ({ options, handleOnRemoveAll }) => {
+  return (
+    <div>
+      <button onClick={handleOnRemoveAll}>❌ Remove All</button>
+
+      {options.length > 0 ? (
+        options.map((option, index) => (
+          <Option optionText={option} key={`option-${index}`} />
+        ))
+      ) : (
+        <h1>There's no options right now ... try add one</h1>
+      )}
+    </div>
+  );
 }
-class Option extends React.Component {
-  render() {
-    const { optionText } = this.props;
-    return (
-      <div>
-        <p>{optionText}</p>
-      </div>
-    );
-  }
+
+const Option = ({optionText}) => {
+  return (
+    <div>
+      <p>{optionText}</p>
+    </div>
+  );
 }
+
 class AddOption extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       option: '',
-      error: ''
+      error: '',
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleOnSubmit = this.handleOnSubmit.bind(this);
@@ -66,16 +58,16 @@ class AddOption extends React.Component {
 
   handleChange(e) {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   }
 
   handleOnSubmit(e) {
     e.preventDefault();
     const error = this.props.handleAddOption(this.state.option.trim());
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return {
-        error
+        error,
       };
     });
   }
@@ -107,7 +99,7 @@ class App extends React.Component {
     this.state = {
       title: 'Indecision',
       subtitle: 'Put your life in the hand of a computer.',
-      options: ['Thing One', 'Thing Two', 'Thing Three']
+      options: ['Thing One', 'Thing Two', 'Thing Three'],
     };
     this.handleAddOption = this.handleAddOption.bind(this);
     this.handleOnRemoveAll = this.handleOnRemoveAll.bind(this);
@@ -136,7 +128,7 @@ class App extends React.Component {
       return 'This item already exist please enter another option';
     }
 
-    this.setState(prevState => {
+    this.setState((prevState) => {
       return { options: [...prevState.options, ...[option]] };
     });
   }
