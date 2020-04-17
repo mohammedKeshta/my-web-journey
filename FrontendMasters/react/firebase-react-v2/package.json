@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@firebase/firestore-types": "^1.10.1",
-    "@types/firebase": "^3.2.1"
+    "@types/firebase": "^3.2.1",
+    "validator": "^13.0.0"
   }
 }

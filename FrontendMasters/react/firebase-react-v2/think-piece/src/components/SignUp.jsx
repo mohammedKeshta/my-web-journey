@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { auth } from '../firebase'
+import { auth, createUserProfileDocument } from '../firebase'
 import { navigate } from '@reach/router'
+import validator from 'validator';
+import { NotificationManager } from 'react-notifications'
 
 class SignUp extends Component {
   state = { displayName: '', email: '', password: '' }
-  unsubscribeFromSignUp = null
 
   handleChange = (event) => {
     const { name, value } = event.target
@@ -15,23 +16,28 @@ class SignUp extends Component {
   handleSubmit = async (event) => {
     event.preventDefault()
     const { email, password, displayName } = this.state
-    this.unsubscribeFromSignUp = auth
-      .createUserWithEmailAndPassword(email, password)
-      .then(({ user }) => {
-        user.updateProfile({
+    if (!validator.isEmail(email))
+      return NotificationManager.info(`Please enter a valid email`, 'Invalid Email')
+    try {
+      auth.createUserWithEmailAndPassword(email, password).then( async ({user}) => {
+        const authedUser = await user.updateProfile({
           displayName,
           photoURL: 'https://i.pravatar.cc/300'
         })
+        await createUserProfileDocument(authedUser, displayName)
+        navigate('/sing-in')
+        this.setState({ displayName: '', email: '', password: '' })
       })
-      .catch((error) => {
-        let errorCode = error.code
-        let errorMessage = error.message
-        console.log(
-          `Error: errorCode:${errorCode}, errorMessage: ${errorMessage}`
-        )
-      })
-    navigate('/sing-in')
-    this.setState({ displayName: '', email: '', password: '' })
+    } catch (error) {
+      let errorCode = error.code
+      let errorMessage = error.message
+      if (errorCode === 'auth/weak-password')
+        NotificationManager.error(`${errorMessage}`, 'Invalid Password')
+      //The email address is already in use by another account.
+      else if (errorCode === 'auth/email-already-in-use')
+        NotificationManager.error(`${errorMessage}`, 'Email Already in use')
+      else NotificationManager.error(`${errorMessage}`, `${errorCode}`)
+    }
   }
 
   render() {
@@ -52,12 +58,14 @@ class SignUp extends Component {
           name="email"
           placeholder="Email"
           value={email}
+          required
           onChange={this.handleChange}
         />
         <input
           type="password"
           name="password"
           placeholder="Password"
+          required
           value={password}
           onChange={this.handleChange}
         />

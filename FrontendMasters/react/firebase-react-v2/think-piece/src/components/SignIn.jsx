@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Link, navigate } from '@reach/router'
 import {
-  auth,
+  auth, createUserProfileDocument,
   facebookProvider,
   githubProvider,
-  googleProvider,
+  googleProvider
 } from '../firebase'
 import { NotificationManager } from 'react-notifications'
 
@@ -17,10 +17,12 @@ class SignIn extends Component {
     this.setState({ [name]: value })
   }
 
-  handleAuthCallback = ({ user }) => {
-    NotificationManager.success(`${user.displayName}`, 'Welcome Back, ')
-    this.setState({ email: '', password: '' })
-    navigate('/')
+  handleAuthCallback = async ({ user }) => {
+    console.log(user)
+    // const authUser = await createUserProfileDocument(user)
+    // NotificationManager.success(`${authUser.displayName || ''}`, 'Welcome Back, ')
+    // this.setState({ email: '', password: '' })
+    // navigate('/')
   }
 
   handleError = (error) => {
@@ -58,14 +60,10 @@ class SignIn extends Component {
       .catch(this.handleError)
   }
 
-  handleAuthenticateWithAnonymous = () => {
+  handleAuthenticateWithAnonymous = async () => {
     auth
       .signInAnonymously()
-      .then(() => {
-        NotificationManager.success(`Anonymous`, 'Welcome Back, ')
-        this.setState({ email: '', password: '' })
-        navigate('posts')
-      })
+      .then(this.handleAuthCallback)
       .catch(this.handleError)
   }
 
