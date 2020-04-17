@@ -53,14 +53,19 @@ var Action = function Action(props) {
 
 var Options = function Options(_ref2) {
   var options = _ref2.options,
-      handleOnRemoveAll = _ref2.handleOnRemoveAll;
+      handleOnRemove = _ref2.handleOnRemove;
   return React.createElement("div", null, React.createElement("button", {
-    onClick: handleOnRemoveAll
+    onClick: handleOnRemove
   }, "\u274C Remove All"), options.length > 0 ? options.map(function (option, index) {
-    return React.createElement(Option, {
+    return React.createElement(React.Fragment, null, React.createElement(Option, {
       optionText: option,
       key: "option-".concat(index)
-    });
+    }), React.createElement("button", {
+      type: "button",
+      onClick: function onClick() {
+        return handleOnRemove(option);
+      }
+    }, "\u274C"));
   }) : React.createElement("h1", null, "There's no options right now ... try add one"));
 };
 
@@ -97,7 +102,7 @@ var AddOption = /*#__PURE__*/function (_React$Component) {
     value: function handleOnSubmit(e) {
       e.preventDefault();
       var error = this.props.handleAddOption(this.state.option.trim());
-      this.setState(function (prevState) {
+      this.setState(function () {
         return {
           error: error
         };
@@ -150,17 +155,19 @@ var App = /*#__PURE__*/function (_React$Component2) {
       options: _this3.props.options
     };
     _this3.handleAddOption = _this3.handleAddOption.bind(_assertThisInitialized(_this3));
-    _this3.handleOnRemoveAll = _this3.handleOnRemoveAll.bind(_assertThisInitialized(_this3));
+    _this3.handleOnRemove = _this3.handleOnRemove.bind(_assertThisInitialized(_this3));
     _this3.handlePick = _this3.handlePick.bind(_assertThisInitialized(_this3));
     return _this3;
   }
 
   _createClass(App, [{
-    key: "handleOnRemoveAll",
-    value: function handleOnRemoveAll() {
-      this.setState(function () {
+    key: "handleOnRemove",
+    value: function handleOnRemove(id) {
+      this.setState(function (prevState) {
         return {
-          options: []
+          options: typeof id === 'string' ? prevState.options.filter(function (option) {
+            return option !== id;
+          }) : []
         };
       });
     }
@@ -205,7 +212,7 @@ var App = /*#__PURE__*/function (_React$Component2) {
         handleAddOption: this.handleAddOption
       }), React.createElement(Options, {
         options: options,
-        handleOnRemoveAll: this.handleOnRemoveAll
+        handleOnRemove: this.handleOnRemove
       }));
     }
   }]);

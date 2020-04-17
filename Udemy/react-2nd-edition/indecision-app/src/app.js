@@ -11,9 +11,8 @@ const Header = ({ title, subtitle }) => {
 };
 
 Header.defaultProps = {
-  title: 'Indecision Default'
-}
-
+  title: 'Indecision Default',
+};
 
 const Action = (props) => {
   const { handlePick, hasOptions } = props;
@@ -26,29 +25,34 @@ const Action = (props) => {
   );
 };
 
-const Options = ({ options, handleOnRemoveAll }) => {
+const Options = ({ options, handleOnRemove }) => {
   return (
     <div>
-      <button onClick={handleOnRemoveAll}>❌ Remove All</button>
+      <button onClick={handleOnRemove}>❌ Remove All</button>
 
       {options.length > 0 ? (
         options.map((option, index) => (
-          <Option optionText={option} key={`option-${index}`} />
+          <>
+            <Option optionText={option} key={`option-${index}`} />
+            <button type="button" onClick={() => handleOnRemove(option)}>
+              ❌
+            </button>
+          </>
         ))
       ) : (
         <h1>There's no options right now ... try add one</h1>
       )}
     </div>
   );
-}
+};
 
-const Option = ({optionText}) => {
+const Option = ({ optionText }) => {
   return (
     <div>
       <p>{optionText}</p>
     </div>
   );
-}
+};
 
 class AddOption extends React.Component {
   constructor(props) {
@@ -70,11 +74,7 @@ class AddOption extends React.Component {
   handleOnSubmit(e) {
     e.preventDefault();
     const error = this.props.handleAddOption(this.state.option.trim());
-    this.setState((prevState) => {
-      return {
-        error,
-      };
-    });
+    this.setState(() => ({ error }));
   }
 
   render() {
@@ -106,14 +106,17 @@ class App extends React.Component {
       options: this.props.options,
     };
     this.handleAddOption = this.handleAddOption.bind(this);
-    this.handleOnRemoveAll = this.handleOnRemoveAll.bind(this);
+    this.handleOnRemove = this.handleOnRemove.bind(this);
     this.handlePick = this.handlePick.bind(this);
   }
 
-  handleOnRemoveAll() {
-    this.setState(() => {
-      return { options: [] };
-    });
+  handleOnRemove(id) {
+    this.setState((prevState) => ({
+      options:
+        typeof id === 'string'
+          ? prevState.options.filter((option) => option !== id)
+          : [],
+    }));
   }
 
   handlePick() {
@@ -146,14 +149,14 @@ class App extends React.Component {
         <Header subtitle={subtitle} />
         <Action handlePick={this.handlePick} hasOptions={hasOptions} />
         <AddOption handleAddOption={this.handleAddOption} />
-        <Options options={options} handleOnRemoveAll={this.handleOnRemoveAll} />
+        <Options options={options} handleOnRemove={this.handleOnRemove} />
       </div>
     );
   }
 }
 
 App.defaultProps = {
-  options: []
-}
+  options: [],
+};
 
 render(<App />, document.getElementById('root'));
