@@ -1,9 +1,15 @@
-import subtract, { isAdult, add, square } from './utils'
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
-console.log('app.js is running')
+class App extends Component {
 
-const randomNumber = Math.floor(Math.random() * 100)
+  render() {
+    return (
+      <div>
+        <h1> Hello From Webpack</h1>
+      </div>
+    );
+  }
+}
 
-console.log(`Age:${randomNumber} => Adult state: ${isAdult(randomNumber)}`)
-
-console.log(subtract(100, 81))
+ReactDOM.render(<App />, document.getElementById('root'))
