@@ -11,7 +11,7 @@ const Header = ({ title, subtitle }) => {
 };
 
 Header.defaultProps = {
-  title: 'Indecision Default Props',
+  title: 'Indecision',
 };
 
 const Action = (props) => {
@@ -32,12 +32,12 @@ const Options = ({ options, handleOnRemove }) => {
 
       {options.length > 0 ? (
         options.map((option, index) => (
-          <>
+          <div style={{'display': 'flex'}}>
             <Option optionText={option} key={`option-${index}`} />
             <button type="button" onClick={() => handleOnRemove(option)}>
               ❌
             </button>
-          </>
+          </div>
         ))
       ) : (
         <h1>There's no options right now ... try add one</h1>
@@ -64,6 +64,7 @@ class AddOption extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleOnSubmit = this.handleOnSubmit.bind(this);
   }
+
 
   handleChange(e) {
     this.setState({
@@ -108,6 +109,25 @@ class App extends React.Component {
     this.handleAddOption = this.handleAddOption.bind(this);
     this.handleOnRemove = this.handleOnRemove.bind(this);
     this.handlePick = this.handlePick.bind(this);
+  }
+
+  componentDidMount() {
+    try {
+      const jsonStr = localStorage.getItem('options');
+      const options = JSON.parse(jsonStr);
+      if (options) {
+        this.setState(() => ({ options }));
+      }
+    } catch (e) {
+      console.error(e.message);
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.options.length !== this.state.options.length) {
+      const json = JSON.stringify(this.state.options);
+      localStorage.setItem('options', json)
+    }
   }
 
   handleOnRemove(id) {

@@ -39,7 +39,7 @@ var Header = function Header(_ref) {
 };
 
 Header.defaultProps = {
-  title: 'Indecision Default Props'
+  title: 'Indecision'
 };
 
 var Action = function Action(props) {
@@ -57,7 +57,11 @@ var Options = function Options(_ref2) {
   return React.createElement("div", null, React.createElement("button", {
     onClick: handleOnRemove
   }, "\u274C Remove All"), options.length > 0 ? options.map(function (option, index) {
-    return React.createElement(React.Fragment, null, React.createElement(Option, {
+    return React.createElement("div", {
+      style: {
+        'display': 'flex'
+      }
+    }, React.createElement(Option, {
       optionText: option,
       key: "option-".concat(index)
     }), React.createElement("button", {
@@ -161,6 +165,32 @@ var App = /*#__PURE__*/function (_React$Component2) {
   }
 
   _createClass(App, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      try {
+        var jsonStr = localStorage.getItem('options');
+        var options = JSON.parse(jsonStr);
+
+        if (options) {
+          this.setState(function () {
+            return {
+              options: options
+            };
+          });
+        }
+      } catch (e) {
+        console.error(e.message);
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (prevState.options.length !== this.state.options.length) {
+        var json = JSON.stringify(this.state.options);
+        localStorage.setItem('options', json);
+      }
+    }
+  }, {
     key: "handleOnRemove",
     value: function handleOnRemove(id) {
       this.setState(function (prevState) {
