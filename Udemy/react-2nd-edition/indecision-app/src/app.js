@@ -1,8 +1,9 @@
-import { isAdult } from './utils'
+import subtract, { isAdult, add, square } from './utils'
 
 console.log('app.js is running')
 
-const ageRange = [12, 20, 10, 43]
-const age = ageRange[Math.floor(Math.random() * ageRange.length)]
+const randomNumber = Math.floor(Math.random() * 100)
 
-console.log(`age:${age} => Adult state: ${isAdult(age)}`)
+console.log(`Age:${randomNumber} => Adult state: ${isAdult(randomNumber)}`)
+
+console.log(subtract(100, 81))
