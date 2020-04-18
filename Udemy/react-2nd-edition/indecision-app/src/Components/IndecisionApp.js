@@ -3,11 +3,13 @@ import Header from './Header'
 import Action from './Action'
 import AddOption from './AddOption'
 import Options from './Options'
+import ModalOption from './ModalOption'
 
 class IndecisionApp extends Component {
   state = {
     subtitle: 'Put your life in the hand of a computer.',
     options: this.props.options,
+    selectedOption: undefined,
   }
 
   componentDidMount() {
@@ -39,7 +41,13 @@ class IndecisionApp extends Component {
     const { options } = this.state
     const randomIndex = Math.floor(Math.random() * options.length)
     const option = options[randomIndex]
-    alert(option)
+    this.setState(() => ({
+      selectedOption: option,
+    }))
+  }
+
+  handleCloseModal = () => {
+    this.setState(() => ({ selectedOption: undefined }))
   }
 
   handleAddOption = (option) => {
@@ -57,7 +65,7 @@ class IndecisionApp extends Component {
   }
 
   render() {
-    const { subtitle, options } = this.state
+    const { subtitle, options, selectedOption } = this.state
     const hasOptions = options.length === 0
 
     return (
@@ -66,6 +74,7 @@ class IndecisionApp extends Component {
         <Action handlePick={this.handlePick} hasOptions={hasOptions} />
         <AddOption handleAddOption={this.handleAddOption} />
         <Options options={options} handleOnRemove={this.handleOnRemove} />
+        <ModalOption closeModal={this.handleCloseModal} selectedOption={selectedOption} />
       </div>
     )
   }
