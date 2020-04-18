@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "server": "live-server ./public/",
-    "compile": "babel --watch src -d ./public/scripts"
+    "compile": "babel --watch src/app.js --out-file ./public/scripts/app.js",
+    "start": "npm run server & npm run compile"
   },
   "prettier": {
     "printWidth": 80,

@@ -39,7 +39,7 @@ var Header = function Header(_ref) {
 };
 
 Header.defaultProps = {
-  title: 'Indecision Default'
+  title: 'Indecision Default Props'
 };
 
 var Action = function Action(props) {

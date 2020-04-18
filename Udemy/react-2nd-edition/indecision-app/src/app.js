@@ -11,7 +11,7 @@ const Header = ({ title, subtitle }) => {
 };
 
 Header.defaultProps = {
-  title: 'Indecision Default',
+  title: 'Indecision Default Props',
 };
 
 const Action = (props) => {
