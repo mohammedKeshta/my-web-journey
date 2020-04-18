@@ -7,12 +7,13 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server ./public/",
-    "compile": "babel --watch src/app.js --out-file ./public/scripts/app.js",
-    "start": "npm run server & npm run compile"
+    "start": "node_modules/.bin/webpack --open --watch --mode development",
+    "build": "webpack --mode production",
+    "build-babel": "babel --watch src/app.js --out-file ./public/scripts/app.js"
   },
   "prettier": {
-    "printWidth": 80,
-    "semi": true,
+    "printWidth": 120,
+    "semi": false,
     "singleQuote": true,
     "bracketSpacing": true
   },
@@ -21,6 +22,14 @@
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
-    "live-server": "^1.2.1"
+    "@types/node": "^13.13.0",
+    "babel-loader": "^8.1.0",
+    "live-server": "^1.2.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
