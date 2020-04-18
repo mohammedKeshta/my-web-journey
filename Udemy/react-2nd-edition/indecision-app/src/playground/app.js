@@ -1,3 +1,4 @@
+/*
 const React = React;
 const { render } = ReactDOM;
 
@@ -180,3 +181,4 @@ App.defaultProps = {
 };
 
 render(<App />, document.getElementById('root'));
+*/

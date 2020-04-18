@@ -6,8 +6,8 @@
   "author": "mohammed elzanaty",
   "license": "MIT",
   "scripts": {
-    "serve": "live-server ./public/",
-    "start": "node_modules/.bin/webpack --open --watch --mode development",
+    "live-server": "live-server ./public/",
+    "start": "webpack-dev-server --open --watch --mode development",
     "build": "webpack --mode production",
     "build-babel": "babel --watch src/app.js --out-file ./public/scripts/app.js"
   },
@@ -26,7 +26,8 @@
     "babel-loader": "^8.1.0",
     "live-server": "^1.2.1",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
     "react": "^16.13.1",
