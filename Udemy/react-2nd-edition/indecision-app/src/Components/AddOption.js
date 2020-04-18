@@ -1,23 +1,18 @@
 import React, { Component } from 'react'
 
 class AddOption extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      option: '',
-      error: '',
-    }
-    this.handleChange = this.handleChange.bind(this)
-    this.handleOnSubmit = this.handleOnSubmit.bind(this)
+  state = {
+    option: '',
+    error: '',
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
     })
   }
 
-  handleOnSubmit(e) {
+  handleOnSubmit = (e) => {
     e.preventDefault()
     const error = this.props.handleAddOption(this.state.option.trim())
     this.setState(() => ({ error }))

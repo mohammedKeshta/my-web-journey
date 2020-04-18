@@ -5,15 +5,9 @@ import AddOption from './AddOption'
 import Options from './Options'
 
 class IndecisionApp extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      subtitle: 'Put your life in the hand of a computer.',
-      options: this.props.options,
-    }
-    this.handleAddOption = this.handleAddOption.bind(this)
-    this.handleOnRemove = this.handleOnRemove.bind(this)
-    this.handlePick = this.handlePick.bind(this)
+  state = {
+    subtitle: 'Put your life in the hand of a computer.',
+    options: this.props.options,
   }
 
   componentDidMount() {
@@ -35,20 +29,20 @@ class IndecisionApp extends Component {
     }
   }
 
-  handleOnRemove(id) {
+  handleOnRemove = (id) => {
     this.setState((prevState) => ({
       options: typeof id === 'string' ? prevState.options.filter((option) => option !== id) : [],
     }))
   }
 
-  handlePick() {
+  handlePick = () => {
     const { options } = this.state
     const randomIndex = Math.floor(Math.random() * options.length)
     const option = options[randomIndex]
     alert(option)
   }
 
-  handleAddOption(option) {
+  handleAddOption = (option) => {
     const { options } = this.state
 
     if (!option) {
