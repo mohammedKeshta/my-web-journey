@@ -6,7 +6,7 @@
   "author": "mohammed elzanaty",
   "license": "MIT",
   "scripts": {
-    "server": "live-server ./public/",
+    "serve": "live-server ./public/",
     "compile": "babel --watch src/app.js --out-file ./public/scripts/app.js",
     "start": "npm run server & npm run compile"
   },
@@ -20,6 +20,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
-    "@babel/preset-react": "^7.8.3"
+    "@babel/preset-react": "^7.8.3",
+    "live-server": "^1.2.1"
   }
 }
