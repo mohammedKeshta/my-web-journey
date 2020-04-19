@@ -4,13 +4,16 @@ import Option from './Option'
 const Options = ({ options, handleOnRemove }) => {
   return (
     <div>
-      <button onClick={handleOnRemove} className="button button--link">
-        Remove All
-      </button>
-
-      {options.length > 0 ? (
+      <div className="widget-header">
+        <h3 className='widget-header__title'>Your Options</h3>
+        <button onClick={handleOnRemove} className="button button--link">
+          Remove All
+        </button>
+      </div>
+      <div className='widget'>
+        {options.length > 0 ? (
         options.map((option, index) => (
-          <div style={{ display: 'flex' }} key={`option-${index}`}>
+          <div className='widget__option' key={`option-${index}`}>
             <Option optionText={option} />
             <button className="button button--link" type="button" onClick={() => handleOnRemove(option)}>
               remove
@@ -18,8 +21,9 @@ const Options = ({ options, handleOnRemove }) => {
           </div>
         ))
       ) : (
-        <h1>There's no options right now ... try add one</h1>
+        <h1 className='widget__message'>There's no options right now ... try add one</h1>
       )}
+      </div>
     </div>
   )
 }
