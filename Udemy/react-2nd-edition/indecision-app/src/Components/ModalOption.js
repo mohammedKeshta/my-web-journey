@@ -1,16 +1,6 @@
 import React  from 'react'
 import Modal from 'react-modal';
 
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
 
 Modal.setAppElement('#root')
 
@@ -20,11 +10,12 @@ const ModalOption = (props) => {
     <Modal
       isOpen={!!selectedOption}
       onRequestClose={closeModal}
-      style={customStyles}
       contentLabel="Example Modal"
+      className='modal'
     >
-      <h1>{selectedOption}</h1>
-      <button onClick={closeModal}>close</button>
+      <h3 className="modal__title">Selected Option</h3>
+      {selectedOption && <p className="modal__body">{selectedOption}</p>}
+      <button className="button" onClick={props.closeModal}>Okay</button>
     </Modal>
   );
 };
