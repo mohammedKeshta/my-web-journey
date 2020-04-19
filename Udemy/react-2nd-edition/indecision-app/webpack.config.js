@@ -4,7 +4,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.min.js'
+    filename: 'bundle.min.js',
   },
   module: {
     rules: [
@@ -12,13 +12,18 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
-      }
-    ]
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.(scss)$/,
+        exclude: /node_modules/,
+        use:  ['style-loader', 'css-loader', 'sass-loader']
+      },
+    ],
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public')
-  }
+    contentBase: path.join(__dirname, 'public'),
+  },
 }
