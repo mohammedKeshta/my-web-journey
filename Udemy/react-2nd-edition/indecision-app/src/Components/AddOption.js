@@ -32,7 +32,7 @@ class AddOption extends Component {
             onFocus={() => this.setState(() => ({ error: '', option: '' }))}
             value={option}
           />
-          <button type="submit">Add Option</button>
+          <button type="submit" className='button'>Add Option</button>
         </form>
       </div>
     )
