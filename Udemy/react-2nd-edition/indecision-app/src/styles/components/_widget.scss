@@ -1,4 +1,4 @@
-@import "../base/settings";
+@import '../base/settings';
 
 .widget {
   background: $light-blue;
@@ -15,11 +15,17 @@
   &__option {
     display: flex;
     justify-content: space-between;
-    padding: $s-size;
+    padding: $l-size $m-size;
     color: $off-white;
+    border-bottom: 1px solid lighten($light-blue, 10%);
+    &__text {
+      color: white;
+      font-weight: 500;
+      font-size: 2rem;
+      margin: 0;
+    }
   }
 }
-
 
 .widget-header {
   background: $blue;
@@ -28,6 +34,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &__title {
     margin: 0;
     font-weight: bold;

@@ -1,0 +1,19 @@
+@import '../base/settings';
+
+.add-option {
+
+  &__error {
+    color: $off-white;
+    font-style: italic;
+    padding: $m-size 0;
+    margin: $m-size 0 0 0;
+  }
+
+  &__form {
+    display: flex;
+    input {
+      flex-grow: 1;
+      border:  none;
+    }
+  }
+}

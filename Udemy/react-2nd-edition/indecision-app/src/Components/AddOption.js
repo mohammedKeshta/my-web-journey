@@ -21,9 +21,9 @@ class AddOption extends Component {
   render() {
     const { error, option } = this.state
     return (
-      <div>
-        {error && <h1>{error}</h1>}
-        <form onSubmit={this.handleOnSubmit}>
+      <div className="add-option">
+        {error && <h1 className="add-option__error">{error}</h1>}
+        <form className="add-option__form" onSubmit={this.handleOnSubmit}>
           <input
             type="text"
             name="option"
@@ -32,7 +32,9 @@ class AddOption extends Component {
             onFocus={() => this.setState(() => ({ error: '', option: '' }))}
             value={option}
           />
-          <button type="submit" className='button'>Add Option</button>
+          <button type="submit" className="button">
+            Add Option
+          </button>
         </form>
       </div>
     )
