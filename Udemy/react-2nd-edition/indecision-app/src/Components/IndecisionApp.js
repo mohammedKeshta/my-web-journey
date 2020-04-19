@@ -69,13 +69,15 @@ class IndecisionApp extends Component {
     const hasOptions = options.length === 0
 
     return (
-      <div>
+      <>
         <Header subtitle={subtitle} />
-        <Action handlePick={this.handlePick} hasOptions={hasOptions} />
-        <AddOption handleAddOption={this.handleAddOption} />
-        <Options options={options} handleOnRemove={this.handleOnRemove} />
-        <ModalOption closeModal={this.handleCloseModal} selectedOption={selectedOption} />
-      </div>
+        <div className="container">
+          <Action handlePick={this.handlePick} hasOptions={hasOptions} />
+          <AddOption handleAddOption={this.handleAddOption} />
+          <Options options={options} handleOnRemove={this.handleOnRemove} />
+          <ModalOption closeModal={this.handleCloseModal} selectedOption={selectedOption} />
+        </div>
+      </>
     )
   }
 }

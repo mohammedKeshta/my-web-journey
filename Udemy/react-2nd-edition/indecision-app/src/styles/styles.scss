@@ -1,4 +1,6 @@
 @import '~normalize-scss/sass/normalize';
 @import './base/reset';
+@import './base/settings';
 @import './base/base';
+@import './components/container';
 @import './components/header';
