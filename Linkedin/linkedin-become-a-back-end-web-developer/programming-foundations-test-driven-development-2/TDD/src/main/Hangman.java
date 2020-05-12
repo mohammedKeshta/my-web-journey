@@ -8,8 +8,11 @@ import java.util.Set;
 
 public class Hangman {
 
+	public static final int MAX_TRIAL = 10;
 	Set<String> usedWords = new HashSet<String>();
 	ArrayList<String> wordsList = new ArrayList<String>();
+	public int remainingTrials;
+	public int score;
 
 	/**
 	 * countAlphabet takes a word and an alphabet and returns the number of
@@ -30,7 +33,7 @@ public class Hangman {
 	}
 
 	public String fetchWord(int requestedLength) {
-
+		remainingTrials = MAX_TRIAL;
 		for (String word : wordsList) {
 			if (word.length() != requestedLength)
 				continue;
@@ -67,11 +70,18 @@ public class Hangman {
 	}
 
 	public String fetchClue(String word, String clue, char guess) {
+		remainingTrials--;
+		if (guess >= 'A' && guess <= 'Z')
+			guess += 32;
+		if (guess < 'a' || guess > 'z')
+			throw new IllegalArgumentException("Invalid character");
+
 		StringBuilder newClue = new StringBuilder();
 		char[] charArray = word.toCharArray();
 		for (int i = 0; i < charArray.length; i++) {
 			if (word.charAt(i) == guess && clue.charAt(i) != guess) {
 				newClue.append(guess);
+				score += (int) MAX_TRIAL / word.length();
 			} else {
 				newClue.append(clue.charAt(i));
 			}
