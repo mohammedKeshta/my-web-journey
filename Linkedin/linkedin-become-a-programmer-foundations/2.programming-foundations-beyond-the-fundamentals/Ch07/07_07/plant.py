@@ -6,6 +6,7 @@ def plant_recommendation(care):
     elif care == 'high':
         print('orchid')
 
+
 plant_recommendation('low')
 plant_recommendation('medium')
 plant_recommendation('high')
