@@ -1,6 +1,8 @@
 # Find the greatest common denominator of two numbers
 # using Euclid's algorithm
 
+# Mohammed Elzanaty
+# Senior Frontend Engineer @ Vodafone International Services 
 
 def gcd(a, b):
     small = min(a, b)
