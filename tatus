@@ -1,0 +1,2661 @@
+[33mcommit 2349f1208dd0d60f071508f585e689044b8487ea[m[33m ([m[1;36mHEAD -> [m[1;32mfeature/linkedin-become-programmer-path[m[33m, [m[1;31morigin/feature/linkedin-become-programmer-path[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Sat May 16 23:43:11 2020 +0200
+
+    LinkedIn: Become a Programmer Foundation - Programming Foundation Algorithms -> Section: Overview
+
+[33mcommit 4cb8176d30efc5755a691f7cf41031b6fd5553fb[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Sat May 16 23:09:05 2020 +0200
+
+    LinkedIn: Become a Programmer Foundation - Programming Foundation Algorithms -> init
+
+[33mcommit ec9931f7907407256c3389f2aa55b31334070e18[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Sat May 16 22:48:04 2020 +0200
+
+    init path
+
+[33mcommit 76255cf5ce101ba40dc0bfd3caebdec1d8f378d4[m[33m ([m[1;31morigin/develop[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdevelop[m[33m)[m
+Merge: 6c3237c 3acd151
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed May 13 23:42:15 2020 +0200
+
+    Merge pull request #78 from mohammedelzanaty/feature/LINKEDIN__programming-foundations-beyond-the-fundamentals
+
+[33mcommit 3acd151b8d50ed3e6b4a36f097e7e7b2d739a606[m[33m ([m[1;32mfeature/LINKEDIN__programming-foundations-beyond-the-fundamentals[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Wed May 13 23:40:28 2020 +0200
+
+    LinkedIn: Programming Foundations: Beyond the fundamentals -> Input/Ouput - Debugging - OOP
+
+[33mcommit dcbc7f8207ebd64b6cad5ffbcff0dcec7a1dc3c2[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Wed May 13 23:39:55 2020 +0200
+
+    LinkedIn: Programming Foundations: Beyond the fundamentals -> Input/Ouput - Debugging - OOP
+
+[33mcommit c53f99879f812cbfc65a8325fb5a32efa0e55f90[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Wed May 13 16:02:24 2020 +0200
+
+    LinkedIn: Programming Foundations: Beyond the fundamentals -> Modules - Strings
+
+[33mcommit 4c962d6961f1f0bb10cbd157d4a7ddf50d3858a5[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Wed May 13 14:25:01 2020 +0200
+
+    LinkedIn: Programming Foundations: Beyond the fundamentals -> Collections - Iterations
+
+[33mcommit 8754ccdbfd7b0aa4a406dbdfb82fef41dc15d506[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Wed May 13 00:20:19 2020 +0200
+
+    LinkedIn: Programming Foundations: Beyond the Fundamentals init
+
+[33mcommit 6c3237c2b52adcfa7234c4520ae8a497b322c3eb[m[33m ([m[1;31morigin/feature/udacity-react[m[33m, [m[1;32mfeature/LINKEDIN__become-a-programmer-foundations_programming-foundations-beyond-the-fundamentals[m[33m)[m
+Merge: 8564c8d b9a2012
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue May 12 18:06:34 2020 +0200
+
+    Merge pull request #77 from mohammedelzanaty/LINKEDIN__programming-foundations-test-driven-development-2
+
+[33mcommit b9a2012eec11334cdb32a6d24334432a086528a0[m[33m ([m[1;32mLINKEDIN__programming-foundations-test-driven-development-2[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Tue May 12 15:40:11 2020 +0200
+
+    linkedin-become-a-back-end-web-developer: Programming Foundations: Test-Driven Development: Chapter 3 TDD Structure and Syntax
+
+[33mcommit 2271b80deb64f54377a052fb9981b346cf25b94a[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Tue May 12 01:31:56 2020 +0200
+
+    linkedin-become-a-back-end-web-developer: Programming Foundations: Test-Driven Development: Chapter 2 -> TDD Methodology
+
+[33mcommit 67a957e388b0d8be45b660758efbc0a65bcf7489[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Mon May 11 21:11:25 2020 +0200
+
+    linkedin-become-a-back-end-web-developer: Programming Foundations: Test-Driven Development: add first hangman test
+
+[33mcommit 00fbd441d275a3c46711ef48125fc30e23d53c78[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Mon May 11 20:54:10 2020 +0200
+
+    linkedin-become-a-back-end-web-developer: Programming Foundations: Test-Driven Development: Add Exersices Files
+
+[33mcommit d776cf688c30702ea37cd3929377d259a89bf89c[m
+Author: mohammedelzanaty <mohammedelzanat129@gmail.com>
+Date:   Mon May 11 16:21:24 2020 +0200
+
+    linkedin-become-a-back-end-web-developer: Programming Foundations: Test-Driven Development: Introduction
+
+[33mcommit 8564c8d84e446d52d477462e7b1f14650202eddd[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Mar 31 12:52:11 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 8:  Section Intro: Accessing API from Browser -> stach
+
+[33mcommit aa23b7aa8a26d2a2fa3908e50b8ade60d08c8302[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 28 15:50:06 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 8:  Section Intro: Accessing API from Browser -> The Query String
+
+[33mcommit 7284f4e5600334aa4b85226df8e046b47bd7051d[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 28 14:24:14 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 7: Intro: Web Servers -> Advanced Templating and Styling
+
+[33mcommit 6df6ba95be19039268b218db28b0a11f95f1e3c0[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 28 12:11:02 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 7: Intro: Web Servers -> Dynamic Pages with Templating
+
+[33mcommit f2d678c181628880283e868717a2a5a78b188a01[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 28 11:49:28 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 7: Intro: Web Servers -> Serving up CSS, JS, Images, and More
+
+[33mcommit 827e9203709b88719aff4f782e110dc154404f20[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 28 11:41:00 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 7: Intro: Web Servers -> Serving up Static Assets
+
+[33mcommit c22451c19f13df1574382315b5ebf50e0fc17278[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 28 11:28:17 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 7: Intro: Web Servers -> Serving up HTML and JSON
+
+[33mcommit affec7ec2817fb4436759f7fd23c13f2a319d8f4[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sun Mar 22 22:55:02 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 7: Intro: Web Servers -> Hello Express
+
+[33mcommit e4bed9e3ddad31100368c3db8291a873cd66948d[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sun Mar 22 22:32:02 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 7: Intro: Web Servers -> init
+
+[33mcommit 6425afa896d480e34d08a9a9fb10fda48157e4f0[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 18:50:19 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 6: Asynchronous Node.js -> https request using nodejs
+
+[33mcommit 9c1a2b6f733a70056f11aa6dad20b760661938e9[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 17:55:18 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 6: Asynchronous Node.js -> Callback Chaining
+
+[33mcommit 67ec3b30282f8ed1249bdc1e86a00d6938b2e847[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 15:42:41 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 6: Asynchronous Node.js -> The Callback Function
+
+[33mcommit 01be3858f54ca55a56119ff168b3cc17651358fa[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 14:36:21 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 6: Asynchronous Node.js -> Handling Errors
+
+[33mcommit bee967fca66044df98f094d5572325bd2ea2a855[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 13:31:08 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 6: Asynchronous Node.js -> Customizing HTTP Requests
+
+[33mcommit 044baab7dafa96f846d87899482c50a7029db018[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 12:46:47 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 6: Asynchronous Node.js -> Making HTTP Requests
+
+[33mcommit 9127a18e07644bc420ce8ec2751e9b8e1527907e[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 11:36:53 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 6: Asynchronous Node.js -> Asynchronous Basics
+
+[33mcommit e5f94b243152f67f3df1f1c8a46d97a51aa69a9f[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 11:21:23 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 6: Asynchronous Node.js -> init
+
+[33mcommit a64fec260ca2a563b42bf31c5d7d42ab78f1afb5[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 11:14:38 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 5: Debugging Node.js -> Debugging Node.js
+
+[33mcommit 22b2188ed5d400d1a61258583b9eab1fbe2e2375[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Mar 21 10:58:32 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 4: File System and Command Line Args -> Read, Delete, Update, Create Notes with yargs package.
+
+[33mcommit a58a269a70a61fd341ae38d790a154be9bf7f60d[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Mar 18 11:09:50 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 4: File System and Command Line Args -> Argument Parsing with Yargs
+
+[33mcommit 7da198d00f45176239a575b1ce48761c4759c2ee[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Mar 17 23:56:50 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 3: Node.js Module -> finalize section
+
+[33mcommit 68b9c03e7f321520ed108bc1964f4bd6a00f83a6[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Mar 17 23:41:27 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 3: Node.js Module -> printing in colors
+
+[33mcommit 608e1f530969fe34f048a08dc6e5383ce14da73d[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Mar 17 23:25:16 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 3: Node.js Module -> importing npm modules
+
+[33mcommit f9a9729d1ff805fd95d3f55779a359816f4100ff[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Mar 17 23:03:35 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 3: Node.js Module -> importing your own files
+
+[33mcommit e852153044602a99f02404a31a74607477586135[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Mar 16 02:29:30 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 3: Node.js Module -> import node module
+
+[33mcommit d309ca197dd73b474b981aaa8a0593084f7ccee9[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Mar 16 01:49:22 2020 +0200
+
+    UDEMY: The Complete Node.js Developer Course -> Section 3: Node.js Module -> init
+
+[33mcommit f1bfc20ed07db82bce95568c3cad232196a110fe[m
+Merge: 06467e8 b31b1b2
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Jan 3 22:58:01 2020 +0200
+
+    Frontend Master React - intermediate react v2 (#69)
+    
+    Frontend Master React - intermediate react v2
+
+[33mcommit b31b1b2ff7f18359e6b84a7dbdca0afb4bc9c250[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Jan 3 22:52:54 2020 +0200
+
+    Frontend Master React - intermediate react v2 => Testing
+
+[33mcommit 3c74db3ca1ed39882fbc6ff9e7e302d38b4c5c74[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Jan 3 21:15:00 2020 +0200
+
+    Frontend Master React - intermediate react v2 => Redux
+
+[33mcommit bb0b88d139c331416014d5336705cc16493e7d36[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Jan 3 16:50:21 2020 +0200
+
+    Frontend Master React - intermediate react v2 => Typescript With React
+
+[33mcommit ed1eb96636027fe6abd3c5b1801c4d1a3af8bd7b[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Jan 3 14:06:26 2020 +0200
+
+    Frontend Master React - intermediate react v2 => Clean Up
+
+[33mcommit 06467e864d83a2545448db6cbd72ac54ece1ea73[m
+Merge: 5662eeb 3480c25
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Jan 1 22:56:42 2020 +0200
+
+    Merge pull request #68 from mohammedelzanaty/feature/FEM-react/intermediate-react-v2
+    
+    Frontend Master React - intermediate react v2 - Hooks
+
+[33mcommit 3480c2583f4dc1b5e5171712667092c54e345cd8[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Jan 1 22:50:14 2020 +0200
+
+    Frontend-Masters: Intermediate React, v2 -> Rever Server
+
+[33mcommit 805018704e72c42aa9421d0355667429c5e3a596[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Jan 1 22:45:26 2020 +0200
+
+    Frontend-Masters: Intermediate React, v2 -> Server Side Rendering
+
+[33mcommit a121c2165c056db0921923290c19d6ced3d147c1[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Jan 1 21:40:09 2020 +0200
+
+    Frontend-Masters: Intermediate React, v2 -> Code Splitting
+
+[33mcommit a263897abb5cfb651d5d85868b4560894e9c197f[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Jan 1 20:47:22 2020 +0200
+
+    Frontend-Masters: Intermediate React, v2 -> CSS in JS
+
+[33mcommit 7f9d5b048ad63b455bc01e418d644233eafe7cba[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Jan 1 18:12:51 2020 +0200
+
+    Frontend-Masters: Intermediate React, v2 -> Hooks In-Depth
+
+[33mcommit 5662eebe3efb2ea0197cc47c83dde1f2008bcf8f[m
+Merge: 75b7529 1036e48
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Dec 30 12:44:40 2019 +0200
+
+    Merge pull request #67 from mohammedelzanaty/feature/mongodb/mongodb_for_developers_learning_path
+    
+    MongoDB for Developers Learning Path:  M001 -> Chapter 3
+
+[33mcommit 1036e4842174aa0da13146308b8ab0da288467cb[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Dec 30 12:43:34 2019 +0200
+
+    MongoDB for Developers Learning Path:  M001 -> Chapter 3
+
+[33mcommit 8ce8d708e0b703df4628bc6e63ad8b3f3f994311[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Dec 28 23:21:30 2019 +0200
+
+    Frontend-Masters: Intermediate React, v2 -> useEffect, useState, useC…
+
+[33mcommit 75b7529475bbdb751a60d7545ca943c0c3fb3baf[m
+Merge: 477d693 24590fb
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Dec 28 23:19:16 2019 +0200
+
+    Merge pull request #66 from mohammedelzanaty/feature/FEM-react/intermediate-react-v2
+    
+    Frontend-Masters:  Intermediate React, v2  -> useEffect, useState, useContext
+
+[33mcommit 24590fb271acf043d6808d5b698b3c6dc653b877[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Dec 28 23:18:19 2019 +0200
+
+    Frontend-Masters:  Intermediate React, v2  -> useEffect, useState, useContext
+
+[33mcommit fec904df9bab3d8692bd7be5f1445595900db4a5[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Dec 28 20:44:56 2019 +0200
+
+    Frontend-Masters:  Intermediate React, v2  -> Init Course
+
+[33mcommit 477d693ffa3b50cf137b7310b96382e7f65d9b99[m
+Merge: 8b03556 af477a2
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Dec 28 18:21:13 2019 +0200
+
+    Merge pull request #65 from mohammedelzanaty/feature/mongodb/mongodb_for_developers_learning_path
+    
+    M001 MongoDB Basics - Chapter  2
+
+[33mcommit af477a2bb05315deb1e9d3cad4c55fa1312232ab[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Dec 28 18:16:59 2019 +0200
+
+    MongoDB for Developers Learning Path:  M001 -> Chapter 2 delete, replace one, update
+
+[33mcommit 0aef163e1982176f41ea53a56332e9a5d4992516[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Dec 28 14:10:00 2019 +0200
+
+    MongoDB for Developers Learning Path:  M001 -> Chapter 2  Insert Many Data to different collection
+
+[33mcommit 215f5b915075c3ddc359fe39724c39280e57bb4d[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Dec 28 13:33:59 2019 +0200
+
+    MongoDB for Developers Learning Path:  M001 -> Chapter 2  Creating a Cluster, Loading Data on it.
+
+[33mcommit 8b0355639e77c5bca6e03be12eab5fca2f391bae[m
+Merge: 4cde128 2be1746
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Dec 27 19:04:33 2019 +0200
+
+    Merge pull request #62 from mohammedelzanaty/feature/FEM-beginner/web-development-v2
+    
+    Finish web development v2 Course Beginner Path
+
+[33mcommit 2be1746808b73a4c5e93be3d3db1daa685de7611[m[33m ([m[1;31morigin/feature/FEM-beginner/web-development-v2[m[33m)[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Dec 27 19:03:31 2019 +0200
+
+    Frontend-Masters:  Complete Intro to Web Development, v2  -> AJAX and parcel
+
+[33mcommit 4cde1284bc15c9bdd948f35580520d676151d57c[m
+Merge: 39f9019 874fced
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Dec 27 16:04:53 2019 +0200
+
+    Merge pull request #61 from mohammedelzanaty/feature/mongodb/mongodb_for_developers_learning_path
+    
+    Mongo DB M001 - Chapter 1
+
+[33mcommit 874fced37bf9e067b4b2f21d39c4138a1fa4d6dc[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Dec 27 16:02:05 2019 +0200
+
+    MongoDB for Developers Learning Path:  M001 -> Chapter 1
+
+[33mcommit a2390d52d7fad924f2d44e5833525a57dbe604c6[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Dec 27 13:58:06 2019 +0200
+
+    MongoDB for Developers Learning Path:  M001 -> Init Course
+
+[33mcommit a67c49d8053292ed174a404065e2bf7dd4548255[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Dec 27 13:52:58 2019 +0200
+
+    Frontend-Masters:  Complete Intro to Web Development, v2  -> Objects and Arrays
+
+[33mcommit 39f90191256ed68234645a3b36a704ea38164125[m
+Merge: ba8eb06 1f038dd
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Dec 26 13:11:20 2019 +0200
+
+    Merge pull request #60 from mohammedelzanaty/feature/FEM-node-js/api-design-nodejs-v3
+    
+    Feature/fem node js/api design nodejs v3
+
+[33mcommit 1f038dd1989a5435fc36a55123ff79149946e325[m[33m ([m[1;31morigin/feature/FEM-node-js/api-design-nodejs-v3[m[33m)[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Thu Dec 26 13:01:38 2019 +0200
+
+    Frontend-Masters:  API Design in Node.js, v3  -> Auth
+
+[33mcommit d9ecbac8e3ff04a4781b04b0b8a79754789cd47d[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Dec 25 21:42:59 2019 +0200
+
+    Frontend-Masters:  API Design in Node.js, v3  -> Controllers & Models
+
+[33mcommit 100a7918d3eb22dc846a590133cd7b9d571a994d[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Dec 25 16:20:26 2019 +0200
+
+    Frontend-Masters:  Complete Intro to Web Development, v2  -> Scope
+
+[33mcommit ac73f86f6a4c1eaa5470cf627858f40fb4811d07[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Dec 25 16:09:34 2019 +0200
+
+    Frontend-Masters:  Complete Intro to Web Development, v2  -> Learning CSS
+
+[33mcommit c9a8d01b4dfbe8ec4b9e82864632c762a06d88d1[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Dec 25 12:31:41 2019 +0200
+
+    Frontend-Masters:  API Design in Node.js, v3  -> Mongoose and MongoDB Exersice
+
+[33mcommit a87594ee10d140fd766bbc139f38af5e73c186ce[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Dec 25 11:03:43 2019 +0200
+
+    Frontend-Masters:  API Design in Node.js, v3  -> fix NODE_ENV issue
+
+[33mcommit 82916cc080eabbf709d430e88edebe7caa3e1bf2[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Dec 25 10:48:45 2019 +0200
+
+    Frontend-Masters:  API Design in Node.js, v3  -> Lesson Two
+
+[33mcommit 244d75fb98f77fe4209efaa3e9a5a0f9eb49b5f8[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Wed Dec 25 10:39:25 2019 +0200
+
+    Frontend-Masters:  API Design in Node.js, v3  -> Lesson One
+
+[33mcommit 3a230e47e03313ea89ee5cd60f97931edf376318[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Dec 24 23:46:09 2019 +0200
+
+    Frontend-Masters:  API Design in Node.js, v3  -> Introduction Section
+
+[33mcommit 38fa7c427d479da63c2330dee35aa7b7e8bf2513[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Dec 24 23:07:10 2019 +0200
+
+    Frontend-Masters:  API Design in Node.js, v3  -> init course
+
+[33mcommit ba8eb06f83f3d373ac2d7165279d57ad575d2ee1[m
+Merge: 00f7ed5 3eead86
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Dec 24 20:14:32 2019 +0200
+
+    Merge pull request #59 from mohammedelzanaty/feature/ossu/coursera-python-for-every-one
+    
+    Feature/ossu/coursera python for every one
+
+[33mcommit 3eead8642ee3d2b949f7d2b88b5fbe4398d2c808[m[33m ([m[1;31morigin/feature/ossu/coursera-python-for-every-one[m[33m)[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Dec 24 19:54:15 2019 +0200
+
+    Python for EveryOne: Exploring Data in Python 3 -> Python for Everybody : Week  Five
+
+[33mcommit 938d853eef7aa53d0604b815486b0753712cb496[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sun Dec 8 14:22:48 2019 +0200
+
+    Frontend-Masters: Complete Intro to Web Development, v2 ->  Init course
+
+[33mcommit f0d7eeee8b724934d906799f6a08a5c2c86b3bc4[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sun Dec 8 14:15:14 2019 +0200
+
+    Python for EveryOne: Exploring Data in Python 3 -> Python for Everybody : Week  Five
+
+[33mcommit 00f7ed5cdcb3ca7df53e78e914840741bcc81486[m
+Merge: 6e53939 786eca1
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Nov 30 14:57:31 2019 +0200
+
+    Merge pull request #58 from mohammedelzanaty/feature/FEM-node-js/node-js
+    
+    Course: Frontend Masters -> Intro to Nodejs
+
+[33mcommit 786eca15680648d2ceee2aac7562292efe60921a[m[33m ([m[1;31morigin/feature/FEM-node-js/node-js[m[33m)[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 30 14:55:41 2019 +0200
+
+    Frontend-Masters:  Introduction to Node.js  -> Debugging & Testing
+
+[33mcommit 04a9f3cb58416a94795b1eb1f0a436088243bdea[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 30 00:04:44 2019 +0200
+
+    Frontend-Masters:  Introduction to Node.js  -> Asynchronous Node
+
+[33mcommit f49612fecbddde8383499259348806d3eabd9290[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Nov 29 21:03:43 2019 +0200
+
+    Frontend-Masters:  Introduction to Node.js  -> Internal Modules & npm
+
+[33mcommit 75b7b9f323ad9c4fd88840d006bc5e01c48f30eb[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Nov 29 18:52:21 2019 +0200
+
+    Frontend-Masters:  Introduction to Node.js  -> Node.js Modules
+
+[33mcommit db3a65fd922b7f9b21114b796ff78cbf6f3b70b6[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Nov 29 01:05:02 2019 +0200
+
+    Frontend-Masters:  Introduction to Node.js  -> Introduction
+
+[33mcommit 756f35bfb57336e04f447cd90d0b19fa44ba18eb[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Nov 26 13:16:16 2019 +0200
+
+    Python for EveryOne: Exploring Data in Python 3 -> Python for Everybody : Week  Four
+
+[33mcommit 3b9e1bddb69399ff38e8e4546835a5f4a6e4932d[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 25 19:22:34 2019 +0200
+
+    Python for EveryOne: Exploring Data in Python 3 -> Python for Everybody : Week Three
+
+[33mcommit a2200e36abddb0230f0f7421c62768b9f56c6490[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 18 20:10:34 2019 +0200
+
+    Python for EveryOne: Exploring Data in Python 3 -> Python for Everybody : Week Two Correction
+
+[33mcommit b0a4157e7f39ca3b17c32ee8ed56d9a22165ec70[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 18 19:32:54 2019 +0200
+
+    Python for EveryOne: Exploring Data in Python 3 -> Python for Everybody : Week Two
+
+[33mcommit d7e1d66a2786ce810700e01108591e85a7bfb555[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 18 18:57:46 2019 +0200
+
+    Python for EveryOne: Exploring Data in Python 3 -> Python for Everybody : Week One
+
+[33mcommit 6e53939f1cf8a45bc576feed0a115cba986080c5[m
+Merge: 1dca0af e743d30
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sun Nov 17 16:30:04 2019 +0200
+
+    Merge branch 'develop' of https://github.com/mohammedelzanaty/my-path-to-be-web-developer into develop
+    
+    # Conflicts:
+    #       FrontendMasters/professional/javascript-hard-parts/js-the-hard-parts.pdf
+
+[33mcommit 1dca0af5f1e1b1d13bacd91d65219d3226a4b1a1[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sun Nov 17 16:29:24 2019 +0200
+
+    book js-hard-parts
+
+[33mcommit e743d30587dd070f457ddfd009779a78d8531063[m
+Merge: efae5a2 226f2b8
+Author: Mohammed Elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Nov 15 14:24:56 2019 +0200
+
+    Merge pull request #57 from mohammedelzanaty/feature/FEM-professional/javascript-hard-parts
+    
+    Frontend-Masters: JavaScript: The Hard Parts  -> Principles of JavaScript
+
+[33mcommit 226f2b88ac4f0a9286048148b00b287d027ee7f1[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Fri Nov 15 14:23:02 2019 +0200
+
+    Frontend-Masters: JavaScript: The Hard Parts  -> Principles of JavaScript
+
+[33mcommit 165fe392341e8fde3dac7e1318b6b70d7d4dd897[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Thu Nov 14 20:45:15 2019 +0200
+
+    Frontend-Masters: JavaScript: The Hard Parts  ->  init course
+
+[33mcommit efae5a2b1225cb0df68bc718f1d2354788510aca[m[33m ([m[1;31morigin/feature/FEM-react/complete-intro-to-react[m[33m)[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Tue Nov 12 10:44:10 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5  -> add modal
+
+[33mcommit ec8e0fef7e091420e9a9206682755ed15c039c17[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 11 20:27:17 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5  ->   Add theme context
+
+[33mcommit 3cfc41219025374b7a9a35c954cabcb8e3477d93[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 11 14:03:32 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5  ->  add error boundary to Details route
+
+[33mcommit 1dc418df6568cb5c32c6da308e78f012b5506041[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 11 13:12:25 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5  ->  add Details route, add custom Babel config, add Carousel
+
+[33mcommit 0bf8caa724d31dd908cbb92b6422d362694aa177[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 11 10:45:53 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5  -> add @reach/router and details component
+
+[33mcommit c0b9e97982a4a16ff1ab2d4c08edf96478741f58[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Mon Nov 11 10:23:12 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5 -> async calls to Petfinder API, update Pet component
+
+[33mcommit e5287f16e1b67d90676a1fd71e37d65e92ad8ff3[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sun Nov 10 15:52:22 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5 -> useState, custome hooks, update ESLint, bring in petfinder client
+
+[33mcommit 07c724e63cca541f4f7e0d8d7646d1582ce9ec14[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sun Nov 10 11:57:28 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5 -> useState, custome hooks, update ESLint, bring in petfinder client
+
+[33mcommit 77bc1c9edb24276afac25deee3d5cfdb7e8fe24b[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 9 23:44:53 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5 ->   Convert project to JSX, add React-specific ESLint config
+
+[33mcommit 5367f93f812f6d391ff24080f5e51c181119ce5b[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 9 23:27:24 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5 ->   Add npm scripts eslint peitter and gitignore
+
+[33mcommit 2c9f8b81a4a39c22715a1332ccf8796dff1970b3[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 9 22:41:58 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5 ->  Pure React
+
+[33mcommit 52949b8af690a3facfabe7a3f29cc3ec12068e4e[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 9 21:09:20 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5 -> update read.me
+
+[33mcommit 0cf4eb96a986d59f07f7ef6a03e65dd7ee1921d8[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 9 21:05:25 2019 +0200
+
+    Frontend-Masters: Complete Intro to React, v5 -> initialization
+
+[33mcommit 40136cfca6cb84bfab689e016d33ed5aeb25e4ec[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 9 20:25:06 2019 +0200
+
+    restructure repo for new year
+
+[33mcommit 979f25651b6bd4eff01a66d4b687b5bff436acbe[m
+Author: Mohammed Elzanaty <mohammed.elzanaty@evolvice.de>
+Date:   Sat Nov 9 20:12:13 2019 +0200
+
+    Certificates
+
+[33mcommit 367c89362aef99b4549c2082267d764e2bfb92d1[m
+Merge: c4e223a 997eab7
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Nov 9 20:06:15 2019 +0200
+
+    Merge pull request #50 from mohammedelzanaty/develop
+    
+    Develop
+
+[33mcommit c4e223a6f349ae11049f210d021e0234f41ebd25[m
+Merge: 2d236bb 645ad63
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Oct 13 11:01:24 2019 +0200
+
+    Merge pull request #32 from mohammedelzanaty/dependabot/npm_and_yarn/coursera-full-stack-react/2.react/confusion/lodash.template-4.5.0
+    
+    build(deps): bump lodash.template from 4.4.0 to 4.5.0 in /coursera-full-stack-react/2.react/confusion
+
+[33mcommit 2d236bbf3f7b38577d62bad5c0b50bdfdb96739e[m
+Merge: cd68ef4 05f746f
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Oct 13 11:01:11 2019 +0200
+
+    Merge pull request #42 from mohammedelzanaty/dependabot/npm_and_yarn/coursera-full-stack-react/1.bootstrap4/1.weekOne/basics_of_node.js_npm/mixin-deep-1.3.2
+    
+    build(deps): bump mixin-deep from 1.3.1 to 1.3.2 in /coursera-full-stack-react/1.bootstrap4/1.weekOne/basics_of_node.js_npm
+
+[33mcommit 997eab7188eaa8e2984783047e798c2690be2bb7[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Sep 21 17:29:46 2019 +0200
+
+    JavaScript Is Sexy: Master JavaScript and Frontend Development => Understand JavaScript Closures With Ease
+
+[33mcommit 3a8896b853513a3576475b8544f9d45ec8e56178[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Sep 21 15:56:04 2019 +0200
+
+    JavaScript Is Sexy: Master JavaScript and Frontend Development => JavaScript Variable Scope and Hoisting Explained
+
+[33mcommit ef9fe1c13b93321e22c807a9e4652271f75f2aa0[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Sep 21 15:28:45 2019 +0200
+
+    JavaScript Is Sexy: Master JavaScript and Frontend Development => JavaScript Prototype in Plain Language
+
+[33mcommit 4942ee698140fdbff6b350d4c52cad857003cfa1[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Sep 21 14:32:33 2019 +0200
+
+    JavaScript Is Sexy: Master JavaScript and Frontend Development => JavaScript Objects in Detail
+
+[33mcommit b7b6c2b9a203f2e107ab37206eb328aa782fd008[m
+Merge: d544b1a 40fff67
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 18 22:53:33 2019 +0200
+
+    Merge pull request #49 from mohammedelzanaty/feature/become-a-programmer-foundations/programming-foundations-fundamentals-3
+    
+    Finalize Programming Foundation Fundamentals Course
+
+[33mcommit 40fff67dbdbe3a471dd705bad19fc0c1da1b8a3d[m[33m ([m[1;31morigin/feature/become-a-programmer-foundations/programming-foundations-fundamentals-3[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 18 22:41:16 2019 +0200
+
+    linkedin-become-a-programmer-foundations: Programming Foundations: Fundamentals -> 3. Conditional Code
+
+[33mcommit 69a80fce7a06f89c8b9b96770cf4ab40b7cfab47[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 18 22:24:19 2019 +0200
+
+    linkedin-become-a-programmer-foundations: Programming Foundations: Fundamentals -> 2. Data Types
+
+[33mcommit 3f214e47ba56d48861fffe90f7bcbb88d62ee694[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 18 16:26:41 2019 +0200
+
+    linkedin-become-a-programmer-foundations: Programming Foundations: Fundamentals -> 1. Programming Basics
+
+[33mcommit d544b1a530e14532148e6e119a02d4149a5b52cf[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 18 15:21:39 2019 +0200
+
+    linkedin-become-a-programmer-foundations: init path
+
+[33mcommit a7a180172bf2c0b599b2e2d96127cbf887ee2fc9[m
+Merge: 67783cf 6cc1f5e
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 18 15:05:21 2019 +0200
+
+    Merge pull request #48 from mohammedelzanaty/feature/become-a-mern-stack-javascript-developer/node-js-securing-restful-apis
+    
+    Finalize Node.js: Securing RESTful APIs
+
+[33mcommit 6cc1f5e9e7073adf1df845c89cdbdd42f0e1e70c[m[33m ([m[1;31morigin/feature/become-a-mern-stack-javascript-developer/node-js-securing-restful-apis[m[33m)[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 18 15:03:35 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Node.js: Securing RESTful APIs -> Create Authentication Manually
+
+[33mcommit a16250d4426b54e01f367cf9c7d411ebf9d7e72b[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 16 22:12:09 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Node.js: Securing RESTful APIs -> JSON Web Token
+
+[33mcommit 22435f097b47ba6004ce9fd4cb661f2bdbf18fe8[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 16 20:37:36 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Node.js: Securing RESTful APIs -> init course
+
+[33mcommit 67783cf90806d0905e228237018fc28751e4f48c[m
+Merge: 0c002db ea0b26d
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 16 20:31:59 2019 +0200
+
+    Merge pull request #47 from mohammedelzanaty/feature/become-a-mern-stack-javascript-developer/learning-full-stack-javascript-development-mongodb-node-and-react
+    
+    Finalize Worest Courese ever
+
+[33mcommit ea0b26df3ad6f98dee689ed8250388576b7b0f27[m[33m ([m[1;31morigin/feature/become-a-mern-stack-javascript-developer/learning-full-stack-javascript-development-mongodb-node-and-react[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 16 20:29:34 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Learning Full-Stack JavaScript Development: MongoDB, Node, and React -> Fetching one consest
+
+[33mcommit 371ce061a34203f79cac6cb043dfea19f8ef2003[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 16 19:28:25 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Learning Full-Stack JavaScript Development: MongoDB, Node, and React -> Working with Data
+
+[33mcommit 464456470a0fdf100ec0a2759ca69475c8ce339a[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 16 14:07:40 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Learning Full-Stack JavaScript Development: MongoDB, Node, and React -> React Basics
+
+[33mcommit 733769374ecdc2dae8d0508e3150f7fd8f0fd1a5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 16 12:22:33 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Learning Full-Stack JavaScript Development: MongoDB, Node, and React -> Getting Started
+
+[33mcommit 0c002dbd39e9ee8b37d5ab38d665b13a4cfa0f82[m
+Merge: 3f44544 d093471
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Sep 10 22:34:30 2019 +0200
+
+    Merge pull request #46 from mohammedelzanaty/feature/become-a-django-developer/learning-django
+    
+    Finish Learn Django
+
+[33mcommit d093471ccfa44ef9b93df8f77be48a51b551b17d[m[33m ([m[1;31morigin/feature/become-a-django-developer/learning-django[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Sep 10 22:31:15 2019 +0200
+
+    linkedin-become-a-django-developer: learning-django -> 4. Building Django Templates
+
+[33mcommit 2a1f77edb007ffde2a8da7c6c43245db8b38424d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Sep 10 21:54:24 2019 +0200
+
+     linkedin-become-a-django-developer: learning-django -> 3. Building URL Handlers and Views
+
+[33mcommit c5aca8165b23efd5658eaa650e4914c62a7a38cc[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Sep 10 15:25:58 2019 +0200
+
+     linkedin-become-a-django-developer: learning-django -> 2. Working with Django Models and the Admin
+
+[33mcommit 84b2a55133430da6df1e506791c4201dfb04d007[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 9 16:02:23 2019 +0200
+
+    linkedin-become-a-django-developer: learning-django -> 1. Setting Up a Django Project
+
+[33mcommit f3f0c82179a7d217b8b0c5913bdc38bd2cc3e711[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 9 14:42:50 2019 +0200
+
+    linkedin-become-a-django-developer: learning-django -> init course
+
+[33mcommit 3f44544ff43864fcadfe96269642c7ad5839ffb3[m
+Merge: 4fd4f8d bcfc6ac
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 9 14:06:43 2019 +0200
+
+    Merge pull request #45 from mohammedelzanaty/feature/improve-your-react-skills/react-testing-and-debugging
+    
+    Finalize React testing and debugging
+
+[33mcommit bcfc6ac0618080f1665fa5ed84c7751ba5acb784[m[33m ([m[1;31morigin/feature/improve-your-react-skills/react-testing-and-debugging[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 9 14:04:22 2019 +0200
+
+    linkedin-improve-your-react-skills: 1.react-testing-and-debugging -> ESLint, Types, and Performance
+
+[33mcommit 562f5eb68d564f194baf118fe8e165041500f4d7[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 9 12:44:24 2019 +0200
+
+    linkedin-improve-your-react-skills: 1.react-testing-and-debugging -> Using Matcher
+
+[33mcommit 0ed79863b24e4dd41931442f4948af24edebe1ba[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 9 11:54:00 2019 +0200
+
+    linkedin-improve-your-react-skills: 1.react-testing-and-debugging -> install eslint, flow and init jest
+
+[33mcommit a5d5d5614250733e1ca1a0e3a94d909d7f360aa8[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 9 11:03:40 2019 +0200
+
+    linkedin-improve-your-react-skills: 1.react-testing-and-debugging -> init project
+
+[33mcommit 4fd4f8d89d569794bfeff2bbd4e964bb03b3f3cf[m
+Merge: 357ed6b a379f36
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 4 11:42:36 2019 +0200
+
+    Merge pull request #44 from mohammedelzanaty/feature/become-a-mern-stack-javascript-developer/building-restful-web-apis-with-node-js-and-express
+    
+    Finalize Building Restful APIs course
+
+[33mcommit a379f36b303a86f189642abc48a137f3857caf09[m[33m ([m[1;31morigin/feature/become-a-mern-stack-javascript-developer/building-restful-web-apis-with-node-js-and-express[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Sep 4 10:19:47 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Building RESTful Web APIs with Node.js and Express -> CRUD Operations
+
+[33mcommit 48738b0c9964127afe1c20e2c494249d01f6a2e7[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Sep 3 14:54:53 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Building RESTful Web APIs with Node.js and Express -> Initial Server Build
+
+[33mcommit 3a49d66db7652900586597041481ef77885bb7a5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Sep 2 17:21:42 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript: Building RESTful Web APIs with Node.js and Express -> init course
+
+[33mcommit cd68ef4b91966d71e075e4edf01ac5b26d1ead4f[m
+Merge: deec97e 357ed6b
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 31 22:54:28 2019 +0200
+
+    Merge pull request #43 from mohammedelzanaty/develop
+    
+    update master
+
+[33mcommit 645ad63d8c4b48fbcc73d7973be32a064c367fea[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sat Aug 31 20:53:55 2019 +0000
+
+    build(deps): bump lodash.template
+    
+    Bumps [lodash.template](https://github.com/lodash/lodash) from 4.4.0 to 4.5.0.
+    - [Release notes](https://github.com/lodash/lodash/releases)
+    - [Commits](https://github.com/lodash/lodash/compare/4.4.0...4.5.0)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+[33mcommit 05f746f3557a6d5bfcd1e91ab0f549188376dfd8[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sat Aug 31 20:53:22 2019 +0000
+
+    build(deps): bump mixin-deep
+    
+    Bumps [mixin-deep](https://github.com/jonschlinkert/mixin-deep) from 1.3.1 to 1.3.2.
+    - [Release notes](https://github.com/jonschlinkert/mixin-deep/releases)
+    - [Commits](https://github.com/jonschlinkert/mixin-deep/compare/1.3.1...1.3.2)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+[33mcommit deec97e16502fe58a51d266f0308954e007ef428[m
+Merge: ebb5c66 83f266c
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 31 22:52:24 2019 +0200
+
+    Merge pull request #31 from mohammedelzanaty/dependabot/npm_and_yarn/coursera-full-stack-react/1.bootstrap4/1.weekOne/basics_of_node.js_npm/lodash-4.17.15
+    
+    build(deps): bump lodash from 4.17.11 to 4.17.15 in /coursera-full-stack-react/1.bootstrap4/1.weekOne/basics_of_node.js_npm
+
+[33mcommit ebb5c66431c70db71622f85b1411e231c6df9376[m
+Merge: e2fce7c c5ea183
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 31 22:52:07 2019 +0200
+
+    Merge pull request #37 from mohammedelzanaty/dependabot/npm_and_yarn/coursera-full-stack-react/2.react/confusion/eslint-utils-1.4.2
+    
+    build(deps): bump eslint-utils from 1.3.1 to 1.4.2 in /coursera-full-stack-react/2.react/confusion
+
+[33mcommit 357ed6b9e4141c7bf5eaeee734be459ef821244b[m
+Merge: a41ccc6 7db2a24
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 31 22:51:45 2019 +0200
+
+    Merge pull request #41 from mohammedelzanaty/feature/become-react-developer/react-creating-and-hosting-a-full-stack-site
+    
+    Finalize Full Stack App
+
+[33mcommit 7db2a247be01ef062342f24218e6dc012ba3094d[m[33m ([m[1;31morigin/feature/become-react-developer/react-creating-and-hosting-a-full-stack-site[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 31 22:40:52 2019 +0200
+
+    linkedin-become-react-developer: react-creating-and-hosting-a-full-stack-site -> Add Article Comments Component
+
+[33mcommit c884d986aeb8aa5654a49694c5e8d167838a264d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 31 22:21:37 2019 +0200
+
+    linkedin-become-react-developer: react-creating-and-hosting-a-full-stack-site -> Connecting The Frontend and The Backend
+
+[33mcommit 5cadd2ab13c95698e30d0a3241ab47085fca480e[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 31 20:14:36 2019 +0200
+
+    linkedin-become-react-developer: react-creating-and-hosting-a-full-stack-site -> Setting up Data Base
+
+[33mcommit 55e5dbb6ba5c7f12c449a51b80c6e93eca1d8a26[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 31 13:07:59 2019 +0200
+
+    linkedin-become-react-developer: react-creating-and-hosting-a-full-stack-site -> Create Node Backend
+
+[33mcommit dc47b23cefb899570a88ab08d7b4f42dd875c0a5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 30 22:38:49 2019 +0200
+
+    linkedin-become-react-developer: react-creating-and-hosting-a-full-stack-site -> create About, article and articles page
+
+[33mcommit ec50d5c7d1c75adc85e4e955c93801f0c8e0e0e5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 30 22:18:05 2019 +0200
+
+    linkedin-become-react-developer: react-creating-and-hosting-a-full-stack-site -> add mock data and init pages
+
+[33mcommit 463429c1f636d29a75daaf17d0477a654196d70b[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 30 21:19:28 2019 +0200
+
+    linkedin-become-react-developer: react-creating-and-hosting-a-full-stack-site -> make home page of blog
+
+[33mcommit 16cafccdfb13d2858f4f0bab3bb5f20cc3e3b969[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 30 20:23:49 2019 +0200
+
+    linkedin-become-react-developer: react-creating-and-hosting-a-full-stack-site -> init course
+
+[33mcommit a41ccc6a6b4fef30a3669e2b34cccc7d2ee8a238[m
+Merge: 34b27b0 d729a7a
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 30 20:13:04 2019 +0200
+
+    Merge pull request #40 from mohammedelzanaty/feature/udacity-full-stack-python/milestone-2-more-python
+    
+    more python one million Arab coders
+
+[33mcommit d729a7a194e88e5c79811929241b4c8e8321fd16[m[33m ([m[1;31morigin/feature/udacity-full-stack-python/milestone-2-more-python[m[33m)[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 30 20:06:28 2019 +0200
+
+    udacity-full-stack-developer: more-python -> Lab 2
+
+[33mcommit 390342ba7a711dfd25720b401076e195fa41b10d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 30 17:51:04 2019 +0200
+
+    udacity-full-stack-developer: more-python -> Strings and Lists
+
+[33mcommit 34b27b00658f43b93e76326ae57201fea984f98e[m
+Merge: 242682a edc7c74
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 29 23:01:11 2019 +0200
+
+    Merge pull request #39 from mohammedelzanaty/feature/become-react-developer/react-js-building-an-interface-2
+    
+    Finalize react-js building an interfact-2
+
+[33mcommit edc7c74930c2c1dcd7f65749c74293dfe6fd6730[m[33m ([m[1;31morigin/feature/become-react-developer/react-js-building-an-interface-2[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 29 21:18:03 2019 +0200
+
+    linkedin-become-react-developer: react-js-building-an-interface-2 -> Setup Nodejs Server and Adding List of Pets and search between them
+
+[33mcommit c8e62a6070ad7b6766f241491e3d2d6c514103f9[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 29 17:09:53 2019 +0200
+
+    linkedin-become-react-developer: react-js-building-an-interface-2 -> Creating Header and Footer Components
+
+[33mcommit 40bcbc76a8f38933b5fde49768b0b010706add62[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 29 17:08:44 2019 +0200
+
+    linkedin-become-react-developer: react-js-building-an-interface-2 -> Building a Basic App
+
+[33mcommit b8eca9b9794f3c00850537dc30852c214b7768bf[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 29 16:22:32 2019 +0200
+
+    linkedin-become-react-developer: react-js-building-an-interface-2 -> init react-interface project
+
+[33mcommit 1522ceecf6b29c348b2dcf8c659d70a5c165359e[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 29 13:58:23 2019 +0200
+
+    linkedin-become-react-developer: react-js-building-an-interface-2 -> init course
+
+[33mcommit 242682ad24e73cb8eac7281e29b4d3bad950a5e1[m
+Merge: b2b2500 3a12a36
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 29 09:14:11 2019 +0200
+
+    Merge pull request #38 from mohammedelzanaty/feature/become-a-mern-stack-javascript-developer/express-essential-training
+    
+    Finish Express Essential Training
+
+[33mcommit 3a12a36467a3a76481da18197dc9b97aca4c3d0e[m[33m ([m[1;31morigin/feature/become-a-mern-stack-javascript-developer/express-essential-training[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 17:19:22 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training ->  Advanced Topics in Express
+
+[33mcommit dba40992a5647411a7d374b5845208663c3c66d7[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 17:00:41 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> Third Party Middleware
+
+[33mcommit fe4006a80c6b2fa00bee7649f6200c6cf95c2639[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 16:54:10 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> Error Handling Middleware
+
+[33mcommit 11ee05d6cf7df4ef318e17b51eb4a8efc8eb6d06[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 16:28:11 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> Built-in middleware
+
+[33mcommit 2f89fdeccbbe2e53eda6f9fc476e976a8ba9be17[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 13:50:57 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> Routing: Chaining
+
+[33mcommit 7a3eebb7929bad2a88bc8b73123146507faf8a7a[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 12:46:13 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> Routing: Common methods
+
+[33mcommit 62c5f43725e1fa000037716c811ece20b06261f7[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 12:11:48 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> Routing: Parameters
+
+[33mcommit 00d361242193b64d6361cfb2b0cf1acc05c0eccd[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 11:57:53 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> Add Static routing file serving
+
+[33mcommit e846314d49fd88a8d89cda711f231caa109bb816[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 11:33:21 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> create a basic data endpoint
+
+[33mcommit 8c6326f4fa1d337e1665f43b1e7cee45639e3222[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 28 11:31:18 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: express-essential-training -> express-generator / and create a basics route
+
+[33mcommit c5ea183d2138f91f39b53b680b7a23440f13ac1c[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Tue Aug 27 10:18:34 2019 +0000
+
+    build(deps): bump eslint-utils
+    
+    Bumps [eslint-utils](https://github.com/mysticatea/eslint-utils) from 1.3.1 to 1.4.2.
+    - [Release notes](https://github.com/mysticatea/eslint-utils/releases)
+    - [Commits](https://github.com/mysticatea/eslint-utils/compare/v1.3.1...v1.4.2)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+[33mcommit b2b25009151b46a660c9e7c242549deda8c6bd74[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:40:36 2019 +0200
+
+    update gitignore with flask
+
+[33mcommit adda9ec2d3b93f3d721ad80288eaa945bfb64430[m
+Merge: 0c177f5 90a4440
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:37:12 2019 +0200
+
+    Merge pull request #36 from mohammedelzanaty/feature/harvardx-css50w/lecture-2-flask
+    
+    feature/harvardx-css50w/lecture-2-flask
+
+[33mcommit 90a44402fec9a604e19731899e4c5e7f506b1a29[m[33m ([m[1;31morigin/feature/harvardx-css50w/lecture-2-flask[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:35:46 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Notes/Sessions
+
+[33mcommit 8f715402c0c6c751cc62943338e916dc0ba90aa4[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:35:35 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Forms
+
+[33mcommit a733186d1f9132ca3ab0d5a2325edc4fde762d4e[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:35:27 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Inheritance
+
+[33mcommit deb9db7de1c33630f2f0086f1504c141463d3bb0[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:35:14 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Loops
+
+[33mcommit c11da67345082067133769a67a50b01565cfad3d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:35:03 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Conditions
+
+[33mcommit d6dc62709d509d8067ef35934fe63b9049d6f701[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:34:46 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Templates Variables
+
+[33mcommit 01268b5e81772ccf1bda030d0cbf22416c08cfa6[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 23:34:33 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Templates
+
+[33mcommit 09a9dea45ac69d224caa21d77c7cc144344fe8a5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 20:47:35 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Hello Flask
+
+[33mcommit 02fae26db44f1cbe9c1392d6efc4b105d83bbdc1[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 19:44:52 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Introduction of python
+
+[33mcommit a92474ea79db995ee95e6e3fe14b1d3045a8b14f[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Aug 25 16:51:15 2019 +0200
+
+    HarvaradX-CS50W: Lecture-03-Flask -> Init flask project
+
+[33mcommit 0c177f57087ef848e0b9ebf4b061c9082fef125e[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 24 23:02:35 2019 +0200
+
+    HarvardX-CS50W: project0
+
+[33mcommit 2953c18e6cc42e5946a7d4a055f9277bfb34c5fc[m
+Merge: 8c349e3 3d70b33
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 24 20:47:03 2019 +0200
+
+    Merge pull request #35 from mohammedelzanaty/feature/udacity-full-stack-python/milestone-2-intro-to-python
+    
+    Finalize Intro to python Function and Basics
+
+[33mcommit 3d70b33c018bb428f1c4f92a5c645dcf913fec9e[m[33m ([m[1;31morigin/feature/udacity-full-stack-python/milestone-2-intro-to-python[m[33m)[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 24 20:46:13 2019 +0200
+
+    udacity-full-stack-developer: intro-to-python -> View Functions, Part Two
+
+[33mcommit 8d8dc4ef71cc14b02549d2fced4d70b575500241[m
+Merge: 1d84a73 742da4f
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 24 19:07:03 2019 +0200
+
+    Merge remote-tracking branch 'origin/feature/udacity-full-stack-python/milestone-2-intro-to-python' into feature/udacity-full-stack-python/milestone-2-intro-to-python
+
+[33mcommit 1d84a738dfec8e7c2863bd76973795a90249a1fd[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 24 19:06:14 2019 +0200
+
+    udacity-full-stack-developer: intro-to-python -> View Functions, Part One
+
+[33mcommit 742da4f4d8c52d09cf95e4b57b4196eb35390452[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 24 19:06:14 2019 +0200
+
+    udacity-full-stack-python: intro-to-python -> View Functions, Part One
+
+[33mcommit d4943b2c3499c81bf00f76ad1e4941ed313daaa7[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Aug 24 15:02:58 2019 +0200
+
+    udacity-full-stack-developer: intro-to-python -> turtle and code
+
+[33mcommit 8c349e3bba70ae73869699f2a62bc205515c7b9b[m
+Merge: 53d69b2 ac38b48
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 18:16:44 2019 +0200
+
+    Merge pull request #34 from mohammedelzanaty/feature/become-react-developer/learning-redux
+    
+    Finish Redux Basic course
+
+[33mcommit ac38b48c9fcb8960c94459ba250d51313e1d26c0[m[33m ([m[1;31morigin/feature/become-react-developer/learning-redux[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 18:08:56 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> Create containers for form components
+
+[33mcommit ad1fe60fb2ee60c0ee87449f553acfecbca0ccb1[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 17:51:59 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> Connecting The Goal Component
+
+[33mcommit 31583d7e1056dd2d683b3fd649259fefd5730892[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 17:43:50 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> Map router params to React components
+
+[33mcommit 69c3190af5af64a75ed9eb4bd7be5d1af5311930[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 17:25:45 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> Map dispatch to React components redux
+
+[33mcommit 7ef43fdf4eaf510f3fb080f20de1a770e7fb40a3[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 17:13:39 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> mapStateToProps redux
+
+[33mcommit a4f7fdcd054da7b1ecc79933e860b1dfb262ff10[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 16:57:12 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> Revamb Code to latest React Version
+
+[33mcommit ba12c094f1fd707ff7edb55fb9f6a7e5f6f236cb[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 11:23:07 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> AutoComplete Thunk
+
+[33mcommit 6d36847ce943e868a8c5d342be2a25a2344266f5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 10:27:54 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> Edit ClearSuggestions Actions
+
+[33mcommit 9c75284674838fe91a23813d0fca6199e7c3d5e8[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 16 10:26:44 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> Build Action Creators
+
+[33mcommit 7885a1639cc038bfcf8c0c7fc51614765b8ca437[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 23:39:59 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> What are action creator
+
+[33mcommit 8481f9689bc705b2908f49e4274b0d4da977d5b2[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 23:13:38 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> Middleware
+
+[33mcommit 9ad272391707d20eb610ef6cb6c2b4113a03161d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 22:50:27 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> state, dispatch, subscribe
+
+[33mcommit a128c1055ec984bfff86f907017fc967a0d17f00[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 20:11:16 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> finalize reducer
+
+[33mcommit 6613128d075d50b2e3131bb5da5295d5233aa07d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 18:19:55 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> build your first reducer
+
+[33mcommit 881d98804589a70a48694e3a2821bdb54657a179[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 17:47:48 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> run redux with babel node
+
+[33mcommit 2f511633b3c70aed26011debb65103f26f50fe71[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 16:32:35 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> store, reducers, actions, exercises files
+
+[33mcommit 7a79f70d377a822eb82075dee3d4f7fe422c4607[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 12:51:28 2019 +0200
+
+    linkedin-become-react-developer: learning-redux -> init project and create initial state
+
+[33mcommit 53d69b2afa245ac913984b38d732b81729c8bf71[m
+Merge: e2fce7c ff4a0cf
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 11:16:57 2019 +0200
+
+    Merge pull request #33 from mohammedelzanaty/feature/udacity-full-stack-python/milestone-1-intro-to-css
+    
+    Feature/udacity full stack python/milestone 1 intro to css
+
+[33mcommit ff4a0cf9af56b94de8c071c3261bbd2f5984246f[m[33m ([m[1;31morigin/feature/udacity-full-stack-python/milestone-1-intro-to-css[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 11:15:32 2019 +0200
+
+    udacity-full-stack-developer: intro-to-css -> lab-1
+
+[33mcommit d1b38f0c7e215a9151e1d24a0afc353f094ad965[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 15 09:44:32 2019 +0200
+
+    udacity-full-stack-developer: intro-to-css -> Fonts, Container
+
+[33mcommit 0b569192ed279eca4c23d8f6f1e83a25cc5a5934[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 23:32:24 2019 +0200
+
+    udacity-full-stack-developer: intro-to-css -> Colors
+
+[33mcommit 7a6aaea1f9994fb9c51599235ec911ab5ba239cc[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 21:28:36 2019 +0200
+
+    udacity-full-stack-developer: intro-to-css -> Selectors
+
+[33mcommit 6ed661b157cd501f0d3980a0b641e9322bdcc55f[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 20:45:00 2019 +0200
+
+    udacity-full-stack-developer: intro-to-css -> tree structure, inline/multiple styles
+
+[33mcommit 77bf0a331d0b6b2f4f3b7f0a6c8ca09ee1cbde6f[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 19:24:17 2019 +0200
+
+    udacity-full-stack-developer: intro-to-css -> init Intro to CSS
+
+[33mcommit 83f266ca9b8a758ee1a63de94d6f30880e88b207[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Aug 14 10:47:14 2019 +0000
+
+    build(deps): bump lodash
+    
+    Bumps [lodash](https://github.com/lodash/lodash) from 4.17.11 to 4.17.15.
+    - [Release notes](https://github.com/lodash/lodash/releases)
+    - [Commits](https://github.com/lodash/lodash/compare/4.17.11...4.17.15)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+[33mcommit e2fce7c3b36556a9c24e887aaf313a5cd640d27f[m
+Merge: 09ee23b 6465afb
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 12:41:25 2019 +0200
+
+    Merge pull request #30 from mohammedelzanaty/develop
+    
+    Rebase New Change Folders Tree
+
+[33mcommit 09ee23b77b971dd7927884572611102d1b726075[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 12:40:06 2019 +0200
+
+    Clean Master Branch
+
+[33mcommit 6465afbf3a67d8653726f2b84990185b8fca06f3[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 12:36:36 2019 +0200
+
+    garbage files
+
+[33mcommit a54ed768e9ae0b72a7aca3f187c8ec2da8dc2905[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 12:36:11 2019 +0200
+
+    edit full stack udacity path
+
+[33mcommit 25ab16adb0123ce169b4ac386b31244e2e2d0fb4[m
+Merge: 996cfa1 0ac0b8a
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 12:34:06 2019 +0200
+
+    Merge branch 'feature/full-stack-development/milestone-one-intro-to-html' into develop
+
+[33mcommit 996cfa191a8cfeb3e928ef34ae79fa281ffaff9a[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 12:33:55 2019 +0200
+
+    Restructure Repo to Paths
+
+[33mcommit 0ac0b8a3b4754261793353f5d11d3a7860ad1309[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 11:14:32 2019 +0200
+
+    udacity-full-stack-developer: intro-to-html -> img, a, DOCTYPE, head, title, validators
+
+[33mcommit 9d70f60b09d061393e7476e7e83353ca35fecba2[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 14 09:22:02 2019 +0200
+
+    udacity-full-stack-developer: intro-to-html -> p, em, strong, h1-h6, br, sup, sub, mark, div
+
+[33mcommit 0ad397d5c3a1ee907ca6a6184b9ddaa6bd9e34dc[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Aug 13 15:59:22 2019 +0200
+
+    udacity-full-stack-developer: intro-to-html -> init milestone
+
+[33mcommit ef161b6da4b15a36468be1a44359ea807d31d33e[m
+Merge: 5839e44 002889c
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Aug 13 15:54:57 2019 +0200
+
+    Merge branch 'feature/become-a-mern-stack-javascript-developer/learning-mongodb' into develop
+
+[33mcommit 5839e4429560ef1b7f038e9426af6d175c20b6d2[m
+Merge: af53f33 b1f05c9
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Aug 13 14:56:18 2019 +0200
+
+    Merge branch 'feature/become-a-mern-stack-javascript-developer/building-a-website-with-node-js-and-express-js-2' into develop
+
+[33mcommit 002889cb1ce3e3f0c6917d3574cdfe394bf1676e[m[33m ([m[1;31morigin/feature/become-a-mern-stack-javascript-developer/learning-mongodb[m[33m)[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Aug 13 14:54:05 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: learning-mongodb -> Aggregation
+
+[33mcommit bb515b7856b825c8dc92b66254c086391dec71bb[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Aug 13 13:25:44 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: learning-mongodb -> Unique Indexes and Text Indexes
+
+[33mcommit 6b35e9e3eae93631624457ef2936c5c775662d73[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 9 19:14:37 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: learning-mongodb -> Implement Post/Put/Delete Api but there are a problem for payload @put
+
+[33mcommit 01b418c14a2f17547662d4ccc8133a72d1df2fa3[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 9 17:18:49 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: learning-mongodb -> make 2 API with get request
+
+[33mcommit ebd999272911793e3ba907bb1fbae0bbff94c7b4[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 9 16:27:10 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: learning-mongodb -> init Hapi Server
+
+[33mcommit 1cb0b926171f0b6a514af24dfce834da084a4ba8[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 9 14:47:13 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: learning-mongodb -> Node MongoDB setup
+
+[33mcommit 9004550660e080577a9bb914ec0cec7ec51ac8c5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Aug 9 14:01:57 2019 +0200
+
+    linkedin-become-a-mern-stack-javascript-developer: learning-mongodb -> Explore the system and understand mongodb
+
+[33mcommit af53f33a19b342e661eb838a3a722220c361d192[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 18:05:50 2019 +0200
+
+    linkedin-agile-software-development: agile-to-the-rescue -> init course
+
+[33mcommit ab51426c96383443e5404723d0e76ad1a6f6bf75[m
+Merge: dfd0a94 327c029
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 18:03:23 2019 +0200
+
+    Merge branch 'feature/become-react-developer/react-js-essential-training-3' into develop
+
+[33mcommit dfd0a94a895360c72d060d5d426a34bced1468c3[m
+Merge: 5b5d9e5 b1f05c9
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 16:09:05 2019 +0200
+
+    Merge branch 'feature/become-a-mern-stack-javascript-developer/building-a-website-with-node-js-and-express-js-2' into develop
+
+[33mcommit 327c029c59dd3dbf8b643f9d282400b072ad910e[m[33m ([m[1;31morigin/feature/become-react-developer/react-js-essential-training-3[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 15:57:09 2019 +0200
+
+    linkedin-become-react-developer: react-js-essential-training -> Default Props and PropsTypes
+
+[33mcommit d40bdee8bbba4e881196b638c8a67adf547af9fb[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 15:33:45 2019 +0200
+
+    linkedin-become-react-developer: react-js-essential-training -> Forms
+
+[33mcommit 26b9b8a29f989b6259759d0dd06f12674f63dc50[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 14:50:41 2019 +0200
+
+    linkedin-become-react-developer: react-js-essential-training -> Fetching Data
+
+[33mcommit 8a2e618b4656b9cffe186d1cc4809c4711f3a33b[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 13:54:59 2019 +0200
+
+    linkedin-become-react-developer: react-js-essential-training -> Props and State
+
+[33mcommit 36886d5a230271748b6d903ab40ce62e016ad0cf[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 12:44:35 2019 +0200
+
+    linkedin-become-react-developer: react-js-essential-training -> React Component
+
+[33mcommit 09638353f5c446b3713921d4be89124f74740749[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 11:51:18 2019 +0200
+
+    linkedin-become-react-developer: react-js-essential-training -> Refactor elements using jsx
+
+[33mcommit 09f16c9f586353074e16cd793b8ba456dbe70410[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 8 11:44:04 2019 +0200
+
+    linkedin-become-react-developer: react-js-essential-training -> Create React Elements
+
+[33mcommit 5b5d9e595d834f345b203416a59188ee4273df0d[m
+Merge: a20fd0b b1f05c9
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 7 23:44:39 2019 +0200
+
+    Merge branch 'feature/become-a-mern-stack-javascript-developer/building-a-website-with-node-js-and-express-js-2' into develop
+
+[33mcommit b1f05c9bfcf394376f67331e7c4238f26872224f[m[33m ([m[1;31morigin/feature/become-a-mern-stack-javascript-developer/building-a-website-with-node-js-and-express-js-2[m[33m)[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 7 23:28:44 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> conference project - handling feedback services
+
+[33mcommit 5ee21ba31119d71a57899b286c773603050f02dd[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 7 23:28:26 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> conference project - handling feedback and form data
+
+[33mcommit c8d191342f1fdcbe6cbdbc2be7fa1de9367795b4[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 7 15:38:45 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> conference project - speakers handling artworks
+
+[33mcommit f0ac3c73328e829f6b162be5a5ea8846e810a06d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 7 15:21:01 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> conference project - Adding Dynamic Data and finalize speakers
+
+[33mcommit c32902d75743449b0410fa174f8d0e7dc8fa33bc[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Aug 7 12:08:52 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> conference project - Creating Static page / working with template variables
+
+[33mcommit ba97a549759dbe1caf354fa63578256f23f20b29[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Aug 6 15:04:43 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> conference project - Creating reusable components with layouts and blocks using includes
+
+[33mcommit fd28db87177eb97be6fb5abfba118ed5d4c373ab[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 1 16:49:02 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> conference project - Creating Custom Error page
+
+[33mcommit 5f2888b683b7ceb273b3b8eb83eb40d5c4760a8b[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 1 16:30:49 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> adding engine template to conference project
+
+[33mcommit 289dc23b4ff07287f3b2c2d9a9c6bf8592b7fcf7[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 1 15:06:00 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> add routes to conference project
+
+[33mcommit 77806a2ea4960c46fc4b642c5df32c33c3d1030c[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Aug 1 14:29:42 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> init conference project with static files
+
+[33mcommit 4e7302cc7a4187a4b0e4cb293d909e4c2e69c89f[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jul 29 17:17:55 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> Express js document express.Router()
+
+[33mcommit 88171c380479733675d4ea987c909ee2c0227d69[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jul 29 17:09:06 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> Express js document app.route()
+
+[33mcommit 2f211c8d67b0fd0da2f6f508300988c728d2553d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jul 29 17:05:48 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> Express js document router parameters
+
+[33mcommit 17ba8f17e694b2d93de42c791dfbb02358823c90[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jul 29 16:56:18 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> Express js document basic routing
+
+[33mcommit 60e0481f1cdd46e5aa27dc8dc9c754065f4b37bd[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jul 29 13:49:19 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> Handling Error Using Node
+
+[33mcommit 8e870b76bdc11af27dbc7ec0cf0a2ea2ca56ecbc[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 21:46:35 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> Creating a server with express
+
+[33mcommit d70b8c25df861fa081e7894981bb4bbccd8e5781[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 21:25:58 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> Adding Routing with logic with a pure Node.js
+
+[33mcommit 2b0bc362cddd60ae78dac98216578f358abb1fd5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 20:38:17 2019 +0200
+
+    linkedin-mean-stack-js-dev: building website using node/express -> Creating a server with a pure Node.js
+
+[33mcommit a20fd0b8d6fda4bdd5db8a73163e609a7ef134b2[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 16:07:44 2019 +0200
+
+    remove and fix submodule
+
+[33mcommit da1431e7d2e087e1e1f7a13980d99b610f35bf9d[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 16:06:50 2019 +0200
+
+    remove and fix submodule
+
+[33mcommit 5939d80ebb495ccf8c9129f925f4d726bec8b39e[m
+Merge: fcb07d5 c811f3a
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 15:59:11 2019 +0200
+
+    Merge pull request #29 from mohammedelzanaty/develop
+    
+    Develop
+
+[33mcommit c811f3a67d2def787f6e0f5c4e37a117fac8c308[m
+Merge: 5273269 e1717ed
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 15:53:25 2019 +0200
+
+    Merge branch 'feature/become-react-developer/learning-react-js-4' into develop
+
+[33mcommit e1717edc20e15e06b99aabb3d271d079033379e9[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 15:46:07 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> create-react-app demo
+
+[33mcommit aa84328f1c4b243e214fdef85e0e18ff13cf31db[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 15:32:36 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> Render from a list of objects
+
+[33mcommit 14770669f68b9aa6411ab224bbd90b49b0e738b0[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 15:22:25 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> using react events
+
+[33mcommit 8a6912734870507be6dea2a55b0904d84b8b397b[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 15:15:33 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> State with class component
+
+[33mcommit 0f8161e1bbf709eef9f238bd9811cc80820c3c6a[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 15:10:28 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> Composing Component
+
+[33mcommit 41a747c75f517448354b469a66f03ce7a84d1d41[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 15:07:47 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> Create Component with props
+
+[33mcommit 102c4a3d15de7c8e37390b50b103cecf5f4fde1d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 14:59:33 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> using jsx
+
+[33mcommit 2928424bcea695acdfa14f0dfc1ea13776a9f6eb[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 14:52:30 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> create multiple element with React.createElement
+
+[33mcommit 10636faec13296599b9587a116771b1e6c05027d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 14:48:59 2019 +0200
+
+    linkedin-become-react-developer: learning-react-js-4 -> init course with exercise files and creatElement API
+
+[33mcommit 5273269dd8d4d6970bf8300cda809141cb15e4df[m
+Merge: f664028 fcb07d5
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 12:50:58 2019 +0200
+
+    Merge branch 'master' into develop
+
+[33mcommit fcb07d527a3ec44dd5d0aee8cbf419f0adb1c0d7[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 12:50:25 2019 +0200
+
+    react-contact-server
+
+[33mcommit f664028ba44ab117586e7ac03dcd6f494e15fb96[m
+Merge: fa04572 f2c4b74
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 12:48:28 2019 +0200
+
+    Merge branch 'master' into develop
+
+[33mcommit f2c4b7429d04c91dfeca0e96f33efd08b04fdad7[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 12:23:38 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential files and streams
+
+[33mcommit 384284a34d6aca365b429c57bb690bca76001207[m
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 11:53:03 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential File System Basics
+
+[33mcommit dd7b3cfb31bd3a146008ee84b7649fe1657665ab[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 01:26:37 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential Improve a module with EventEmitter
+
+[33mcommit 7b8dd4892000332629777d890e79b9f632bdb087[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 01:04:09 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential event_emitter
+
+[33mcommit a240c2afa785b7ac8d9eb05141b4752b95570fa8[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 00:27:16 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential create a module
+
+[33mcommit 79b1e87bfe641398cdae1b2bcada3e9fe13e1dd5[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 00:18:06 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential export custom module
+
+[33mcommit c7cd10e92065dca855f35a144c63b57ae085d745[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 00:13:59 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential write a file with question using readline-module
+
+[33mcommit 0b6f3cc9481c98c5b8a3b0ad179348b4a6e3d8d0[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 28 00:00:45 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential readline-module
+
+[33mcommit 9f9816ec517552c46d49e3940cb7577f5a0c6803[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Jul 27 23:52:01 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential core-modules
+
+[33mcommit 0bd81e59701f1331fadfec5abe9872a81133d3bd[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Jul 27 23:09:16 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential setInterval/setTimeOut
+
+[33mcommit 12dfbe3d4ab61c2fb403cbd347858a4a98cc0ff2[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Jul 27 22:51:10 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential standard input
+
+[33mcommit 6b88f75286bbbe77c4dda978b32b7853a4828d63[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Jul 27 22:37:13 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential standard output
+
+[33mcommit 4c68b6987c3c4cd1c800a5b1adffaecd486e1d2d[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Jul 27 20:15:53 2019 +0200
+
+    linkedin-mean-stack-js-dev: node essential init
+
+[33mcommit 3947261c3693d507b58f7597bb67ce0504a013a9[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Jul 26 09:34:05 2019 +0200
+
+    linkedin-mean-stack-js-dev: finish learn npm course
+
+[33mcommit 18b1267903948cd08ae7ffa184459fbce7ea2bdc[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Jul 25 23:05:40 2019 +0200
+
+    udacity-react: start redux course
+
+[33mcommit 41ee1ae5bfd7a522bb8528b256e1f33eb72e401f[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 17:46:14 2019 +0200
+
+    udacity-react:Clean Some code
+
+[33mcommit 4d2ab8118312651af43df7283b6f3c526af70178[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 17:42:46 2019 +0200
+
+    udacity-react: Save new contact to the server
+
+[33mcommit 1671df810c69d7edbcc61bf60e68e1be7dc54273[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 17:08:19 2019 +0200
+
+    udacity-react: Add Routes to the App
+
+[33mcommit c56e2995a2eccc0c384e66123199cd7ca9463b31[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 14:36:09 2019 +0200
+
+    udacity-react: Add the -Now Showing- Details
+
+[33mcommit 463b435f45ef224c7e820259f8a56763fdf2d19a[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 13:15:25 2019 +0200
+
+    udacity-react: Adding PropsTypes to our ContactList Component
+
+[33mcommit 42b3e748fa7215ab187f2e43f973bbed6c3106e0[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 11:52:17 2019 +0200
+
+    udacity-react: Convert ListContacts to a Stateless Functional Component
+
+[33mcommit 34b71970d20f5eb1ee342412344288e238b49c3e[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 11:27:02 2019 +0200
+
+    udacity-react: Create the ListContacts Component
+
+[33mcommit 4420f5b6eb6960bc25ea7e592b533ee2d1bd7059[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 11:12:04 2019 +0200
+
+    udacity-react: Reformat initial Contacts Project Client side and Server Side
+
+[33mcommit d09ee84db4b91bc9288b25383febd432222be046[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 23 10:37:18 2019 +0200
+
+    udacity-react: Reformat initial Contacts Project
+
+[33mcommit b407f0aac87b63f1fb66cc8dcd16269099b01669[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 21 12:15:42 2019 +0200
+
+    udacity-react: Composing & Props in React
+
+[33mcommit 35b38adfd4e767c8985ad44660e62bcc53eaaad0[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 21 12:03:54 2019 +0200
+
+    udacity-react: Create React App Contacts Install
+
+[33mcommit a9019ba009d19d679e30b519500e097d1ce2e69c[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 21 11:36:19 2019 +0200
+
+    udacity-react: ContactList Component
+
+[33mcommit 57a6dc5747929e3d23cf1a4f31da3bae703e8f24[m
+Author: Mohammed <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 21 11:28:04 2019 +0200
+
+    udacity-react: React.createElement() to JSX
+
+[33mcommit 0744ba03a2a4315eaa879621160cb3ea62b47b49[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Jul 21 11:22:29 2019 +0200
+
+    udacity-react: Nesting with array React.createElement() Calls
+
+[33mcommit 899f2ca0f44c3415246c8d02b61aac88f2b447ac[m
+Merge: 9e9e372 fa04572
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 16 21:37:45 2019 +0200
+
+    Merge pull request #28 from mohammedelzanaty/develop
+    
+    Develop
+
+[33mcommit fa0457202b76b492c3cec32141eb2283ab786063[m
+Merge: bf25b79 89f5694
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 16 21:36:19 2019 +0200
+
+    Merge remote-tracking branch 'origin/develop' into feature/full-stack-react-bootstrap-4
+    
+    # Conflicts:
+    #       .gitignore
+
+[33mcommit 9e9e372235d08e8bbc496c69206a60e6f432ed0c[m
+Merge: 1e08ac7 89f5694
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 16 21:30:13 2019 +0200
+
+    Merge pull request #27 from mohammedelzanaty/develop
+    
+    Develop
+
+[33mcommit 89f5694dda9dc8c3949aa06e5313128dc28fc64c[m
+Merge: a1c5d1b 9d122d7
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 16 21:29:31 2019 +0200
+
+    Merge pull request #26 from mohammedelzanaty/feature/pluralsight-react
+    
+    Feature/pluralsight react
+
+[33mcommit a1c5d1b22694b6f0ac14f9f1de6298b85abb6da2[m
+Merge: 35de172 a260c00
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 16 21:29:14 2019 +0200
+
+    Merge pull request #25 from mohammedelzanaty/feature/full-stack-frontend-react
+    
+    Feature/full stack frontend react
+
+[33mcommit 35de172c5275cb9a6c605ccac9f0a2599388c70e[m
+Merge: 21987e2 abe1bf5
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 16 21:28:55 2019 +0200
+
+    Merge pull request #24 from mohammedelzanaty/feature/books-road-to-react
+    
+    [F, road-to-react] Chapter One Start
+
+[33mcommit 21987e2e3e0b5294958f857571c65797176f99f9[m
+Merge: 3b5d4fa fa5f546
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 16 21:28:27 2019 +0200
+
+    Merge pull request #23 from mohammedelzanaty/feature/CS50
+    
+    [F, CS50] mermory-part-1
+
+[33mcommit 3b5d4fa6d26057765887e2bccb04cb80055229b3[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jul 15 23:00:23 2019 +0200
+
+    [F, ٌreact-get-started] Lesson Two  Cards ApThe GitHubp
+
+[33mcommit a260c00c082529643de0233688357dee4c7380a3[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jul 15 22:49:38 2019 +0200
+
+    [F, full-stack-frontend-react] WEEK FOUR NETWORKING
+
+[33mcommit f0b52edf755552f5f72ee0f1936348cbb8bfe0ec[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Jul 13 14:41:12 2019 +0200
+
+    [F, full-stack-frontend-react] Week Three Uncontrolled forms
+
+[33mcommit ca956ca5dc83fca1b67c47c50253f0b90fa7342b[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Jul 12 22:20:40 2019 +0200
+
+    [F, full-stack-frontend-react] Week Two Controlled Forms with validations
+
+[33mcommit 3bd8b7f49c8435b14bf1ebcb1804780fa15498a4[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Jul 12 18:54:32 2019 +0200
+
+    [F, full-stack-frontend-react] Week Two  About Page
+
+[33mcommit c92431e28fba86b9d44ed3436f7e2183bd5b4306[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Jul 12 00:45:23 2019 +0200
+
+    [F, full-stack-frontend-react] Week Two SPA part-2
+
+[33mcommit 00e1a53aa00b3837bdfde2a749bc486ce1754e80[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Jul 11 23:04:08 2019 +0200
+
+    [F, full-stack-frontend-react] Week Two SPA Part-1
+
+[33mcommit efb810fd851c117208d69aa0e5331bdc100e8f90[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Jul 11 16:34:21 2019 +0200
+
+    [F, full-stack-frontend-react] Week Two react-router
+
+[33mcommit b42171c278dc9a24889f225fed769405a8813931[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Thu Jul 11 12:17:08 2019 +0200
+
+    [F, react-get-started] Week Two - React Components Types
+
+[33mcommit b9f7923ff88f9052fda540ee0bba9c3f6a02d44f[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Jul 10 23:31:22 2019 +0200
+
+    [F, full-stack-frontend-react] Week 2 - Main Component
+
+[33mcommit 87f828903d05138f977c34c5f60e8d7532202912[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 9 12:16:18 2019 +0200
+
+    [F, full-stack-front-react ] Week One
+
+[33mcommit 9d122d73bed731844c50a416937a8953541a0758[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jul 2 23:08:48 2019 +0200
+
+    [F, ٌreact-get-started] Lesson Two The GitHub Cards App
+
+[33mcommit b9684c37c354901f875af4b301905b4c13107dac[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jul 1 22:51:45 2019 +0200
+
+    [F, ٌreact-get-started] Lesson One Basics
+
+[33mcommit 0321706b4c1a34972b39a595a5c8c5b26d288257[m
+Merge: 53efae3 c5bc3df
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jun 25 15:28:32 2019 +0200
+
+    Merge pull request #22 from mohammedelzanaty/feature/pluralsight-react
+    
+    [F, react-big-picture] notes
+
+[33mcommit c5bc3df87acda5d4bf6a499c1e23fd84811c134c[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jun 25 15:14:53 2019 +0200
+
+    [F, ٌreact-big-picture] notes
+
+[33mcommit abe1bf5317a53a20eaef3e218ee81234450cb88f[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Jun 25 10:46:47 2019 +0200
+
+    [F, road-to-react] Chapter One Start
+
+[33mcommit aa99966ce8cbad4321c596353a1cf09c7a76d539[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jun 24 17:02:07 2019 +0200
+
+    [F, frontend-react] create a new DishdetailComponent to show denials of dishes
+
+[33mcommit 27b32123266eb612c906e7ed73e89fe82a190827[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jun 24 15:24:40 2019 +0200
+
+    [F, frontend-react] react component part-2
+
+[33mcommit f114a75f324cbf2d55c87c575f29df1cc340deda[m
+Author: MohammedElzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Jun 19 16:02:24 2019 +0200
+
+    Initial Setup
+
+[33mcommit bf25b79a464e663be1b18adb2931e61770b0e919[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Jun 17 12:17:12 2019 +0200
+
+    Basics of nodejs and npm install
+
+[33mcommit 1e08ac7fdcd7370581f9575b9d512481bd3ed1db[m
+Merge: cfe6ba6 53efae3
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun May 5 19:36:20 2019 +0200
+
+    Merge pull request #21 from mohammedelzanaty/develop
+    
+    Finishing the course of Programming Foundations with Python
+
+[33mcommit 53efae39a1e5a483d3cad0eab5818e3702e2d099[m
+Merge: 462af65 a2bda5b
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun May 5 19:35:46 2019 +0200
+
+    Merge pull request #20 from mohammedelzanaty/feature/programmingFoundationsWithPython
+    
+    Feature/programming foundations with python
+
+[33mcommit a2bda5b01bc0cc3a9c005d25582d29a58770587e[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun May 5 19:34:53 2019 +0200
+
+    [F, programmingFoundationWithPython] Advanced OOP
+
+[33mcommit fbee8325678aa18159801482525f45b517d4ccf6[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun May 5 16:43:50 2019 +0200
+
+    [F, programmingFoundationWithPython] movies-website
+
+[33mcommit fa5f5463326c0cff8ded49b86d52ee5aa944d587[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun May 5 15:01:58 2019 +0200
+
+    [F, CS50] mermory-part-1
+
+[33mcommit 462af65bd144fc651b18416b9a50ee01e2e0e7a2[m
+Merge: 4103e54 d096518
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun May 5 12:02:40 2019 +0200
+
+    Merge pull request #19 from mohammedelzanaty/feature/CS50
+    
+    [F, CS50] strings-part-2
+
+[33mcommit d096518145f1586536e5c543f64d4f6bdfd12991[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun May 5 12:01:46 2019 +0200
+
+    [F, CS50] strings-part-2
+
+[33mcommit 4103e54db3632fafeb813a6f6920ab917f9777d5[m
+Merge: e70b220 69ec2f7
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat May 4 23:38:21 2019 +0200
+
+    Merge pull request #18 from mohammedelzanaty/feature/CS50
+    
+    [F, CS50] strings-part-1
+
+[33mcommit 69ec2f708285aa0c7dfb38d90b74e672b1cbe0e8[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat May 4 23:37:24 2019 +0200
+
+    [F, CS50] strings-part-1
+
+[33mcommit e70b22050bc57e1978d4dcf45608f7101f6575bb[m
+Merge: 2b346ff ca94645
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri May 3 20:15:09 2019 +0200
+
+    Merge pull request #17 from mohammedelzanaty/feature/CS50
+    
+    [F, CS50] arrays
+
+[33mcommit ca94645edf8d7d654dca18baa5b1b3aa3b1e5704[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri May 3 20:13:59 2019 +0200
+
+    [F, CS50] arrays
+
+[33mcommit 2b346ff7bc5d7fadd617c53d432699502304b770[m
+Merge: 8cd48e3 345e68a
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri May 3 00:28:36 2019 +0200
+
+    Merge pull request #16 from mohammedelzanaty/feature/CS50
+    
+    Feature/cs50
+
+[33mcommit 345e68a1ec1bd57af8f4cb9707c9707663eb0c9f[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri May 3 00:26:21 2019 +0200
+
+    [F, CS50-C] conditions, function, loops
+
+[33mcommit 0d015a17352c4d6a49fc1d6fcdfa33e6070de24f[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed May 1 23:21:38 2019 +0200
+
+    [F, programmingFoundationWithPython] Use classes: Profanity Editor
+
+[33mcommit 6b63bbc16a14e4d25f61fd256bbbb0a23b9c2687[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed May 1 20:27:54 2019 +0200
+
+    [F, CS50] lecture 2 c language inputs
+
+[33mcommit a8fbc25554a82f842f0b3bafb65bd9c4ba428346[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed May 1 20:06:15 2019 +0200
+
+    [F, CS50] lecture 2 c language hello world
+
+[33mcommit cfe6ba6ca8928cd0f1691f5e9b9baf8dc626364c[m
+Merge: c265653 8cd48e3
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Apr 29 21:03:32 2019 +0200
+
+    Merge pull request #15 from mohammedelzanaty/develop
+    
+    Finish Introduction to Python Programming
+
+[33mcommit 8cd48e30fe43dcdb4641cff069c96c734b032e9f[m
+Merge: cf6f021 c8456c7
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Apr 29 21:02:18 2019 +0200
+
+    Merge pull request #14 from mohammedelzanaty/feature/programmingFoundationsWithPython
+    
+    Feature/programming foundations with python
+
+[33mcommit c8456c729c6eb330a3186d43e6e743ad9d6055c0[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Apr 29 21:01:17 2019 +0200
+
+    [F, INTRODUCTION-TO-PYTHON-PROGRAMMING-GENERATOR] SCRIPTING AND GENERATING
+
+[33mcommit 19ba02e573ca7b513760564668ecca84ec402e79[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Apr 29 00:51:33 2019 +0200
+
+    [F, use-classes] playing with creating objects by turtle class and twilio lib
+
+[33mcommit 4025e2a78db4c9e478bd3a093ec7b14401ac41c1[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 20:57:57 2019 +0200
+
+    [F, use function ] build time break and rename iamges projects
+
+[33mcommit cf6f021c61a6640563cca26ff7127dfddeea4dfa[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 19:16:06 2019 +0200
+
+    start new course of programming foundations with python
+
+[33mcommit 699fa01517c38648d2c0ef301f9bdc8f030443d1[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 19:11:26 2019 +0200
+
+    lint file population
+
+[33mcommit 008725502f6e95c78975225631bf1aaa93c5f9bf[m
+Merge: 28b334c 2b2fd22
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 19:05:31 2019 +0200
+
+    Merge branch 'develop' of https://github.com/mohammedelzanaty/FullStackWebDeveloper into develop
+
+[33mcommit 2b2fd22cb6e1d719a4803787443c3f0d6741b8f0[m
+Merge: 1b94076 875dec1
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 19:04:16 2019 +0200
+
+    Merge pull request #13 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    Feature/introduction to python programming
+
+[33mcommit c2656531a657056f804e42eea8932f16ae6a59e0[m
+Merge: 85e0558 875dec1
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 19:03:42 2019 +0200
+
+    Merge pull request #11 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    Feature/introduction to python programming
+
+[33mcommit 875dec14487602c8bddbcac9fb9c64bc0609f128[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 19:02:04 2019 +0200
+
+    add shell workeshop
+
+[33mcommit 28b334c3d5eca3b9e9fecb40a4994884726ced82[m
+Merge: 1b94076 85e0558
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 18:58:29 2019 +0200
+
+    Merge branch 'master' into develop
+
+[33mcommit af246e453e409160843b0aa95658719e7a3e738a[m
+Merge: c9de991 0cf52e1
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 18:57:40 2019 +0200
+
+    Merge branch 'master' into feature/IntroductionToPythonProgramming
+
+[33mcommit 1b94076251ac6d75605964a172da483a1036f3a3[m
+Merge: 062e0d8 c9de991
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 18:56:12 2019 +0200
+
+    Merge pull request #12 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    [R, Introdction2Pyton] delete first course from branch
+
+[33mcommit c9de991f548914206906f4d2f87de66e5394f539[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 18:53:45 2019 +0200
+
+    [R, Introdction2Pyton] delete first course from branch
+
+[33mcommit 062e0d832af8a2124fb71b322ebaf58d30690c64[m
+Merge: 1ca5d11 68d9491
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 16:26:58 2019 +0200
+
+    Merge pull request #10 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    Feature/introduction to python programming
+
+[33mcommit 68d94918164ecf06d8beba51f9ce0839c567afb4[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 16:25:41 2019 +0200
+
+    [F, IntroductionToPythonProgramming-Scripting] errors and excptions
+
+[33mcommit 52f7ff7a03dd3f5251902d99924a771362f7f553[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sun Apr 28 15:29:41 2019 +0200
+
+    [F, IntroductionToPythonProgramming-Function] method related to how to declar function
+
+[33mcommit 1ca5d114ee27a1afc8e1ddb6eb368cd8844f654e[m
+Merge: 88cbb8d 0d74bad
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Apr 27 14:21:04 2019 +0200
+
+    Merge pull request #9 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    Feature/introduction to python programming
+
+[33mcommit 0d74bad9584e45a647dbf4d4b451a49dc4611198[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Apr 27 14:16:17 2019 +0200
+
+    [F, Lesson 2] zip, listComprehensions and practice
+
+[33mcommit 85e055878a904e8510a49628edf415a06aa91b42[m
+Merge: 0cf52e1 8d59f26
+Author: mohammed elzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Apr 27 01:17:51 2019 +0200
+
+    Merge pull request #8 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    Feature/introduction to python programming
+
+[33mcommit 8d59f26dcc5fa7746a7ae11904a02b5665b5df10[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Sat Apr 27 01:14:28 2019 +0200
+
+    [F, IntroductionToPytonProgrammin] while, for loop
+
+[33mcommit 88cbb8d6a527f02869978d291b417ddc2af8c22e[m
+Merge: 0b4ecf3 1eadb43
+Author: mohammed elzanaty <megamas800@gmail.com>
+Date:   Mon Apr 1 21:28:58 2019 +0200
+
+    Merge pull request #7 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    [F, IntroductionToPytionProgramming/ControlFlow ] add for loop examples
+
+[33mcommit 1eadb43e5eedac5fc37d35429b67c09be890c799[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Apr 1 21:20:07 2019 +0200
+
+    [F, IntroductionToPytionProgramming/ControlFlow ] add for loop examples
+
+[33mcommit 0b4ecf3f0cfd014a36a63b8acf508cc264bb52d2[m
+Merge: a6d1b42 4d77768
+Author: mohammed elzanaty <megamas800@gmail.com>
+Date:   Fri Mar 29 16:05:37 2019 +0200
+
+    Merge pull request #6 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    Feature/introduction to python programming
+
+[33mcommit 4d77768a0d6fbaa4ed3827e4510899cfffb1e459[m
+Merge: 063c417 307ef07
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Mar 29 16:02:30 2019 +0200
+
+    Merge branch 'feature/IntroductionToPythonProgramming' of https://github.com/mohammedelzanaty/FullStackWebDeveloper into feature/IntroductionToPythonProgramming
+
+[33mcommit 063c417228e5f36c1bf07b4f8708f9022d7c417a[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Fri Mar 29 16:01:29 2019 +0200
+
+    [F, IntroductionToPytionProgramming] control flow
+
+[33mcommit a6d1b42fb8a324b9af6108f9ef02c1b6c38f8adc[m
+Merge: 96d4d03 307ef07
+Author: mohammed elzanaty <megamas800@gmail.com>
+Date:   Thu Mar 28 08:45:11 2019 +0200
+
+    Merge pull request #5 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    Feature/introduction to python programming
+
+[33mcommit 307ef07e2e4eb225f66476dfc4a57e3fe321ef73[m
+Merge: c1857e4 96d4d03
+Author: mohammed elzanaty <megamas800@gmail.com>
+Date:   Thu Mar 28 08:42:25 2019 +0200
+
+    Merge pull request #4 from mohammedelzanaty/develop
+    
+    Merge pull request #3 from mohammedelzanaty/feature/IntroductionToPyt…
+
+[33mcommit c1857e440df37de93a19026de407b548a5237838[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Wed Mar 27 23:07:01 2019 +0200
+
+    [F, IntroductionToPythonProgramming] dataStructures module
+
+[33mcommit 96d4d03d245d2f420e1e729e3d9ebdce2669dbc2[m
+Merge: 0ddf463 4632fdb
+Author: mohammed elzanaty <megamas800@gmail.com>
+Date:   Tue Mar 19 16:39:12 2019 +0200
+
+    Merge pull request #3 from mohammedelzanaty/feature/IntroductionToPythonProgramming
+    
+    [F, IntroductionToPythonProgramming] Data Types and Operators
+
+[33mcommit 4632fdb3e904a832336e1cc2553d2caeec0ca427[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Tue Mar 19 16:36:42 2019 +0200
+
+    [F, IntroductionToPythonProgramming
+
+[33mcommit 0cf52e136b0d12fa9a8ecada4adcdbe55ec264e7[m
+Merge: 9dce468 0c7d80b
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Mar 18 21:34:11 2019 +0200
+
+    Merge branch 'master' of https://github.com/mohammedelzanaty/FullStackWebDeveloper
+
+[33mcommit 9dce46804ecaed2b64db440b775ad65388b50841[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Mar 18 21:11:07 2019 +0200
+
+    add gitattributes
+
+[33mcommit 0c7d80bbf0c20f820241d3d37d836edd27977b98[m
+Merge: a7c5631 d9f4c96
+Author: mohammed elzanaty <megamas800@gmail.com>
+Date:   Mon Mar 18 21:08:37 2019 +0200
+
+    Merge pull request #2 from mohammedelzanaty/feature/shellWorkShop
+    
+    [F, ShellWorkShop] commands about playing with terminal
+
+[33mcommit d9f4c961920d15bbd9e48124291ce1f0525f0337[m
+Author: mohammedelzanaty <mohammedelzanaty129@gmail.com>
+Date:   Mon Mar 18 21:06:52 2019 +0200
+
+    [F, ShellWorkShop] commands about playing with terminal
+
+[33mcommit a7c5631833485399b01bf5ae33ace1e8e58f4455[m
+Merge: 27981e3 0ddf463
+Author: mohammed elzanaty <megamas800@gmail.com>
+Date:   Mon Mar 18 15:38:30 2019 +0200
+
+    Merge pull request #1 from mohammedelzanaty/develop
+    
+    add readme file image
+
+[33mcommit 0ddf4630f016a2e62530216d27010ea581525eb2[m
+Author: Mohammed <mohammedelzanaty129@gmail.com>
+Date:   Mon Mar 18 15:32:28 2019 +0200
+
+    add readme file image
+
+[33mcommit 27981e3e303725e1463779cda67f29d3ce1894b8[m
+Author: Mohammed <mohammedelzanaty129@gmail.com>
+Date:   Mon Mar 18 15:29:42 2019 +0200
+
+    add readme file
+
+[33mcommit 303d8c51c564d302090e146445651936279739e5[m
+Author: mohammed elzanaty <megamas800@gmail.com>
+Date:   Mon Mar 18 15:23:58 2019 +0200
+
+    Initial commit
