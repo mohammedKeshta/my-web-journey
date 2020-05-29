@@ -1,0 +1,23 @@
+## Notes
+- Relation ->
+  -  a set of columns of related data 
+  -  a set of attributes (columns) that describe information about specific instances (rows) of an entity
+  -  You may also see the rows called "tuples."
+- Composite Key -> Tow or more fields taken together to act as a unique identifer 
+- Foreign Key -> is what a primary key from one table is called when it's referenced in another table. 
+- Types of DB relationships
+  - One-to-many 
+  - Many-to-many 
+  - One-to-one
+- A transaction is a collection of steps that must all be completed in order for a change to be made to the database.
+- ACID 
+  - Atomic  represents the fact that a transaction can't be divided into smaller parts
+  - Consistent 
+  - Isolated 
+  - Durable 
+- SQL 
+  - Structured Query Language 
+  - Allow statements to be written for DBMS to interpret how to interact with data 
+  - SQL statement is composed of clauses which can contain expressions and predicates 
+  - A clause will include a key word specify some action to take and something to act on or use.
+  - 

@@ -1,0 +1,24 @@
+## Notes: Data Base Optimization
+- Normalization Rules 
+  - Help for reduce redundancy and improve the integrity of our data 
+  - Benefits  
+    - Reduce Redundancy 
+    - Improve Integrity 
+    - Organize Table 
+  - Rules 
+    - 1NF first normal form
+      - Values in each cell should be atomic.
+      - Tables should have no repeating groups. 
+    - 2NF second normal form 
+      - No value in a table should depend on only part of a key that can be used to uniquely identify a row.
+    - 3NF third normal form 
+      - Values should not be stored if they can be calculated from another non-key field.
+      - If a value you 'r using can be derived from some kind of rule from another value in table that's a violation of 3NF
+      - IF a value can NOT be derived from another field if it descript something unique to that row it 's NOT violation
+      - 3NF tells you that each field in a row should represent something unique about a record.
+  - De Normalization 
+    - The process of intentionally duplicating information in a table in a violation of normalization rules 
+    - The process of trying to improve the read performance of a database, at the expense of losing some write performance, by adding redundant copies of data or by grouping data
+    - a trade-off between speed and integrity.
+    - If you need to prioritize the speed of a particular operation, you might choose to denormalize, as long as you remain aware of the threat to database integrity.
+    - 

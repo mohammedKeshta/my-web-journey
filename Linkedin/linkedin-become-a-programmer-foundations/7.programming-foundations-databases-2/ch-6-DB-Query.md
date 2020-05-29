@@ -1,0 +1,11 @@
+## Notes: Data Base Optimization
+- Data Base Query 
+- When the database automatically increments a key field, you don't need to worry about setting the value. The database will provide the next value in the sequence automatically.
+- As a Data Manipulation Language (DML), SQL can be used to create, read, update, and delete information stored in the database.
+- As a Data Definition Language (DDL), SQL can be used to create and modify the structure of database tables.
+- Aggregate functions return one value that describes a set of data.
+- Joining tables allows you to match rows from one table with rows on another table.
+- You can join together many tables as long as you tell the database which pairs of values on the tables are intended to match.
+- In order to reduce the number of records you get back from a query, you can filter the results based on the contents of a field. For example, you might ask the database to show you records for customers who have their 'State' field set to 'California'.
+- For some fields, you might want to prohibit entering records with empty values. By telling the database that the field can't be null, the database will handle this restriction for you.
+- 
