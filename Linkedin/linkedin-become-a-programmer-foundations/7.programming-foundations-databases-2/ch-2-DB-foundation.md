@@ -1,5 +1,5 @@
 ## Notes
-- Relation ->
+- Relation DB ->
   -  a set of columns of related data 
   -  a set of attributes (columns) that describe information about specific instances (rows) of an entity
   -  You may also see the rows called "tuples."
