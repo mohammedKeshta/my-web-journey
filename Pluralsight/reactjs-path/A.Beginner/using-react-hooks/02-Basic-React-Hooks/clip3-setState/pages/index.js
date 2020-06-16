@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const InputElement = () => {
   const [inputText, setInputText] = useState("");
   const [historyList, setHistoryList] = useState([]);
 
+  useEffect(() => {
+    if (inputText.length === 0) {
+      setHistoryList([]);
+    }
+  }, [inputText]);
   return (
     <div>
       <input
