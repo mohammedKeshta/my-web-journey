@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useReducer } from 'react'
+import React, { useState, useEffect, useContext, useReducer, useCallback, useMemo } from 'react'
 
 import Head from 'next/head'
 
@@ -48,9 +48,9 @@ const Speakers = ({}) => {
   }
   console.log(speakerList)
 
-  const speakerListFiltered = isLoading
-    ? []
-    : speakerList
+  const newSpeakerList = useMemo(
+    () =>
+      speakerList
         .filter(({ sat, sun }) => (speakingSaturday && sat) || (speakingSunday && sun))
         .sort(function (a, b) {
           if (a.firstName < b.firstName) {
@@ -60,13 +60,17 @@ const Speakers = ({}) => {
             return 1
           }
           return 0
-        })
+        }),
+    [speakingSaturday, speakerList]
+  )
+
+  const speakerListFiltered = isLoading ? [] : newSpeakerList
 
   const handleChangeSunday = () => {
     setSpeakingSunday(!speakingSunday)
   }
 
-  const heartFavoriteHandler = (e, favoriteValue) => {
+  const heartFavoriteHandler = useCallback((e, favoriteValue) => {
     e.preventDefault()
     const sessionId = parseInt(e.target.attributes['data-sessionid'].value)
     // const favSpeakersList = speakerList.map((item) => {
@@ -78,7 +82,7 @@ const Speakers = ({}) => {
     // })
     dispatch({ type: favoriteValue ? 'favorite' : 'unfavorite', sessionId })
     //console.log("changing session favorte to " + favoriteValue);
-  }
+  }, [])
 
   if (isLoading) return <div>Loading...</div>
 
