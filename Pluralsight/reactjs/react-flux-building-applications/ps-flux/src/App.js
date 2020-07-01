@@ -12,10 +12,10 @@ const App = () => {
         return <Home />
     }
     return (
-        <div className="container-fluid">
+        <>
             <Header />
-            {getPage()}
-        </div>
+            <div className="container-fluid">{getPage()}</div>
+        </>
     )
 }
 
