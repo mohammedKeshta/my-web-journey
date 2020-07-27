@@ -9,21 +9,23 @@ const CourseList = ({ courses }) => {
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Title</th>
-                    <th scope="col">Author Id</th>
+                    <th scope="col">Author</th>
                     <th scope="col">Category</th>
                 </tr>
             </thead>
             <tbody>
-                {courses.map(({ slug, title, authorId, category, id }, index) => (
-                    <tr key={`${title}-${id}`}>
-                        <th scope="row">{index}</th>
-                        <td>
-                            <Link to={`course/${slug}`}>{title}</Link>
-                        </td>
-                        <td>{authorId}</td>
-                        <td>{category}</td>
-                    </tr>
-                ))}
+                {courses.map(
+                    ({ slug, title, author, category, id }, index) => (
+                        <tr key={`${title}-${id}`}>
+                            <th scope="row">{index}</th>
+                            <td>
+                                <Link to={`course/${slug}`}>{title}</Link>
+                            </td>
+                            <td>{author}</td>
+                            <td>{category}</td>
+                        </tr>
+                    )
+                )}
             </tbody>
         </table>
     )
