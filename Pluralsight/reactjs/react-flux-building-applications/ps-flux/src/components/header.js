@@ -1,6 +1,8 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Header = () => {
+    const activeMenuItem = { color: 'orange' }
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,24 +21,24 @@ const Header = () => {
                     className="collapse navbar-collapse"
                     id="navbarTogglerDemo01"
                 >
-                    <a className="navbar-brand" href="#">
+                    <NavLink className="navbar-brand" exact to="/">
                         Courses Platform
-                    </a>
+                    </NavLink>
                     <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="/">
+                            <NavLink className="nav-link" exact activeStyle={activeMenuItem} to="/">
                                 Home
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/courses">
+                            <NavLink className="nav-link" activeStyle={activeMenuItem} to="/courses">
                                 Courses
-                            </a>
+                            </NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/about">
+                            <NavLink className="nav-link" activeStyle={activeMenuItem} to="/about">
                                 About
-                            </a>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
