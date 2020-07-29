@@ -879,3 +879,4 @@ dmypy.json
 .pydevproject
 
 # End of https://www.gitignore.io/api/pydev,flask
+.DS_Store
