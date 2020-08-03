@@ -1,0 +1,96 @@
+{
+  "name": "ps-redux",
+  "description": "React and Redux Pluralsight course by Cory House",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.dev.js --port 3000"
+  },
+  "dependencies": {
+    "bootstrap": "4.5.0",
+    "immer": "7.0.7",
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "7.2.1",
+    "react-router-dom": "5.2.0",
+    "react-toastify": "6.0.8",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0",
+    "reselect": "4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.11.0",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.1.0",
+    "babel-preset-react-app": "9.1.2",
+    "css-loader": "4.2.0",
+    "cssnano": "4.1.10",
+    "enzyme": "3.11.0",
+    "enzyme-adapter-react-16": "1.15.2",
+    "eslint": "7.6.0",
+    "eslint-loader": "4.0.2",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-react": "7.20.5",
+    "fetch-mock": "9.10.6",
+    "html-webpack-plugin": "4.3.0",
+    "http-server": "0.12.3",
+    "jest": "26.2.2",
+    "json-server": "0.16.1",
+    "mini-css-extract-plugin": "0.9.0",
+    "node-fetch": "^2.6.0",
+    "npm-run-all": "4.1.5",
+    "postcss-loader": "3.0.0",
+    "react-test-renderer": "16.13.1",
+    "react-testing-library": "8.0.1",
+    "redux-immutable-state-invariant": "2.1.0",
+    "redux-mock-store": "1.5.4",
+    "rimraf": "3.0.2",
+    "style-loader": "1.2.1",
+    "webpack": "4.44.1",
+    "webpack-bundle-analyzer": "3.8.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "no-debugger": "off",
+      "no-console": "off",
+      "no-unused-vars": "warn",
+      "react/prop-types": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "root": true
+  }
+}
