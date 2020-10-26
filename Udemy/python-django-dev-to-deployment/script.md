@@ -27,5 +27,10 @@
     - [for manage.py help]
         - python manage.py help
     - [to run server]
-        - python manage.py runserver 
-    
+        - python manage.py runserver
+    - [to create app]
+        - python manage.py startapp pages
+    - Remember the three-step guide to making model changes:
+        - Change your models (in models.py).
+        - Run python manage.py makemigrations to create migrations for those changes
+        - Run python manage.py migrate to apply those changes to the database.
