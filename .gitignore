@@ -1095,3 +1095,6 @@ dmypy.json
 # profiling data
 
 # End of https://www.toptal.com/developers/gitignore/api/django,python
+Udemy/python-django-dev-to-deployment/btre_django/static/**
+Udemy/python-django-dev-to-deployment/btre_django/media/**
+
