@@ -6,91 +6,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todos</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="shortcut icon" href="https://cdn.wrike.com/image/favicon.ico" />
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="https://cdn.wrike.com/image/favicon.ico"/>
 
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2>
-                    Todos
-                </h2>
-                <p class="lead">Todo App For Your Daily Work Test</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-12">
-                <form id="form">
-                    <div class="form-group">
-                        <label for="description">Add Todo</label>
-                        <input type="text" class="form-control" id="description" placeholder="I will do this today"
-                            name="description">
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-2">Add Todo</button>
-                </form>
-            </div>
-            <div class="col-md-9 col-sm-12">
-                <p class="text-danger d-none" id="error">Error Happen</p>
-                <ul class="list-group" id="todos">
-                    {% if data  %}
-                    {% for todo in data %}
-                    <li class="list-group-item d-flex justify-content-between align-items-center">{{todo.description}}
-
-                        <button class="btn btn-danger" onclick={{todo.description}}>X</button>
-                    </li>
-                    {% endfor %}
-                    {% else %}
-                    <h3 class="text-info">There's no Todos</h3>
-                    {% endif %}
-                </ul>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2>
+                Todos
+            </h2>
+            <p class="lead">Todo App For Your Daily Work Test</p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-12">
+            <form id="form">
+                <div class="form-group">
+                    <label for="description">Add Todo</label>
+                    <input type="text" class="form-control" id="description" placeholder="I will do this today"
+                           name="description" required>
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Add Todo</button>
+            </form>
+        </div>
+        <div class="col-md-9 col-sm-12">
+            <p class="text-danger d-none" id="error">Error Happen</p>
+            <ul class="list-group" id="todos">
+                {% if data %}
+                    {% for todo in data %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center" id={{ todo.id }}>
+                            <label for={{ todo.description }}>
+                                <input type="checkbox" name={{ todo.description }} id={{ todo.id }}
+                                       onchange="setChecked(event, {{ todo.id }})"
+                                        {% if todo.completed %}
+                                       checked
+                                        {% endif %}
+                                >
+                                <span> {{ todo.description }}</span>
+                            </label>
+                            <button class="btn btn-danger" onclick='deleteTodo({{ todo.id }})'>X</button>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                {#                <h3 class="text-info d-none">There's no Todos</h3>#}
+            </ul>
+        </div>
+    </div>
+</div>
 
-    <script>
+<script>
 
-        const deleteTodo = (description) => {
-            const URL = '/todos/delete'
-            const payload = JSON.stringify({ 'description': description })
-            console.log(payload)
-        }
+    const deleteTodo = (todoId) => {
+        const URL = `/todos/${todoId}/delete`
+        fetch(URL, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json()).then(res => {
+            if (res.success) {
+                document.getElementById(res.id).remove()
+                document.getElementById('error').className = 'd-none'
+            }
+        }).catch(error => {
+            document.getElementById('error').className = 'text-danger'
+        })
+    }
 
-        document.getElementById('form').onsubmit = (e) => {
-            e.preventDefault()
 
-            const URL = '/todos/create'
-            const payload = JSON.stringify({ 'description': document.getElementById('description').value })
-            fetch(URL, {
-                method: 'POST',
-                body: payload,
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }).then(res => res.json())
-                .then(res => {
-                    let description = res['description']
-                    let todos = document.getElementById('todos')
-                    // Create List Item 
-                    let todo = document.createElement('li')
-                    todo.innerHTML = description
-                    todo.className = 'list-group-item d-flex justify-content-between align-items-center'
-                    // Create Delete Button
-                    let delete_btn = document.createElement('button')
-                    delete_btn.innerHTML = 'X'
-                    delete_btn.className = 'btn btn-danger'
-                    // Append Button to List Item 
-                    todo.appendChild(delete_btn)
-                    // Append New Todo to Todos List
-                    todos.appendChild(todo)
-                    document.getElementById('error').className = 'd-none'
-                }).catch(error => {
-                    document.getElementById('error').className = 'text-danger'
-                })
-        }
-    </script>
+    const setChecked = (event, todoId) => {
+        const URL = `/todos/${todoId}/set-completed`
+        const payload = JSON.stringify({
+            'completed': event.target['checked']
+        })
+        fetch(URL, {
+            method: 'POST',
+            body: payload,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).catch(error => {
+
+            document.getElementById('error').className = 'text-danger'
+        })
+
+    }
+
+    document.getElementById('form').onsubmit = (e) => {
+        e.preventDefault()
+
+        const URL = '/todos/create'
+        const payload = JSON.stringify({'description': document.getElementById('description').value})
+        fetch(URL, {
+            method: 'POST',
+            body: payload,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }).then(res => res.json())
+            .then(res => {
+                let description = res['description']
+                let id = res['id']
+                let todos = document.getElementById('todos')
+                // Create List Item
+                let todo = document.createElement('li')
+                todo.id = id
+                todo.className = 'list-group-item d-flex justify-content-between align-items-center'
+                // creat label
+                let label = document.createElement('label')
+                label.setAttribute('for', description)
+                // Create Span for descrption
+                let span = document.createElement('span')
+                span.innerHTML = " " + description
+                // Create Checkbox input
+                let input = document.createElement('input')
+                input.type = 'checkbox'
+                input.checked = false
+                input.name = description.toLowerCase().replace(' ', '-')
+                input.id = id
+                input.setAttribute('onchange', `setChecked(event, ${id})`)
+                label.appendChild(input)
+                label.appendChild(span)
+                // Create Delete Button
+                let delete_btn = document.createElement('button')
+                delete_btn.innerHTML = 'X'
+                delete_btn.className = 'btn btn-danger'
+                delete_btn.setAttribute('onclick', `deleteTodo(${id})`)
+                // Append Button to List Item
+                todo.appendChild(label)
+                todo.appendChild(delete_btn)
+                // Append New Todo to Todos List
+                todos.appendChild(todo)
+                document.getElementById('error').className = 'd-none'
+            }).catch(error => {
+            document.getElementById('error').className = 'text-danger'
+        })
+    }
+</script>
 
 </body>
 
