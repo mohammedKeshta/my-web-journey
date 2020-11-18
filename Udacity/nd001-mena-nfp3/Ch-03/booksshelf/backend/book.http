@@ -1,0 +1,43 @@
+###
+GET http://127.0.0.1:5000/books
+Accept: application/json
+
+###
+GET http://127.0.0.1:5000/books?page=2
+Accept: application/json
+
+###
+GET http://127.0.0.1:5000/books?page=1000
+Accept: application/json
+
+###
+PATCH http://127.0.0.1:5000/books/15
+Content-Type: application/json
+
+{
+  "rating": 5
+}
+
+###
+PATCH http://127.0.0.1:5000/books/2
+Content-Type: application/json
+
+{
+  "rating": 2
+}
+
+###
+DELETE http://127.0.0.1:5000/books/10
+Content-Type: application/json
+
+###
+POST http://127.0.0.1:5000/books
+Content-Type: application/json
+
+{
+  "title": "Intro To Python 4",
+  "author": "znzn",
+  "rating": 2
+}
+
+###
