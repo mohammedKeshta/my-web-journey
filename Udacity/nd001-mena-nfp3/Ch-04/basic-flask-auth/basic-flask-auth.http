@@ -1,0 +1,10 @@
+###
+GET https://mohammedelzanaty129.us.auth0.com/.well-known/jwks.json
+#Authorization: Bearer
+
+###
+GET http://localhost:5000/headers
+Accept: application/json
+Authorization: Bearer x
+
+###

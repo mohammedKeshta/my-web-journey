@@ -1,0 +1,5 @@
+GET http://localhost:5000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZ2FiZSIsInNjaG9vbCI6InVkYWNpdHkiLCJyb2xlIjoiaW5zdHJ1Y3RvciJ9.T9hKh61bM-lFqvntAWrqPLWxAH-Ig0usQVwiVcJ1g5g
+
+
+###

@@ -1,0 +1,72 @@
+## GET ALL Categories
+GET http://127.0.0.1:5000/categories
+Accept: application/json
+
+### GET ALL Questions
+GET http://127.0.0.1:5000/questions
+Accept: application/json
+
+### GET ALL Questions
+GET http://127.0.0.1:5000/questions?page=1000
+Accept: application/json
+
+### DELETE Question
+DELETE http://127.0.0.1:5000/questions/1
+Accept: application/json
+
+
+### DELETE Question Doesnot exist
+DELETE http://127.0.0.1:5000/questions/1000
+Accept: application/json
+
+
+### DELETE Question Doesnot exist
+DELETE http://127.0.0.1:5000/questions/mohammed-elzanaty
+Accept: application/json
+
+
+### POST new question
+POST http://127.0.0.1:5000/questions
+Content-Type: application/json
+
+{
+  "question": "Question 3",
+  "answer": "Answer 3",
+  "difficulty": 4,
+  "category": 2
+}
+
+
+### POST new fake question
+POST http://127.0.0.1:5000/questions
+Content-Type: application/json
+
+{
+  "question": "fake one"
+}
+
+### POST search term
+POST http://127.0.0.1:5000/questions
+Content-Type: application/json
+
+{
+  "searchTerm": "Question 1"
+}
+
+### GET ALL Questions for specific category
+GET http://127.0.0.1:5000/categories/1/questions
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:5000/quizzes
+Content-Type: application/json
+
+{
+  "previous_questions": [1, 2, 3],
+  "quiz_category": {
+     "id": 1,
+     "type": "All"
+  }
+}
+###

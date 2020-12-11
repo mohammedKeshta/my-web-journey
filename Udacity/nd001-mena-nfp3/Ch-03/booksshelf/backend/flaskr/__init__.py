@@ -76,7 +76,7 @@ def create_app(test_config=None):
         current_books = create_pagination(request, selection)
 
         if len(current_books) == 0:
-            abort(400)
+            abort(404)
 
         return jsonify({'status': 'success',
                         'books': current_books,
@@ -98,7 +98,7 @@ def create_app(test_config=None):
             if 'rating' in body:
                 book.rating = int(body.get('rating'))
             book.update()
-            return jsonify({'success': 'success',
+            return jsonify({'status': 'success',
                             'message': f'Book with ID:{book.id} is updated Successfully',
                             'book': book.format()})
         except Exception as e:
