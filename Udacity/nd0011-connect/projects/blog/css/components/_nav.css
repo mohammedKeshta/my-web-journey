@@ -1,0 +1,153 @@
+.navbar {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    color: #252a32;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+}
+
+
+.navbar .navbar__header {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar__header .brand {
+    fill: #f8c803;
+    width: 40px;
+    height: auto;
+}
+
+
+.burger {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #252a32;
+    position: absolute;
+    left: 0;
+    transition: .3s all linear;
+}
+
+.burger__line--first {
+    top: 0;
+}
+
+.burger__line--second, .burger__line--third {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger__line--fourth {
+    bottom: 0;
+}
+
+.burger_active .burger__line--first,
+.burger_active .burger__line--fourth {
+    opacity: 0;
+}
+
+.burger_active .burger__line--second {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.burger_active .burger__line--third {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.navbar .navbar__menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.navbar .menu__item {
+    margin: 0.5rem 0;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.navbar .menu__link {
+    font-size: 1rem;
+    display: inline-block;
+    font-weight: 500;
+    color: #252a32;
+    transition: all 0.35s ease;
+}
+
+.navbar .menu__link:hover {
+    color: #f8c803;
+}
+
+.navbar .navbar__menu.active {
+    width: 100%;
+    height: 10rem;
+    margin: 1rem 0;
+}
+
+.navbar .navbar__social {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .social__item {
+    font-size: 1.65rem;
+    line-height: inherit;
+    margin: 0 0.5rem;
+    color: #252a32;
+    transition: all 0.35s ease;
+}
+
+.navbar .social__item:hover {
+    color: #f8c803;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .navbar .navbar__header .burger {
+        display: none;
+    }
+
+    .navbar .navbar__menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .navbar .menu__item {
+        padding: 0;
+        margin: 0 0.5rem;
+    }
+
+    .navbar .navbar__social {
+        display: flex;
+    }
+}
+

@@ -1,0 +1,44 @@
+/* Widget */
+.widget {
+    padding: 1rem;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.widget .widget__img {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 1rem auto;
+    transition: all 300ms ease-in-out;
+}
+
+.widget .widget__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.widget .widget__content .categories li {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.widget .widget__content .categories li .badge {
+    background: #f8c803;
+    color: white;
+    padding: 0.1rem 0.6rem;
+    border-radius: 50%;
+}
+
+.widget .widget__content .categories li a {
+    color: #252a32;
+}
+
+.widget .widget__content .categories li a:hover {
+    color: #f8c803;
+}

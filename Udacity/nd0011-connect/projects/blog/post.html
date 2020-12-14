@@ -42,7 +42,6 @@
             </div>
             <ul class="navbar__menu">
                 <li class="menu__item"><a href="index.html" class="menu__link hvr-underline-from-left">Home</a></li>
-                <li class="menu__item"><a href="#posts" class="menu__link hvr-underline-from-left">Posts</a></li>
                 <li class="menu__item"><a href="#footer" class="menu__link hvr-underline-from-left">Footer</a></li>
             </ul>
             <div class="navbar__social">
@@ -78,7 +77,7 @@
                         <form>
                             <label for="email" class="sr-only">Email</label>
                             <input type="email" placeholder="Enter your email" id="email">
-                            <button class="btn">Subscribe</button>
+                            <button class="btn btn-primary">Subscribe</button>
                         </form>
                     </div>
                 </div>
@@ -99,120 +98,82 @@
             </div>
         </div>
     </aside>
-    <section class="grid-container__content" id="posts">
+    <section class="grid-container__content" id="post-details">
         <div class="container">
-            <div class="posts">
-                <h2 class="title">Trending articles</h2>
-                <div class="post">
-                    <div class="post__image">
-                        <img src="images/blog-1.jpg" alt="post-image">
-                    </div>
-                    <div class="post__content">
-                        <h3 class="post__title"><a href="./post.html">
-                            Trip that you’ll never ever forget
-                        </a></h3>
-                        <div class="post__meta">
-                            <div class="post__meta--author">
-                                by <strong>Mohammed Elzanaty</strong>
-                            </div>
-                            <time itemprop="dateModified" datetime="2019-09-04T11:10:54+00:00">December 10, 2020
-                            </time>
-                        </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live…</p>
-                        <hr>
-                        <div class="post__tags">
-                            <i class="fa fa-tag"></i>
-                            <ul>
-                                <li><a href="#">People, </a></li>
-                                <li><a href="#">Travel</a></li>
-                            </ul>
-                        </div>
+            <div class="post-details">
+                <figure class="post-details__image">
+                    <img src="images/blog-1.jpg" alt="post-image" >
+                    <figcaption>Trip that you’ll never ever forget</figcaption>
+                </figure>
 
-                        <button class="btn post_btn"><a href="./post.html">See More...</a></button>
+                <h1 class="post-details__title">Trip that you’ll never ever forget</h1>
+                <div class="post-details__meta">
+                    <p class="post-details__meta--author">
+                        By <strong>Mohammed Elzanaty</strong>
+                    </p>
+                    <time itemprop="dateModified" datetime="2019-09-04T11:10:54+00:00">December 10, 2020
+                    </time>
+                </div>
+
+                <div class="post-details__content">
+
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                        there live…</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, aut corporis debitis dolorem eum
+                        excepturi hic illum laborum laudantium minus molestias natus numquam omnis pariatur placeat
+                        provident quae quam quasi.</p>
+                    <p>Earum enim explicabo illo provident reprehenderit sequi sint sunt. Accusamus aliquid aspernatur
+                        assumenda consequuntur <em>dolorem earum eveniet exercitationem</em>, incidunt minima odio provident
+                        voluptatum! Alias aperiam dolore dolores voluptatem! Soluta, tempora!</p>
+                    <p>Ad aspernatur assumenda at consectetur consequuntur debitis dolor doloribus enim excepturi facere
+                        illo ipsa ipsam ipsum iste maxime minus mollitia nesciunt non, odio officia optio reprehenderit
+                        repudiandae sequi sit unde!</p>
+                    <p>Alias aliquam amet doloribus fugit pariatur, quia tempore! Aliquam iure porro quam quas rem unde
+                        vel veritatis voluptas! Enim esse itaque perferendis saepe totam. Cupiditate error nihil nulla
+                        similique sit!</p>
+                    <p>Dicta iste itaque laudantium molestiae molestias natus odio voluptatem! Adipisci animi aperiam
+                        consequuntur cum eius hic illo ipsum laudantium nihil odit perspiciatis praesentium quidem quis
+                        quo, ratione reiciendis sed similique?</p>
+
+                    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                        For 50 years, WWF has been protecting the future of nature. The world's leading conservation
+                        organization, WWF works in 100 countries and is supported by 1.2 million members in the United
+                        States and close to 5 million globally.
+                        <span>Mohammed Elzanaty</span>
+                    </blockquote>
+
+                    <div class="post-details__tags">
+                        <h3 class="title">Tags</h3>
+                        <ul>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Travel</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="post-details__share">
+                        <h3 class="title">Share it now </h3>
+                        <ul>
+                            <li class="share__item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="share__item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li class="share__item"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="post-details__author">
+                        <img alt="author"
+                             src="images/me.jpeg"
+                             class="post-details__author--image">
+                       <div class="post-details__author--content">
+                           <p class="author__content" itemprop="description">Mohammed Elzanaty is the co-founder and CEO
+                               of
+                               <a href="#" class="external" target="_blank">ClearVoice</a> a
+                               content marketing technology company for high-quality blogs and content destinations.
+                               <span class="author__posts--links"><a
+                                       href="#">Other posts by Mohammed Elzanaty »</a></span>
+                           </p>
+                       </div>
                     </div>
                 </div>
-                <div class="post">
-                    <div class="post__image">
-                        <img src="images/blog-2.jpg" alt="post-image">
-                    </div>
-                    <div class="post__content">
-                        <h3 class="post__title"><a href="#">Must-have gear</a></h3>
-                        <div class="post__meta">
-                            <div class="post__meta--author">
-                                by <strong>Mohammed Elzanaty</strong>
-                            </div>
-                            <time itemprop="dateModified" datetime="2019-09-04T11:10:54+00:00">December 10, 2020
-                            </time>
-                        </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live…</p>
-                        <hr>
-                        <div class="post__tags">
-                            <i class="fa fa-tag"></i>
-                            <ul>
-                                <li><a href="#">People, </a></li>
-                                <li><a href="#">Design</a></li>
-                            </ul>
-                        </div>
 
-                        <button class="btn post_btn"><a href="./post.html">See More...</a></button>
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="post__image">
-                        <img src="images/blog-3.jpg" alt="post-image">
-                    </div>
-                    <div class="post__content">
-                        <h3 class="post__title"><a href="#">Healthy breakfast ideas</a></h3>
-                        <div class="post__meta">
-                            <div class="post__meta--author">
-                                by <strong>Mohammed Elzanaty</strong>
-                            </div>
-                            <time itemprop="dateModified" datetime="2019-09-04T11:10:54+00:00">December 10, 2020
-                            </time>
-                        </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live…</p>
-                        <hr>
-                        <div class="post__tags">
-                            <i class="fa fa-tag"></i>
-                            <ul>
-                                <li><a href="#">People, </a></li>
-                                <li><a href="#">Tech</a></li>
-                            </ul>
-                        </div>
-
-                        <button class="btn post_btn"><a href="./post.html">See More...</a></button>
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="post__image">
-                        <img src="images/blog-4.jpg" alt="post-image">
-                    </div>
-                    <div class="post__content">
-                        <h3 class="post__title"><a href="#">Top 5 tips to have a great vacation</a></h3>
-                        <div class="post__meta">
-                            <div class="post__meta--author">
-                                by <strong>Mohammed Elzanaty</strong>
-                            </div>
-                            <time itemprop="dateModified" datetime="2019-09-04T11:10:54+00:00">December 10, 2020
-                            </time>
-                        </div>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                            there live…</p>
-                        <hr>
-                        <div class="post__tags">
-                            <i class="fa fa-tag"></i>
-                            <ul>
-                                <li><a href="#">People, </a></li>
-                                <li><a href="#">Travel</a></li>
-                            </ul>
-                        </div>
-
-                        <button class="btn post_btn"><a href="./post.html">See More...</a></button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>

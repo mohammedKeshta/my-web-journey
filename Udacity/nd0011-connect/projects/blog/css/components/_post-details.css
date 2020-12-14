@@ -1,0 +1,132 @@
+.post-details {
+    padding: 1rem;
+}
+
+.post-details .post-details__image {
+    width: 100%;
+}
+
+.post-details .post-details__image figcaption {
+    text-align: center;
+}
+
+.post-details .post-details__image img {
+    width: 100%;
+}
+
+.post-details .post-details__title {
+    font-size: 1.4rem;
+    color: #f8c803;
+    margin: 1rem 0;
+}
+
+.post-details .post-details__meta {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 1rem;
+}
+
+.post-details .post-details__meta p,
+.post-details .post-details__meta time {
+    font-weight: bold;
+}
+
+.post-details .post-details__content p {
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    color: #8d8d8d;
+}
+
+.post-details blockquote {
+    font-size: 1rem;
+    width: 100%;
+    margin: 50px auto;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #f8c803;
+    line-height: 1.6;
+    position: relative;
+}
+
+.post-details blockquote::before {
+    content: "\201C";
+    color: #f8c803;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+.post-details blockquote::after {
+    content: '';
+}
+
+.post-details blockquote span {
+    display: block;
+    color: #333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.post-details .post-details__tags,
+.post-details .post-details__share {
+    margin-bottom: 1rem;
+}
+
+.post-details .post-details__tags ul,
+.post-details .post-details__share ul {
+    display: flex;
+}
+
+.post-details .post-details__tags li a,
+.post-details .post-details__share li a {
+    background: #f8c803;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    border-radius: 20px;
+}
+
+
+
+
+.post-details .post-details__author {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #f8c803;
+    padding: 2rem;
+}
+.post-details__author--image {
+    margin-right: 1rem;
+    width: 100%;
+}
+
+.post-details .post-details__author--content .author__content{
+    font-size: 1rem;
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .post-details blockquote {
+        font-size: 1.4em;
+        width: 60%;
+    }
+
+    .post-details .post-details__title {
+        font-size: 2rem;
+    }
+
+    .post-details .post-details__author {
+        flex-wrap: nowrap;
+        padding: 4rem;
+    }
+
+    .post-details__author--image {
+        margin-right: 1rem;
+        width: 200px;
+    }
+}
