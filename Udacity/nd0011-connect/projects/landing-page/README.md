@@ -1,13 +1,28 @@
 # Landing Page Project
 
 ## Table of Contents
+   The Project has starter code. Lots of my code is Javascript code in app.js file and some modifications are made in index.html file.
 
-* [Instructions](#instructions)
+## Features made:
+   - Navigation built dynamically as an unordered list
+   - When use try to scroll to the page the active section reflect at the nav item.
+   - When clicking an item from the navigation menu, the link is scrolling to the appropriate section.
+   - User has the ability to scroll up with button 
 
-## Instructions
+## Development
+   1. Documentation and minor change
+   2. Build Navigation 
+   3. Smooth scroll
+   4. Activate class on scroll
+      
+        
+       
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Project Tree
+    | root
+        | css
+        |    - styles.css
+        | js
+        |    - app.js
+        | index.html
+        | README.md
