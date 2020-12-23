@@ -22,7 +22,9 @@ function respondToTheClick(id) {
     console.log(`A paragraph ${id} was clicked.`)
 }
 
-const div = document.createElement('div')
+// const div = document.createElement('div')
+const fragment = document.createDocumentFragment()
+
 
 for (let i = 1; i < 200 ; i++) {
     // Create a pragaph element
@@ -33,7 +35,8 @@ for (let i = 1; i < 200 ; i++) {
     // append text to paragarph
     p.appendChild(textNode)
     // append to container
-    div.appendChild(p)
+    // div.appendChild(p)
+    fragment.appendChild(p)
 }
 
 // create an event click listenter for each paragaph
@@ -41,4 +44,4 @@ div.addEventListener('click', (event) => {
     respondToTheClick(event.target.dataset.id)
 })
 
-document.body.appendChild(div)
+document.body.appendChild(fragment)
