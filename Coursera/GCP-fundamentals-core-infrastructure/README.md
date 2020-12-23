@@ -1,5 +1,14 @@
-#[Google Cloud Platform Fundamentals - Core Infrastructure](https://app.pluralsight.com/library/courses/google-cloud-platform-fundamentals-core-infrastructure/table-of-contents) 
+#[Google Cloud Platform Fundamentals - Core Infrastructure](https://www.coursera.org/learn/gcp-fundamentals) 
 
+## Demonstration: Getting Started with Cloud Launcher
+    - Cloud Launcher 
+    - Lamp [search] -> Lamp Certified by Bitnami
+    - Launch on Compute Engine
+    - Login using ssh 
+    - cd /opt/bitnami [change the directory where software installed]
+    - sudo cp docs/phpinfo.php appache2/htdocs
+    - exit 
+    - url/phpinfo.php 
 
 ## Getting started with compute engine 
     - gcloud compute zones list | grep us-central1
