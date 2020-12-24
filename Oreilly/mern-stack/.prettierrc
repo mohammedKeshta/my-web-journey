@@ -4,5 +4,6 @@
   "printWidth": 80,
   "endOfLine": "auto",
   "bracketSpacing": true,
-  "jsxSingleQuote": true
+  "jsxSingleQuote": true,
+  "singleQuote": true
 }

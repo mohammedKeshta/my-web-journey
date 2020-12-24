@@ -1,9 +1,9 @@
-import React from "react"
-import Head from "next/head"
-import { Container } from "semantic-ui-react"
+import React from 'react'
+import Head from 'next/head'
+import { Container } from 'semantic-ui-react'
 
-import Header from "./Header"
-import HeadContent from "./HeadContent"
+import Header from './Header'
+import HeadContent from './HeadContent'
 
 function Layout({ children }) {
   return (
@@ -20,7 +20,7 @@ function Layout({ children }) {
         <title>ReactReserve</title>
       </Head>
       <Header />
-      <Container text style={{ paddingTop: "1em" }}>
+      <Container text style={{ paddingTop: '1em' }}>
         {children}
       </Container>
     </>
