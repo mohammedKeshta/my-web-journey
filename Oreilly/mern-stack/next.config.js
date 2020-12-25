@@ -2,7 +2,7 @@
 module.exports = {
   env: {
     MONGO_SRV:
-      'mongodb+srv://react-reserve:react-reserve@react-reserve.j5acy.mongodb.net/<dbname>?retryWrites=true&w=majority',
+      'mongodb+srv://react-reserve:react-reserve@react-reserve.j5acy.mongodb.net/reactreserve?retryWrites=true&w=majority',
     JWT_SECRET: '<insert-jwt-secret>',
     CLOUDINARY_URL: '<insert-cloudinary-url>',
     STRIPE_SECRET_KEY: '<insert-stripe-secret-key>',

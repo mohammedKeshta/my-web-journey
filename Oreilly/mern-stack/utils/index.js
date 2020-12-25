@@ -1,3 +1,4 @@
 import connectDB from './connectDB'
+import CONSTANTS from './CONSTANTS'
 
-export { connectDB }
+export { connectDB, CONSTANTS }
