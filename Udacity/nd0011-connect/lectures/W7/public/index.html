@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="zip" />
+      <button type="submit" id="button">get Temp</button>
+    </form>
+
+    <div id="data"></div>
+
+    <script>
+      const APP_ID = "7b7e957ad672e94b7c96fd0394f598d4";
+      const BASE_URL = "http://api.openweathermap.org/data/2.5/weather";
+      document.getElementById("button").addEventListener("click", (event) => {
+        event.preventDefault();
+        const zip = document.getElementById("zip").value;
+        const url = `${BASE_URL}?zip=${zip}&appid=${APP_ID}`;
+        getWeather(url);
+      });
+
+      function getWeather(url) {
+        // get data
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const { main } = data
+            updateUI(main)
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+
+      function updateUI(data) {
+        document.getElementById('data').innerHTML = data.temp
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+<nav>
+    <ul>
+        <li><a href="/entries/">Posts</a></li>
+        <li><a href="/entries/post">Create Post</a></li>
+    </ul>
+</nav>
+
+<% if (entries.length > 0) { %>
+    <% entries.forEach((entry) => { %>
+        <div class='entry'>
+            <h3><%= entry.title %></h3>
+            <p><%= entry.body %></p>
+            <p>Posted by <%= entry.username %></p>
+        </div>
+    <% }) %>
+<% } else { %>
+    <h1>No Entries</h1>
+<% } %>
+</body>
+</html>

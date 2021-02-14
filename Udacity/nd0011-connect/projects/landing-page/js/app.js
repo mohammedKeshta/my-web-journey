@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
    * View is responsible of manipulating the DOM and will access the data
    * stored in the model through the Controller
    */
-
+ 
   let view = {
     init: function () {
       this.initNavBar("navbar__list");

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<nav>
+    <ul>
+        <li><a href="/entries/">Posts</a></li>
+        <li><a href="/entries/post">Create Post</a></li>
+    </ul>
+</nav>
+<form action="/entries/post" method="post">
+    <p>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="entry[title]" placeholder="Title" />
+    </p>
+    <p>
+        <label for="body">Title</label>
+        <textarea  id="body" name="entry[body]" placeholder="Body"> </textarea>
+    </p>
+
+    <button type="submit">Post</button>
+</form>
+</body>
+</html>

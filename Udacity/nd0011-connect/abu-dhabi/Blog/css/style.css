@@ -1,0 +1,29 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 50px auto 400px;
+}
+
+@media (max-width: 600px) {
+  body {
+    grid-template-areas:
+      "footer"
+      "header"
+      "main";
+  }
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
