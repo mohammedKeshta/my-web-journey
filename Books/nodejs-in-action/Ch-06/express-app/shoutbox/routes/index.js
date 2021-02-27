@@ -20,7 +20,7 @@ router.get("/post", (req, res, next) => {
 router.post("/post", (req, res, next) => {
   const { title, body } = req.body.entry
   const user = res.locals.user
-  const username = user ? user.username : 'Elzanaty'
+  const username = user ? user.username : "Elzanaty"
   const entry = new Entry({
     username,
     title,
