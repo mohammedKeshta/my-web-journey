@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-in-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"**/**/*.{js,jsx}\""
+  },
+  "author": "Mohammed Elzanaty",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
