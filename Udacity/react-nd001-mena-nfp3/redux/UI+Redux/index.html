@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .completed {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Todo List</h1>
+      <label for="todo">Todo</label
+      ><input id="todo" type="text" placeholder="Add Todo" />
+      <button id="todoBtn">Add Todo</button>
+      <ul id="todos"></ul>
+    </div>
+    <div>
+      <h1>Goals</h1>
+      <label for="goal">Goal</label
+      ><input id="goal" type="text" placeholder="Add Goal" />
+      <button id="goalBtn">Add Goal</button>
+      <ul id="goals"></ul>
+    </div>
+
+    <script type="text/javascript">
+      function generateId() {
+        return (
+          Math.random().toString(36).substring(2) +
+          new Date().getTime().toString(36)
+        );
+      }
+
+      // TODO_CONSTANTS
+      const ADD_TODO = "ADD_TODO";
+      const REMOVE_TODO = "REMOVE_TODO";
+      const TOGGLE_TODO = "TOGGLE_TODO";
+      // GOALS_CONTACTS
+      const ADD_GOAL = "ADD_GOAL";
+      const REMOVE_GOAL = "REMOVE_GOAL";
+
+      const INITIAL_STATE = {
+        todos: [],
+        goals: [],
+      };
+
+      // index lib
+      function createStore(initialState = {}, reducer) {
+        /**
+         * the index should have four parts
+         *  1. The State
+         *  2. Get the state
+         *  3. Listen to changes on the state
+         *  4. Update the state
+         */
+        let state = initialState;
+        let listeners = [];
+
+        const getState = () => state;
+
+        const subscribe = (listener) => {
+          listeners.push(listener);
+          return () => {
+            listeners = listeners.filter((l) => l !== listener);
+          };
+        };
+
+        const dispatch = (action) => {
+          state = reducer(state, action);
+          listeners.forEach((listener) => listener());
+        };
+
+        return {
+          getState,
+          subscribe,
+          dispatch,
+        };
+      }
+
+      // TODO_ACTIONS
+      const addTodo = (todo) => {
+        return {
+          type: ADD_TODO,
+          todo,
+        };
+      };
+      const removeTodo = (id) => {
+        return {
+          type: REMOVE_TODO,
+          id,
+        };
+      };
+      const toggleTodo = (id) => {
+        return {
+          type: TOGGLE_TODO,
+          id,
+        };
+      };
+      // GOALS_ACTIONS
+      const addGoal = (goal) => {
+        return {
+          type: ADD_GOAL,
+          goal,
+        };
+      };
+      const removeGoal = (id) => {
+        return {
+          type: REMOVE_GOAL,
+          id,
+        };
+      };
+
+      // Reducers
+      function todos(state = [], action) {
+        switch (action.type) {
+          case ADD_TODO:
+            return state.concat([action.todo]);
+          case REMOVE_TODO:
+            return state.filter((todo) => todo.id !== action.todo.id);
+          case TOGGLE_TODO:
+            return state.map((todo) =>
+              todo.id !== action.id
+                ? todo
+                : { ...todo, complete: !todo.complete }
+            );
+          default:
+            return state;
+        }
+      }
+
+      function goals(state = [], action) {
+        switch (action.type) {
+          case ADD_GOAL:
+            return state.concat([action.goal]);
+          case REMOVE_GOAL:
+            return state.filter((goal) => goal.id !== action.id);
+          default:
+            return state;
+        }
+      }
+
+      function rootReducer(state, action) {
+        return {
+          todos: todos(state.todos, action),
+          goals: goals(state.goals, action),
+        };
+      }
+
+      // Create the index
+      const store = createStore(INITIAL_STATE, rootReducer);
+
+      const unsubscribe = store.subscribe(() => {
+        const { goals, todos } = store.getState();
+        console.log(todos)
+        console.log(goals)
+        addTodosToDOM(todos);
+        addGoalsToDOM(goals);
+      });
+
+      const addNewGoal = () => {
+        const input = document.getElementById("goal");
+        const name = input.value.trim();
+        input.value = "";
+        store.dispatch(
+          addGoal({
+            id: generateId(),
+            name,
+          })
+        );
+      };
+
+      const addNewTodo = () => {
+        const input = document.getElementById("todo");
+        const name = input.value.trim();
+        input.value = "";
+        store.dispatch(
+          addTodo({
+            id: generateId(),
+            name,
+            complete: false,
+          })
+        );
+      };
+
+      const addTodosToDOM = (todos) => {
+        const todosContainer = document.getElementById("todos");
+        const todosFragment = document.createDocumentFragment();
+        todos.forEach((todo) => {
+          const li = document.createElement("li");
+          li.innerHTML = `${todo.name} <button id='remove-todo' data-id=${todo.id}>x</button></li>`;
+          if (todo.complete) {
+            li.classList.add("completed");
+          }
+          todosFragment.appendChild(li);
+        });
+        todosContainer.appendChild(todosFragment);
+      };
+
+      const addGoalsToDOM = (goals) => {
+        const goalsContainer = document.getElementById("goals");
+        const goalsFragment = document.createDocumentFragment();
+
+        goals.forEach((goal) => {
+          const li = document.createElement("li");
+          li.innerHTML = `${goal.name} <button id='remove-goal' data-id=${goal.id}>x</button></li>`;
+          goalsFragment.appendChild(li);
+        });
+        goalsContainer.appendChild(goalsFragment);
+      };
+
+      document.getElementById("todoBtn").addEventListener("click", (event) => {
+        event.preventDefault();
+        addNewTodo();
+      });
+
+      document.getElementById("goalBtn").addEventListener("click", (event) => {
+        event.preventDefault();
+
+        addNewGoal();
+      });
+    </script>
+  </body>
+</html>
