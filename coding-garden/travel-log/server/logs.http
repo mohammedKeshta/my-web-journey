@@ -1,0 +1,18 @@
+POST http://localhost:1337/api/logs
+Content-Type: application/json
+
+{
+  "title": "Empire State Building",
+  "comments": "Quite amazing view and experience. You cam definitely see the industrial revolution when you look at New York compared to Houston lol",
+  "latitude": 40.7484405,
+  "longitude": -73.9878531,
+  "rating": 4.7,
+  "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg",
+  "visitDate": "2021-03-18T18:48:12.870Z"
+}
+
+###
+GET http://localhost:1337/api/logs
+Accept: application/json
+
+###
