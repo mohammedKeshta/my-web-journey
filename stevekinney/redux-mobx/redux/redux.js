@@ -24,21 +24,42 @@ console.log(makeLouderAndBoldAndRepeatThreeTimes('hello'))
 */
 
 // create store
-const reducer = (state = { value: 1 }, action) => {
+const calculatorReducer = (state = { value: 1 }, action) => {
   if (action.type === 'ADD') {
     const value = state.value
-    const amount = action.payload.amount
-    return { value: amount + value }
+    const amount = action.payload
+    return { ...state, value: amount + value }
   }
   return state
 }
-const store = createStore(reducer)
-store.dispatch({
-  type: 'ADD',
-  payload: {
-    amount: 2,
-  },
+
+const reducer = combineReducers({
+  calculator: calculatorReducer,
 })
 
-console.log(store)
-console.log(store.getState())
+const addAction = (amount) => {
+  return {
+    type: 'ADD',
+    payload: amount,
+  }
+}
+
+const logger = ({ getState }) => {
+  return (next) => (action) => {
+    console.log('Middleware', getState(), action)
+    return next(action)
+  }
+}
+
+const store = createStore(reducer, applyMiddleware(logger))
+
+store.dispatch(addAction(4))
+
+const dispatchAdd = bindActionCreators(addAction, store.dispatch)
+dispatchAdd(2)
+
+const unsubscribe = () => {
+  console.log(store.getState())
+}
+
+unsubscribe()
