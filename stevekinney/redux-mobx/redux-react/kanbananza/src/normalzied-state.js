@@ -24,6 +24,3 @@ export const cards = {
   entities: normalizedLists.entities.cards,
   ids: Object.keys(normalizedLists.entities.cards),
 }
-console.log({ lists })
-console.log({ users })
-console.log({ cards })
