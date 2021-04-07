@@ -13,43 +13,6 @@ const TOGGLE_TODO = "TOGGLE_TODO";
 const ADD_GOAL = "ADD_GOAL";
 const REMOVE_GOAL = "REMOVE_GOAL";
 
-const INITIAL_STATE = {
-    todos: [],
-    goals: [],
-};
-
-// index lib
-function createStore(initialState = {}, reducer) {
-    /**
-     * the index should have four parts
-     *  1. The State
-     *  2. Get the state
-     *  3. Listen to changes on the state
-     *  4. Update the state
-     */
-    let state = initialState;
-    let listeners = [];
-
-    const getState = () => state;
-
-    const subscribe = (listener) => {
-        listeners.push(listener);
-        return () => {
-            listeners = listeners.filter((l) => l !== listener);
-        };
-    };
-
-    const dispatch = (action) => {
-        state = reducer(state, action);
-        listeners.forEach((listener) => listener());
-    };
-
-    return {
-        getState,
-        subscribe,
-        dispatch,
-    };
-}
 
 // TODO_ACTIONS
 const addTodoAction = (todo) => {
@@ -113,15 +76,12 @@ function goals(state = [], action) {
     }
 }
 
-function rootReducer(state, action) {
-    return {
-        todos: todos(state.todos, action),
-        goals: goals(state.goals, action),
-    };
-}
-
 // Create the index
-const store = createStore(INITIAL_STATE, rootReducer);
+const store = Redux.createStore(
+    Redux.combineReducers({
+        todos,
+        goals
+    }));
 
 const unsubscribe = store.subscribe(() => {
     const {goals, todos} = store.getState();
@@ -159,7 +119,7 @@ const addGoal = () => {
     );
 };
 
-function createRemoveButton (onClick) {
+function createRemoveButton(onClick) {
     const removeBtn = document.createElement('button')
     removeBtn.innerHTML = 'X'
     removeBtn.addEventListener('click', onClick)
