@@ -12,9 +12,10 @@ let users = {
     ],
   },
   tylermcginnis: {
-    id: 'tylermcginnis',
-    name: 'Tyler McGinnis',
-    avatarURL: 'https://tylermcginnis.com/would-you-rather/tyler.jpg',
+    id: 'mohammed_elzanaty',
+    name: 'Mohammed Elzanaty',
+    avatarURL:
+      'https://media-exp1.licdn.com/dms/image/C4D03AQFYQc46HSugaQ/profile-displayphoto-shrink_100_100/0/1605332940170?e=1623283200&v=beta&t=jCYU0IgcnfE1tr_YalLTzjfzdjxD38CDRlU6nrHlD80',
     tweets: [
       '5c9qojr2d1738zlx09afby',
       'f4xzgapq7mu783k9t02ghx',
