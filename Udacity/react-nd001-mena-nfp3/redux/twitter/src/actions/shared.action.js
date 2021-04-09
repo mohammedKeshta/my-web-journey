@@ -1,3 +1,4 @@
+import { showLoading, hideLoading } from 'react-redux-loading'
 import { getInitialData } from '../utils/api'
 import { receiveTweets } from './tweets.action'
 import { receiveUsers } from './users.action'
@@ -7,10 +8,12 @@ const AUTHED_ID = 'mohammed_elzanaty'
 
 export function handleInitialData() {
   return (dispatch) => {
+    dispatch(showLoading())
     return getInitialData().then(({ users, tweets }) => {
       dispatch(receiveUsers(users))
       dispatch(receiveTweets(tweets))
       dispatch(setAuthedUser(AUTHED_ID))
+      dispatch(hideLoading())
     })
   }
 }
