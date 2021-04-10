@@ -1,13 +1,13 @@
 import { RECEIVE_USERS } from '../types'
 
-export default function usersReducer(state = {}, action) {
+export default function usersReducer(users = {}, action) {
   switch (action.type) {
     case RECEIVE_USERS:
       return {
-        ...state,
+        ...users,
         ...action.payload.users,
       }
     default:
-      return state
+      return users
   }
 }

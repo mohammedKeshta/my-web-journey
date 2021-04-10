@@ -1,10 +1,10 @@
 import { ADD_TWEET, RECEIVE_TWEETS, TOGGLE_TWEET } from '../types'
 
-export default function tweetsReducer(state = {}, action) {
+export default function tweetsReducer(tweets = {}, action) {
   switch (action.type) {
     case RECEIVE_TWEETS:
       return {
-        ...state,
+        ...tweets,
         ...action.payload.tweets,
       }
     case ADD_TWEET:
@@ -14,32 +14,30 @@ export default function tweetsReducer(state = {}, action) {
       if (tweet.replyingTo !== null) {
         replyingTo = {
           [tweet.replyingTo]: {
-            ...state[tweet.replyingTo],
-            replies: state[tweet.replyingTo].replies.concat([tweet.id]),
+            ...tweets[tweet.replyingTo],
+            replies: tweets[tweet.replyingTo].replies.concat([tweet.id]),
           },
         }
       }
 
       return {
-        ...state,
+        ...tweets,
         [tweet.id]: tweet,
         ...replyingTo,
       }
     case TOGGLE_TWEET:
-      const tweetId = action.payload.id
+      const { id: tweetId, hasLiked, authedUser } = action.payload.id
       return {
-        ...state,
+        ...tweets,
         [tweetId]: {
-          ...state[tweetId],
+          ...tweets[tweetId],
           likes:
-            action.payload.hasLiked === true
-              ? state[tweetId].likes.filter(
-                  (uid) => uid !== action.payload.authedUser
-                )
-              : state[tweetId].likes.concat(action.payload.authedUser),
+            hasLiked === true
+              ? tweets[tweetId].likes.filter((uid) => uid !== authedUser)
+              : tweets[tweetId].likes.concat(authedUser),
         },
       }
     default:
-      return state
+      return tweets
   }
 }

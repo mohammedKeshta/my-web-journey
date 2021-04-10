@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { formatTweet, formatDate } from '../utils/helpers'
 import {
   TiArrowBackOutline,
   TiHeartOutline,
   TiHeartFullOutline,
 } from 'react-icons/all'
-import { formatDate, formatTweet } from '../utils/helpers'
+import { Link, withRouter } from 'react-router-dom'
 import { handleToggleTweet } from '../actions/tweets.action'
 
 class Tweet extends Component {
@@ -13,6 +14,7 @@ class Tweet extends Component {
     e.preventDefault()
 
     const { dispatch, tweet, authedUser } = this.props
+
     dispatch(
       handleToggleTweet({
         id: tweet.id,
@@ -23,7 +25,7 @@ class Tweet extends Component {
   }
   toParent = (e, id) => {
     e.preventDefault()
-    // todo: Redirect to parent Tweet.
+    this.props.history.push(`/tweet/${id}`)
   }
   render() {
     const { tweet } = this.props
@@ -40,11 +42,12 @@ class Tweet extends Component {
       hasLiked,
       likes,
       replies,
+      id,
       parent,
     } = tweet
 
     return (
-      <div className="tweet">
+      <Link to={`/tweet/${id}`} className="tweet">
         <img src={avatar} alt={`Avatar of ${name}`} className="avatar" />
         <div className="tweet-info">
           <div>
@@ -73,7 +76,7 @@ class Tweet extends Component {
             <span>{likes !== 0 && likes}</span>
           </div>
         </div>
-      </div>
+      </Link>
     )
   }
 }
@@ -81,6 +84,7 @@ class Tweet extends Component {
 function mapStateToProps({ authedUser, users, tweets }, { id }) {
   const tweet = tweets[id]
   const parentTweet = tweet ? tweets[tweet.replyingTo] : null
+
   return {
     authedUser,
     tweet: tweet
@@ -89,4 +93,4 @@ function mapStateToProps({ authedUser, users, tweets }, { id }) {
   }
 }
 
-export default connect(mapStateToProps)(Tweet)
+export default withRouter(connect(mapStateToProps)(Tweet))

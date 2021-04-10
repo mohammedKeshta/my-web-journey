@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Tweet from './Tweet'
+import Tweet from '../components/Tweet'
 
 class Dashboard extends Component {
   componentDidMount() {}
