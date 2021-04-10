@@ -11,7 +11,7 @@ let users = {
       '3sklxkf9yyfowrf0o1ftbb',
     ],
   },
-  tylermcginnis: {
+  mohammed_elzanaty: {
     id: 'mohammed_elzanaty',
     name: 'Mohammed Elzanaty',
     avatarURL:

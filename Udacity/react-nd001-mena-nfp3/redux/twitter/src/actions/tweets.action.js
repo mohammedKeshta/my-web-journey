@@ -1,10 +1,18 @@
-import { RECEIVE_TWEETS, TOGGLE_TWEET } from '../types'
-import { saveLikeToggle } from '../utils/api'
+import { ADD_TWEET, RECEIVE_TWEETS, TOGGLE_TWEET } from '../types'
+import { saveLikeToggle, saveTweet } from '../utils/api'
+import { showLoading, hideLoading } from 'react-redux-loading'
 
 export function receiveTweets(tweets) {
   return {
     type: RECEIVE_TWEETS,
     payload: { tweets },
+  }
+}
+
+export function addTweet(tweet) {
+  return {
+    type: ADD_TWEET,
+    payload: { tweet },
   }
 }
 
@@ -16,6 +24,22 @@ export function toggleTweet({ id, authedUser, hasLiked }) {
       authedUser,
       hasLiked,
     },
+  }
+}
+
+export function handleAddTweet(text, replyingTo) {
+  return (dispatch, getState) => {
+    const { authedUser } = getState()
+
+    dispatch(showLoading())
+
+    return saveTweet({
+      text,
+      author: authedUser,
+      replyingTo,
+    })
+      .then((tweet) => dispatch(addTweet(tweet)))
+      .then(() => dispatch(hideLoading()))
   }
 }
 

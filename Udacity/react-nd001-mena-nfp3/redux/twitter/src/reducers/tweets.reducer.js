@@ -1,4 +1,4 @@
-import { RECEIVE_TWEETS, TOGGLE_TWEET } from '../types'
+import { ADD_TWEET, RECEIVE_TWEETS, TOGGLE_TWEET } from '../types'
 
 export default function tweetsReducer(state = {}, action) {
   switch (action.type) {
@@ -6,6 +6,24 @@ export default function tweetsReducer(state = {}, action) {
       return {
         ...state,
         ...action.payload.tweets,
+      }
+    case ADD_TWEET:
+      const { tweet } = action.payload
+
+      let replyingTo = {}
+      if (tweet.replyingTo !== null) {
+        replyingTo = {
+          [tweet.replyingTo]: {
+            ...state[tweet.replyingTo],
+            replies: state[tweet.replyingTo].replies.concat([tweet.id]),
+          },
+        }
+      }
+
+      return {
+        ...state,
+        [tweet.id]: tweet,
+        ...replyingTo,
       }
     case TOGGLE_TWEET:
       const tweetId = action.payload.id

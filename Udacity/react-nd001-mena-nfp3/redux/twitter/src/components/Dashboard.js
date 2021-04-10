@@ -6,7 +6,6 @@ class Dashboard extends Component {
   componentDidMount() {}
 
   render() {
-    console.log(this.props)
     return (
       <div>
         <h3 className="center">Your TimeLine</h3>
