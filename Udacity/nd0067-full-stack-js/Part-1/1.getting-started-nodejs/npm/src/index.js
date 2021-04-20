@@ -1,6 +1,6 @@
 // # Instructions
 
-// Your goal is to set up an NPM project which will lint and prettfy the code in index.js. Configure the project, install the proper node modules, and configure eslint and prettier. You will also need to include scripts that run eslint and prettier. There are errors in the index.js file. Run the scripts and fix the errors based off the results displayed in the console.
+// Your goal is to set up an NPM project which will lint and prettfy the code in index-js.js. Configure the project, install the proper node modules, and configure eslint and prettier. You will also need to include scripts that run eslint and prettier. There are errors in the index-js.js file. Run the scripts and fix the errors based off the results displayed in the console.
 
 // Import readline module for getting input from console
 // Find more here: https://nodejs.org/api/readline.html#readline_readline

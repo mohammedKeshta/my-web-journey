@@ -1,18 +1,19 @@
 module.exports = {
-  root: true,
-  plugins: ["prettier"],
   env: {
+    commonjs: true,
+    es2021: true,
     node: true,
-    es6: true,
   },
-  extends: ["eslint:recommended", "prettier"],
+  extends: ["airbnb-base", "eslint:recommended", "prettier"],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: 2017,
+    ecmaVersion: 12,
   },
+  plugins: ["@typescript-eslint", "prettier"],
   rules: {
     "prettier/prettier": 2,
     "no-use-before-define": ["error", { functions: true, classes: true }],
     "no-var": "error",
     "prefer-const": "error",
   },
-};
+}

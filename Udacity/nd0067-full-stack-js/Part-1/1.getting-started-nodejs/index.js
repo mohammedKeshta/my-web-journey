@@ -15,9 +15,9 @@ console.groupEnd()
 process.stdout.write('asd')
 console.log(process.argv)
 console.log('=== Path Module ===')
-console.log(path.resolve('index.js'))
-console.log(path.normalize('.//index.js'))
-console.log(path.join('/app', 'src', '/index.js'));
+console.log(path.resolve('index-js.js'))
+console.log(path.normalize('.//index-js.js'))
+console.log(path.join('/app', 'src', '/index-js.js'));
 
 // Mainline
 console.log('Hello, ----------- mainline');
