@@ -1,0 +1,27 @@
+{
+  "name": "my-web-journey",
+  "version": "1.0.0",
+  "description": "> Take your backend to the next level and find out what it's fully capable of.",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write '*/**/*.{ts,js,jsx,tsx}'",
+    "format:quick": "pretty-quick --staged",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammedelzanaty/my-web-journey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohammedelzanaty/my-web-journey/issues"
+  },
+  "homepage": "https://github.com/mohammedelzanaty/my-web-journey#readme",
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "prettier": "^2.3.0",
+    "pretty-quick": "^3.1.0"
+  }
+}
