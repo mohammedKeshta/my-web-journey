@@ -38,7 +38,7 @@ module.exports = {
           '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
       }
     ],
-    semi: ['error', 'never'],
+    // semi: ['error', 'never'],
     'no-console': 'off',
     'prettier/prettier': 2,
     'no-use-before-define': [
@@ -62,4 +62,4 @@ module.exports = {
       }
     ]
   }
-}
+};
