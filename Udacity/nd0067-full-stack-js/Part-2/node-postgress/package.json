@@ -1,0 +1,40 @@
+{
+  "name": "node-postgress",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc-watch --esModuleInterop src/server.ts --outDir ./build --onSuccess \"node ./build/server.js\"",
+    "build": "tsc",
+    "start": "yarn build && node build/server.js",
+    "test": "jasmine-ts",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/jasmine": "^3.6.9",
+    "@types/morgan": "^1.9.2",
+    "@types/node": "^15.12.2",
+    "@types/pg": "^8.6.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jasmine": "^3.6.9",
+    "jasmine-spec-reporter": "^7.0.0",
+    "jasmine-ts": "^0.3.3",
+    "prettier": "^2.3.1",
+    "ts-node": "^10.0.0",
+    "tsc-watch": "^4.4.0",
+    "typescript": "^4.3.2"
+  }
+}
