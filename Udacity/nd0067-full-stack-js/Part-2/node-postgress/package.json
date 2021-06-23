@@ -9,9 +9,11 @@
     "start": "yarn build && node build/server.js",
     "test": "jasmine-ts",
     "lint": "eslint . --ext .ts",
-    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'"
+    "format": "yarn lint --fix"
   },
   "dependencies": {
+    "db-migrate": "^0.11.12",
+    "db-migrate-pg": "^1.2.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",

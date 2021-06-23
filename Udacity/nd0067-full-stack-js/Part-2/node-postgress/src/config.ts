@@ -1,8 +1,8 @@
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 
-dotenv.config()
+dotenv.config();
 
-const { PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD } = process.env
+const { PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD } = process.env;
 
 export default {
   port: process.env.PORT,
@@ -10,5 +10,5 @@ export default {
   dbPort: PGPORT,
   database: PGDB,
   user: PGUSER,
-  password: PGPASSWORD
-}
+  password: PGPASSWORD,
+};
