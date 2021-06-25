@@ -6,7 +6,7 @@ const pool = new Pool({
   database: config.database,
   user: config.user,
   password: config.password,
-  port: parseInt(config.dbPort as string, 10),
+  port: parseInt(config.dbPort as string, 10)
 });
 
 pool.on('error', (error) => {

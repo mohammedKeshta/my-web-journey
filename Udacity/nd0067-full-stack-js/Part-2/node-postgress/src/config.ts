@@ -2,13 +2,14 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const { PGHOST, PGPORT, PGDB, PGUSER, PGPASSWORD } = process.env;
+const { NODE_ENV, DB_HOST, DB_PORT, DB_DATABASE, DB_DATABASE_TEST, DB_USER, DB_PASS, PORT } =
+  process.env;
 
 export default {
-  port: process.env.PORT,
-  host: PGHOST,
-  dbPort: PGPORT,
-  database: PGDB,
-  user: PGUSER,
-  password: PGPASSWORD,
+  port: PORT,
+  host: DB_HOST,
+  dbPort: DB_PORT,
+  database: NODE_ENV === 'development' ? DB_DATABASE : DB_DATABASE_TEST,
+  user: DB_USER,
+  password: DB_PASS
 };

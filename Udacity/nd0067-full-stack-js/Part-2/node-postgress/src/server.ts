@@ -1,7 +1,7 @@
 import express, { Application, Response, Request } from 'express';
 import morgan from 'morgan';
 import config from './config';
-import pool from './database';
+import routes from './routes';
 
 const app: Application = express();
 
@@ -10,25 +10,12 @@ const address: string = `0.0.0.0:${config.port}`;
 app.use(express.json());
 app.use(morgan('dev'));
 
-pool
-  .connect()
-  .then((client) => {
-    client
-      .query('SELECT * FROM plants')
-      .then((res) => {
-        console.table(res.rows);
-      })
-      .catch((err) => {
-        console.error(`Error executing query ${err}`);
-      });
-  })
-  .catch((err) => {
-    console.error(`Error acquiring client ${err.message}`);
-  });
+// add routing for /api path
+app.use('/api', routes);
 
 app.get('/', (req: Request, res: Response) => {
   res.send({
-    message: 'hello, world',
+    message: 'hello, world'
   });
 });
 

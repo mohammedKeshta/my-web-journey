@@ -48,7 +48,8 @@ module.exports = {
         printWidth: 100,
         bracketSpacing: true,
         tabWidth: 2,
-        arrowParens: 'always'
+        arrowParens: 'always',
+        trailingComma: 'none'
       }
     ],
     'no-use-before-define': [
