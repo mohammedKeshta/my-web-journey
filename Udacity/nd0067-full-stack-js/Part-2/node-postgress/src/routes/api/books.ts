@@ -1,8 +1,8 @@
 import { Request, Response, Router } from 'express';
-import BookStore from '../../models/book';
+import BookModel from '../../models/book';
 
 const routes = Router();
-const store = new BookStore();
+const store = new BookModel();
 
 routes.get('/', async (_req: Request, res: Response) => {
   try {

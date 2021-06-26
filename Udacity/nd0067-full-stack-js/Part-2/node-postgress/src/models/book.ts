@@ -11,7 +11,7 @@ export interface Book {
   summary: string;
 }
 
-class BookStore {
+class BookModel {
   async index(): Promise<Book[]> {
     try {
       const connection = await db.connect();
@@ -81,4 +81,4 @@ class BookStore {
   }
 }
 
-export default BookStore;
+export default BookModel;
