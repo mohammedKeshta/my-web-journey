@@ -4,7 +4,7 @@ import BookStore from '../../models/book';
 const routes = Router();
 const store = new BookStore();
 
-routes.get('/', async (req: Request, res: Response) => {
+routes.get('/', async (_req: Request, res: Response) => {
   try {
     const books = await store.index();
     res.json({

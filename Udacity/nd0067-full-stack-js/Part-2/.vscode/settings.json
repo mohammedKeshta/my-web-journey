@@ -9,6 +9,16 @@
       "database": "plants_test",
       "username": "mohammdelzanaty",
       "password": "M3l2o18#129"
+    },
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "plants-dev",
+      "database": "plants_dev",
+      "username": "mohammdelzanaty",
+      "password": "M3l2o18#129"
     }
   ]
 }
