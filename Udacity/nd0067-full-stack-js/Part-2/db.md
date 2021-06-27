@@ -21,7 +21,7 @@
 
 ## Queries
 
-```shell
+```sql
 
 CREATE DATABASE database_for_all_things
 
@@ -31,11 +31,11 @@ CREATE TABLE first_things (id SERIAL PRIMARY KEY, name VARCHAR(50), count intege
 
 ## Commands in the course
 
-```shell
+```sql
 
 create table plants (id SERIAL PRIMARY KEY, name varchar(100), description text, individuals integer, sighting_date date);
 
-# CRUD
+-- CRUD
 
 insert into plants (name, description, individuals, sighting_date) values ('Dandelion', 'Fuzzy yellow flowers', 5, '2021-01-01');
 
@@ -45,7 +45,7 @@ update plants set individuals=8 where id=1;
 
 delete from plants where id=1;
 
-# filters
+-- filters
 
 select * from plants where id=1;
 
@@ -61,7 +61,7 @@ select name, id from plants where sighting_date is null;
 
 select name, id from plants where individuals is not null;
 
-# foreign keys 
+-- foreign keys 
 
 create table regions ( id SERIAL PRIMARY KEY, name VARCHAR);
 create table users ( id SERIAL PRIMARY KEY, name VARCHAR, email VARCHAR);
@@ -74,4 +74,16 @@ alter table animals add foreign key (region_id) references regions(id);
 alter table animals add foreign key (user_id) references users(id);
 
 
+-- sorting 
+
+-- list of all products where products with the highest prices would come first and get smaller as you scrolled down the list.
+select * from products order by price desc; 
+
+-- sort the rows by name starting with A and going up to Z.
+SELECT * FROM users ORDER BY name ASC; 
+
+
+-- sql joins
+
+select * from products inner join order_products on products.id = order_products.id;
 ```
