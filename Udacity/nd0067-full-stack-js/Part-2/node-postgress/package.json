@@ -23,6 +23,7 @@
     "helmet": "^4.6.0",
     "jasmine": "^3.7.0",
     "jasmine-spec-reporter": "^7.0.0",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "pg": "^8.6.0"
   },
@@ -32,6 +33,7 @@
     "@types/express": "^4.17.12",
     "@types/helmet": "^4.0.0",
     "@types/jasmine": "^3.6.3",
+    "@types/jsonwebtoken": "^8.5.2",
     "@types/morgan": "^1.9.2",
     "@types/node": "^15.12.2",
     "@types/pg": "^8.6.0",

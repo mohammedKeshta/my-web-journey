@@ -19,13 +19,12 @@ class UserModel {
 
       const connection = await db.connect();
       const sql =
-        'insert into users (first_name, last_name, username, email, password) values ($1, $2, $3, $4, $5) returning *';
+        'insert into users (first_name, last_name, username, email, password) values ($1, $2, $3, $4, $5) returning first_name, last_name, username, email';
       const hash = bcrypt.hashSync(
         `${password}${config.pepper}`,
         parseInt(config.salt as string, 10)
       );
       const result = await connection.query(sql, [firstName, lastName, username, email, hash]);
-      console.log(result);
       connection.release();
       return result.rows[0];
     } catch (error) {

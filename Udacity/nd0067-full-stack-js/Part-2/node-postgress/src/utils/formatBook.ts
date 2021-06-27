@@ -1,4 +1,4 @@
-import { Book } from '../models/book';
+import { Book } from '../models/book.model';
 
 const formatBook = (book: {
   id?: number | undefined;

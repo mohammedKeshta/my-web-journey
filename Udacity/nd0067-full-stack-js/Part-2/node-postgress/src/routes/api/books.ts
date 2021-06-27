@@ -1,5 +1,5 @@
 import { Request, Response, Router } from 'express';
-import BookModel from '../../models/book';
+import BookModel from '../../models/book.model';
 
 const routes = Router();
 const store = new BookModel();

@@ -1,12 +1,7 @@
 import { Response, Request, NextFunction } from 'express';
-import HttpException from '../exceptions/http.exception';
+import Error from '../interfaces/error.interface';
 
-const errorMiddleware = (
-  error: HttpException,
-  _req: Request,
-  res: Response,
-  _next: NextFunction
-) => {
+const errorMiddleware = (error: Error, _req: Request, res: Response, _next: NextFunction) => {
   const status = error.status || 500;
   const message = error.message || 'Whoops!! something went wrong';
   res.status(status).json({ status, message });
