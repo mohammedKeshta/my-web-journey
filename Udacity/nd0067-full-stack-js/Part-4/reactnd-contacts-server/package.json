@@ -11,7 +11,8 @@
     "sequelize": "^6.6.5"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "clean": "rm -rf www && mkdir www",
     "build": "yarn clean && cp -rf client/ www/client && cp -rf node_modules www/node_modules && cp -rf public/ www/public && cp config.js contacts.js server.js package.json www",
     "zip": "yarn build && cd www && zip -r -D ../app.zip *",
