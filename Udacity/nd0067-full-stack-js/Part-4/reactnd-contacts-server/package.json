@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "clone": "^2.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.16.4",
+    "mz-config": "^0.0.1",
+    "nodemon": "^2.0.12",
+    "pg": "^8.5.1",
+    "sequelize": "^6.6.5"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "clean": "rm -rf www && mkdir www",
+    "build": "yarn clean && cp -rf client/ www/client && cp -rf node_modules www/node_modules && cp -rf public/ www/public && cp config.js contacts.js server.js package.json www",
+    "zip": "yarn build && cd www && zip -r -D ../app.zip *",
+    "format": "prettier --write '**/**/*.{ts,tsx,js,jsx}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
