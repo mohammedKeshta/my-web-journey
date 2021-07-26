@@ -1,0 +1,13 @@
+{
+  "name": "part-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "frontend:install": "cd FRONTEND_DIR && npm install",
+    "backend:install": "cd SERVER_DIR && npm install",
+    "frontend:build": "cd FRONTEND_DIR && npm run build",
+    "backend:build": "cd SERVER_DIR && npm run build",
+    "frontend:deploy": "cd FRONTEND_DIR && npm run deploy"
+  }
+}
